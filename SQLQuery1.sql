@@ -12,6 +12,7 @@ create table TaiKhoan
 go
 insert into TaiKhoan values ('1', 'khanh','113','user')
 insert into TaiKhoan values ('2', 'khanh113','113','admin')
+
 go
 
 select * from TaiKhoan
