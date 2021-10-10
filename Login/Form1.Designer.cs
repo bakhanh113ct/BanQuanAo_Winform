@@ -116,7 +116,7 @@ namespace Login
             this.guna2Button1.Text = "USER LOGIN";
             // 
             // txtUsername
-            //  
+            //  nguyens
             this.txtUsername.AcceptsTab = true;
             this.txtUsername.AutoRoundedCorners = true;
             this.txtUsername.BackColor = System.Drawing.SystemColors.ControlLightLight;
