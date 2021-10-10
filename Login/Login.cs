@@ -19,21 +19,21 @@ namespace Login
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-LBAULH5;Initial Catalog=QuanLyKho;Integrated Security=True");
             SqlDataAdapter da = new SqlDataAdapter("select * from TaiKhoan where tendangnhap = '" + txtUsername.Text + "' and matkhau = '" + txtPassword.Text + "'", con);
             DataTable dt = new DataTable();
             da.Fill(dt);
             if (dt.Rows.Count > 0)
             {
-                this.Hide();
-                UI_Home H = new UI_Home();
-                H.ShowDialog();
-                this.Show();
+                guna2ProgressBar1.Value = 0;
+                timer1.Start();
             }
             else
             {
                 MessageBox.Show("SAI.");
             }
+
         }
 
         private void pwshow_CheckedChanged(object sender, EventArgs e)
@@ -44,6 +44,22 @@ namespace Login
             }
             else
                 txtPassword.UseSystemPasswordChar = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            guna2ProgressBar1.Increment(3);
+            PhanTram.Text = guna2ProgressBar1.ProgressPercentText;
+
+            if (guna2ProgressBar1.ProgressPercentText == "100%")
+            {
+                timer1.Stop();
+                this.Hide();
+                UI_Home H = new UI_Home();
+                H.ShowDialog();
+                this.Show();
+            }
+            
         }
     }
 }

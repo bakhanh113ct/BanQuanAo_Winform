@@ -44,6 +44,9 @@ namespace Login
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2ProgressBar1 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.PhanTram = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -248,12 +251,38 @@ namespace Login
             // 
             this.guna2DragControl1.TargetControl = this.guna2Panel1;
             // 
+            // guna2ProgressBar1
+            // 
+            this.guna2ProgressBar1.BorderRadius = 8;
+            this.guna2ProgressBar1.Location = new System.Drawing.Point(0, 509);
+            this.guna2ProgressBar1.Name = "guna2ProgressBar1";
+            this.guna2ProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(3)))), ((int)(((byte)(121)))));
+            this.guna2ProgressBar1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
+            this.guna2ProgressBar1.ShadowDecoration.Parent = this.guna2ProgressBar1;
+            this.guna2ProgressBar1.Size = new System.Drawing.Size(361, 15);
+            this.guna2ProgressBar1.TabIndex = 18;
+            this.guna2ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // PhanTram
+            // 
+            this.PhanTram.AutoSize = true;
+            this.PhanTram.Location = new System.Drawing.Point(164, 490);
+            this.PhanTram.Name = "PhanTram";
+            this.PhanTram.Size = new System.Drawing.Size(0, 13);
+            this.PhanTram.TabIndex = 19;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(361, 524);
+            this.Controls.Add(this.PhanTram);
+            this.Controls.Add(this.guna2ProgressBar1);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -287,5 +316,8 @@ namespace Login
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2ProgressBar guna2ProgressBar1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label PhanTram;
     }
 }
