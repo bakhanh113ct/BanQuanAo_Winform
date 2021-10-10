@@ -10,29 +10,29 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 namespace Login
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
 
-        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
 
         }
 
         public void guna2GradientButton1_Click_1(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-LBAULH5;Initial Catalog=QuanLyKho;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-5E0I4OU\SQLEXPRESS01;Initial Catalog=QuanLyKho;Integrated Security=True");
             SqlDataAdapter da = new SqlDataAdapter("select * from TaiKhoan where tendangnhap = '"+txtUsername.Text+"' and matkhau = '"+txtPassword.Text+"'",con);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            if(dt.Rows.Count > 0)
+            if (dt.Rows.Count > 0)
             {
                 this.Hide();
-                Form2 f = new Form2();
-                f.ShowDialog();
+                UI_Home H = new UI_Home();
+                H.ShowDialog();
                 this.Show();
             }
             else
@@ -41,12 +41,7 @@ namespace Login
             }
         }
 
-        private void guna2ControlBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2ToggleSwitch1_CheckedChanged(object sender, EventArgs e)
+        private void pwshow_CheckedChanged(object sender, EventArgs e)
         {
             if (pwshow.Checked)
             {
@@ -54,12 +49,6 @@ namespace Login
             }
             else
                 txtPassword.UseSystemPasswordChar = true;
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
         }
     }
 }
