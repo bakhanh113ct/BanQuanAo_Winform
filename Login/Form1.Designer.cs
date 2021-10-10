@@ -116,7 +116,7 @@ namespace Login
             this.guna2Button1.Text = "USER LOGIN";
             // 
             // txtUsername
-            //  nguyens
+            // 
             this.txtUsername.AcceptsTab = true;
             this.txtUsername.AutoRoundedCorners = true;
             this.txtUsername.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -136,7 +136,7 @@ namespace Login
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.HoverState.Parent = this.txtUsername;
             this.txtUsername.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtUsername.IconLeft")));
-            this.txtUsername.Location = new System.Drawing.Point(56, 178);
+            this.txtUsername.Location = new System.Drawing.Point(56, 200);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderForeColor = System.Drawing.Color.DimGray;
@@ -167,7 +167,7 @@ namespace Login
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.HoverState.Parent = this.txtPassword;
             this.txtPassword.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtPassword.IconLeft")));
-            this.txtPassword.Location = new System.Drawing.Point(56, 239);
+            this.txtPassword.Location = new System.Drawing.Point(56, 262);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.DimGray;
@@ -195,7 +195,7 @@ namespace Login
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.HoverState.Parent = this.btnLogin;
-            this.btnLogin.Location = new System.Drawing.Point(56, 351);
+            this.btnLogin.Location = new System.Drawing.Point(56, 384);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.ShadowDecoration.Parent = this.btnLogin;
             this.btnLogin.Size = new System.Drawing.Size(254, 37);
@@ -210,7 +210,7 @@ namespace Login
             this.pwshow.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.pwshow.CheckedState.InnerColor = System.Drawing.Color.White;
             this.pwshow.CheckedState.Parent = this.pwshow;
-            this.pwshow.Location = new System.Drawing.Point(56, 289);
+            this.pwshow.Location = new System.Drawing.Point(56, 318);
             this.pwshow.Name = "pwshow";
             this.pwshow.ShadowDecoration.Parent = this.pwshow;
             this.pwshow.Size = new System.Drawing.Size(33, 18);
@@ -226,7 +226,7 @@ namespace Login
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(41)))), ((int)(((byte)(144)))));
-            this.label1.Location = new System.Drawing.Point(98, 292);
+            this.label1.Location = new System.Drawing.Point(98, 321);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 15);
             this.label1.TabIndex = 9;
@@ -239,7 +239,7 @@ namespace Login
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(41)))), ((int)(((byte)(144)))));
-            this.label2.Location = new System.Drawing.Point(215, 292);
+            this.label2.Location = new System.Drawing.Point(215, 321);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 15);
             this.label2.TabIndex = 4;

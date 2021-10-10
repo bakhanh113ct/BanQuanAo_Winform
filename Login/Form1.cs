@@ -24,7 +24,7 @@ namespace Login
 
         public void guna2GradientButton1_Click_1(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-5E0I4OU\SQLEXPRESS01;Initial Catalog=QuanLyKho;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-LBAULH5;Initial Catalog=QuanLyKho;Integrated Security=True");
             SqlDataAdapter da = new SqlDataAdapter("select * from TaiKhoan where tendangnhap = '"+txtUsername.Text+"' and matkhau = '"+txtPassword.Text+"'",con);
             DataTable dt = new DataTable();
             da.Fill(dt);
