@@ -29,6 +29,7 @@ namespace UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TOOL = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.SETTINGS = new Guna.UI2.WinForms.Guna2Button();
             this.ANALYSIS = new Guna.UI2.WinForms.Guna2Button();
@@ -50,10 +51,13 @@ namespace UI
             this.zoom_in_out = new Guna.UI2.WinForms.Guna2Button();
             this.minimize = new Guna.UI2.WinForms.Guna2Button();
             this.subProgram = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.TOOL.SuspendLayout();
             this.info.SuspendLayout();
             this.Tool2.SuspendLayout();
             this.tool3.SuspendLayout();
+            this.subProgram.SuspendLayout();
             this.SuspendLayout();
             // 
             // TOOL
@@ -72,8 +76,9 @@ namespace UI
             this.TOOL.Radius = 10;
             this.TOOL.ShadowColor = System.Drawing.Color.Black;
             this.TOOL.ShadowShift = 0;
-            this.TOOL.Size = new System.Drawing.Size(315, 872);
+            this.TOOL.Size = new System.Drawing.Size(316, 606);
             this.TOOL.TabIndex = 0;
+            this.TOOL.UseWaitCursor = true;
             // 
             // SETTINGS
             // 
@@ -96,9 +101,10 @@ namespace UI
             this.SETTINGS.Location = new System.Drawing.Point(0, 540);
             this.SETTINGS.Name = "SETTINGS";
             this.SETTINGS.ShadowDecoration.Parent = this.SETTINGS;
-            this.SETTINGS.Size = new System.Drawing.Size(315, 73);
+            this.SETTINGS.Size = new System.Drawing.Size(316, 73);
             this.SETTINGS.TabIndex = 10;
             this.SETTINGS.Text = "SETTINGS";
+            this.SETTINGS.UseWaitCursor = true;
             // 
             // ANALYSIS
             // 
@@ -121,9 +127,10 @@ namespace UI
             this.ANALYSIS.Location = new System.Drawing.Point(0, 464);
             this.ANALYSIS.Name = "ANALYSIS";
             this.ANALYSIS.ShadowDecoration.Parent = this.ANALYSIS;
-            this.ANALYSIS.Size = new System.Drawing.Size(315, 76);
+            this.ANALYSIS.Size = new System.Drawing.Size(316, 76);
             this.ANALYSIS.TabIndex = 9;
             this.ANALYSIS.Text = "ANALYSIS";
+            this.ANALYSIS.UseWaitCursor = true;
             // 
             // CUSTOMER
             // 
@@ -147,9 +154,10 @@ namespace UI
             this.CUSTOMER.Name = "CUSTOMER";
             this.CUSTOMER.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.CUSTOMER.ShadowDecoration.Parent = this.CUSTOMER;
-            this.CUSTOMER.Size = new System.Drawing.Size(315, 76);
+            this.CUSTOMER.Size = new System.Drawing.Size(316, 76);
             this.CUSTOMER.TabIndex = 8;
             this.CUSTOMER.Text = "CUSTOMER";
+            this.CUSTOMER.UseWaitCursor = true;
             // 
             // AGENCY
             // 
@@ -172,9 +180,10 @@ namespace UI
             this.AGENCY.Location = new System.Drawing.Point(0, 312);
             this.AGENCY.Name = "AGENCY";
             this.AGENCY.ShadowDecoration.Parent = this.AGENCY;
-            this.AGENCY.Size = new System.Drawing.Size(315, 76);
+            this.AGENCY.Size = new System.Drawing.Size(316, 76);
             this.AGENCY.TabIndex = 4;
             this.AGENCY.Text = "AGENCY";
+            this.AGENCY.UseWaitCursor = true;
             // 
             // STORE
             // 
@@ -197,10 +206,11 @@ namespace UI
             this.STORE.Location = new System.Drawing.Point(0, 236);
             this.STORE.Name = "STORE";
             this.STORE.ShadowDecoration.Parent = this.STORE;
-            this.STORE.Size = new System.Drawing.Size(315, 76);
+            this.STORE.Size = new System.Drawing.Size(316, 76);
             this.STORE.TabIndex = 3;
             this.STORE.Text = "STORE";
             this.STORE.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.STORE.UseWaitCursor = true;
             // 
             // HOME
             // 
@@ -227,9 +237,10 @@ namespace UI
             this.HOME.Location = new System.Drawing.Point(0, 167);
             this.HOME.Name = "HOME";
             this.HOME.ShadowDecoration.Parent = this.HOME;
-            this.HOME.Size = new System.Drawing.Size(315, 69);
+            this.HOME.Size = new System.Drawing.Size(316, 69);
             this.HOME.TabIndex = 2;
             this.HOME.Text = "HOME";
+            this.HOME.UseWaitCursor = true;
             // 
             // Mylogo
             // 
@@ -249,9 +260,10 @@ namespace UI
             this.Mylogo.Location = new System.Drawing.Point(0, 0);
             this.Mylogo.Name = "Mylogo";
             this.Mylogo.ShadowDecoration.Parent = this.Mylogo;
-            this.Mylogo.Size = new System.Drawing.Size(315, 167);
+            this.Mylogo.Size = new System.Drawing.Size(316, 167);
             this.Mylogo.TabIndex = 1;
             this.Mylogo.Text = "My Logo";
+            this.Mylogo.UseWaitCursor = true;
             // 
             // info
             // 
@@ -260,13 +272,15 @@ namespace UI
             this.info.Controls.Add(this.twitter);
             this.info.Controls.Add(this.instagram);
             this.info.FillColor = System.Drawing.Color.White;
-            this.info.Location = new System.Drawing.Point(40, 948);
+            this.info.Location = new System.Drawing.Point(3, 26);
             this.info.Name = "info";
             this.info.Radius = 10;
             this.info.ShadowColor = System.Drawing.Color.White;
             this.info.ShadowShift = 0;
             this.info.Size = new System.Drawing.Size(315, 92);
             this.info.TabIndex = 12;
+            this.info.UseWaitCursor = true;
+            this.info.Paint += new System.Windows.Forms.PaintEventHandler(this.info_Paint);
             // 
             // Facebook
             // 
@@ -289,6 +303,7 @@ namespace UI
             this.Facebook.ShadowDecoration.Parent = this.Facebook;
             this.Facebook.Size = new System.Drawing.Size(60, 60);
             this.Facebook.TabIndex = 4;
+            this.Facebook.UseWaitCursor = true;
             // 
             // twitter
             // 
@@ -311,6 +326,7 @@ namespace UI
             this.twitter.ShadowDecoration.Parent = this.twitter;
             this.twitter.Size = new System.Drawing.Size(60, 60);
             this.twitter.TabIndex = 3;
+            this.twitter.UseWaitCursor = true;
             // 
             // instagram
             // 
@@ -333,6 +349,7 @@ namespace UI
             this.instagram.ShadowDecoration.Parent = this.instagram;
             this.instagram.Size = new System.Drawing.Size(60, 60);
             this.instagram.TabIndex = 2;
+            this.instagram.UseWaitCursor = true;
             // 
             // Tool2
             // 
@@ -346,8 +363,9 @@ namespace UI
             this.Tool2.Radius = 10;
             this.Tool2.ShadowColor = System.Drawing.Color.Black;
             this.Tool2.ShadowDepth = 0;
-            this.Tool2.Size = new System.Drawing.Size(1308, 76);
+            this.Tool2.Size = new System.Drawing.Size(559, 50);
             this.Tool2.TabIndex = 13;
+            this.Tool2.UseWaitCursor = true;
             // 
             // notify
             // 
@@ -370,6 +388,7 @@ namespace UI
             this.notify.ShadowDecoration.Parent = this.notify;
             this.notify.Size = new System.Drawing.Size(50, 50);
             this.notify.TabIndex = 2;
+            this.notify.UseWaitCursor = true;
             // 
             // send
             // 
@@ -392,6 +411,7 @@ namespace UI
             this.send.ShadowDecoration.Parent = this.send;
             this.send.Size = new System.Drawing.Size(50, 50);
             this.send.TabIndex = 1;
+            this.send.UseWaitCursor = true;
             // 
             // avatar
             // 
@@ -411,17 +431,19 @@ namespace UI
             this.avatar.ShadowDecoration.Parent = this.avatar;
             this.avatar.Size = new System.Drawing.Size(50, 50);
             this.avatar.TabIndex = 0;
+            this.avatar.UseWaitCursor = true;
             // 
             // tool3
             // 
             this.tool3.Controls.Add(this.Exit);
             this.tool3.Controls.Add(this.zoom_in_out);
             this.tool3.Controls.Add(this.minimize);
-            this.tool3.Location = new System.Drawing.Point(1758, 12);
+            this.tool3.Location = new System.Drawing.Point(982, 40);
             this.tool3.Name = "tool3";
             this.tool3.ShadowDecoration.Parent = this.tool3;
             this.tool3.Size = new System.Drawing.Size(150, 50);
             this.tool3.TabIndex = 14;
+            this.tool3.UseWaitCursor = true;
             // 
             // Exit
             // 
@@ -443,6 +465,7 @@ namespace UI
             this.Exit.ShadowDecoration.Parent = this.Exit;
             this.Exit.Size = new System.Drawing.Size(40, 40);
             this.Exit.TabIndex = 2;
+            this.Exit.UseWaitCursor = true;
             // 
             // zoom_in_out
             // 
@@ -464,6 +487,7 @@ namespace UI
             this.zoom_in_out.ShadowDecoration.Parent = this.zoom_in_out;
             this.zoom_in_out.Size = new System.Drawing.Size(40, 40);
             this.zoom_in_out.TabIndex = 1;
+            this.zoom_in_out.UseWaitCursor = true;
             // 
             // minimize
             // 
@@ -485,39 +509,52 @@ namespace UI
             this.minimize.ShadowDecoration.Parent = this.minimize;
             this.minimize.Size = new System.Drawing.Size(40, 40);
             this.minimize.TabIndex = 0;
+            this.minimize.UseWaitCursor = true;
             // 
             // subProgram
             // 
             this.subProgram.BackColor = System.Drawing.Color.Transparent;
+            this.subProgram.Controls.Add(this.info);
             this.subProgram.FillColor = System.Drawing.Color.White;
-            this.subProgram.Location = new System.Drawing.Point(389, 160);
+            this.subProgram.Location = new System.Drawing.Point(396, 158);
             this.subProgram.Name = "subProgram";
             this.subProgram.Radius = 10;
             this.subProgram.ShadowColor = System.Drawing.Color.Black;
             this.subProgram.ShadowShift = 0;
-            this.subProgram.Size = new System.Drawing.Size(1482, 880);
+            this.subProgram.Size = new System.Drawing.Size(736, 422);
             this.subProgram.TabIndex = 15;
+            this.subProgram.UseWaitCursor = true;
+            // 
+            // guna2AnimateWindow1
+            // 
+            this.guna2AnimateWindow1.TargetForm = this;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.TargetControl = this;
             // 
             // UI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(238)))));
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1158, 662);
             this.Controls.Add(this.subProgram);
             this.Controls.Add(this.tool3);
             this.Controls.Add(this.Tool2);
-            this.Controls.Add(this.info);
             this.Controls.Add(this.TOOL);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.Name = "UI";
             this.Text = "UI";
+            this.UseWaitCursor = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.TOOL.ResumeLayout(false);
             this.info.ResumeLayout(false);
             this.Tool2.ResumeLayout(false);
             this.tool3.ResumeLayout(false);
+            this.subProgram.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -545,6 +582,8 @@ namespace UI
         private Guna.UI2.WinForms.Guna2Button zoom_in_out;
         private Guna.UI2.WinForms.Guna2Button minimize;
         private Guna.UI2.WinForms.Guna2ShadowPanel subProgram;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }
 

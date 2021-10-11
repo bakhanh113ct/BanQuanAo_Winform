@@ -16,5 +16,10 @@ namespace UI
         {
             InitializeComponent();
         }
+
+        private void info_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
