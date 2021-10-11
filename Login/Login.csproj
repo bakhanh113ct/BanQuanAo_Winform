@@ -49,12 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Container\1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Container\1.Designer.cs">
-      <DependentUpon>1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,9 +63,6 @@
     <Compile Include="UI_Home.Designer.cs">
       <DependentUpon>UI_Home.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Container\1.resx">
-      <DependentUpon>1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
