@@ -44,6 +44,9 @@ namespace Login
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.PrgLogin = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.PhanTram = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -233,7 +236,7 @@ namespace Login
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(101, 104);
+            this.guna2Button1.Location = new System.Drawing.Point(101, 86);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(163, 55);
@@ -248,12 +251,38 @@ namespace Login
             // 
             this.guna2DragControl1.TargetControl = this.guna2Panel1;
             // 
+            // PrgLogin
+            // 
+            this.PrgLogin.BorderRadius = 8;
+            this.PrgLogin.Location = new System.Drawing.Point(0, 508);
+            this.PrgLogin.Name = "PrgLogin";
+            this.PrgLogin.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
+            this.PrgLogin.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(3)))), ((int)(((byte)(121)))));
+            this.PrgLogin.ShadowDecoration.Parent = this.PrgLogin;
+            this.PrgLogin.Size = new System.Drawing.Size(361, 13);
+            this.PrgLogin.TabIndex = 18;
+            this.PrgLogin.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // PhanTram
+            // 
+            this.PhanTram.BackColor = System.Drawing.Color.Transparent;
+            this.PhanTram.Location = new System.Drawing.Point(178, 484);
+            this.PhanTram.Name = "PhanTram";
+            this.PhanTram.Size = new System.Drawing.Size(3, 2);
+            this.PhanTram.TabIndex = 19;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(361, 524);
+            this.Controls.Add(this.PhanTram);
+            this.Controls.Add(this.PrgLogin);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -287,5 +316,8 @@ namespace Login
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2ProgressBar PrgLogin;
+        private System.Windows.Forms.Timer timer1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel PhanTram;
     }
 }

@@ -25,10 +25,8 @@ namespace Login
             da.Fill(dt);
             if (dt.Rows.Count > 0)
             {
-                this.Hide();
-                UI_Home H = new UI_Home();
-                H.ShowDialog();
-                this.Show();
+                PrgLogin.Value = 0;
+                timer1.Start();
             }
             else
             {
@@ -44,6 +42,21 @@ namespace Login
             }
             else
                 txtPassword.UseSystemPasswordChar = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            PrgLogin.Increment(2);
+            PhanTram.Text = PrgLogin.ProgressPercentText;
+
+            if (PrgLogin.ProgressPercentText == "100%")
+            {
+                timer1.Stop();
+                this.Hide();
+                UI_Home H = new UI_Home();
+                H.ShowDialog();
+                this.Show();
+            }
         }
     }
 }
