@@ -74,6 +74,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UI_Home.resx">
       <DependentUpon>UI_Home.cs</DependentUpon>
@@ -91,6 +92,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Instagram_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twitter_squared_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook_64px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification_64px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sent_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize_window_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize_window_64px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sent_64px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize_window_64px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggle_full_screen_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_64px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
