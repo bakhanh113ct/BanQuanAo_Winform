@@ -71,12 +71,13 @@ namespace UI
             this.TOOL.Controls.Add(this.HOME);
             this.TOOL.Controls.Add(this.Mylogo);
             this.TOOL.FillColor = System.Drawing.Color.White;
-            this.TOOL.Location = new System.Drawing.Point(40, 40);
+            this.TOOL.Location = new System.Drawing.Point(32, 32);
+            this.TOOL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TOOL.Name = "TOOL";
             this.TOOL.Radius = 10;
             this.TOOL.ShadowColor = System.Drawing.Color.Black;
             this.TOOL.ShadowShift = 0;
-            this.TOOL.Size = new System.Drawing.Size(316, 606);
+            this.TOOL.Size = new System.Drawing.Size(253, 485);
             this.TOOL.TabIndex = 0;
             this.TOOL.UseWaitCursor = true;
             // 
@@ -98,10 +99,11 @@ namespace UI
             this.SETTINGS.Image = global::UI.Properties.Resources.settings_64px;
             this.SETTINGS.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.SETTINGS.ImageSize = new System.Drawing.Size(50, 50);
-            this.SETTINGS.Location = new System.Drawing.Point(0, 540);
+            this.SETTINGS.Location = new System.Drawing.Point(0, 433);
+            this.SETTINGS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SETTINGS.Name = "SETTINGS";
             this.SETTINGS.ShadowDecoration.Parent = this.SETTINGS;
-            this.SETTINGS.Size = new System.Drawing.Size(316, 73);
+            this.SETTINGS.Size = new System.Drawing.Size(253, 58);
             this.SETTINGS.TabIndex = 10;
             this.SETTINGS.Text = "SETTINGS";
             this.SETTINGS.UseWaitCursor = true;
@@ -124,10 +126,11 @@ namespace UI
             this.ANALYSIS.Image = global::UI.Properties.Resources.account_64px;
             this.ANALYSIS.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.ANALYSIS.ImageSize = new System.Drawing.Size(50, 50);
-            this.ANALYSIS.Location = new System.Drawing.Point(0, 464);
+            this.ANALYSIS.Location = new System.Drawing.Point(0, 372);
+            this.ANALYSIS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ANALYSIS.Name = "ANALYSIS";
             this.ANALYSIS.ShadowDecoration.Parent = this.ANALYSIS;
-            this.ANALYSIS.Size = new System.Drawing.Size(316, 76);
+            this.ANALYSIS.Size = new System.Drawing.Size(253, 61);
             this.ANALYSIS.TabIndex = 9;
             this.ANALYSIS.Text = "ANALYSIS";
             this.ANALYSIS.UseWaitCursor = true;
@@ -150,11 +153,12 @@ namespace UI
             this.CUSTOMER.Image = global::UI.Properties.Resources.customer_64px;
             this.CUSTOMER.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.CUSTOMER.ImageSize = new System.Drawing.Size(50, 50);
-            this.CUSTOMER.Location = new System.Drawing.Point(0, 388);
+            this.CUSTOMER.Location = new System.Drawing.Point(0, 311);
+            this.CUSTOMER.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CUSTOMER.Name = "CUSTOMER";
             this.CUSTOMER.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.CUSTOMER.ShadowDecoration.Parent = this.CUSTOMER;
-            this.CUSTOMER.Size = new System.Drawing.Size(316, 76);
+            this.CUSTOMER.Size = new System.Drawing.Size(253, 61);
             this.CUSTOMER.TabIndex = 8;
             this.CUSTOMER.Text = "CUSTOMER";
             this.CUSTOMER.UseWaitCursor = true;
@@ -177,10 +181,11 @@ namespace UI
             this.AGENCY.Image = global::UI.Properties.Resources.handshake_64px;
             this.AGENCY.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.AGENCY.ImageSize = new System.Drawing.Size(50, 50);
-            this.AGENCY.Location = new System.Drawing.Point(0, 312);
+            this.AGENCY.Location = new System.Drawing.Point(0, 250);
+            this.AGENCY.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AGENCY.Name = "AGENCY";
             this.AGENCY.ShadowDecoration.Parent = this.AGENCY;
-            this.AGENCY.Size = new System.Drawing.Size(316, 76);
+            this.AGENCY.Size = new System.Drawing.Size(253, 61);
             this.AGENCY.TabIndex = 4;
             this.AGENCY.Text = "AGENCY";
             this.AGENCY.UseWaitCursor = true;
@@ -203,10 +208,11 @@ namespace UI
             this.STORE.Image = global::UI.Properties.Resources.online_store_64px;
             this.STORE.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.STORE.ImageSize = new System.Drawing.Size(50, 50);
-            this.STORE.Location = new System.Drawing.Point(0, 236);
+            this.STORE.Location = new System.Drawing.Point(0, 189);
+            this.STORE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.STORE.Name = "STORE";
             this.STORE.ShadowDecoration.Parent = this.STORE;
-            this.STORE.Size = new System.Drawing.Size(316, 76);
+            this.STORE.Size = new System.Drawing.Size(253, 61);
             this.STORE.TabIndex = 3;
             this.STORE.Text = "STORE";
             this.STORE.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
@@ -234,10 +240,11 @@ namespace UI
             this.HOME.Image = global::UI.Properties.Resources.home_page_64px;
             this.HOME.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.HOME.ImageSize = new System.Drawing.Size(50, 50);
-            this.HOME.Location = new System.Drawing.Point(0, 167);
+            this.HOME.Location = new System.Drawing.Point(0, 134);
+            this.HOME.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HOME.Name = "HOME";
             this.HOME.ShadowDecoration.Parent = this.HOME;
-            this.HOME.Size = new System.Drawing.Size(316, 69);
+            this.HOME.Size = new System.Drawing.Size(253, 55);
             this.HOME.TabIndex = 2;
             this.HOME.Text = "HOME";
             this.HOME.UseWaitCursor = true;
@@ -258,9 +265,10 @@ namespace UI
             this.Mylogo.ForeColor = System.Drawing.Color.White;
             this.Mylogo.HoverState.Parent = this.Mylogo;
             this.Mylogo.Location = new System.Drawing.Point(0, 0);
+            this.Mylogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Mylogo.Name = "Mylogo";
             this.Mylogo.ShadowDecoration.Parent = this.Mylogo;
-            this.Mylogo.Size = new System.Drawing.Size(316, 167);
+            this.Mylogo.Size = new System.Drawing.Size(253, 134);
             this.Mylogo.TabIndex = 1;
             this.Mylogo.Text = "My Logo";
             this.Mylogo.UseWaitCursor = true;
@@ -272,12 +280,13 @@ namespace UI
             this.info.Controls.Add(this.twitter);
             this.info.Controls.Add(this.instagram);
             this.info.FillColor = System.Drawing.Color.White;
-            this.info.Location = new System.Drawing.Point(3, 26);
+            this.info.Location = new System.Drawing.Point(2, 21);
+            this.info.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.info.Name = "info";
             this.info.Radius = 10;
             this.info.ShadowColor = System.Drawing.Color.White;
             this.info.ShadowShift = 0;
-            this.info.Size = new System.Drawing.Size(315, 92);
+            this.info.Size = new System.Drawing.Size(252, 74);
             this.info.TabIndex = 12;
             this.info.UseWaitCursor = true;
             this.info.Paint += new System.Windows.Forms.PaintEventHandler(this.info_Paint);
@@ -298,10 +307,11 @@ namespace UI
             this.Facebook.HoverState.Parent = this.Facebook;
             this.Facebook.Image = global::UI.Properties.Resources.facebook_64px;
             this.Facebook.ImageSize = new System.Drawing.Size(50, 50);
-            this.Facebook.Location = new System.Drawing.Point(231, 16);
+            this.Facebook.Location = new System.Drawing.Point(185, 13);
+            this.Facebook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Facebook.Name = "Facebook";
             this.Facebook.ShadowDecoration.Parent = this.Facebook;
-            this.Facebook.Size = new System.Drawing.Size(60, 60);
+            this.Facebook.Size = new System.Drawing.Size(48, 48);
             this.Facebook.TabIndex = 4;
             this.Facebook.UseWaitCursor = true;
             // 
@@ -321,10 +331,11 @@ namespace UI
             this.twitter.HoverState.Parent = this.twitter;
             this.twitter.Image = global::UI.Properties.Resources.twitter_squared_64px;
             this.twitter.ImageSize = new System.Drawing.Size(50, 50);
-            this.twitter.Location = new System.Drawing.Point(127, 16);
+            this.twitter.Location = new System.Drawing.Point(102, 13);
+            this.twitter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.twitter.Name = "twitter";
             this.twitter.ShadowDecoration.Parent = this.twitter;
-            this.twitter.Size = new System.Drawing.Size(60, 60);
+            this.twitter.Size = new System.Drawing.Size(48, 48);
             this.twitter.TabIndex = 3;
             this.twitter.UseWaitCursor = true;
             // 
@@ -344,10 +355,11 @@ namespace UI
             this.instagram.HoverState.Parent = this.instagram;
             this.instagram.Image = global::UI.Properties.Resources.Instagram_64px1;
             this.instagram.ImageSize = new System.Drawing.Size(50, 50);
-            this.instagram.Location = new System.Drawing.Point(31, 16);
+            this.instagram.Location = new System.Drawing.Point(25, 13);
+            this.instagram.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.instagram.Name = "instagram";
             this.instagram.ShadowDecoration.Parent = this.instagram;
-            this.instagram.Size = new System.Drawing.Size(60, 60);
+            this.instagram.Size = new System.Drawing.Size(48, 48);
             this.instagram.TabIndex = 2;
             this.instagram.UseWaitCursor = true;
             // 
@@ -358,12 +370,13 @@ namespace UI
             this.Tool2.Controls.Add(this.send);
             this.Tool2.Controls.Add(this.avatar);
             this.Tool2.FillColor = System.Drawing.Color.White;
-            this.Tool2.Location = new System.Drawing.Point(396, 40);
+            this.Tool2.Location = new System.Drawing.Point(319, 53);
+            this.Tool2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Tool2.Name = "Tool2";
             this.Tool2.Radius = 10;
             this.Tool2.ShadowColor = System.Drawing.Color.Black;
             this.Tool2.ShadowDepth = 0;
-            this.Tool2.Size = new System.Drawing.Size(559, 50);
+            this.Tool2.Size = new System.Drawing.Size(447, 40);
             this.Tool2.TabIndex = 13;
             this.Tool2.UseWaitCursor = true;
             // 
@@ -383,10 +396,11 @@ namespace UI
             this.notify.HoverState.Parent = this.notify;
             this.notify.Image = global::UI.Properties.Resources.notification_64px;
             this.notify.ImageSize = new System.Drawing.Size(50, 50);
-            this.notify.Location = new System.Drawing.Point(117, 13);
+            this.notify.Location = new System.Drawing.Point(94, 10);
+            this.notify.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.notify.Name = "notify";
             this.notify.ShadowDecoration.Parent = this.notify;
-            this.notify.Size = new System.Drawing.Size(50, 50);
+            this.notify.Size = new System.Drawing.Size(40, 40);
             this.notify.TabIndex = 2;
             this.notify.UseWaitCursor = true;
             // 
@@ -406,10 +420,11 @@ namespace UI
             this.send.HoverState.Parent = this.send;
             this.send.Image = global::UI.Properties.Resources.sent_64px;
             this.send.ImageSize = new System.Drawing.Size(50, 50);
-            this.send.Location = new System.Drawing.Point(205, 13);
+            this.send.Location = new System.Drawing.Point(164, 10);
+            this.send.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.send.Name = "send";
             this.send.ShadowDecoration.Parent = this.send;
-            this.send.Size = new System.Drawing.Size(50, 50);
+            this.send.Size = new System.Drawing.Size(40, 40);
             this.send.TabIndex = 1;
             this.send.UseWaitCursor = true;
             // 
@@ -426,10 +441,11 @@ namespace UI
             this.avatar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.avatar.ForeColor = System.Drawing.Color.White;
             this.avatar.HoverState.Parent = this.avatar;
-            this.avatar.Location = new System.Drawing.Point(28, 13);
+            this.avatar.Location = new System.Drawing.Point(22, 10);
+            this.avatar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.avatar.Name = "avatar";
             this.avatar.ShadowDecoration.Parent = this.avatar;
-            this.avatar.Size = new System.Drawing.Size(50, 50);
+            this.avatar.Size = new System.Drawing.Size(40, 40);
             this.avatar.TabIndex = 0;
             this.avatar.UseWaitCursor = true;
             // 
@@ -438,10 +454,11 @@ namespace UI
             this.tool3.Controls.Add(this.Exit);
             this.tool3.Controls.Add(this.zoom_in_out);
             this.tool3.Controls.Add(this.minimize);
-            this.tool3.Location = new System.Drawing.Point(982, 40);
+            this.tool3.Location = new System.Drawing.Point(786, 11);
+            this.tool3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tool3.Name = "tool3";
             this.tool3.ShadowDecoration.Parent = this.tool3;
-            this.tool3.Size = new System.Drawing.Size(150, 50);
+            this.tool3.Size = new System.Drawing.Size(120, 40);
             this.tool3.TabIndex = 14;
             this.tool3.UseWaitCursor = true;
             // 
@@ -460,10 +477,11 @@ namespace UI
             this.Exit.HoverState.Parent = this.Exit;
             this.Exit.Image = global::UI.Properties.Resources.delete_64px;
             this.Exit.ImageSize = new System.Drawing.Size(36, 36);
-            this.Exit.Location = new System.Drawing.Point(105, 5);
+            this.Exit.Location = new System.Drawing.Point(84, 4);
+            this.Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Exit.Name = "Exit";
             this.Exit.ShadowDecoration.Parent = this.Exit;
-            this.Exit.Size = new System.Drawing.Size(40, 40);
+            this.Exit.Size = new System.Drawing.Size(32, 32);
             this.Exit.TabIndex = 2;
             this.Exit.UseWaitCursor = true;
             // 
@@ -482,10 +500,11 @@ namespace UI
             this.zoom_in_out.HoverState.Parent = this.zoom_in_out;
             this.zoom_in_out.Image = global::UI.Properties.Resources.toggle_full_screen_64px;
             this.zoom_in_out.ImageSize = new System.Drawing.Size(36, 36);
-            this.zoom_in_out.Location = new System.Drawing.Point(55, 5);
+            this.zoom_in_out.Location = new System.Drawing.Point(44, 4);
+            this.zoom_in_out.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.zoom_in_out.Name = "zoom_in_out";
             this.zoom_in_out.ShadowDecoration.Parent = this.zoom_in_out;
-            this.zoom_in_out.Size = new System.Drawing.Size(40, 40);
+            this.zoom_in_out.Size = new System.Drawing.Size(32, 32);
             this.zoom_in_out.TabIndex = 1;
             this.zoom_in_out.UseWaitCursor = true;
             // 
@@ -504,10 +523,11 @@ namespace UI
             this.minimize.HoverState.Parent = this.minimize;
             this.minimize.Image = global::UI.Properties.Resources.minimize_window_64px;
             this.minimize.ImageSize = new System.Drawing.Size(36, 36);
-            this.minimize.Location = new System.Drawing.Point(5, 5);
+            this.minimize.Location = new System.Drawing.Point(4, 4);
+            this.minimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.minimize.Name = "minimize";
             this.minimize.ShadowDecoration.Parent = this.minimize;
-            this.minimize.Size = new System.Drawing.Size(40, 40);
+            this.minimize.Size = new System.Drawing.Size(32, 32);
             this.minimize.TabIndex = 0;
             this.minimize.UseWaitCursor = true;
             // 
@@ -516,12 +536,13 @@ namespace UI
             this.subProgram.BackColor = System.Drawing.Color.Transparent;
             this.subProgram.Controls.Add(this.info);
             this.subProgram.FillColor = System.Drawing.Color.White;
-            this.subProgram.Location = new System.Drawing.Point(396, 158);
+            this.subProgram.Location = new System.Drawing.Point(317, 107);
+            this.subProgram.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.subProgram.Name = "subProgram";
             this.subProgram.Radius = 10;
             this.subProgram.ShadowColor = System.Drawing.Color.Black;
             this.subProgram.ShadowShift = 0;
-            this.subProgram.Size = new System.Drawing.Size(736, 422);
+            this.subProgram.Size = new System.Drawing.Size(589, 338);
             this.subProgram.TabIndex = 15;
             this.subProgram.UseWaitCursor = true;
             // 
@@ -535,10 +556,10 @@ namespace UI
             // 
             // UI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(238)))));
-            this.ClientSize = new System.Drawing.Size(1158, 662);
+            this.ClientSize = new System.Drawing.Size(926, 530);
             this.Controls.Add(this.subProgram);
             this.Controls.Add(this.tool3);
             this.Controls.Add(this.Tool2);
@@ -546,6 +567,8 @@ namespace UI
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(1366, 728);
             this.Name = "UI";
             this.Text = "UI";
             this.UseWaitCursor = true;
