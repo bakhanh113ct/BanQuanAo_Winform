@@ -63,9 +63,29 @@ namespace Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap account_64px {
+            get {
+                object obj = ResourceManager.GetObject("account_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap avatar_48px {
             get {
                 object obj = ResourceManager.GetObject("avatar_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap customer_64px {
+            get {
+                object obj = ResourceManager.GetObject("customer_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +116,26 @@ namespace Login.Properties {
         internal static System.Drawing.Bitmap facebook_64px1 {
             get {
                 object obj = ResourceManager.GetObject("facebook_64px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap handshake_64px {
+            get {
+                object obj = ResourceManager.GetObject("handshake_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home_page_64px {
+            get {
+                object obj = ResourceManager.GetObject("home_page_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,6 +203,16 @@ namespace Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap online_store_64px {
+            get {
+                object obj = ResourceManager.GetObject("online_store_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sent_64px {
             get {
                 object obj = ResourceManager.GetObject("sent_64px", resourceCulture);
@@ -176,6 +226,16 @@ namespace Login.Properties {
         internal static System.Drawing.Bitmap sent_64px1 {
             get {
                 object obj = ResourceManager.GetObject("sent_64px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settings_64px {
+            get {
+                object obj = ResourceManager.GetObject("settings_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
