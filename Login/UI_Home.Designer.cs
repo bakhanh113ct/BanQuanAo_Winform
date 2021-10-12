@@ -60,6 +60,8 @@ namespace Login
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.SubProgram = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.txtworkspace = new System.Windows.Forms.Label();
+            this.txtPerformance = new System.Windows.Forms.Label();
             this.Tool.SuspendLayout();
             this.subbar3.SuspendLayout();
             this.Tool2.SuspendLayout();
@@ -340,6 +342,8 @@ namespace Login
             // Tool2
             // 
             this.Tool2.BackColor = System.Drawing.Color.Transparent;
+            this.Tool2.Controls.Add(this.txtPerformance);
+            this.Tool2.Controls.Add(this.txtworkspace);
             this.Tool2.Controls.Add(this.send);
             this.Tool2.Controls.Add(this.notify);
             this.Tool2.Controls.Add(this.Avatar);
@@ -615,6 +619,27 @@ namespace Login
             this.SubProgram.Size = new System.Drawing.Size(686, 441);
             this.SubProgram.TabIndex = 2;
             // 
+            // txtworkspace
+            // 
+            this.txtworkspace.AutoSize = true;
+            this.txtworkspace.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtworkspace.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtworkspace.Location = new System.Drawing.Point(204, 10);
+            this.txtworkspace.Name = "txtworkspace";
+            this.txtworkspace.Size = new System.Drawing.Size(92, 17);
+            this.txtworkspace.TabIndex = 4;
+            this.txtworkspace.Text = "My workspace";
+            // 
+            // txtPerformance
+            // 
+            this.txtPerformance.AutoSize = true;
+            this.txtPerformance.Font = new System.Drawing.Font("Myriad Hebrew", 10F);
+            this.txtPerformance.Location = new System.Drawing.Point(295, 12);
+            this.txtPerformance.Name = "txtPerformance";
+            this.txtPerformance.Size = new System.Drawing.Size(56, 17);
+            this.txtPerformance.TabIndex = 5;
+            this.txtPerformance.Text = "> HOME";
+            // 
             // UI_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -633,6 +658,7 @@ namespace Login
             this.Tool.ResumeLayout(false);
             this.subbar3.ResumeLayout(false);
             this.Tool2.ResumeLayout(false);
+            this.Tool2.PerformLayout();
             this.info.ResumeLayout(false);
             this.tool3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -671,5 +697,7 @@ namespace Login
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel subbar2;
         private Guna.UI2.WinForms.Guna2ShadowPanel SubProgram;
+        private System.Windows.Forms.Label txtPerformance;
+        private System.Windows.Forms.Label txtworkspace;
     }
 }

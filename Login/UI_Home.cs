@@ -34,6 +34,7 @@ namespace Login
             panel.Visible = true;
             button.ForeColor = Color.FromArgb(216, 19, 248);
             button.FillColor = Color.FromArgb(251, 237, 251);
+            txtPerformance.Text = "> " + button.Text;
         }
 
         private void AddSubbarandHomeButton()
