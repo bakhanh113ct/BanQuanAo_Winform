@@ -29,6 +29,7 @@ namespace Login
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Tool = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.SETTING = new Guna.UI2.WinForms.Guna2Button();
             this.ANALYSIS = new Guna.UI2.WinForms.Guna2Button();
@@ -50,6 +51,9 @@ namespace Login
             this.exit = new Guna.UI2.WinForms.Guna2Button();
             this.zooe_in_out = new Guna.UI2.WinForms.Guna2Button();
             this.minimize = new Guna.UI2.WinForms.Guna2Button();
+            this.subbar1 = new System.Windows.Forms.Panel();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Tool.SuspendLayout();
             this.Tool2.SuspendLayout();
             this.info.SuspendLayout();
@@ -59,6 +63,7 @@ namespace Login
             // Tool
             // 
             this.Tool.BackColor = System.Drawing.Color.Transparent;
+            this.Tool.Controls.Add(this.subbar1);
             this.Tool.Controls.Add(this.SETTING);
             this.Tool.Controls.Add(this.ANALYSIS);
             this.Tool.Controls.Add(this.CUSTOMER);
@@ -209,6 +214,7 @@ namespace Login
             this.HOME.Size = new System.Drawing.Size(147, 37);
             this.HOME.TabIndex = 1;
             this.HOME.Text = "HOME";
+            this.HOME.Click += new System.EventHandler(this.HOME_Click);
             // 
             // MyLogo
             // 
@@ -491,6 +497,23 @@ namespace Login
             this.minimize.TabIndex = 0;
             this.minimize.Click += new System.EventHandler(this.minimize_Click);
             // 
+            // subbar1
+            // 
+            this.subbar1.BackColor = System.Drawing.Color.Fuchsia;
+            this.subbar1.Location = new System.Drawing.Point(137, 114);
+            this.subbar1.Name = "subbar1";
+            this.subbar1.Size = new System.Drawing.Size(10, 37);
+            this.subbar1.TabIndex = 5;
+            this.subbar1.Visible = false;
+            // 
+            // guna2AnimateWindow1
+            // 
+            this.guna2AnimateWindow1.TargetForm = this;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.TargetControl = this;
+            // 
             // UI_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -536,5 +559,8 @@ namespace Login
         private Guna.UI2.WinForms.Guna2Button minimize;
         private Guna.UI2.WinForms.Guna2Button zooe_in_out;
         private Guna.UI2.WinForms.Guna2Button exit;
+        private System.Windows.Forms.Panel subbar1;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

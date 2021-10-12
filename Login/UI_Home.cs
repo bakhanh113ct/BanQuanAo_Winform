@@ -26,5 +26,10 @@ namespace Login
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void HOME_Click(object sender, EventArgs e)
+        {
+            subbar1.Visible = true;
+        }
     }
 }
