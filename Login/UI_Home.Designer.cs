@@ -31,12 +31,12 @@ namespace Login
         {
             this.components = new System.ComponentModel.Container();
             this.Tool = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.subbar3 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.subbar6 = new System.Windows.Forms.Panel();
             this.subbar5 = new System.Windows.Forms.Panel();
             this.subbar4 = new System.Windows.Forms.Panel();
             this.subbar2 = new System.Windows.Forms.Panel();
-            this.subbar3 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.subbar1 = new System.Windows.Forms.Panel();
             this.SETTING = new Guna.UI2.WinForms.Guna2Button();
             this.ANALYSIS = new Guna.UI2.WinForms.Guna2Button();
@@ -46,6 +46,7 @@ namespace Login
             this.HOME = new Guna.UI2.WinForms.Guna2Button();
             this.MyLogo = new Guna.UI2.WinForms.Guna2Button();
             this.Tool2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.txt_worksp = new System.Windows.Forms.Label();
             this.send = new Guna.UI2.WinForms.Guna2Button();
             this.notify = new Guna.UI2.WinForms.Guna2Button();
             this.Avatar = new Guna.UI2.WinForms.Guna2Button();
@@ -60,7 +61,6 @@ namespace Login
             this.minimize = new Guna.UI2.WinForms.Guna2Button();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.txt_worksp = new System.Windows.Forms.Label();
             this.Tool.SuspendLayout();
             this.subbar3.SuspendLayout();
             this.Tool2.SuspendLayout();
@@ -71,12 +71,12 @@ namespace Login
             // Tool
             // 
             this.Tool.BackColor = System.Drawing.Color.Transparent;
+            this.Tool.Controls.Add(this.subbar1);
             this.Tool.Controls.Add(this.subbar3);
             this.Tool.Controls.Add(this.subbar6);
             this.Tool.Controls.Add(this.subbar5);
             this.Tool.Controls.Add(this.subbar4);
             this.Tool.Controls.Add(this.subbar2);
-            this.Tool.Controls.Add(this.subbar1);
             this.Tool.Controls.Add(this.SETTING);
             this.Tool.Controls.Add(this.ANALYSIS);
             this.Tool.Controls.Add(this.CUSTOMER);
@@ -93,6 +93,25 @@ namespace Login
             this.Tool.ShadowShift = 0;
             this.Tool.Size = new System.Drawing.Size(147, 441);
             this.Tool.TabIndex = 0;
+            // 
+            // subbar3
+            // 
+            this.subbar3.BackColor = System.Drawing.Color.Fuchsia;
+            this.subbar3.Controls.Add(this.panel3);
+            this.subbar3.Location = new System.Drawing.Point(142, 188);
+            this.subbar3.Name = "subbar3";
+            this.subbar3.Size = new System.Drawing.Size(5, 37);
+            this.subbar3.TabIndex = 6;
+            this.subbar3.Visible = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Fuchsia;
+            this.panel3.Location = new System.Drawing.Point(0, 37);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 37);
+            this.panel3.TabIndex = 6;
+            this.panel3.Visible = false;
             // 
             // subbar6
             // 
@@ -129,25 +148,6 @@ namespace Login
             this.subbar2.Size = new System.Drawing.Size(5, 37);
             this.subbar2.TabIndex = 6;
             this.subbar2.Visible = false;
-            // 
-            // subbar3
-            // 
-            this.subbar3.BackColor = System.Drawing.Color.Fuchsia;
-            this.subbar3.Controls.Add(this.panel3);
-            this.subbar3.Location = new System.Drawing.Point(142, 188);
-            this.subbar3.Name = "subbar3";
-            this.subbar3.Size = new System.Drawing.Size(5, 37);
-            this.subbar3.TabIndex = 6;
-            this.subbar3.Visible = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Fuchsia;
-            this.panel3.Location = new System.Drawing.Point(0, 37);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 37);
-            this.panel3.TabIndex = 6;
-            this.panel3.Visible = false;
             // 
             // subbar1
             // 
@@ -336,6 +336,17 @@ namespace Login
             this.Tool2.ShadowShift = 0;
             this.Tool2.Size = new System.Drawing.Size(611, 37);
             this.Tool2.TabIndex = 1;
+            // 
+            // txt_worksp
+            // 
+            this.txt_worksp.AutoSize = true;
+            this.txt_worksp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txt_worksp.ForeColor = System.Drawing.Color.LightGray;
+            this.txt_worksp.Location = new System.Drawing.Point(225, 11);
+            this.txt_worksp.Name = "txt_worksp";
+            this.txt_worksp.Size = new System.Drawing.Size(97, 17);
+            this.txt_worksp.TabIndex = 4;
+            this.txt_worksp.Text = "My workspace";
             // 
             // send
             // 
@@ -597,17 +608,6 @@ namespace Login
             // guna2DragControl1
             // 
             this.guna2DragControl1.TargetControl = this;
-            // 
-            // txt_worksp
-            // 
-            this.txt_worksp.AutoSize = true;
-            this.txt_worksp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txt_worksp.ForeColor = System.Drawing.Color.LightGray;
-            this.txt_worksp.Location = new System.Drawing.Point(225, 11);
-            this.txt_worksp.Name = "txt_worksp";
-            this.txt_worksp.Size = new System.Drawing.Size(97, 17);
-            this.txt_worksp.TabIndex = 4;
-            this.txt_worksp.Text = "My workspace";
             // 
             // UI_Home
             // 
