@@ -624,7 +624,7 @@ namespace Login
             this.txtworkspace.AutoSize = true;
             this.txtworkspace.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtworkspace.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtworkspace.Location = new System.Drawing.Point(204, 10);
+            this.txtworkspace.Location = new System.Drawing.Point(210, 10);
             this.txtworkspace.Name = "txtworkspace";
             this.txtworkspace.Size = new System.Drawing.Size(92, 17);
             this.txtworkspace.TabIndex = 4;
@@ -634,7 +634,7 @@ namespace Login
             // 
             this.txtPerformance.AutoSize = true;
             this.txtPerformance.Font = new System.Drawing.Font("Myriad Hebrew", 10F);
-            this.txtPerformance.Location = new System.Drawing.Point(295, 12);
+            this.txtPerformance.Location = new System.Drawing.Point(302, 12);
             this.txtPerformance.Name = "txtPerformance";
             this.txtPerformance.Size = new System.Drawing.Size(56, 17);
             this.txtPerformance.TabIndex = 5;
