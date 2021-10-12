@@ -52,6 +52,18 @@ namespace Login
             Home_button.Add(ANALYSIS);
             Home_button.Add(SETTING);
         }
+        private Form activeForm = null;
+        private void openPerformance(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            SubProgram.Controls.Add(childForm);
+            SubProgram.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
         private void exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -65,31 +77,37 @@ namespace Login
         private void HOME_Click(object sender, EventArgs e)
         {
             subbar_Change(subbar1, HOME);
+            openPerformance(new Home_perfomancecs());
         }
 
         private void STORE_Click(object sender, EventArgs e)
         {
             subbar_Change(subbar2, STORE);
+            openPerformance(new Store_performence());
         }
 
         private void PARTNER_Click(object sender, EventArgs e)
         {
             subbar_Change(subbar3, PARTNER);
+            openPerformance(new Partner_performance());
         }
 
         private void CUSTOMER_Click(object sender, EventArgs e)
         {
             subbar_Change(subbar4, CUSTOMER);
+            openPerformance(new Customer_performance());
         }
 
         private void ANALYSIS_Click(object sender, EventArgs e)
         {
             subbar_Change(subbar5, ANALYSIS);
+            openPerformance(new Analysis_performance());
         }
 
         private void SETTING_Click(object sender, EventArgs e)
         {
             subbar_Change(subbar6, SETTING);
+            openPerformance(new Settings_performance());
         }
 
         private void facebook_Click(object sender, EventArgs e)
@@ -106,5 +124,16 @@ namespace Login
         {
             System.Diagnostics.Process.Start("https://www.instagram.com/");
         }
+
+        private void MyLogo_MouseHover(object sender, EventArgs e)
+        {
+            MyLogo.FillColor = Color.White;
+        }
+
+        private void zooe_in_out_Click(object sender, EventArgs e)
+        {
+
+        }
+        
     }
 }
