@@ -102,7 +102,6 @@ namespace Login
             this.subbar1.Name = "subbar1";
             this.subbar1.Size = new System.Drawing.Size(7, 46);
             this.subbar1.TabIndex = 5;
-            this.subbar1.Visible = false;
             // 
             // subbar3
             // 
@@ -423,9 +422,9 @@ namespace Login
             this.HOME.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.HOME.DisabledState.Parent = this.HOME;
             this.HOME.Dock = System.Windows.Forms.DockStyle.Top;
-            this.HOME.FillColor = System.Drawing.Color.White;
+            this.HOME.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(237)))), ((int)(((byte)(250)))));
             this.HOME.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.HOME.ForeColor = System.Drawing.Color.Black;
+            this.HOME.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(19)))), ((int)(((byte)(248)))));
             this.HOME.HoverState.Parent = this.HOME;
             this.HOME.Image = global::Login.Properties.Resources.home_page_64px;
             this.HOME.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -648,6 +647,16 @@ namespace Login
             this.Avatar.ShadowDecoration.Parent = this.Avatar;
             this.Avatar.Size = new System.Drawing.Size(32, 32);
             this.Avatar.TabIndex = 1;
+            // 
+            // txtWorkspace
+            // 
+            this.txtWorkspace.AutoSize = true;
+            this.txtWorkspace.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtWorkspace.Location = new System.Drawing.Point(298, 11);
+            this.txtWorkspace.Name = "txtWorkspace";
+            this.txtWorkspace.Size = new System.Drawing.Size(54, 15);
+            this.txtWorkspace.TabIndex = 5;
+            this.txtWorkspace.Text = "> HOME";
             // 
             // UI_Home
             // 
