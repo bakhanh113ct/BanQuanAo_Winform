@@ -38,18 +38,18 @@ namespace Login
             this.HOME = new Guna.UI2.WinForms.Guna2Button();
             this.MyLogo = new Guna.UI2.WinForms.Guna2Button();
             this.Tool2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.send = new Guna.UI2.WinForms.Guna2Button();
+            this.notify = new Guna.UI2.WinForms.Guna2Button();
+            this.Avatar = new Guna.UI2.WinForms.Guna2Button();
             this.SubProgram = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.info = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.facebook = new Guna.UI2.WinForms.Guna2Button();
+            this.twitter = new Guna.UI2.WinForms.Guna2Button();
+            this.instagram = new Guna.UI2.WinForms.Guna2Button();
             this.tool3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.exit = new Guna.UI2.WinForms.Guna2Button();
             this.zooe_in_out = new Guna.UI2.WinForms.Guna2Button();
             this.minimize = new Guna.UI2.WinForms.Guna2Button();
-            this.facebook = new Guna.UI2.WinForms.Guna2Button();
-            this.twitter = new Guna.UI2.WinForms.Guna2Button();
-            this.instagram = new Guna.UI2.WinForms.Guna2Button();
-            this.send = new Guna.UI2.WinForms.Guna2Button();
-            this.notify = new Guna.UI2.WinForms.Guna2Button();
-            this.Avatar = new Guna.UI2.WinForms.Guna2Button();
             this.Tool.SuspendLayout();
             this.Tool2.SuspendLayout();
             this.info.SuspendLayout();
@@ -67,12 +67,13 @@ namespace Login
             this.Tool.Controls.Add(this.HOME);
             this.Tool.Controls.Add(this.MyLogo);
             this.Tool.FillColor = System.Drawing.Color.White;
-            this.Tool.Location = new System.Drawing.Point(24, 24);
+            this.Tool.Location = new System.Drawing.Point(18, 20);
+            this.Tool.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Tool.Name = "Tool";
             this.Tool.Radius = 4;
             this.Tool.ShadowColor = System.Drawing.Color.Black;
             this.Tool.ShadowShift = 0;
-            this.Tool.Size = new System.Drawing.Size(196, 543);
+            this.Tool.Size = new System.Drawing.Size(147, 441);
             this.Tool.TabIndex = 0;
             // 
             // SETTING
@@ -90,10 +91,11 @@ namespace Login
             this.SETTING.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SETTING.ForeColor = System.Drawing.Color.Black;
             this.SETTING.HoverState.Parent = this.SETTING;
-            this.SETTING.Location = new System.Drawing.Point(0, 370);
+            this.SETTING.Location = new System.Drawing.Point(0, 299);
+            this.SETTING.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SETTING.Name = "SETTING";
             this.SETTING.ShadowDecoration.Parent = this.SETTING;
-            this.SETTING.Size = new System.Drawing.Size(196, 46);
+            this.SETTING.Size = new System.Drawing.Size(147, 37);
             this.SETTING.TabIndex = 6;
             this.SETTING.Text = "SETTING";
             // 
@@ -111,10 +113,11 @@ namespace Login
             this.ANALYSIS.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ANALYSIS.ForeColor = System.Drawing.Color.Black;
             this.ANALYSIS.HoverState.Parent = this.ANALYSIS;
-            this.ANALYSIS.Location = new System.Drawing.Point(0, 324);
+            this.ANALYSIS.Location = new System.Drawing.Point(0, 262);
+            this.ANALYSIS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ANALYSIS.Name = "ANALYSIS";
             this.ANALYSIS.ShadowDecoration.Parent = this.ANALYSIS;
-            this.ANALYSIS.Size = new System.Drawing.Size(196, 46);
+            this.ANALYSIS.Size = new System.Drawing.Size(147, 37);
             this.ANALYSIS.TabIndex = 5;
             this.ANALYSIS.Text = "ANALYSIS";
             // 
@@ -133,10 +136,11 @@ namespace Login
             this.CUSTOMER.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.CUSTOMER.ForeColor = System.Drawing.Color.Black;
             this.CUSTOMER.HoverState.Parent = this.CUSTOMER;
-            this.CUSTOMER.Location = new System.Drawing.Point(0, 278);
+            this.CUSTOMER.Location = new System.Drawing.Point(0, 225);
+            this.CUSTOMER.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CUSTOMER.Name = "CUSTOMER";
             this.CUSTOMER.ShadowDecoration.Parent = this.CUSTOMER;
-            this.CUSTOMER.Size = new System.Drawing.Size(196, 46);
+            this.CUSTOMER.Size = new System.Drawing.Size(147, 37);
             this.CUSTOMER.TabIndex = 4;
             this.CUSTOMER.Text = "CUSTOMER";
             // 
@@ -154,10 +158,11 @@ namespace Login
             this.PARTNER.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.PARTNER.ForeColor = System.Drawing.Color.Black;
             this.PARTNER.HoverState.Parent = this.PARTNER;
-            this.PARTNER.Location = new System.Drawing.Point(0, 232);
+            this.PARTNER.Location = new System.Drawing.Point(0, 188);
+            this.PARTNER.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PARTNER.Name = "PARTNER";
             this.PARTNER.ShadowDecoration.Parent = this.PARTNER;
-            this.PARTNER.Size = new System.Drawing.Size(196, 46);
+            this.PARTNER.Size = new System.Drawing.Size(147, 37);
             this.PARTNER.TabIndex = 3;
             this.PARTNER.Text = "PARTNER";
             // 
@@ -175,10 +180,11 @@ namespace Login
             this.STORE.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.STORE.ForeColor = System.Drawing.Color.Black;
             this.STORE.HoverState.Parent = this.STORE;
-            this.STORE.Location = new System.Drawing.Point(0, 186);
+            this.STORE.Location = new System.Drawing.Point(0, 151);
+            this.STORE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.STORE.Name = "STORE";
             this.STORE.ShadowDecoration.Parent = this.STORE;
-            this.STORE.Size = new System.Drawing.Size(196, 46);
+            this.STORE.Size = new System.Drawing.Size(147, 37);
             this.STORE.TabIndex = 2;
             this.STORE.Text = "STORE";
             // 
@@ -196,10 +202,11 @@ namespace Login
             this.HOME.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.HOME.ForeColor = System.Drawing.Color.Black;
             this.HOME.HoverState.Parent = this.HOME;
-            this.HOME.Location = new System.Drawing.Point(0, 140);
+            this.HOME.Location = new System.Drawing.Point(0, 114);
+            this.HOME.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HOME.Name = "HOME";
             this.HOME.ShadowDecoration.Parent = this.HOME;
-            this.HOME.Size = new System.Drawing.Size(196, 46);
+            this.HOME.Size = new System.Drawing.Size(147, 37);
             this.HOME.TabIndex = 1;
             this.HOME.Text = "HOME";
             // 
@@ -217,9 +224,10 @@ namespace Login
             this.MyLogo.ForeColor = System.Drawing.Color.White;
             this.MyLogo.HoverState.Parent = this.MyLogo;
             this.MyLogo.Location = new System.Drawing.Point(0, 0);
+            this.MyLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MyLogo.Name = "MyLogo";
             this.MyLogo.ShadowDecoration.Parent = this.MyLogo;
-            this.MyLogo.Size = new System.Drawing.Size(196, 140);
+            this.MyLogo.Size = new System.Drawing.Size(147, 114);
             this.MyLogo.TabIndex = 0;
             this.MyLogo.Text = "My Logo";
             // 
@@ -230,180 +238,14 @@ namespace Login
             this.Tool2.Controls.Add(this.notify);
             this.Tool2.Controls.Add(this.Avatar);
             this.Tool2.FillColor = System.Drawing.Color.White;
-            this.Tool2.Location = new System.Drawing.Point(245, 24);
+            this.Tool2.Location = new System.Drawing.Point(184, 20);
+            this.Tool2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Tool2.Name = "Tool2";
             this.Tool2.Radius = 4;
             this.Tool2.ShadowColor = System.Drawing.Color.Black;
             this.Tool2.ShadowShift = 0;
-            this.Tool2.Size = new System.Drawing.Size(815, 46);
+            this.Tool2.Size = new System.Drawing.Size(611, 37);
             this.Tool2.TabIndex = 1;
-            // 
-            // SubProgram
-            // 
-            this.SubProgram.BackColor = System.Drawing.Color.Transparent;
-            this.SubProgram.FillColor = System.Drawing.Color.White;
-            this.SubProgram.Location = new System.Drawing.Point(245, 99);
-            this.SubProgram.Name = "SubProgram";
-            this.SubProgram.Radius = 4;
-            this.SubProgram.ShadowColor = System.Drawing.Color.Black;
-            this.SubProgram.ShadowShift = 0;
-            this.SubProgram.Size = new System.Drawing.Size(914, 543);
-            this.SubProgram.TabIndex = 2;
-            // 
-            // info
-            // 
-            this.info.BackColor = System.Drawing.Color.Transparent;
-            this.info.Controls.Add(this.facebook);
-            this.info.Controls.Add(this.twitter);
-            this.info.Controls.Add(this.instagram);
-            this.info.FillColor = System.Drawing.Color.White;
-            this.info.Location = new System.Drawing.Point(24, 592);
-            this.info.Name = "info";
-            this.info.Radius = 6;
-            this.info.ShadowColor = System.Drawing.Color.Black;
-            this.info.ShadowShift = 0;
-            this.info.Size = new System.Drawing.Size(196, 50);
-            this.info.TabIndex = 3;
-            // 
-            // tool3
-            // 
-            this.tool3.BackColor = System.Drawing.Color.Transparent;
-            this.tool3.Controls.Add(this.exit);
-            this.tool3.Controls.Add(this.zooe_in_out);
-            this.tool3.Controls.Add(this.minimize);
-            this.tool3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
-            this.tool3.Location = new System.Drawing.Point(1080, 12);
-            this.tool3.Name = "tool3";
-            this.tool3.ShadowColor = System.Drawing.Color.Black;
-            this.tool3.ShadowShift = 0;
-            this.tool3.Size = new System.Drawing.Size(92, 30);
-            this.tool3.TabIndex = 4;
-            // 
-            // exit
-            // 
-            this.exit.CheckedState.Parent = this.exit;
-            this.exit.CustomImages.Parent = this.exit;
-            this.exit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.exit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.exit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.exit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.exit.DisabledState.Parent = this.exit;
-            this.exit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
-            this.exit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.exit.ForeColor = System.Drawing.Color.White;
-            this.exit.HoverState.Parent = this.exit;
-            this.exit.Image = global::Login.Properties.Resources.delete_64px;
-            this.exit.ImageSize = new System.Drawing.Size(22, 22);
-            this.exit.Location = new System.Drawing.Point(63, 3);
-            this.exit.Name = "exit";
-            this.exit.ShadowDecoration.Parent = this.exit;
-            this.exit.Size = new System.Drawing.Size(26, 26);
-            this.exit.TabIndex = 2;
-            // 
-            // zooe_in_out
-            // 
-            this.zooe_in_out.CheckedState.Parent = this.zooe_in_out;
-            this.zooe_in_out.CustomImages.Parent = this.zooe_in_out;
-            this.zooe_in_out.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.zooe_in_out.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.zooe_in_out.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.zooe_in_out.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.zooe_in_out.DisabledState.Parent = this.zooe_in_out;
-            this.zooe_in_out.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
-            this.zooe_in_out.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.zooe_in_out.ForeColor = System.Drawing.Color.White;
-            this.zooe_in_out.HoverState.Parent = this.zooe_in_out;
-            this.zooe_in_out.Image = global::Login.Properties.Resources.toggle_full_screen_64px;
-            this.zooe_in_out.ImageSize = new System.Drawing.Size(22, 22);
-            this.zooe_in_out.Location = new System.Drawing.Point(33, 3);
-            this.zooe_in_out.Name = "zooe_in_out";
-            this.zooe_in_out.ShadowDecoration.Parent = this.zooe_in_out;
-            this.zooe_in_out.Size = new System.Drawing.Size(26, 26);
-            this.zooe_in_out.TabIndex = 1;
-            // 
-            // minimize
-            // 
-            this.minimize.CheckedState.Parent = this.minimize;
-            this.minimize.CustomImages.Parent = this.minimize;
-            this.minimize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.minimize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.minimize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.minimize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.minimize.DisabledState.Parent = this.minimize;
-            this.minimize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
-            this.minimize.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.minimize.ForeColor = System.Drawing.Color.White;
-            this.minimize.HoverState.Parent = this.minimize;
-            this.minimize.Image = global::Login.Properties.Resources.minimize_window_64px2;
-            this.minimize.ImageSize = new System.Drawing.Size(22, 22);
-            this.minimize.Location = new System.Drawing.Point(3, 3);
-            this.minimize.Name = "minimize";
-            this.minimize.ShadowDecoration.Parent = this.minimize;
-            this.minimize.Size = new System.Drawing.Size(26, 26);
-            this.minimize.TabIndex = 0;
-            // 
-            // facebook
-            // 
-            this.facebook.CheckedState.Parent = this.facebook;
-            this.facebook.CustomImages.Parent = this.facebook;
-            this.facebook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.facebook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.facebook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.facebook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.facebook.DisabledState.Parent = this.facebook;
-            this.facebook.FillColor = System.Drawing.Color.White;
-            this.facebook.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.facebook.ForeColor = System.Drawing.Color.White;
-            this.facebook.HoverState.Parent = this.facebook;
-            this.facebook.Image = global::Login.Properties.Resources.facebook_64px1;
-            this.facebook.ImageSize = new System.Drawing.Size(29, 29);
-            this.facebook.Location = new System.Drawing.Point(149, 10);
-            this.facebook.Name = "facebook";
-            this.facebook.ShadowDecoration.Parent = this.facebook;
-            this.facebook.Size = new System.Drawing.Size(32, 32);
-            this.facebook.TabIndex = 2;
-            // 
-            // twitter
-            // 
-            this.twitter.CheckedState.Parent = this.twitter;
-            this.twitter.CustomImages.Parent = this.twitter;
-            this.twitter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.twitter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.twitter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.twitter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.twitter.DisabledState.Parent = this.twitter;
-            this.twitter.FillColor = System.Drawing.Color.White;
-            this.twitter.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.twitter.ForeColor = System.Drawing.Color.White;
-            this.twitter.HoverState.Parent = this.twitter;
-            this.twitter.Image = global::Login.Properties.Resources.twitter_squared_64px;
-            this.twitter.ImageSize = new System.Drawing.Size(29, 29);
-            this.twitter.Location = new System.Drawing.Point(82, 9);
-            this.twitter.Name = "twitter";
-            this.twitter.ShadowDecoration.Parent = this.twitter;
-            this.twitter.Size = new System.Drawing.Size(32, 32);
-            this.twitter.TabIndex = 1;
-            // 
-            // instagram
-            // 
-            this.instagram.CheckedState.Parent = this.instagram;
-            this.instagram.CustomImages.Parent = this.instagram;
-            this.instagram.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.instagram.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.instagram.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.instagram.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.instagram.DisabledState.Parent = this.instagram;
-            this.instagram.FillColor = System.Drawing.Color.White;
-            this.instagram.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.instagram.ForeColor = System.Drawing.Color.White;
-            this.instagram.HoverState.Parent = this.instagram;
-            this.instagram.Image = global::Login.Properties.Resources.Instagram_64px;
-            this.instagram.ImageSize = new System.Drawing.Size(29, 29);
-            this.instagram.Location = new System.Drawing.Point(10, 10);
-            this.instagram.Name = "instagram";
-            this.instagram.ShadowDecoration.Parent = this.instagram;
-            this.instagram.Size = new System.Drawing.Size(32, 32);
-            this.instagram.TabIndex = 0;
             // 
             // send
             // 
@@ -420,10 +262,11 @@ namespace Login
             this.send.HoverState.Parent = this.send;
             this.send.Image = global::Login.Properties.Resources.sent_64px1;
             this.send.ImageSize = new System.Drawing.Size(29, 29);
-            this.send.Location = new System.Drawing.Point(114, 7);
+            this.send.Location = new System.Drawing.Point(86, 6);
+            this.send.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.send.Name = "send";
             this.send.ShadowDecoration.Parent = this.send;
-            this.send.Size = new System.Drawing.Size(32, 32);
+            this.send.Size = new System.Drawing.Size(24, 26);
             this.send.TabIndex = 3;
             // 
             // notify
@@ -441,10 +284,11 @@ namespace Login
             this.notify.HoverState.Parent = this.notify;
             this.notify.Image = global::Login.Properties.Resources.notification_64px1;
             this.notify.ImageSize = new System.Drawing.Size(29, 29);
-            this.notify.Location = new System.Drawing.Point(57, 7);
+            this.notify.Location = new System.Drawing.Point(43, 6);
+            this.notify.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.notify.Name = "notify";
             this.notify.ShadowDecoration.Parent = this.notify;
-            this.notify.Size = new System.Drawing.Size(32, 32);
+            this.notify.Size = new System.Drawing.Size(24, 26);
             this.notify.TabIndex = 2;
             // 
             // Avatar
@@ -462,25 +306,203 @@ namespace Login
             this.Avatar.HoverState.Parent = this.Avatar;
             this.Avatar.Image = global::Login.Properties.Resources.avatar_48px;
             this.Avatar.ImageSize = new System.Drawing.Size(29, 29);
-            this.Avatar.Location = new System.Drawing.Point(7, 7);
+            this.Avatar.Location = new System.Drawing.Point(5, 6);
+            this.Avatar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Avatar.Name = "Avatar";
             this.Avatar.ShadowDecoration.Parent = this.Avatar;
-            this.Avatar.Size = new System.Drawing.Size(32, 32);
+            this.Avatar.Size = new System.Drawing.Size(24, 26);
             this.Avatar.TabIndex = 1;
+            // 
+            // SubProgram
+            // 
+            this.SubProgram.BackColor = System.Drawing.Color.Transparent;
+            this.SubProgram.FillColor = System.Drawing.Color.White;
+            this.SubProgram.Location = new System.Drawing.Point(184, 80);
+            this.SubProgram.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SubProgram.Name = "SubProgram";
+            this.SubProgram.Radius = 4;
+            this.SubProgram.ShadowColor = System.Drawing.Color.Black;
+            this.SubProgram.ShadowShift = 0;
+            this.SubProgram.Size = new System.Drawing.Size(686, 441);
+            this.SubProgram.TabIndex = 2;
+            // 
+            // info
+            // 
+            this.info.BackColor = System.Drawing.Color.Transparent;
+            this.info.Controls.Add(this.facebook);
+            this.info.Controls.Add(this.twitter);
+            this.info.Controls.Add(this.instagram);
+            this.info.FillColor = System.Drawing.Color.White;
+            this.info.Location = new System.Drawing.Point(18, 481);
+            this.info.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.info.Name = "info";
+            this.info.Radius = 6;
+            this.info.ShadowColor = System.Drawing.Color.Black;
+            this.info.ShadowShift = 0;
+            this.info.Size = new System.Drawing.Size(147, 41);
+            this.info.TabIndex = 3;
+            // 
+            // facebook
+            // 
+            this.facebook.CheckedState.Parent = this.facebook;
+            this.facebook.CustomImages.Parent = this.facebook;
+            this.facebook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.facebook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.facebook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.facebook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.facebook.DisabledState.Parent = this.facebook;
+            this.facebook.FillColor = System.Drawing.Color.White;
+            this.facebook.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.facebook.ForeColor = System.Drawing.Color.White;
+            this.facebook.HoverState.Parent = this.facebook;
+            this.facebook.Image = global::Login.Properties.Resources.facebook_64px1;
+            this.facebook.ImageSize = new System.Drawing.Size(29, 29);
+            this.facebook.Location = new System.Drawing.Point(112, 8);
+            this.facebook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.facebook.Name = "facebook";
+            this.facebook.ShadowDecoration.Parent = this.facebook;
+            this.facebook.Size = new System.Drawing.Size(24, 26);
+            this.facebook.TabIndex = 2;
+            // 
+            // twitter
+            // 
+            this.twitter.CheckedState.Parent = this.twitter;
+            this.twitter.CustomImages.Parent = this.twitter;
+            this.twitter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.twitter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.twitter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.twitter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.twitter.DisabledState.Parent = this.twitter;
+            this.twitter.FillColor = System.Drawing.Color.White;
+            this.twitter.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.twitter.ForeColor = System.Drawing.Color.White;
+            this.twitter.HoverState.Parent = this.twitter;
+            this.twitter.Image = global::Login.Properties.Resources.twitter_squared_64px;
+            this.twitter.ImageSize = new System.Drawing.Size(29, 29);
+            this.twitter.Location = new System.Drawing.Point(62, 7);
+            this.twitter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.twitter.Name = "twitter";
+            this.twitter.ShadowDecoration.Parent = this.twitter;
+            this.twitter.Size = new System.Drawing.Size(24, 26);
+            this.twitter.TabIndex = 1;
+            // 
+            // instagram
+            // 
+            this.instagram.CheckedState.Parent = this.instagram;
+            this.instagram.CustomImages.Parent = this.instagram;
+            this.instagram.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.instagram.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.instagram.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.instagram.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.instagram.DisabledState.Parent = this.instagram;
+            this.instagram.FillColor = System.Drawing.Color.White;
+            this.instagram.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.instagram.ForeColor = System.Drawing.Color.White;
+            this.instagram.HoverState.Parent = this.instagram;
+            this.instagram.Image = global::Login.Properties.Resources.Instagram_64px;
+            this.instagram.ImageSize = new System.Drawing.Size(29, 29);
+            this.instagram.Location = new System.Drawing.Point(8, 8);
+            this.instagram.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.instagram.Name = "instagram";
+            this.instagram.ShadowDecoration.Parent = this.instagram;
+            this.instagram.Size = new System.Drawing.Size(24, 26);
+            this.instagram.TabIndex = 0;
+            // 
+            // tool3
+            // 
+            this.tool3.BackColor = System.Drawing.Color.Transparent;
+            this.tool3.Controls.Add(this.exit);
+            this.tool3.Controls.Add(this.zooe_in_out);
+            this.tool3.Controls.Add(this.minimize);
+            this.tool3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
+            this.tool3.Location = new System.Drawing.Point(810, 10);
+            this.tool3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tool3.Name = "tool3";
+            this.tool3.ShadowColor = System.Drawing.Color.Black;
+            this.tool3.ShadowShift = 0;
+            this.tool3.Size = new System.Drawing.Size(69, 24);
+            this.tool3.TabIndex = 4;
+            // 
+            // exit
+            // 
+            this.exit.CheckedState.Parent = this.exit;
+            this.exit.CustomImages.Parent = this.exit;
+            this.exit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.exit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.exit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.exit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.exit.DisabledState.Parent = this.exit;
+            this.exit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
+            this.exit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.exit.ForeColor = System.Drawing.Color.White;
+            this.exit.HoverState.Parent = this.exit;
+            this.exit.Image = global::Login.Properties.Resources.delete_64px;
+            this.exit.ImageSize = new System.Drawing.Size(22, 22);
+            this.exit.Location = new System.Drawing.Point(47, 2);
+            this.exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.exit.Name = "exit";
+            this.exit.ShadowDecoration.Parent = this.exit;
+            this.exit.Size = new System.Drawing.Size(20, 21);
+            this.exit.TabIndex = 2;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
+            // zooe_in_out
+            // 
+            this.zooe_in_out.CheckedState.Parent = this.zooe_in_out;
+            this.zooe_in_out.CustomImages.Parent = this.zooe_in_out;
+            this.zooe_in_out.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.zooe_in_out.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.zooe_in_out.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.zooe_in_out.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.zooe_in_out.DisabledState.Parent = this.zooe_in_out;
+            this.zooe_in_out.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
+            this.zooe_in_out.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.zooe_in_out.ForeColor = System.Drawing.Color.White;
+            this.zooe_in_out.HoverState.Parent = this.zooe_in_out;
+            this.zooe_in_out.Image = global::Login.Properties.Resources.toggle_full_screen_64px;
+            this.zooe_in_out.ImageSize = new System.Drawing.Size(22, 22);
+            this.zooe_in_out.Location = new System.Drawing.Point(25, 2);
+            this.zooe_in_out.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.zooe_in_out.Name = "zooe_in_out";
+            this.zooe_in_out.ShadowDecoration.Parent = this.zooe_in_out;
+            this.zooe_in_out.Size = new System.Drawing.Size(20, 21);
+            this.zooe_in_out.TabIndex = 1;
+            // 
+            // minimize
+            // 
+            this.minimize.CheckedState.Parent = this.minimize;
+            this.minimize.CustomImages.Parent = this.minimize;
+            this.minimize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.minimize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.minimize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.minimize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.minimize.DisabledState.Parent = this.minimize;
+            this.minimize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
+            this.minimize.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.minimize.ForeColor = System.Drawing.Color.White;
+            this.minimize.HoverState.Parent = this.minimize;
+            this.minimize.Image = global::Login.Properties.Resources.minimize_window_64px2;
+            this.minimize.ImageSize = new System.Drawing.Size(22, 22);
+            this.minimize.Location = new System.Drawing.Point(2, 2);
+            this.minimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.minimize.Name = "minimize";
+            this.minimize.ShadowDecoration.Parent = this.minimize;
+            this.minimize.Size = new System.Drawing.Size(20, 21);
+            this.minimize.TabIndex = 0;
+            this.minimize.Click += new System.EventHandler(this.minimize_Click);
             // 
             // UI_Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
-            this.ClientSize = new System.Drawing.Size(1184, 666);
+            this.ClientSize = new System.Drawing.Size(888, 541);
             this.Controls.Add(this.tool3);
             this.Controls.Add(this.info);
             this.Controls.Add(this.SubProgram);
             this.Controls.Add(this.Tool2);
             this.Controls.Add(this.Tool);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UI_Home";
             this.Text = "UI_Home";
             this.Tool.ResumeLayout(false);

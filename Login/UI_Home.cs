@@ -17,6 +17,14 @@ namespace Login
             InitializeComponent();
         }
 
-       
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
