@@ -31,6 +31,13 @@ namespace Login
         {
             this.components = new System.ComponentModel.Container();
             this.Tool = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.subbar6 = new System.Windows.Forms.Panel();
+            this.subbar5 = new System.Windows.Forms.Panel();
+            this.subbar4 = new System.Windows.Forms.Panel();
+            this.subbar2 = new System.Windows.Forms.Panel();
+            this.subbar3 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.subbar1 = new System.Windows.Forms.Panel();
             this.SETTING = new Guna.UI2.WinForms.Guna2Button();
             this.ANALYSIS = new Guna.UI2.WinForms.Guna2Button();
             this.CUSTOMER = new Guna.UI2.WinForms.Guna2Button();
@@ -51,10 +58,11 @@ namespace Login
             this.exit = new Guna.UI2.WinForms.Guna2Button();
             this.zooe_in_out = new Guna.UI2.WinForms.Guna2Button();
             this.minimize = new Guna.UI2.WinForms.Guna2Button();
-            this.subbar1 = new System.Windows.Forms.Panel();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.txt_worksp = new System.Windows.Forms.Label();
             this.Tool.SuspendLayout();
+            this.subbar3.SuspendLayout();
             this.Tool2.SuspendLayout();
             this.info.SuspendLayout();
             this.tool3.SuspendLayout();
@@ -63,6 +71,11 @@ namespace Login
             // Tool
             // 
             this.Tool.BackColor = System.Drawing.Color.Transparent;
+            this.Tool.Controls.Add(this.subbar3);
+            this.Tool.Controls.Add(this.subbar6);
+            this.Tool.Controls.Add(this.subbar5);
+            this.Tool.Controls.Add(this.subbar4);
+            this.Tool.Controls.Add(this.subbar2);
             this.Tool.Controls.Add(this.subbar1);
             this.Tool.Controls.Add(this.SETTING);
             this.Tool.Controls.Add(this.ANALYSIS);
@@ -73,13 +86,77 @@ namespace Login
             this.Tool.Controls.Add(this.MyLogo);
             this.Tool.FillColor = System.Drawing.Color.White;
             this.Tool.Location = new System.Drawing.Point(18, 20);
-            this.Tool.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tool.Margin = new System.Windows.Forms.Padding(2);
             this.Tool.Name = "Tool";
-            this.Tool.Radius = 4;
+            this.Tool.Radius = 10;
             this.Tool.ShadowColor = System.Drawing.Color.Black;
             this.Tool.ShadowShift = 0;
             this.Tool.Size = new System.Drawing.Size(147, 441);
             this.Tool.TabIndex = 0;
+            // 
+            // subbar6
+            // 
+            this.subbar6.BackColor = System.Drawing.Color.Fuchsia;
+            this.subbar6.Location = new System.Drawing.Point(142, 299);
+            this.subbar6.Name = "subbar6";
+            this.subbar6.Size = new System.Drawing.Size(5, 37);
+            this.subbar6.TabIndex = 6;
+            this.subbar6.Visible = false;
+            // 
+            // subbar5
+            // 
+            this.subbar5.BackColor = System.Drawing.Color.Fuchsia;
+            this.subbar5.Location = new System.Drawing.Point(142, 262);
+            this.subbar5.Name = "subbar5";
+            this.subbar5.Size = new System.Drawing.Size(5, 37);
+            this.subbar5.TabIndex = 6;
+            this.subbar5.Visible = false;
+            // 
+            // subbar4
+            // 
+            this.subbar4.BackColor = System.Drawing.Color.Fuchsia;
+            this.subbar4.Location = new System.Drawing.Point(142, 225);
+            this.subbar4.Name = "subbar4";
+            this.subbar4.Size = new System.Drawing.Size(5, 37);
+            this.subbar4.TabIndex = 6;
+            this.subbar4.Visible = false;
+            // 
+            // subbar2
+            // 
+            this.subbar2.BackColor = System.Drawing.Color.Fuchsia;
+            this.subbar2.Location = new System.Drawing.Point(142, 151);
+            this.subbar2.Name = "subbar2";
+            this.subbar2.Size = new System.Drawing.Size(5, 37);
+            this.subbar2.TabIndex = 6;
+            this.subbar2.Visible = false;
+            // 
+            // subbar3
+            // 
+            this.subbar3.BackColor = System.Drawing.Color.Fuchsia;
+            this.subbar3.Controls.Add(this.panel3);
+            this.subbar3.Location = new System.Drawing.Point(142, 188);
+            this.subbar3.Name = "subbar3";
+            this.subbar3.Size = new System.Drawing.Size(5, 37);
+            this.subbar3.TabIndex = 6;
+            this.subbar3.Visible = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Fuchsia;
+            this.panel3.Location = new System.Drawing.Point(0, 37);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 37);
+            this.panel3.TabIndex = 6;
+            this.panel3.Visible = false;
+            // 
+            // subbar1
+            // 
+            this.subbar1.BackColor = System.Drawing.Color.Fuchsia;
+            this.subbar1.Location = new System.Drawing.Point(142, 114);
+            this.subbar1.Name = "subbar1";
+            this.subbar1.Size = new System.Drawing.Size(5, 37);
+            this.subbar1.TabIndex = 5;
+            this.subbar1.Visible = false;
             // 
             // SETTING
             // 
@@ -97,12 +174,13 @@ namespace Login
             this.SETTING.ForeColor = System.Drawing.Color.Black;
             this.SETTING.HoverState.Parent = this.SETTING;
             this.SETTING.Location = new System.Drawing.Point(0, 299);
-            this.SETTING.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SETTING.Margin = new System.Windows.Forms.Padding(2);
             this.SETTING.Name = "SETTING";
             this.SETTING.ShadowDecoration.Parent = this.SETTING;
             this.SETTING.Size = new System.Drawing.Size(147, 37);
             this.SETTING.TabIndex = 6;
             this.SETTING.Text = "SETTING";
+            this.SETTING.Click += new System.EventHandler(this.SETTING_Click);
             // 
             // ANALYSIS
             // 
@@ -119,12 +197,13 @@ namespace Login
             this.ANALYSIS.ForeColor = System.Drawing.Color.Black;
             this.ANALYSIS.HoverState.Parent = this.ANALYSIS;
             this.ANALYSIS.Location = new System.Drawing.Point(0, 262);
-            this.ANALYSIS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ANALYSIS.Margin = new System.Windows.Forms.Padding(2);
             this.ANALYSIS.Name = "ANALYSIS";
             this.ANALYSIS.ShadowDecoration.Parent = this.ANALYSIS;
             this.ANALYSIS.Size = new System.Drawing.Size(147, 37);
             this.ANALYSIS.TabIndex = 5;
             this.ANALYSIS.Text = "ANALYSIS";
+            this.ANALYSIS.Click += new System.EventHandler(this.ANALYSIS_Click);
             // 
             // CUSTOMER
             // 
@@ -142,12 +221,13 @@ namespace Login
             this.CUSTOMER.ForeColor = System.Drawing.Color.Black;
             this.CUSTOMER.HoverState.Parent = this.CUSTOMER;
             this.CUSTOMER.Location = new System.Drawing.Point(0, 225);
-            this.CUSTOMER.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CUSTOMER.Margin = new System.Windows.Forms.Padding(2);
             this.CUSTOMER.Name = "CUSTOMER";
             this.CUSTOMER.ShadowDecoration.Parent = this.CUSTOMER;
             this.CUSTOMER.Size = new System.Drawing.Size(147, 37);
             this.CUSTOMER.TabIndex = 4;
             this.CUSTOMER.Text = "CUSTOMER";
+            this.CUSTOMER.Click += new System.EventHandler(this.CUSTOMER_Click);
             // 
             // PARTNER
             // 
@@ -164,12 +244,13 @@ namespace Login
             this.PARTNER.ForeColor = System.Drawing.Color.Black;
             this.PARTNER.HoverState.Parent = this.PARTNER;
             this.PARTNER.Location = new System.Drawing.Point(0, 188);
-            this.PARTNER.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PARTNER.Margin = new System.Windows.Forms.Padding(2);
             this.PARTNER.Name = "PARTNER";
             this.PARTNER.ShadowDecoration.Parent = this.PARTNER;
             this.PARTNER.Size = new System.Drawing.Size(147, 37);
             this.PARTNER.TabIndex = 3;
             this.PARTNER.Text = "PARTNER";
+            this.PARTNER.Click += new System.EventHandler(this.PARTNER_Click);
             // 
             // STORE
             // 
@@ -186,12 +267,13 @@ namespace Login
             this.STORE.ForeColor = System.Drawing.Color.Black;
             this.STORE.HoverState.Parent = this.STORE;
             this.STORE.Location = new System.Drawing.Point(0, 151);
-            this.STORE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.STORE.Margin = new System.Windows.Forms.Padding(2);
             this.STORE.Name = "STORE";
             this.STORE.ShadowDecoration.Parent = this.STORE;
             this.STORE.Size = new System.Drawing.Size(147, 37);
             this.STORE.TabIndex = 2;
             this.STORE.Text = "STORE";
+            this.STORE.Click += new System.EventHandler(this.STORE_Click);
             // 
             // HOME
             // 
@@ -208,7 +290,7 @@ namespace Login
             this.HOME.ForeColor = System.Drawing.Color.Black;
             this.HOME.HoverState.Parent = this.HOME;
             this.HOME.Location = new System.Drawing.Point(0, 114);
-            this.HOME.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HOME.Margin = new System.Windows.Forms.Padding(2);
             this.HOME.Name = "HOME";
             this.HOME.ShadowDecoration.Parent = this.HOME;
             this.HOME.Size = new System.Drawing.Size(147, 37);
@@ -218,6 +300,7 @@ namespace Login
             // 
             // MyLogo
             // 
+            this.MyLogo.BorderRadius = 7;
             this.MyLogo.CheckedState.Parent = this.MyLogo;
             this.MyLogo.CustomImages.Parent = this.MyLogo;
             this.MyLogo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -230,7 +313,7 @@ namespace Login
             this.MyLogo.ForeColor = System.Drawing.Color.White;
             this.MyLogo.HoverState.Parent = this.MyLogo;
             this.MyLogo.Location = new System.Drawing.Point(0, 0);
-            this.MyLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MyLogo.Margin = new System.Windows.Forms.Padding(2);
             this.MyLogo.Name = "MyLogo";
             this.MyLogo.ShadowDecoration.Parent = this.MyLogo;
             this.MyLogo.Size = new System.Drawing.Size(147, 114);
@@ -240,12 +323,13 @@ namespace Login
             // Tool2
             // 
             this.Tool2.BackColor = System.Drawing.Color.Transparent;
+            this.Tool2.Controls.Add(this.txt_worksp);
             this.Tool2.Controls.Add(this.send);
             this.Tool2.Controls.Add(this.notify);
             this.Tool2.Controls.Add(this.Avatar);
             this.Tool2.FillColor = System.Drawing.Color.White;
             this.Tool2.Location = new System.Drawing.Point(184, 20);
-            this.Tool2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tool2.Margin = new System.Windows.Forms.Padding(2);
             this.Tool2.Name = "Tool2";
             this.Tool2.Radius = 4;
             this.Tool2.ShadowColor = System.Drawing.Color.Black;
@@ -269,7 +353,7 @@ namespace Login
             this.send.Image = global::Login.Properties.Resources.sent_64px1;
             this.send.ImageSize = new System.Drawing.Size(29, 29);
             this.send.Location = new System.Drawing.Point(86, 6);
-            this.send.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.send.Margin = new System.Windows.Forms.Padding(2);
             this.send.Name = "send";
             this.send.ShadowDecoration.Parent = this.send;
             this.send.Size = new System.Drawing.Size(24, 26);
@@ -291,7 +375,7 @@ namespace Login
             this.notify.Image = global::Login.Properties.Resources.notification_64px1;
             this.notify.ImageSize = new System.Drawing.Size(29, 29);
             this.notify.Location = new System.Drawing.Point(43, 6);
-            this.notify.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.notify.Margin = new System.Windows.Forms.Padding(2);
             this.notify.Name = "notify";
             this.notify.ShadowDecoration.Parent = this.notify;
             this.notify.Size = new System.Drawing.Size(24, 26);
@@ -313,7 +397,7 @@ namespace Login
             this.Avatar.Image = global::Login.Properties.Resources.avatar_48px;
             this.Avatar.ImageSize = new System.Drawing.Size(29, 29);
             this.Avatar.Location = new System.Drawing.Point(5, 6);
-            this.Avatar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Avatar.Margin = new System.Windows.Forms.Padding(2);
             this.Avatar.Name = "Avatar";
             this.Avatar.ShadowDecoration.Parent = this.Avatar;
             this.Avatar.Size = new System.Drawing.Size(24, 26);
@@ -324,7 +408,7 @@ namespace Login
             this.SubProgram.BackColor = System.Drawing.Color.Transparent;
             this.SubProgram.FillColor = System.Drawing.Color.White;
             this.SubProgram.Location = new System.Drawing.Point(184, 80);
-            this.SubProgram.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SubProgram.Margin = new System.Windows.Forms.Padding(2);
             this.SubProgram.Name = "SubProgram";
             this.SubProgram.Radius = 4;
             this.SubProgram.ShadowColor = System.Drawing.Color.Black;
@@ -340,7 +424,7 @@ namespace Login
             this.info.Controls.Add(this.instagram);
             this.info.FillColor = System.Drawing.Color.White;
             this.info.Location = new System.Drawing.Point(18, 481);
-            this.info.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.info.Margin = new System.Windows.Forms.Padding(2);
             this.info.Name = "info";
             this.info.Radius = 6;
             this.info.ShadowColor = System.Drawing.Color.Black;
@@ -350,7 +434,9 @@ namespace Login
             // 
             // facebook
             // 
+            this.facebook.BorderRadius = 5;
             this.facebook.CheckedState.Parent = this.facebook;
+            this.facebook.Cursor = System.Windows.Forms.Cursors.Hand;
             this.facebook.CustomImages.Parent = this.facebook;
             this.facebook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.facebook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -364,15 +450,18 @@ namespace Login
             this.facebook.Image = global::Login.Properties.Resources.facebook_64px1;
             this.facebook.ImageSize = new System.Drawing.Size(29, 29);
             this.facebook.Location = new System.Drawing.Point(112, 8);
-            this.facebook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.facebook.Margin = new System.Windows.Forms.Padding(2);
             this.facebook.Name = "facebook";
             this.facebook.ShadowDecoration.Parent = this.facebook;
             this.facebook.Size = new System.Drawing.Size(24, 26);
             this.facebook.TabIndex = 2;
+            this.facebook.Click += new System.EventHandler(this.facebook_Click);
             // 
             // twitter
             // 
+            this.twitter.BorderRadius = 5;
             this.twitter.CheckedState.Parent = this.twitter;
+            this.twitter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.twitter.CustomImages.Parent = this.twitter;
             this.twitter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.twitter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -386,15 +475,18 @@ namespace Login
             this.twitter.Image = global::Login.Properties.Resources.twitter_squared_64px;
             this.twitter.ImageSize = new System.Drawing.Size(29, 29);
             this.twitter.Location = new System.Drawing.Point(62, 7);
-            this.twitter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.twitter.Margin = new System.Windows.Forms.Padding(2);
             this.twitter.Name = "twitter";
             this.twitter.ShadowDecoration.Parent = this.twitter;
             this.twitter.Size = new System.Drawing.Size(24, 26);
             this.twitter.TabIndex = 1;
+            this.twitter.Click += new System.EventHandler(this.twitter_Click);
             // 
             // instagram
             // 
+            this.instagram.BorderRadius = 5;
             this.instagram.CheckedState.Parent = this.instagram;
+            this.instagram.Cursor = System.Windows.Forms.Cursors.Hand;
             this.instagram.CustomImages.Parent = this.instagram;
             this.instagram.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.instagram.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -408,11 +500,12 @@ namespace Login
             this.instagram.Image = global::Login.Properties.Resources.Instagram_64px;
             this.instagram.ImageSize = new System.Drawing.Size(29, 29);
             this.instagram.Location = new System.Drawing.Point(8, 8);
-            this.instagram.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.instagram.Margin = new System.Windows.Forms.Padding(2);
             this.instagram.Name = "instagram";
             this.instagram.ShadowDecoration.Parent = this.instagram;
             this.instagram.Size = new System.Drawing.Size(24, 26);
             this.instagram.TabIndex = 0;
+            this.instagram.Click += new System.EventHandler(this.instagram_Click);
             // 
             // tool3
             // 
@@ -422,7 +515,7 @@ namespace Login
             this.tool3.Controls.Add(this.minimize);
             this.tool3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
             this.tool3.Location = new System.Drawing.Point(810, 10);
-            this.tool3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tool3.Margin = new System.Windows.Forms.Padding(2);
             this.tool3.Name = "tool3";
             this.tool3.ShadowColor = System.Drawing.Color.Black;
             this.tool3.ShadowShift = 0;
@@ -445,7 +538,7 @@ namespace Login
             this.exit.Image = global::Login.Properties.Resources.delete_64px;
             this.exit.ImageSize = new System.Drawing.Size(22, 22);
             this.exit.Location = new System.Drawing.Point(47, 2);
-            this.exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.exit.Margin = new System.Windows.Forms.Padding(2);
             this.exit.Name = "exit";
             this.exit.ShadowDecoration.Parent = this.exit;
             this.exit.Size = new System.Drawing.Size(20, 21);
@@ -468,7 +561,7 @@ namespace Login
             this.zooe_in_out.Image = global::Login.Properties.Resources.toggle_full_screen_64px;
             this.zooe_in_out.ImageSize = new System.Drawing.Size(22, 22);
             this.zooe_in_out.Location = new System.Drawing.Point(25, 2);
-            this.zooe_in_out.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.zooe_in_out.Margin = new System.Windows.Forms.Padding(2);
             this.zooe_in_out.Name = "zooe_in_out";
             this.zooe_in_out.ShadowDecoration.Parent = this.zooe_in_out;
             this.zooe_in_out.Size = new System.Drawing.Size(20, 21);
@@ -490,21 +583,12 @@ namespace Login
             this.minimize.Image = global::Login.Properties.Resources.minimize_window_64px2;
             this.minimize.ImageSize = new System.Drawing.Size(22, 22);
             this.minimize.Location = new System.Drawing.Point(2, 2);
-            this.minimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.minimize.Margin = new System.Windows.Forms.Padding(2);
             this.minimize.Name = "minimize";
             this.minimize.ShadowDecoration.Parent = this.minimize;
             this.minimize.Size = new System.Drawing.Size(20, 21);
             this.minimize.TabIndex = 0;
             this.minimize.Click += new System.EventHandler(this.minimize_Click);
-            // 
-            // subbar1
-            // 
-            this.subbar1.BackColor = System.Drawing.Color.Fuchsia;
-            this.subbar1.Location = new System.Drawing.Point(137, 114);
-            this.subbar1.Name = "subbar1";
-            this.subbar1.Size = new System.Drawing.Size(10, 37);
-            this.subbar1.TabIndex = 5;
-            this.subbar1.Visible = false;
             // 
             // guna2AnimateWindow1
             // 
@@ -514,22 +598,36 @@ namespace Login
             // 
             this.guna2DragControl1.TargetControl = this;
             // 
+            // txt_worksp
+            // 
+            this.txt_worksp.AutoSize = true;
+            this.txt_worksp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txt_worksp.ForeColor = System.Drawing.Color.LightGray;
+            this.txt_worksp.Location = new System.Drawing.Point(225, 11);
+            this.txt_worksp.Name = "txt_worksp";
+            this.txt_worksp.Size = new System.Drawing.Size(97, 17);
+            this.txt_worksp.TabIndex = 4;
+            this.txt_worksp.Text = "My workspace";
+            // 
             // UI_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(888, 541);
+            this.Controls.Add(this.Tool);
             this.Controls.Add(this.tool3);
             this.Controls.Add(this.info);
             this.Controls.Add(this.SubProgram);
             this.Controls.Add(this.Tool2);
-            this.Controls.Add(this.Tool);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(1366, 728);
             this.Name = "UI_Home";
             this.Text = "UI_Home";
             this.Tool.ResumeLayout(false);
+            this.subbar3.ResumeLayout(false);
             this.Tool2.ResumeLayout(false);
+            this.Tool2.PerformLayout();
             this.info.ResumeLayout(false);
             this.tool3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -562,5 +660,12 @@ namespace Login
         private System.Windows.Forms.Panel subbar1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private System.Windows.Forms.Panel subbar6;
+        private System.Windows.Forms.Panel subbar5;
+        private System.Windows.Forms.Panel subbar4;
+        private System.Windows.Forms.Panel subbar3;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel subbar2;
+        private System.Windows.Forms.Label txt_worksp;
     }
 }
