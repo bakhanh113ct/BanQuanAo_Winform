@@ -29,9 +29,11 @@ namespace Login
             foreach (Guna2Button x in Home_button)
             {
                 x.ForeColor = Color.Black;
+                x.FillColor = Color.White;
             }
             panel.Visible = true;
-            button.ForeColor = Color.Fuchsia;
+            button.ForeColor = Color.FromArgb(216, 19, 248);
+            button.FillColor = Color.FromArgb(251, 237, 250);
         }
 
         private void AddSubbarandHomeButton()
