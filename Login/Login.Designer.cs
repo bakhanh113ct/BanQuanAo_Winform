@@ -47,7 +47,9 @@ namespace Login
             this.PrgLogin = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.PhanTram = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Gif_Logo = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Gif_Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -272,8 +274,19 @@ namespace Login
             this.PhanTram.BackColor = System.Drawing.Color.Transparent;
             this.PhanTram.Location = new System.Drawing.Point(178, 484);
             this.PhanTram.Name = "PhanTram";
-            this.PhanTram.Size = new System.Drawing.Size(3, 2);
+            this.PhanTram.Size = new System.Drawing.Size(0, 0);
             this.PhanTram.TabIndex = 19;
+            this.PhanTram.Text = null;
+            // 
+            // Gif_Logo
+            // 
+            this.Gif_Logo.Image = global::Login.Properties.Resources.Logo;
+            this.Gif_Logo.Location = new System.Drawing.Point(35, 86);
+            this.Gif_Logo.Name = "Gif_Logo";
+            this.Gif_Logo.Size = new System.Drawing.Size(302, 328);
+            this.Gif_Logo.TabIndex = 20;
+            this.Gif_Logo.TabStop = false;
+            this.Gif_Logo.Visible = false;
             // 
             // Login
             // 
@@ -281,6 +294,7 @@ namespace Login
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(361, 524);
+            this.Controls.Add(this.Gif_Logo);
             this.Controls.Add(this.PhanTram);
             this.Controls.Add(this.PrgLogin);
             this.Controls.Add(this.guna2Panel1);
@@ -296,6 +310,7 @@ namespace Login
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Gif_Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,5 +334,6 @@ namespace Login
         private Guna.UI2.WinForms.Guna2ProgressBar PrgLogin;
         private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2HtmlLabel PhanTram;
+        private System.Windows.Forms.PictureBox Gif_Logo;
     }
 }

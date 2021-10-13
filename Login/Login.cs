@@ -26,6 +26,7 @@ namespace Login
             if (dt.Rows.Count > 0)
             {
                 PrgLogin.Value = 0;
+                Gif_Logo.Visible = true;
                 timer1.Start();
             }
             else
@@ -46,7 +47,7 @@ namespace Login
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            PrgLogin.Increment(2);
+            PrgLogin.Increment(3);
             PhanTram.Text = PrgLogin.ProgressPercentText;
 
             if (PrgLogin.ProgressPercentText == "100%")
@@ -55,7 +56,7 @@ namespace Login
                 this.Hide();
                 UI_Home H = new UI_Home();
                 H.ShowDialog();
-                this.Show();
+                //this.Show();
             }
         }
     }
