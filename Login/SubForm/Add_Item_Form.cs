@@ -35,6 +35,7 @@ namespace Login.SubForm
         }
         public void Insert(byte[] image)
         {
+            int check = 0;
             if (sqlCon == null)
             {
                 sqlCon = new SqlConnection(strCon);
@@ -55,27 +56,52 @@ namespace Login.SubForm
             sqlCmd.Parameters.AddWithValue("@Loai", txbLoai.Text);
             sqlCmd.Parameters.AddWithValue("@Anh", image);
             sqlCmd.Connection = sqlCon;
-            sqlCmd.ExecuteNonQuery();
+            try
+            {
+                check = sqlCmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                MessageBox.Show("Them khong thanh cong.");
+            }
+            if (check != 0)
+                MessageBox.Show("Them thanh cong.");
         }
 
 
         byte[] ConvertoByte(Image img)
         {
-            using (MemoryStream ms = new MemoryStream())
+            if(img != null)
             {
-                img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                return ms.ToArray();
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                    return ms.ToArray();
+                }
             }
+            else
+            {
+                MessageBox.Show("Chua them anh");
+            }
+            return null;
+            
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Insert(ConvertoByte(picture.Image));
+            byte[] imgbyte = ConvertoByte(picture.Image);
+            if (imgbyte != null)
+                Insert(imgbyte);
         }
 
         private void exit_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

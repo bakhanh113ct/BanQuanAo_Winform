@@ -74,16 +74,18 @@ namespace Login
             this.cbbFilter.HoverState.Parent = this.cbbFilter;
             this.cbbFilter.ItemHeight = 30;
             this.cbbFilter.Items.AddRange(new object[] {
-            "Ao",
-            "Quan",
-            "Giay",
-            "Dep"});
+            "Áo",
+            "Quần",
+            "Giày, Dép",
+            "Mũ",
+            "Tất cả"});
             this.cbbFilter.ItemsAppearance.Parent = this.cbbFilter;
             this.cbbFilter.Location = new System.Drawing.Point(13, 5);
             this.cbbFilter.Name = "cbbFilter";
             this.cbbFilter.ShadowDecoration.Parent = this.cbbFilter;
-            this.cbbFilter.Size = new System.Drawing.Size(103, 36);
+            this.cbbFilter.Size = new System.Drawing.Size(152, 36);
             this.cbbFilter.TabIndex = 5;
+            this.cbbFilter.SelectedIndexChanged += new System.EventHandler(this.cbbFilter_SelectedIndexChanged);
             // 
             // txbSearch
             // 
