@@ -106,6 +106,18 @@
     <Compile Include="Performance\Store_performence.Designer.cs">
       <DependentUpon>Store_performence.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubForm\Add_Item_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Add_Item_Form.Designer.cs">
+      <DependentUpon>Add_Item_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Edit_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Edit_Form.Designer.cs">
+      <DependentUpon>Edit_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI_Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +160,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Performance\Store_performence.resx">
       <DependentUpon>Store_performence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Add_Item_Form.resx">
+      <DependentUpon>Add_Item_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Edit_Form.resx">
+      <DependentUpon>Edit_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI_Home.resx">
       <DependentUpon>UI_Home.cs</DependentUpon>

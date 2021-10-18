@@ -16,5 +16,16 @@ namespace Login.Control_User
         {
             InitializeComponent();
         }
+
+        private void picture_Click(object sender, EventArgs e)
+        {
+            SubForm.Edit_Form editform = new SubForm.Edit_Form();
+            editform.ShowDialog();
+        }
+
+        private void btn_Background_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
