@@ -274,14 +274,14 @@ namespace Login
             this.PhanTram.BackColor = System.Drawing.Color.Transparent;
             this.PhanTram.Location = new System.Drawing.Point(178, 484);
             this.PhanTram.Name = "PhanTram";
-            this.PhanTram.Size = new System.Drawing.Size(0, 0);
+            this.PhanTram.Size = new System.Drawing.Size(3, 2);
             this.PhanTram.TabIndex = 19;
             this.PhanTram.Text = null;
             // 
             // Gif_Logo
             // 
             this.Gif_Logo.Image = global::Login.Properties.Resources.Logo;
-            this.Gif_Logo.Location = new System.Drawing.Point(35, 86);
+            this.Gif_Logo.Location = new System.Drawing.Point(25, 86);
             this.Gif_Logo.Name = "Gif_Logo";
             this.Gif_Logo.Size = new System.Drawing.Size(302, 328);
             this.Gif_Logo.TabIndex = 20;

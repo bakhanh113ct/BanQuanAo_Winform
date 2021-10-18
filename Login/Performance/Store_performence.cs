@@ -16,5 +16,11 @@ namespace Login
         {
             InitializeComponent();
         }
+
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            Control_User.Item item = new Control_User.Item();
+            flpnStore.Controls.Add(item);
+        }
     }
 }
