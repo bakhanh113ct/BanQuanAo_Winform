@@ -79,15 +79,7 @@ namespace Login
             flpnStore.Controls.Clear();
             LoadPanel("select * from SanPham");
         }
-        //Chuyển ảnh sang byte
-        byte[] ConvertoByte(Image img)
-        {
-            using (MemoryStream ms = new MemoryStream())
-            {
-                img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                return ms.ToArray();
-            }
-        }
+
         //Chuyển byte sang ảnh
         public Image ConvertoImage(byte[] data)
         {

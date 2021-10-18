@@ -45,6 +45,7 @@ namespace Login.SubForm
             this.txbMota = new Guna.UI2.WinForms.Guna2TextBox();
             this.txbLoai = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnUpload = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.txbNhacungcap = new Guna.UI2.WinForms.Guna2TextBox();
             this.tool3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
@@ -71,7 +72,7 @@ namespace Login.SubForm
             this.txbGiaTien.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txbGiaTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbGiaTien.HoverState.Parent = this.txbGiaTien;
-            this.txbGiaTien.Location = new System.Drawing.Point(26, 94);
+            this.txbGiaTien.Location = new System.Drawing.Point(26, 79);
             this.txbGiaTien.Margin = new System.Windows.Forms.Padding(0);
             this.txbGiaTien.Name = "txbGiaTien";
             this.txbGiaTien.PasswordChar = '\0';
@@ -95,7 +96,7 @@ namespace Login.SubForm
             this.txbSoLuong.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txbSoLuong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbSoLuong.HoverState.Parent = this.txbSoLuong;
-            this.txbSoLuong.Location = new System.Drawing.Point(26, 140);
+            this.txbSoLuong.Location = new System.Drawing.Point(26, 122);
             this.txbSoLuong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbSoLuong.Name = "txbSoLuong";
             this.txbSoLuong.PasswordChar = '\0';
@@ -239,10 +240,10 @@ namespace Login.SubForm
             // 
             this.picture.FillColor = System.Drawing.Color.Silver;
             this.picture.ImageRotate = 0F;
-            this.picture.Location = new System.Drawing.Point(414, 36);
+            this.picture.Location = new System.Drawing.Point(408, 36);
             this.picture.Name = "picture";
             this.picture.ShadowDecoration.Parent = this.picture;
-            this.picture.Size = new System.Drawing.Size(261, 230);
+            this.picture.Size = new System.Drawing.Size(267, 248);
             this.picture.TabIndex = 0;
             this.picture.TabStop = false;
             // 
@@ -260,7 +261,7 @@ namespace Login.SubForm
             this.txbTen.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txbTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbTen.HoverState.Parent = this.txbTen;
-            this.txbTen.Location = new System.Drawing.Point(26, 45);
+            this.txbTen.Location = new System.Drawing.Point(26, 36);
             this.txbTen.Margin = new System.Windows.Forms.Padding(0);
             this.txbTen.Name = "txbTen";
             this.txbTen.PasswordChar = '\0';
@@ -284,7 +285,7 @@ namespace Login.SubForm
             this.txbMota.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txbMota.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbMota.HoverState.Parent = this.txbMota;
-            this.txbMota.Location = new System.Drawing.Point(26, 187);
+            this.txbMota.Location = new System.Drawing.Point(26, 165);
             this.txbMota.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbMota.Name = "txbMota";
             this.txbMota.PasswordChar = '\0';
@@ -308,7 +309,7 @@ namespace Login.SubForm
             this.txbLoai.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txbLoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbLoai.HoverState.Parent = this.txbLoai;
-            this.txbLoai.Location = new System.Drawing.Point(26, 236);
+            this.txbLoai.Location = new System.Drawing.Point(26, 208);
             this.txbLoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbLoai.Name = "txbLoai";
             this.txbLoai.PasswordChar = '\0';
@@ -334,7 +335,7 @@ namespace Login.SubForm
             this.btnUpload.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnUpload.ForeColor = System.Drawing.Color.White;
             this.btnUpload.HoverState.Parent = this.btnUpload;
-            this.btnUpload.Location = new System.Drawing.Point(546, 285);
+            this.btnUpload.Location = new System.Drawing.Point(546, 302);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.ShadowDecoration.Parent = this.btnUpload;
             this.btnUpload.Size = new System.Drawing.Size(128, 33);
@@ -342,12 +343,37 @@ namespace Login.SubForm
             this.btnUpload.Text = "Upload";
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
+            // txbNhacungcap
+            // 
+            this.txbNhacungcap.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbNhacungcap.DefaultText = "";
+            this.txbNhacungcap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txbNhacungcap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txbNhacungcap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbNhacungcap.DisabledState.Parent = this.txbNhacungcap;
+            this.txbNhacungcap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbNhacungcap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbNhacungcap.FocusedState.Parent = this.txbNhacungcap;
+            this.txbNhacungcap.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txbNhacungcap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbNhacungcap.HoverState.Parent = this.txbNhacungcap;
+            this.txbNhacungcap.Location = new System.Drawing.Point(26, 251);
+            this.txbNhacungcap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txbNhacungcap.Name = "txbNhacungcap";
+            this.txbNhacungcap.PasswordChar = '\0';
+            this.txbNhacungcap.PlaceholderText = "Nhà cung cấp";
+            this.txbNhacungcap.SelectedText = "";
+            this.txbNhacungcap.ShadowDecoration.Parent = this.txbNhacungcap;
+            this.txbNhacungcap.Size = new System.Drawing.Size(277, 30);
+            this.txbNhacungcap.TabIndex = 10;
+            // 
             // Add_Item_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(700, 400);
+            this.Controls.Add(this.txbNhacungcap);
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.txbLoai);
             this.Controls.Add(this.txbMota);
@@ -383,5 +409,6 @@ namespace Login.SubForm
         private Guna.UI2.WinForms.Guna2TextBox txbMota;
         private Guna.UI2.WinForms.Guna2TextBox txbLoai;
         private Guna.UI2.WinForms.Guna2GradientButton btnUpload;
+        private Guna.UI2.WinForms.Guna2TextBox txbNhacungcap;
     }
 }
