@@ -16,5 +16,10 @@ namespace Login.SubForm
         {
             InitializeComponent();
         }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

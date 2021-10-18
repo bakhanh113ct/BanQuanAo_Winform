@@ -16,7 +16,7 @@ namespace Login
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SubForm.Add_Item_Form());
+            Application.Run(new UI_Home());
         }
     }
 }
