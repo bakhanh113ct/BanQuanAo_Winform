@@ -12,12 +12,14 @@ namespace Login
 {
     public partial class UI_Home : Form
     {
+        public Store_performence Store;
         List<Panel> subbar = new List<Panel>();
         List<Guna2Button> Home_button = new List<Guna2Button>(); 
         public UI_Home()
         {
             InitializeComponent();
             AddSubbarandHomeButton();
+            Store = new Store_performence();
         }
 
         private void subbar_Change(Panel panel, Guna.UI2.WinForms.Guna2Button button)
@@ -83,7 +85,7 @@ namespace Login
         private void STORE_Click(object sender, EventArgs e)
         {
             subbar_Change(subbar2, STORE);
-            openPerformance(new Store_performence());
+            openPerformance(Store);
         }
 
         private void PARTNER_Click(object sender, EventArgs e)

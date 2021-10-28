@@ -32,6 +32,7 @@ namespace Login.SubForm
             {
                 picture.Image = Image.FromFile(ofd.FileName);
             }
+            picture.SizeMode = PictureBoxSizeMode.CenterImage;
         }
         public void Insert(byte[] image)
         {

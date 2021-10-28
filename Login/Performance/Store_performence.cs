@@ -14,11 +14,20 @@ namespace Login
 {
     public partial class Store_performence : Form
     {
+        public SubForm.Edit_Form editform = new SubForm.Edit_Form();
         string strCon = "Data Source=DESKTOP-LBAULH5;Initial Catalog=QuanLyKho;Integrated Security=True";
         SqlConnection sqlCon = null;
         public Store_performence()
         {
             InitializeComponent();
+            if (sqlCon == null)
+            {
+                sqlCon = new SqlConnection(strCon);
+            }
+            if (sqlCon.State == ConnectionState.Closed)
+            {
+                sqlCon.Open();
+            }
         }
         private void Store_performence_Load(object sender, EventArgs e)
         {
@@ -45,7 +54,6 @@ namespace Login
             SqlDataReader reader = sqlCmd.ExecuteReader();
             while (reader.Read())
             {
-                Control_User.Item u = new Control_User.Item();
                 string Ten = reader.GetString(1).Trim();
                 double gia = reader.GetFloat(2);
                 int soluong = reader.GetInt32(3);
@@ -53,16 +61,9 @@ namespace Login
                 int daban = reader.GetInt32(5);
                 string mota = reader.GetString(6);
                 string Loai = reader.GetString(7);
-                //Load
-                u.lbName.Text = Ten;
-                u.btnGia.Text = gia.ToString() + " VND";
-                u.SoLuong.Text = "SL: " + soluong.ToString();
-                u.DaBan.Text = "Ban: " + daban.ToString();
-                if (soluong > 0)
-                {
-                    u.btnTinhTrang.Text = "Còn";
-                    u.btnTinhTrang.FillColor = Color.FromArgb(68, 201, 97);
-                }
+                //Tạo Usercontrol
+                Control_User.Item u = new Control_User.Item(Ten, gia, soluong, danhgia, daban, mota, Loai);
+                u.editform = editform;
                 //Load ảnh
                 byte[] b = null;
                 b = (byte[])reader.GetValue(8);
@@ -74,7 +75,7 @@ namespace Login
             reader.Close();
         }
         //Load lại flowlayoutpanel
-        private void btnReload_Click(object sender, EventArgs e)
+        public void btnReload_Click(object sender, EventArgs e)
         {
             flpnStore.Controls.Clear();
             LoadPanel("select * from SanPham");
@@ -92,7 +93,8 @@ namespace Login
         private void btnAdd_Click(object sender, EventArgs e)
         {
             SubForm.Add_Item_Form additem = new SubForm.Add_Item_Form();
-            additem.ShowDialog();
+            additem.ShowDialog(this);
+            this.LoadPanel("select * from SanPham");
         }
 
         private void cbbFilter_SelectedIndexChanged(object sender, EventArgs e)

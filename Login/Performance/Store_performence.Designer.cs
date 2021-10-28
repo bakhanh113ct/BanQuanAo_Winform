@@ -155,6 +155,7 @@ namespace Login
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Store_performence";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Store_performence";
             this.Load += new System.EventHandler(this.Store_performence_Load);
             this.ResumeLayout(false);
