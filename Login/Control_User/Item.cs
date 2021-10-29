@@ -60,6 +60,12 @@ namespace Login.Control_User
                 return true;
             return false;
         }
+        private bool Check_delete(SubForm.Edit_Form editform)
+        {
+            if (editform.check_delete_click == true)
+                return true;
+            return false;
+        }
         private void picture_Click(object sender, EventArgs e)
         {
             //SubForm.Edit_Form editform = new SubForm.Edit_Form();
@@ -74,6 +80,8 @@ namespace Login.Control_User
             editform.ShowDialog();
             if(Check_Change(editform))
                 Reload(editform);
+            if (Check_delete(editform))
+                this.Dispose();
         }
 
         private void btn_Background_Click(object sender, EventArgs e)

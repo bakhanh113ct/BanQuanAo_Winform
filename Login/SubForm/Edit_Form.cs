@@ -15,21 +15,13 @@ namespace Login.SubForm
     public partial class Edit_Form : Form
     {
         public bool check_save_click = false;
-        
+        public bool check_delete_click = false;
         string strCon = "Data Source=DESKTOP-LBAULH5;Initial Catalog=QuanLyKho;Integrated Security=True";
         SqlConnection sqlCon = null;
         string old_Name;
         public Edit_Form()
         {
             InitializeComponent();
-            if (sqlCon == null)
-            {
-                sqlCon = new SqlConnection(strCon);
-            }
-            if (sqlCon.State == ConnectionState.Closed)
-            {
-                sqlCon.Open();
-            }
         }
 
         private void exit_Click(object sender, EventArgs e)
@@ -106,6 +98,7 @@ namespace Login.SubForm
             }
             if (check != 0)
             {
+                check_delete_click = true;
                 MessageBox.Show("Xoa thanh cong.");
                 this.Close();
             }
@@ -143,7 +136,8 @@ namespace Login.SubForm
         private void Edit_Form_Load(object sender, EventArgs e)
         {
             old_Name = txbTen.Text;
-            
+            check_save_click = false;
+            check_delete_click = false;
         }
     }
 }
