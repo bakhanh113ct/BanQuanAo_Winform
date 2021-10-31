@@ -14,7 +14,7 @@ namespace Login
 {
     public partial class Store_performence : Form
     {
-        public SubForm.Edit_Form editform = new SubForm.Edit_Form();
+        public SubForm.Edit_Form editform = new SubForm.Edit_Form();    //mọi item đều có chung 1 form edit
         string strCon = "Data Source=DESKTOP-LBAULH5;Initial Catalog=QuanLyKho;Integrated Security=True";
         SqlConnection sqlCon = null;
         public Store_performence()
@@ -54,12 +54,14 @@ namespace Login
                 string Loai = reader.GetString(7);
                 //Tạo Usercontrol
                 Control_User.Item u = new Control_User.Item(Ten, gia, soluong, danhgia, daban, mota, Loai);
-                u.editform = editform;
+                u.editform = editform;  //tham chiếu tới từng item
                 //Load ảnh
                 byte[] b = null;
                 b = (byte[])reader.GetValue(8);
                 u.picture.Image = ConvertoImage(b);
                 u.picture.SizeMode = PictureBoxSizeMode.CenterImage;
+                //
+                u.btnBuy.Hide();
                 // Thêm vào panel
                 flpnStore.Controls.Add(u);
             }

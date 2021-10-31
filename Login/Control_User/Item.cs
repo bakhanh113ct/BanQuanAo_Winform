@@ -12,7 +12,9 @@ namespace Login.Control_User
 {
     public partial class Item : UserControl
     {
-        public SubForm.Edit_Form editform;
+        public SubForm.Edit_Form editform;      //tạo 1 form edit để tham chiếu tới form edit từ store_performence
+
+        //Thông tin của từng item 
         public string Ten;
         public double gia;
         public int soluong;
@@ -31,11 +33,12 @@ namespace Login.Control_User
             this.daban = daban;
             this.mota = mota;
             this.Loai = Loai;
-
+            btnTinhTrang.BackColor = Color.Transparent;
             lbName.Text = Ten;
             if (soluong > 0)
             {
                 btnTinhTrang.Text = "Còn";
+                btnTinhTrang.BackColor = Color.Transparent;
                 btnTinhTrang.FillColor = Color.FromArgb(68, 201, 97);
             }
             btnGia.Text = gia.ToString() + " VND";
@@ -68,7 +71,7 @@ namespace Login.Control_User
         }
         private void picture_Click(object sender, EventArgs e)
         {
-            //SubForm.Edit_Form editform = new SubForm.Edit_Form();
+            //gán thông tin của item cho form edit
             editform.txbTen.Text = this.Ten;
             editform.txbGiaTien.Text = gia.ToString();
             editform.txbSoLuong.Text = soluong.ToString();
@@ -77,12 +80,12 @@ namespace Login.Control_User
             editform.txbNhacungcap.Text = "a";
             editform.picture.Image = this.picture.Image;
             editform.picture.SizeMode = PictureBoxSizeMode.CenterImage;
+            //
             editform.ShowDialog();
             if(Check_Change(editform))
                 Reload(editform);
             if (Check_delete(editform))
-                //this.Dispose();
-                MessageBox.Show("a");
+                this.Dispose();
         }
 
         private void btn_Background_Click(object sender, EventArgs e)

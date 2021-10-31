@@ -29,37 +29,19 @@ namespace Login.Control_User
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnTinhTrang = new Guna.UI2.WinForms.Guna2Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Item));
             this.lbName = new System.Windows.Forms.Label();
             this.btnGia = new Guna.UI2.WinForms.Guna2Button();
             this.DaBan = new System.Windows.Forms.Label();
             this.SoLuong = new System.Windows.Forms.Label();
-            this.picture = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.picture = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnBuy = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnTinhTrang = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
+            this.picture.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnTinhTrang
-            // 
-            this.btnTinhTrang.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTinhTrang.BorderRadius = 7;
-            this.btnTinhTrang.CheckedState.Parent = this.btnTinhTrang;
-            this.btnTinhTrang.CustomImages.Parent = this.btnTinhTrang;
-            this.btnTinhTrang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTinhTrang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTinhTrang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTinhTrang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTinhTrang.DisabledState.Parent = this.btnTinhTrang;
-            this.btnTinhTrang.FillColor = System.Drawing.Color.Red;
-            this.btnTinhTrang.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnTinhTrang.ForeColor = System.Drawing.Color.White;
-            this.btnTinhTrang.HoverState.Parent = this.btnTinhTrang;
-            this.btnTinhTrang.Location = new System.Drawing.Point(5, 4);
-            this.btnTinhTrang.Name = "btnTinhTrang";
-            this.btnTinhTrang.ShadowDecoration.Parent = this.btnTinhTrang;
-            this.btnTinhTrang.Size = new System.Drawing.Size(49, 20);
-            this.btnTinhTrang.TabIndex = 1;
-            this.btnTinhTrang.Text = "Hết";
             // 
             // lbName
             // 
@@ -115,10 +97,33 @@ namespace Login.Control_User
             this.SoLuong.Text = "SoLuong";
             this.SoLuong.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
+            // guna2CustomGradientPanel1
+            // 
+            this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(19)))), ((int)(((byte)(248)))));
+            this.guna2CustomGradientPanel1.BorderRadius = 5;
+            this.guna2CustomGradientPanel1.BorderThickness = 1;
+            this.guna2CustomGradientPanel1.Controls.Add(this.btnTinhTrang);
+            this.guna2CustomGradientPanel1.Controls.Add(this.picture);
+            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2CustomGradientPanel1.ForeColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(155, 185);
+            this.guna2CustomGradientPanel1.TabIndex = 8;
+            // 
             // picture
             // 
+            this.picture.BackColor = System.Drawing.Color.Transparent;
             this.picture.BorderRadius = 5;
-            this.picture.FillColor = System.Drawing.Color.LightGray;
+            this.picture.Controls.Add(this.btnBuy);
+            this.picture.FillColor = System.Drawing.Color.Silver;
             this.picture.ImageRotate = 0F;
             this.picture.Location = new System.Drawing.Point(3, 3);
             this.picture.Name = "picture";
@@ -128,45 +133,77 @@ namespace Login.Control_User
             this.picture.TabStop = false;
             this.picture.Click += new System.EventHandler(this.picture_Click);
             // 
-            // guna2CustomGradientPanel1
+            // btnBuy
             // 
-            this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(19)))), ((int)(((byte)(248)))));
-            this.guna2CustomGradientPanel1.BorderRadius = 5;
-            this.guna2CustomGradientPanel1.BorderThickness = 1;
-            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(155, 185);
-            this.guna2CustomGradientPanel1.TabIndex = 8;
+            this.btnBuy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuy.BackgroundImage")));
+            this.btnBuy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBuy.CheckedState.Parent = this.btnBuy;
+            this.btnBuy.CustomImages.Parent = this.btnBuy;
+            this.btnBuy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBuy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBuy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBuy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBuy.DisabledState.Parent = this.btnBuy;
+            this.btnBuy.FillColor = System.Drawing.Color.Transparent;
+            this.btnBuy.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBuy.ForeColor = System.Drawing.Color.White;
+            this.btnBuy.HoverState.Parent = this.btnBuy;
+            this.btnBuy.Location = new System.Drawing.Point(119, 2);
+            this.btnBuy.Name = "btnBuy";
+            this.btnBuy.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnBuy.ShadowDecoration.Parent = this.btnBuy;
+            this.btnBuy.Size = new System.Drawing.Size(27, 27);
+            this.btnBuy.TabIndex = 0;
+            // 
+            // btnTinhTrang
+            // 
+            this.btnTinhTrang.BorderRadius = 7;
+            this.btnTinhTrang.CheckedState.Parent = this.btnTinhTrang;
+            this.btnTinhTrang.CustomImages.Parent = this.btnTinhTrang;
+            this.btnTinhTrang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTinhTrang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTinhTrang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTinhTrang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTinhTrang.DisabledState.Parent = this.btnTinhTrang;
+            this.btnTinhTrang.FillColor = System.Drawing.Color.Red;
+            this.btnTinhTrang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnTinhTrang.ForeColor = System.Drawing.Color.White;
+            this.btnTinhTrang.HoverState.Parent = this.btnTinhTrang;
+            this.btnTinhTrang.Location = new System.Drawing.Point(3, 5);
+            this.btnTinhTrang.Name = "btnTinhTrang";
+            this.btnTinhTrang.ShadowDecoration.Parent = this.btnTinhTrang;
+            this.btnTinhTrang.Size = new System.Drawing.Size(49, 20);
+            this.btnTinhTrang.TabIndex = 9;
+            this.btnTinhTrang.Text = "Hết";
             // 
             // Item
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.SoLuong);
             this.Controls.Add(this.DaBan);
             this.Controls.Add(this.btnGia);
             this.Controls.Add(this.lbName);
-            this.Controls.Add(this.btnTinhTrang);
-            this.Controls.Add(this.picture);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Name = "Item";
             this.Size = new System.Drawing.Size(155, 185);
+            this.guna2CustomGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
+            this.picture.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        public Guna.UI2.WinForms.Guna2Button btnTinhTrang;
         public System.Windows.Forms.Label lbName;
         public Guna.UI2.WinForms.Guna2Button btnGia;
         public System.Windows.Forms.Label DaBan;
         public System.Windows.Forms.Label SoLuong;
-        public Guna.UI2.WinForms.Guna2PictureBox picture;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        public Guna.UI2.WinForms.Guna2PictureBox picture;
+        public Guna.UI2.WinForms.Guna2CircleButton btnBuy;
+        private Guna.UI2.WinForms.Guna2Button btnTinhTrang;
     }
 }
