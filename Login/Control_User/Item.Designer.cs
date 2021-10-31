@@ -29,7 +29,6 @@ namespace Login.Control_User
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Item));
             this.lbName = new System.Windows.Forms.Label();
             this.btnGia = new Guna.UI2.WinForms.Guna2Button();
             this.DaBan = new System.Windows.Forms.Label();
@@ -135,7 +134,7 @@ namespace Login.Control_User
             // 
             // btnBuy
             // 
-            this.btnBuy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuy.BackgroundImage")));
+            this.btnBuy.BackgroundImage = global::Login.Properties.Resources.add;
             this.btnBuy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnBuy.CheckedState.Parent = this.btnBuy;
             this.btnBuy.CustomImages.Parent = this.btnBuy;
