@@ -20,18 +20,9 @@ namespace Login
         public Store_performence()
         {
             InitializeComponent();
-            if (sqlCon == null)
-            {
-                sqlCon = new SqlConnection(strCon);
-            }
-            if (sqlCon.State == ConnectionState.Closed)
-            {
-                sqlCon.Open();
-            }
         }
         private void Store_performence_Load(object sender, EventArgs e)
         {
-
             LoadPanel("select * from SanPham");
         }
 

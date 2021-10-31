@@ -81,7 +81,8 @@ namespace Login.Control_User
             if(Check_Change(editform))
                 Reload(editform);
             if (Check_delete(editform))
-                this.Dispose();
+                //this.Dispose();
+                MessageBox.Show("a");
         }
 
         private void btn_Background_Click(object sender, EventArgs e)

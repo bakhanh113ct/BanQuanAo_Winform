@@ -669,6 +669,7 @@ namespace Login
             this.Name = "UI_Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UI_Home";
+            this.Load += new System.EventHandler(this.UI_Home_Load);
             this.Tool.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Logo)).EndInit();
             this.subbar3.ResumeLayout(false);

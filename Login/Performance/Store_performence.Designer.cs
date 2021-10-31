@@ -108,7 +108,7 @@ namespace Login
             this.txbSearch.PlaceholderText = "Search";
             this.txbSearch.SelectedText = "";
             this.txbSearch.ShadowDecoration.Parent = this.txbSearch;
-            this.txbSearch.Size = new System.Drawing.Size(156, 26);
+            this.txbSearch.Size = new System.Drawing.Size(156, 36);
             this.txbSearch.TabIndex = 6;
             this.txbSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
