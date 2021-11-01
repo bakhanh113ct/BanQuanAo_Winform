@@ -99,7 +99,7 @@ namespace Login
             // btnReload
             // 
             this.btnReload.BackColor = System.Drawing.Color.Transparent;
-            this.btnReload.BackgroundImage = global::Login.Properties.Resources.Reload;
+            this.btnReload.BackgroundImage = global::Login.Properties.Resources.reload1;
             this.btnReload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnReload.CheckedState.Parent = this.btnReload;
             this.btnReload.CustomImages.Parent = this.btnReload;
@@ -123,7 +123,7 @@ namespace Login
             // btnCart
             // 
             this.btnCart.BackColor = System.Drawing.Color.Transparent;
-            this.btnCart.BackgroundImage = global::Login.Properties.Resources.Cart;
+            this.btnCart.BackgroundImage = global::Login.Properties.Resources.shopping_cart;
             this.btnCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCart.CheckedState.Parent = this.btnCart;
             this.btnCart.CustomImages.Parent = this.btnCart;
