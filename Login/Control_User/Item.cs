@@ -92,5 +92,11 @@ namespace Login.Control_User
         {
 
         }
+
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+            SubForm.Detail_Form detail_form = new SubForm.Detail_Form();
+            detail_form.ShowDialog();
+        }
     }
 }

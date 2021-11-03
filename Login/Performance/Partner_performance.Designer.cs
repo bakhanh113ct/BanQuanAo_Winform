@@ -136,7 +136,7 @@ namespace Login
             this.btnCart.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCart.ForeColor = System.Drawing.Color.White;
             this.btnCart.HoverState.Parent = this.btnCart;
-            this.btnCart.Location = new System.Drawing.Point(433, 5);
+            this.btnCart.Location = new System.Drawing.Point(426, 5);
             this.btnCart.Name = "btnCart";
             this.btnCart.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnCart.ShadowDecoration.Parent = this.btnCart;

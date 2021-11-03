@@ -20,7 +20,10 @@ namespace Login
         public Partner_performance()
         {
             InitializeComponent();
+            AddThongBao();
         }
+
+        
 
         public static Image resizeImage(Image imgToResize, Size size)
         {
@@ -113,7 +116,36 @@ namespace Login
 
         private void btnCart_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void AddThongBao()
+        {
+            Label label1 = new Label();
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(2, 2);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(14, 13);
+            label1.TabIndex = 16;
+            label1.Text = "1";
+            Guna.UI2.WinForms.Guna2Chip btnSoHang = new Guna.UI2.WinForms.Guna2Chip();
+            btnSoHang.Controls.Add(label1);
+            btnCart.Controls.Add(btnSoHang);
+            btnSoHang.AutoRoundedCorners = true;
+            btnSoHang.BackColor = System.Drawing.Color.Transparent;
+            btnSoHang.BorderRadius = 9;
+            btnSoHang.FillColor = System.Drawing.Color.Red;
+            btnSoHang.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            btnSoHang.ForeColor = System.Drawing.Color.White;
+            btnSoHang.IsClosable = false;
+            btnSoHang.Location = new System.Drawing.Point(22, 3);
+            btnSoHang.Margin = new System.Windows.Forms.Padding(-2);
+            btnSoHang.Name = "btnSoHang";
+            btnSoHang.ShadowDecoration.Parent = btnSoHang;
+            btnSoHang.Size = new System.Drawing.Size(17, 17);
+            btnSoHang.TabIndex = 0;
+            btnSoHang.Text = "";
         }
     }
 }

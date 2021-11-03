@@ -102,7 +102,6 @@ namespace Login.Control_User
             this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(19)))), ((int)(((byte)(248)))));
             this.guna2CustomGradientPanel1.BorderRadius = 5;
             this.guna2CustomGradientPanel1.BorderThickness = 1;
-            this.guna2CustomGradientPanel1.Controls.Add(this.btnTinhTrang);
             this.guna2CustomGradientPanel1.Controls.Add(this.picture);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.Transparent;
@@ -122,6 +121,7 @@ namespace Login.Control_User
             this.picture.BackColor = System.Drawing.Color.Transparent;
             this.picture.BorderRadius = 5;
             this.picture.Controls.Add(this.btnBuy);
+            this.picture.Controls.Add(this.btnTinhTrang);
             this.picture.FillColor = System.Drawing.Color.Silver;
             this.picture.ImageRotate = 0F;
             this.picture.Location = new System.Drawing.Point(3, 3);
@@ -153,6 +153,7 @@ namespace Login.Control_User
             this.btnBuy.ShadowDecoration.Parent = this.btnBuy;
             this.btnBuy.Size = new System.Drawing.Size(27, 27);
             this.btnBuy.TabIndex = 0;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
             // btnTinhTrang
             // 
@@ -168,7 +169,7 @@ namespace Login.Control_User
             this.btnTinhTrang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnTinhTrang.ForeColor = System.Drawing.Color.White;
             this.btnTinhTrang.HoverState.Parent = this.btnTinhTrang;
-            this.btnTinhTrang.Location = new System.Drawing.Point(3, 5);
+            this.btnTinhTrang.Location = new System.Drawing.Point(2, 2);
             this.btnTinhTrang.Name = "btnTinhTrang";
             this.btnTinhTrang.ShadowDecoration.Parent = this.btnTinhTrang;
             this.btnTinhTrang.Size = new System.Drawing.Size(49, 20);
