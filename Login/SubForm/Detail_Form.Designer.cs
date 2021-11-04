@@ -36,10 +36,15 @@ namespace Login.SubForm
             this.exit = new Guna.UI2.WinForms.Guna2Button();
             this.zooe_in_out = new Guna.UI2.WinForms.Guna2Button();
             this.minimize = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCancel = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnUpload = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
             this.picture = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lbName = new System.Windows.Forms.Label();
+            this.lbGia = new System.Windows.Forms.Label();
+            this.lbSL = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbDetail = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tool3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
@@ -84,6 +89,7 @@ namespace Login.SubForm
             this.exit.ShadowDecoration.Parent = this.exit;
             this.exit.Size = new System.Drawing.Size(20, 21);
             this.exit.TabIndex = 2;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // zooe_in_out
             // 
@@ -129,74 +135,28 @@ namespace Login.SubForm
             this.minimize.Size = new System.Drawing.Size(20, 21);
             this.minimize.TabIndex = 0;
             // 
-            // btnCancel
+            // btnAdd
             // 
-            this.btnCancel.BorderRadius = 10;
-            this.btnCancel.CheckedState.Parent = this.btnCancel;
-            this.btnCancel.CustomImages.Parent = this.btnCancel;
-            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCancel.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCancel.DisabledState.Parent = this.btnCancel;
-            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(83)))), ((int)(((byte)(75)))));
-            this.btnCancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(83)))), ((int)(((byte)(75)))));
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.HoverState.Parent = this.btnCancel;
-            this.btnCancel.Location = new System.Drawing.Point(12, 316);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
-            this.btnCancel.Size = new System.Drawing.Size(128, 33);
-            this.btnCancel.TabIndex = 19;
-            this.btnCancel.Text = "Cancel";
-            // 
-            // btnSave
-            // 
-            this.btnSave.BorderRadius = 10;
-            this.btnSave.CheckedState.Parent = this.btnSave;
-            this.btnSave.CustomImages.Parent = this.btnSave;
-            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.DisabledState.Parent = this.btnSave;
-            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(201)))), ((int)(((byte)(97)))));
-            this.btnSave.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(201)))), ((int)(((byte)(97)))));
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.HoverState.Parent = this.btnSave;
-            this.btnSave.Location = new System.Drawing.Point(155, 316);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.ShadowDecoration.Parent = this.btnSave;
-            this.btnSave.Size = new System.Drawing.Size(128, 33);
-            this.btnSave.TabIndex = 18;
-            this.btnSave.Text = "Save";
-            // 
-            // btnUpload
-            // 
-            this.btnUpload.BorderRadius = 10;
-            this.btnUpload.CheckedState.Parent = this.btnUpload;
-            this.btnUpload.CustomImages.Parent = this.btnUpload;
-            this.btnUpload.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpload.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpload.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUpload.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUpload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUpload.DisabledState.Parent = this.btnUpload;
-            this.btnUpload.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(201)))), ((int)(((byte)(97)))));
-            this.btnUpload.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(201)))), ((int)(((byte)(97)))));
-            this.btnUpload.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnUpload.ForeColor = System.Drawing.Color.White;
-            this.btnUpload.HoverState.Parent = this.btnUpload;
-            this.btnUpload.Location = new System.Drawing.Point(526, 316);
-            this.btnUpload.Name = "btnUpload";
-            this.btnUpload.ShadowDecoration.Parent = this.btnUpload;
-            this.btnUpload.Size = new System.Drawing.Size(128, 33);
-            this.btnUpload.TabIndex = 17;
-            this.btnUpload.Text = "Upload";
+            this.btnAdd.BorderRadius = 10;
+            this.btnAdd.CheckedState.Parent = this.btnAdd;
+            this.btnAdd.CustomImages.Parent = this.btnAdd;
+            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdd.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdd.DisabledState.Parent = this.btnAdd;
+            this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(201)))), ((int)(((byte)(97)))));
+            this.btnAdd.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(201)))), ((int)(((byte)(97)))));
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.HoverState.Parent = this.btnAdd;
+            this.btnAdd.Location = new System.Drawing.Point(526, 316);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
+            this.btnAdd.Size = new System.Drawing.Size(128, 33);
+            this.btnAdd.TabIndex = 17;
+            this.btnAdd.Text = "ADD";
             // 
             // picture
             // 
@@ -209,15 +169,82 @@ namespace Login.SubForm
             this.picture.TabIndex = 12;
             this.picture.TabStop = false;
             // 
+            // lbName
+            // 
+            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Location = new System.Drawing.Point(403, 27);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(251, 39);
+            this.lbName.TabIndex = 21;
+            this.lbName.Text = "Name";
+            // 
+            // lbGia
+            // 
+            this.lbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGia.Location = new System.Drawing.Point(403, 76);
+            this.lbGia.Name = "lbGia";
+            this.lbGia.Size = new System.Drawing.Size(251, 29);
+            this.lbGia.TabIndex = 22;
+            this.lbGia.Text = "$$$";
+            this.lbGia.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lbSL
+            // 
+            this.lbSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSL.Location = new System.Drawing.Point(403, 110);
+            this.lbSL.Name = "lbSL";
+            this.lbSL.Size = new System.Drawing.Size(251, 28);
+            this.lbSL.TabIndex = 23;
+            this.lbSL.Text = "SL: ";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(403, 160);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 24);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Details:";
+            // 
+            // lbDetail
+            // 
+            this.lbDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDetail.Location = new System.Drawing.Point(403, 195);
+            this.lbDetail.Name = "lbDetail";
+            this.lbDetail.Size = new System.Drawing.Size(251, 88);
+            this.lbDetail.TabIndex = 25;
+            this.lbDetail.Text = "...";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Location = new System.Drawing.Point(407, 64);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(247, 2);
+            this.panel1.TabIndex = 26;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Location = new System.Drawing.Point(407, 147);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(247, 2);
+            this.panel2.TabIndex = 27;
+            // 
             // Detail_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 361);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lbDetail);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbSL);
+            this.Controls.Add(this.lbGia);
+            this.Controls.Add(this.lbName);
             this.Controls.Add(this.tool3);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnUpload);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.picture);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Detail_Form";
@@ -236,10 +263,15 @@ namespace Login.SubForm
         private Guna.UI2.WinForms.Guna2Button exit;
         private Guna.UI2.WinForms.Guna2Button zooe_in_out;
         private Guna.UI2.WinForms.Guna2Button minimize;
-        private Guna.UI2.WinForms.Guna2GradientButton btnCancel;
-        private Guna.UI2.WinForms.Guna2GradientButton btnSave;
-        private Guna.UI2.WinForms.Guna2GradientButton btnUpload;
+        private Guna.UI2.WinForms.Guna2GradientButton btnAdd;
         private Guna.UI2.WinForms.Guna2PictureBox picture;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private System.Windows.Forms.Label lbDetail;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbSL;
+        private System.Windows.Forms.Label lbGia;
+        private System.Windows.Forms.Label lbName;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -2,13 +2,21 @@
 create table SanPham
 (
 	id int primary key IDENTITY(1,1),
-	Ten nvarchar(30),
-	Gia int,
+	Ten nvarchar(50),
+	Gia real,
 	SoLuong int,
-	DanhGia float,
+	DanhGia real,
 	DaBan int,
 	MoTa nvarchar(100),
-	Loai nvarchar(20)
+	Loai nvarchar(20),
+	Anh image
+)
+
+create table LoaiSanPham
+(
+	id int primary key IDENTITY(1,1),
+	Ten nvarchar(20),
+
 )
 
 

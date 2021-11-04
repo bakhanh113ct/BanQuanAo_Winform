@@ -58,13 +58,16 @@ namespace Login
                 string Ten = reader.GetString(1).Trim();
                 double gia = reader.GetFloat(2);
                 int soluong = reader.GetInt32(3);
-                int danhgia = reader.GetInt32(4);
+                double danhgia = reader.GetFloat(4);
                 int daban = reader.GetInt32(5);
                 string mota = reader.GetString(6);
                 string Loai = reader.GetString(7);
                 //Tạo Usercontrol
                 Control_User.Item u = new Control_User.Item(Ten, gia, soluong, danhgia, daban, mota, Loai);
                 u.editform = editform;  //tham chiếu tới từng item
+                u.Click -= u.picture_Click;
+
+                
                 //Load ảnh
                 byte[] b = null;
                 b = (byte[])reader.GetValue(8);

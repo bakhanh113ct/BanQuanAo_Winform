@@ -18,12 +18,12 @@ namespace Login.Control_User
         public string Ten;
         public double gia;
         public int soluong;
-        public int danhgia;
+        public double danhgia;
         public int daban;
         public string mota;
         public string Loai;
         public Item() { }
-        public Item(string Ten, double gia, int soluong, int danhgia, int daban, string mota, string Loai)
+        public Item(string Ten, double gia, int soluong, double danhgia, int daban, string mota, string Loai)
         {
             InitializeComponent();
             this.Ten = Ten;
@@ -69,7 +69,7 @@ namespace Login.Control_User
                 return true;
             return false;
         }
-        private void picture_Click(object sender, EventArgs e)
+        public void picture_Click(object sender, EventArgs e)
         {
             //gán thông tin của item cho form edit
             editform.txbTen.Text = this.Ten;
