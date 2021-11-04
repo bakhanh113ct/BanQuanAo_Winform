@@ -14,6 +14,7 @@ namespace Login
 {
     public partial class Store_performence : Form
     {
+        public Control_User.Item item;
         public SubForm.Edit_Form editform = new SubForm.Edit_Form();    //mọi item đều có chung 1 form edit
         string strCon = "Data Source=DESKTOP-LBAULH5;Initial Catalog=QuanLyKho;Integrated Security=True";
         SqlConnection sqlCon = null;
@@ -53,7 +54,7 @@ namespace Login
                 string mota = reader.GetString(6);
                 string Loai = reader.GetString(7);
                 //Tạo Usercontrol
-                Control_User.Item u = new Control_User.Item(Ten, gia, soluong, danhgia, daban, mota, Loai);
+                Control_User.Item u = new Control_User.Item(Ten, gia, soluong, danhgia, daban, mota, Loai, this);
                 u.editform = editform;  //tham chiếu tới từng item
                 //Load ảnh
                 byte[] b = null;
@@ -111,6 +112,55 @@ namespace Login
                     LoadPanel("select * from SanPham");
                     break;
             }
+        }
+
+        public void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (item == null)
+                return;
+            editform.txbTen.Text = item.Ten;
+            editform.txbGiaTien.Text = item.gia.ToString();
+            editform.txbSoLuong.Text = item.soluong.ToString();
+            editform.txbMota.Text = item.mota;
+            editform.txbLoai.Text = item.Loai;
+            editform.txbNhacungcap.Text = "a";
+            editform.picture.Image = item.picture.Image;
+            editform.picture.SizeMode = PictureBoxSizeMode.CenterImage;
+            //
+            editform.ShowDialog();
+            if (Check_Change(editform))
+            {
+                Reload(editform);
+                item.Reload(editform.txbTen.Text,Convert.ToDouble(editform.txbGiaTien.Text), 
+                            Convert.ToInt32(editform.txbSoLuong.Text), editform.txbMota.Text,
+                            editform.txbLoai.Text);
+            }
+            if (Check_delete(editform))
+                this.Dispose();
+        }
+        private void Reload(SubForm.Edit_Form editform)
+        {
+            item.lbName.Text = editform.txbTen.Text;
+            if (Convert.ToInt32(editform.txbSoLuong.Text) > 0)
+            {
+                item.btnTinhTrang.Text = "Còn";
+                item.btnTinhTrang.FillColor = Color.FromArgb(68, 201, 97);
+            }
+            item.btnGia.Text = editform.txbGiaTien.Text + "VND";
+            item.SoLuong.Text = "SL: " + editform.txbSoLuong.Text;
+        }
+
+        private bool Check_Change(SubForm.Edit_Form editform)
+        {
+            if (editform.check_save_click == true)
+                return true;
+            return false;
+        }
+        private bool Check_delete(SubForm.Edit_Form editform)
+        {
+            if (editform.check_delete_click == true)
+                return true;
+            return false;
         }
     }
 }

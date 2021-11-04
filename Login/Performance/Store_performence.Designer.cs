@@ -34,6 +34,7 @@ namespace Login
             this.txbSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.flpnStore = new System.Windows.Forms.FlowLayoutPanel();
             this.btnReload = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -140,12 +141,37 @@ namespace Login
             this.btnReload.TabIndex = 8;
             this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
+            // btnEdit
+            // 
+            this.btnEdit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(65)))), ((int)(((byte)(255)))));
+            this.btnEdit.BorderRadius = 10;
+            this.btnEdit.BorderThickness = 1;
+            this.btnEdit.CheckedState.Parent = this.btnEdit;
+            this.btnEdit.CustomImages.Parent = this.btnEdit;
+            this.btnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEdit.DisabledState.Parent = this.btnEdit;
+            this.btnEdit.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEdit.ForeColor = System.Drawing.Color.Black;
+            this.btnEdit.HoverState.Parent = this.btnEdit;
+            this.btnEdit.Location = new System.Drawing.Point(264, 5);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.ShadowDecoration.Parent = this.btnEdit;
+            this.btnEdit.Size = new System.Drawing.Size(103, 26);
+            this.btnEdit.TabIndex = 9;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // Store_performence
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(686, 441);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnReload);
             this.Controls.Add(this.flpnStore);
             this.Controls.Add(this.txbSearch);
@@ -168,5 +194,6 @@ namespace Login
         private Guna.UI2.WinForms.Guna2TextBox txbSearch;
         private System.Windows.Forms.FlowLayoutPanel flpnStore;
         private Guna.UI2.WinForms.Guna2CircleButton btnReload;
+        private Guna.UI2.WinForms.Guna2Button btnEdit;
     }
 }

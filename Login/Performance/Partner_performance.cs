@@ -63,7 +63,7 @@ namespace Login
                 string mota = reader.GetString(6);
                 string Loai = reader.GetString(7);
                 //Tạo Usercontrol
-                Control_User.Item u = new Control_User.Item(Ten, gia, soluong, danhgia, daban, mota, Loai);
+                Control_User.Item u = new Control_User.Item(Ten, gia, soluong, danhgia, daban, mota, Loai, this);
                 u.editform = editform;  //tham chiếu tới từng item
                 u.Click -= u.picture_Click;
 

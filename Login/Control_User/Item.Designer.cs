@@ -204,6 +204,6 @@ namespace Login.Control_User
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         public Guna.UI2.WinForms.Guna2PictureBox picture;
         public Guna.UI2.WinForms.Guna2CircleButton btnBuy;
-        private Guna.UI2.WinForms.Guna2Button btnTinhTrang;
+        public Guna.UI2.WinForms.Guna2Button btnTinhTrang;
     }
 }

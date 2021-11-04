@@ -13,7 +13,7 @@ namespace Login.Control_User
     public partial class Item : UserControl
     {
         public SubForm.Edit_Form editform;      //tạo 1 form edit để tham chiếu tới form edit từ store_performence
-
+        public Store_performence ParentForm { get; set; }
         //Thông tin của từng item 
         public string Ten;
         public double gia;
@@ -23,8 +23,9 @@ namespace Login.Control_User
         public string mota;
         public string Loai;
         public Item() { }
-        public Item(string Ten, double gia, int soluong, double danhgia, int daban, string mota, string Loai)
+        public Item(string Ten, double gia, int soluong, double danhgia, int daban, string mota, string Loai, Control panel)
         {
+            ParentForm = panel as Store_performence;
             InitializeComponent();
             this.Ten = Ten;
             this.gia = gia;
@@ -46,46 +47,22 @@ namespace Login.Control_User
             DaBan.Text = "Ban: " + daban.ToString();
             
         }
-        private void Reload(SubForm.Edit_Form editform)
+        
+        public void Reload(string Ten, double gia, int soluong, string mota, string Loai)
         {
-            lbName.Text = editform.txbTen.Text;
-            if (Convert.ToInt32(editform.txbSoLuong.Text) > 0)
-            {
-                btnTinhTrang.Text = "Còn";
-                btnTinhTrang.FillColor = Color.FromArgb(68, 201, 97);
-            }
-            editform.txbGiaTien.Text = gia.ToString() + " VND";
-            SoLuong.Text = "SL: " + editform.txbSoLuong.Text;
+            this.Ten = Ten;
+            this.gia = gia;
+            this.soluong = soluong;
+            this.danhgia = danhgia;
+            this.daban = daban;
+            this.mota = mota;
+            this.Loai = Loai;
         }
-        private bool Check_Change(SubForm.Edit_Form editform)
-        {
-            if(editform.check_save_click == true)
-                return true;
-            return false;
-        }
-        private bool Check_delete(SubForm.Edit_Form editform)
-        {
-            if (editform.check_delete_click == true)
-                return true;
-            return false;
-        }
+        
         public void picture_Click(object sender, EventArgs e)
         {
-            //gán thông tin của item cho form edit
-            editform.txbTen.Text = this.Ten;
-            editform.txbGiaTien.Text = gia.ToString();
-            editform.txbSoLuong.Text = soluong.ToString();
-            editform.txbMota.Text = mota;
-            editform.txbLoai.Text = mota;
-            editform.txbNhacungcap.Text = "a";
-            editform.picture.Image = this.picture.Image;
-            editform.picture.SizeMode = PictureBoxSizeMode.CenterImage;
-            //
-            editform.ShowDialog();
-            if(Check_Change(editform))
-                Reload(editform);
-            if (Check_delete(editform))
-                this.Dispose();
+            if(ParentForm != null)
+                ParentForm.item = this;
         }
 
         private void btn_Background_Click(object sender, EventArgs e)
