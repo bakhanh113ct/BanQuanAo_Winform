@@ -14,7 +14,7 @@ namespace Login
 {
     public partial class Partner_performance : Form
     {
-        public SubForm.Edit_Form editform = new SubForm.Edit_Form();    //mọi item đều có chung 1 form edit
+        //public SubForm.Edit_Form editform = new SubForm.Edit_Form();    //mọi item đều có chung 1 form edit
         string strCon = "Data Source=DESKTOP-LBAULH5;Initial Catalog=QuanLyKho;Integrated Security=True";
         SqlConnection sqlCon = null;
         public Partner_performance()
@@ -64,10 +64,8 @@ namespace Login
                 string Loai = reader.GetString(7);
                 //Tạo Usercontrol
                 Control_User.Item u = new Control_User.Item(Ten, gia, soluong, danhgia, daban, mota, Loai, this);
-                u.editform = editform;  //tham chiếu tới từng item
+                //u.editform = editform;  //tham chiếu tới từng item
                 u.Click -= u.picture_Click;
-
-                
                 //Load ảnh
                 byte[] b = null;
                 b = (byte[])reader.GetValue(8);

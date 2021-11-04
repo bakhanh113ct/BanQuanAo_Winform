@@ -55,7 +55,6 @@ namespace Login
                 string Loai = reader.GetString(7);
                 //Tạo Usercontrol
                 Control_User.Item u = new Control_User.Item(Ten, gia, soluong, danhgia, daban, mota, Loai, this);
-                u.editform = editform;  //tham chiếu tới từng item
                 //Load ảnh
                 byte[] b = null;
                 b = (byte[])reader.GetValue(8);
@@ -130,24 +129,10 @@ namespace Login
             editform.ShowDialog();
             if (Check_Change(editform))
             {
-                Reload(editform);
-                item.Reload(editform.txbTen.Text,Convert.ToDouble(editform.txbGiaTien.Text), 
-                            Convert.ToInt32(editform.txbSoLuong.Text), editform.txbMota.Text,
-                            editform.txbLoai.Text);
+                LoadPanel("select * from SanPham");
             }
             if (Check_delete(editform))
                 this.Dispose();
-        }
-        private void Reload(SubForm.Edit_Form editform)
-        {
-            item.lbName.Text = editform.txbTen.Text;
-            if (Convert.ToInt32(editform.txbSoLuong.Text) > 0)
-            {
-                item.btnTinhTrang.Text = "Còn";
-                item.btnTinhTrang.FillColor = Color.FromArgb(68, 201, 97);
-            }
-            item.btnGia.Text = editform.txbGiaTien.Text + "VND";
-            item.SoLuong.Text = "SL: " + editform.txbSoLuong.Text;
         }
 
         private bool Check_Change(SubForm.Edit_Form editform)
