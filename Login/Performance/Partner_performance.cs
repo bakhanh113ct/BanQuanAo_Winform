@@ -14,16 +14,14 @@ namespace Login
 {
     public partial class Partner_performance : Form
     {
-        //public SubForm.Edit_Form editform = new SubForm.Edit_Form();    //mọi item đều có chung 1 form edit
-        string strCon = "Data Source=DESKTOP-LBAULH5;Initial Catalog=QuanLyKho;Integrated Security=True";
-        SqlConnection sqlCon = null;
+        static public Guna.UI2.WinForms.Guna2Chip btnSoHang;
+        static public Label label1;
+        public Control_User.Item item;
         public Partner_performance()
         {
             InitializeComponent();
-            AddThongBao();
         }
 
-        
 
         public static Image resizeImage(Image imgToResize, Size size)
         {
@@ -34,47 +32,22 @@ namespace Login
         private void Partner_performance_Load(object sender, EventArgs e)
         {
             LoadPanel("select * from SanPham");
+            btnSoHang = new Guna.UI2.WinForms.Guna2Chip();
+            label1 = new Label();
+            AddThongBao();
         }
+
+
 
         public void LoadPanel(string query)
         {
             flpnStore.Controls.Clear();
-            if (sqlCon == null)
+            DBA.Reload("select * from SanPham");
+            foreach (Control_User.Item i in DBA.ListItem)
             {
-                sqlCon = new SqlConnection(strCon);
+                flpnStore.Controls.Add(i);
             }
-            if (sqlCon.State == ConnectionState.Closed)
-            {
-                sqlCon.Open();
-            }
-            SqlCommand sqlCmd = new SqlCommand();
-            sqlCmd.CommandType = CommandType.Text;
-            sqlCmd.CommandText = query;
-            sqlCmd.Connection = sqlCon;
-
-            SqlDataReader reader = sqlCmd.ExecuteReader();
-            while (reader.Read())
-            {
-                string Ten = reader.GetString(1).Trim();
-                double gia = reader.GetFloat(2);
-                int soluong = reader.GetInt32(3);
-                double danhgia = reader.GetFloat(4);
-                int daban = reader.GetInt32(5);
-                string mota = reader.GetString(6);
-                string Loai = reader.GetString(7);
-                //Tạo Usercontrol
-                Control_User.Item u = new Control_User.Item(Ten, gia, soluong, danhgia, daban, mota, Loai, this);
-                //u.editform = editform;  //tham chiếu tới từng item
-                u.Click -= u.picture_Click;
-                //Load ảnh
-                byte[] b = null;
-                b = (byte[])reader.GetValue(8);
-                u.picture.Image = ConvertoImage(b);
-                u.picture.SizeMode = PictureBoxSizeMode.CenterImage;
-                // Thêm vào panel
-                flpnStore.Controls.Add(u);
-            }
-            reader.Close();
+            
         }
         //Load lại flowlayoutpanel
         public void btnReload_Click(object sender, EventArgs e)
@@ -120,17 +93,21 @@ namespace Login
             
         }
 
+        public static void reload(int i)
+        {
+            label1.Text = i.ToString();
+        }
+
         private void AddThongBao()
         {
-            Label label1 = new Label();
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label1.Location = new System.Drawing.Point(2, 2);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(14, 13);
             label1.TabIndex = 16;
-            label1.Text = "1";
-            Guna.UI2.WinForms.Guna2Chip btnSoHang = new Guna.UI2.WinForms.Guna2Chip();
+            label1.Text = UI_Home.i.ToString();
+
             btnSoHang.Controls.Add(label1);
             btnCart.Controls.Add(btnSoHang);
             btnSoHang.AutoRoundedCorners = true;

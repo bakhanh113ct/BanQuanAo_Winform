@@ -64,6 +64,7 @@ namespace Login.SubForm
             {
                 MessageBox.Show("Cap nhat thanh cong.");
                 check_save_click = true;
+                this.Close();
             }
         }
         private void btnSave_Click(object sender, EventArgs e)

@@ -56,6 +56,7 @@
     <Compile Include="Control_User\Item.Designer.cs">
       <DependentUpon>Item.cs</DependentUpon>
     </Compile>
+    <Compile Include="DBA.cs" />
     <Compile Include="Performance\Analysis_performance.cs">
       <SubType>Form</SubType>
     </Compile>

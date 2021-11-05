@@ -49,26 +49,35 @@ namespace Login.Control_User
                 btnTinhTrang.BackColor = Color.Transparent;
                 btnTinhTrang.FillColor = Color.FromArgb(68, 201, 97);
             }
-            btnGia.Text = gia.ToString() + " VND";
-            SoLuong.Text = "SL: " + soluong.ToString();
-            DaBan.Text = "Ban: " + daban.ToString();
+            lbGia.Text = gia.ToString() + " VND";
+            lbSoLuong.Text = "SL: " + soluong.ToString();
+            lbDaBan.Text = "Ban: " + daban.ToString();
+            lbName.ForeColor = Color.FromKnownColor(KnownColor.Black);
         }
-        
-        public void picture_Click(object sender, EventArgs e)
-        {
-            if(Parent_Store != null)
-                Parent_Store.item = this;
-        }
-
-        private void btn_Background_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnBuy_Click(object sender, EventArgs e)
         {
             SubForm.Detail_Form detail_form = new SubForm.Detail_Form();
+            detail_form.lbName.Text = Ten;
+            detail_form.lbGia.Text = gia.ToString();
+            detail_form.lbSL.Text = soluong.ToString();
+            detail_form.lbDetail.Text = mota;
+            detail_form.picture.Image = picture.Image;
+            detail_form.picture.SizeMode = PictureBoxSizeMode.CenterImage;
             detail_form.ShowDialog();
         }
+
+        private void btnItem_Click(object sender, EventArgs e)
+        {
+            if (Parent_Store != null)
+                Parent_Store.item = this;
+            if (Parent_Partner != null)
+                Parent_Partner.item = this;
+            foreach(Item i in DBA.ListItem)
+            {
+                i.btnItem.FillColor = Color.Transparent;
+            }
+            btnItem.FillColor = Color.Yellow;
+        }
+
     }
 }

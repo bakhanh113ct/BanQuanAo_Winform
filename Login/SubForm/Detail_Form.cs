@@ -26,5 +26,11 @@ namespace Login.SubForm
         {
             this.Close();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            UI_Home.i++;
+            Partner_performance.reload(UI_Home.i);
+        }
     }
 }

@@ -33,8 +33,8 @@ namespace Login
             this.cbbFilter = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txbSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.flpnStore = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnReload = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReload = new Guna.UI2.WinForms.Guna2CircleButton();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -53,7 +53,7 @@ namespace Login
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAdd.ForeColor = System.Drawing.Color.Black;
             this.btnAdd.HoverState.Parent = this.btnAdd;
-            this.btnAdd.Location = new System.Drawing.Point(373, 5);
+            this.btnAdd.Location = new System.Drawing.Point(372, 8);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
             this.btnAdd.Size = new System.Drawing.Size(103, 26);
@@ -121,26 +121,6 @@ namespace Login
             this.flpnStore.Size = new System.Drawing.Size(661, 382);
             this.flpnStore.TabIndex = 7;
             // 
-            // btnReload
-            // 
-            this.btnReload.CheckedState.Parent = this.btnReload;
-            this.btnReload.CustomImages.Parent = this.btnReload;
-            this.btnReload.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnReload.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnReload.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnReload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnReload.DisabledState.Parent = this.btnReload;
-            this.btnReload.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnReload.ForeColor = System.Drawing.Color.White;
-            this.btnReload.HoverState.Parent = this.btnReload;
-            this.btnReload.Location = new System.Drawing.Point(482, 1);
-            this.btnReload.Name = "btnReload";
-            this.btnReload.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnReload.ShadowDecoration.Parent = this.btnReload;
-            this.btnReload.Size = new System.Drawing.Size(30, 30);
-            this.btnReload.TabIndex = 8;
-            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
-            // 
             // btnEdit
             // 
             this.btnEdit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(65)))), ((int)(((byte)(255)))));
@@ -157,7 +137,7 @@ namespace Login
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnEdit.ForeColor = System.Drawing.Color.Black;
             this.btnEdit.HoverState.Parent = this.btnEdit;
-            this.btnEdit.Location = new System.Drawing.Point(264, 5);
+            this.btnEdit.Location = new System.Drawing.Point(264, 8);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.ShadowDecoration.Parent = this.btnEdit;
             this.btnEdit.Size = new System.Drawing.Size(103, 26);
@@ -165,14 +145,38 @@ namespace Login
             this.btnEdit.Text = "Edit";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
+            // btnReload
+            // 
+            this.btnReload.BackColor = System.Drawing.Color.Transparent;
+            this.btnReload.BackgroundImage = global::Login.Properties.Resources.reload1;
+            this.btnReload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnReload.CheckedState.Parent = this.btnReload;
+            this.btnReload.CustomImages.Parent = this.btnReload;
+            this.btnReload.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReload.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReload.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReload.DisabledState.Parent = this.btnReload;
+            this.btnReload.FillColor = System.Drawing.Color.Transparent;
+            this.btnReload.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnReload.ForeColor = System.Drawing.Color.White;
+            this.btnReload.HoverState.Parent = this.btnReload;
+            this.btnReload.Location = new System.Drawing.Point(482, 5);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnReload.ShadowDecoration.Parent = this.btnReload;
+            this.btnReload.Size = new System.Drawing.Size(32, 32);
+            this.btnReload.TabIndex = 16;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
+            // 
             // Store_performence
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(686, 441);
-            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnReload);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.flpnStore);
             this.Controls.Add(this.txbSearch);
             this.Controls.Add(this.cbbFilter);
@@ -193,7 +197,7 @@ namespace Login
         private Guna.UI2.WinForms.Guna2ComboBox cbbFilter;
         private Guna.UI2.WinForms.Guna2TextBox txbSearch;
         private System.Windows.Forms.FlowLayoutPanel flpnStore;
-        private Guna.UI2.WinForms.Guna2CircleButton btnReload;
         private Guna.UI2.WinForms.Guna2Button btnEdit;
+        private Guna.UI2.WinForms.Guna2CircleButton btnReload;
     }
 }

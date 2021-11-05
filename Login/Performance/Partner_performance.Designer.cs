@@ -56,7 +56,7 @@ namespace Login
             "Mũ",
             "Tất cả"});
             this.cbbFilter.ItemsAppearance.Parent = this.cbbFilter;
-            this.cbbFilter.Location = new System.Drawing.Point(13, 6);
+            this.cbbFilter.Location = new System.Drawing.Point(13, 5);
             this.cbbFilter.Name = "cbbFilter";
             this.cbbFilter.ShadowDecoration.Parent = this.cbbFilter;
             this.cbbFilter.Size = new System.Drawing.Size(152, 36);
@@ -78,7 +78,7 @@ namespace Login
             this.txbSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbSearch.HoverState.Parent = this.txbSearch;
-            this.txbSearch.Location = new System.Drawing.Point(518, 6);
+            this.txbSearch.Location = new System.Drawing.Point(518, 5);
             this.txbSearch.Name = "txbSearch";
             this.txbSearch.PasswordChar = '\0';
             this.txbSearch.PlaceholderText = "Search";
@@ -91,7 +91,7 @@ namespace Login
             // flpnStore
             // 
             this.flpnStore.AutoScroll = true;
-            this.flpnStore.Location = new System.Drawing.Point(13, 52);
+            this.flpnStore.Location = new System.Drawing.Point(13, 47);
             this.flpnStore.Name = "flpnStore";
             this.flpnStore.Size = new System.Drawing.Size(661, 382);
             this.flpnStore.TabIndex = 12;
@@ -112,11 +112,11 @@ namespace Login
             this.btnReload.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnReload.ForeColor = System.Drawing.Color.White;
             this.btnReload.HoverState.Parent = this.btnReload;
-            this.btnReload.Location = new System.Drawing.Point(477, 7);
+            this.btnReload.Location = new System.Drawing.Point(482, 5);
             this.btnReload.Name = "btnReload";
             this.btnReload.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnReload.ShadowDecoration.Parent = this.btnReload;
-            this.btnReload.Size = new System.Drawing.Size(35, 35);
+            this.btnReload.Size = new System.Drawing.Size(32, 32);
             this.btnReload.TabIndex = 15;
             this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
@@ -136,7 +136,7 @@ namespace Login
             this.btnCart.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCart.ForeColor = System.Drawing.Color.White;
             this.btnCart.HoverState.Parent = this.btnCart;
-            this.btnCart.Location = new System.Drawing.Point(426, 5);
+            this.btnCart.Location = new System.Drawing.Point(430, 1);
             this.btnCart.Name = "btnCart";
             this.btnCart.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnCart.ShadowDecoration.Parent = this.btnCart;

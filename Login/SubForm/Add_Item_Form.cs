@@ -66,7 +66,13 @@ namespace Login.SubForm
                 MessageBox.Show("Them khong thanh cong.");
             }
             if (check != 0)
-                MessageBox.Show("Them thanh cong.");
+            {
+                DialogResult result =  MessageBox.Show("Them thanh cong.");
+                if(result == DialogResult.OK)
+                {
+                    this.Hide();
+                }
+            }
         }
 
 

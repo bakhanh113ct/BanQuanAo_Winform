@@ -1,6 +1,35 @@
 ﻿
+using System.Drawing;
+using System.Windows.Forms;
+
 namespace Login.Control_User
 {
+    public class CustomLabel : Label
+    {
+        public CustomLabel()
+        {
+            this.SetStyle(ControlStyles.UserPaint, true); //Call in constructor, Use UserPaint
+        }
+
+        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+        {
+            if (Enabled)
+            {
+                //use normal realization
+                base.OnPaint(e);
+                return;
+            }
+            //custom drawing
+            using (Brush aBrush = new SolidBrush(Color.Black))
+            {
+                Rectangle rect1 = new Rectangle(75, 10, 0, 0);
+                StringFormat stringFormat = new StringFormat();
+                stringFormat.Alignment = StringAlignment.Center;
+                stringFormat.LineAlignment = StringAlignment.Center;
+                e.Graphics.DrawString(Text, Font, aBrush, rect1, stringFormat);
+            }
+        }
+    }
     partial class Item
     {
         /// <summary> 
@@ -29,92 +58,56 @@ namespace Login.Control_User
         /// </summary>
         private void InitializeComponent()
         {
+            this.lbGia = new Control_User.CustomLabel();
             this.lbName = new System.Windows.Forms.Label();
-            this.btnGia = new Guna.UI2.WinForms.Guna2Button();
-            this.DaBan = new System.Windows.Forms.Label();
-            this.SoLuong = new System.Windows.Forms.Label();
-            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.lbDaBan = new System.Windows.Forms.Label();
+            this.lbSoLuong = new System.Windows.Forms.Label();
             this.picture = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnBuy = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnTinhTrang = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2CustomGradientPanel1.SuspendLayout();
+            this.btnItem = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.picture.SuspendLayout();
+            this.btnItem.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbName
             // 
             this.lbName.AutoSize = true;
-            this.lbName.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbName.BackColor = System.Drawing.Color.Transparent;
             this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbName.ForeColor = System.Drawing.Color.Black;
             this.lbName.Location = new System.Drawing.Point(3, 119);
+            this.lbName.Margin = new System.Windows.Forms.Padding(0);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(51, 17);
             this.lbName.TabIndex = 2;
             this.lbName.Text = "abcxyz";
             // 
-            // btnGia
+            // lbDaBan
             // 
-            this.btnGia.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGia.BorderRadius = 5;
-            this.btnGia.CheckedState.Parent = this.btnGia;
-            this.btnGia.CustomImages.Parent = this.btnGia;
-            this.btnGia.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnGia.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnGia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnGia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnGia.DisabledState.Parent = this.btnGia;
-            this.btnGia.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGia.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnGia.ForeColor = System.Drawing.Color.Black;
-            this.btnGia.HoverState.Parent = this.btnGia;
-            this.btnGia.Location = new System.Drawing.Point(6, 136);
-            this.btnGia.Name = "btnGia";
-            this.btnGia.ShadowDecoration.Parent = this.btnGia;
-            this.btnGia.Size = new System.Drawing.Size(142, 25);
-            this.btnGia.TabIndex = 3;
-            this.btnGia.Text = "10.000";
+            this.lbDaBan.AutoSize = true;
+            this.lbDaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lbDaBan.ForeColor = System.Drawing.Color.Black;
+            this.lbDaBan.Location = new System.Drawing.Point(5, 164);
+            this.lbDaBan.Margin = new System.Windows.Forms.Padding(0);
+            this.lbDaBan.Name = "lbDaBan";
+            this.lbDaBan.Size = new System.Drawing.Size(45, 15);
+            this.lbDaBan.TabIndex = 4;
+            this.lbDaBan.Text = "DaBan";
+            this.lbDaBan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // DaBan
+            // lbSoLuong
             // 
-            this.DaBan.AutoSize = true;
-            this.DaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.DaBan.Location = new System.Drawing.Point(5, 164);
-            this.DaBan.Name = "DaBan";
-            this.DaBan.Size = new System.Drawing.Size(45, 15);
-            this.DaBan.TabIndex = 4;
-            this.DaBan.Text = "DaBan";
-            this.DaBan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.SoLuong.Location = new System.Drawing.Point(91, 163);
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.Size = new System.Drawing.Size(57, 15);
-            this.SoLuong.TabIndex = 5;
-            this.SoLuong.Text = "SoLuong";
-            this.SoLuong.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // guna2CustomGradientPanel1
-            // 
-            this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(19)))), ((int)(((byte)(248)))));
-            this.guna2CustomGradientPanel1.BorderRadius = 5;
-            this.guna2CustomGradientPanel1.BorderThickness = 1;
-            this.guna2CustomGradientPanel1.Controls.Add(this.picture);
-            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2CustomGradientPanel1.ForeColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(155, 185);
-            this.guna2CustomGradientPanel1.TabIndex = 8;
+            this.lbSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lbSoLuong.ForeColor = System.Drawing.Color.Black;
+            this.lbSoLuong.Location = new System.Drawing.Point(91, 163);
+            this.lbSoLuong.Margin = new System.Windows.Forms.Padding(0);
+            this.lbSoLuong.Name = "lbSoLuong";
+            this.lbSoLuong.Size = new System.Drawing.Size(57, 15);
+            this.lbSoLuong.TabIndex = 5;
+            this.lbSoLuong.Text = "SoLuong";
+            this.lbSoLuong.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // picture
             // 
@@ -128,9 +121,9 @@ namespace Login.Control_User
             this.picture.Name = "picture";
             this.picture.ShadowDecoration.Parent = this.picture;
             this.picture.Size = new System.Drawing.Size(149, 113);
+            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picture.TabIndex = 7;
             this.picture.TabStop = false;
-            this.picture.Click += new System.EventHandler(this.picture_Click);
             // 
             // btnBuy
             // 
@@ -176,34 +169,73 @@ namespace Login.Control_User
             this.btnTinhTrang.TabIndex = 9;
             this.btnTinhTrang.Text = "Hết";
             // 
+            // btnItem
+            // 
+            this.btnItem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(65)))), ((int)(((byte)(255)))));
+            this.btnItem.BorderRadius = 5;
+            this.btnItem.BorderThickness = 1;
+            this.btnItem.CheckedState.Parent = this.btnItem;
+            this.btnItem.Controls.Add(this.picture);
+            this.btnItem.Controls.Add(this.lbSoLuong);
+            this.btnItem.Controls.Add(this.lbDaBan);
+            this.btnItem.Controls.Add(this.lbName);
+            this.btnItem.Controls.Add(this.lbGia);
+            this.btnItem.CustomImages.Parent = this.btnItem;
+            this.btnItem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnItem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnItem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnItem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnItem.DisabledState.Parent = this.btnItem;
+            this.btnItem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnItem.FillColor = System.Drawing.Color.White;
+            this.btnItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnItem.ForeColor = System.Drawing.Color.White;
+            this.btnItem.HoverState.Parent = this.btnItem;
+            this.btnItem.Location = new System.Drawing.Point(0, 0);
+            this.btnItem.Name = "btnItem";
+            this.btnItem.ShadowDecoration.Parent = this.btnItem;
+            this.btnItem.Size = new System.Drawing.Size(155, 185);
+            this.btnItem.TabIndex = 8;
+            this.btnItem.Click += new System.EventHandler(this.btnItem_Click);
+            // 
+            // lbGia
+            // 
+            this.lbGia.BackColor = System.Drawing.Color.Transparent;
+            this.lbGia.Enabled = false;
+            this.lbGia.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.lbGia.ForeColor = System.Drawing.Color.Black;
+            this.lbGia.Location = new System.Drawing.Point(3, 138);
+            this.lbGia.Margin = new System.Windows.Forms.Padding(0);
+            this.lbGia.Name = "lbGia";
+            this.lbGia.Size = new System.Drawing.Size(149, 26);
+            this.lbGia.TabIndex = 9;
+            this.lbGia.Text = "10.000";
+            this.lbGia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Item
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.SoLuong);
-            this.Controls.Add(this.DaBan);
-            this.Controls.Add(this.btnGia);
-            this.Controls.Add(this.lbName);
-            this.Controls.Add(this.guna2CustomGradientPanel1);
+            this.Controls.Add(this.btnItem);
             this.Name = "Item";
             this.Size = new System.Drawing.Size(155, 185);
-            this.guna2CustomGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.picture.ResumeLayout(false);
+            this.btnItem.ResumeLayout(false);
+            this.btnItem.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        public System.Windows.Forms.Label lbName;
-        public Guna.UI2.WinForms.Guna2Button btnGia;
-        public System.Windows.Forms.Label DaBan;
-        public System.Windows.Forms.Label SoLuong;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private CustomLabel lbGia;
+        public Label lbName;
+        public Label lbDaBan;
+        public Label lbSoLuong;
         public Guna.UI2.WinForms.Guna2PictureBox picture;
         public Guna.UI2.WinForms.Guna2CircleButton btnBuy;
         public Guna.UI2.WinForms.Guna2Button btnTinhTrang;
+        private Guna.UI2.WinForms.Guna2Button btnItem;
     }
 }

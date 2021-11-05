@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,12 +14,57 @@ namespace Login
 {
     public partial class UI_Home : Form
     {
+        static public int i = 0;
         List<Panel> subbar = new List<Panel>();
-        List<Guna2Button> Home_button = new List<Guna2Button>(); 
+        List<Guna2Button> Home_button = new List<Guna2Button>();
+        private Form activeForm = null;
+        public static Store_performence store = null;
+        private Home_perfomancecs home = null;
+        private Partner_performance partner = null;
         public UI_Home()
         {
             InitializeComponent();
             AddSubbarandHomeButton();
+        }
+
+        private void UI_Home_Load(object sender, EventArgs e)
+        {
+            partner = new Partner_performance();
+            store = new Store_performence();
+            DBA.Reload("select * from SanPham");
+        }
+
+       
+        private void AddSubbarandHomeButton()
+        {
+            subbar.Add(subbar1);
+            subbar.Add(subbar2);
+            subbar.Add(subbar3);
+            subbar.Add(subbar4);
+            subbar.Add(subbar5);
+            subbar.Add(subbar6);
+            Home_button.Add(HOME);
+            Home_button.Add(STORE);
+            Home_button.Add(PARTNER);
+            Home_button.Add(CUSTOMER);
+            Home_button.Add(ANALYSIS);
+            Home_button.Add(SETTING);
+        }
+       
+        private void openPerformance(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Hide();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            SubProgram.Controls.Add(childForm);
+            SubProgram.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void subbar_Change(Panel panel, Guna.UI2.WinForms.Guna2Button button)
@@ -37,38 +84,6 @@ namespace Login
             txtPerformance.Text = "> " + button.Text;
         }
 
-        private void AddSubbarandHomeButton()
-        {
-            subbar.Add(subbar1);
-            subbar.Add(subbar2);
-            subbar.Add(subbar3);
-            subbar.Add(subbar4);
-            subbar.Add(subbar5);
-            subbar.Add(subbar6);
-            Home_button.Add(HOME);
-            Home_button.Add(STORE);
-            Home_button.Add(PARTNER);
-            Home_button.Add(CUSTOMER);
-            Home_button.Add(ANALYSIS);
-            Home_button.Add(SETTING);
-        }
-        private Form activeForm = null;
-        private void openPerformance(Form childForm)
-        {
-            if (activeForm != null)
-                activeForm.Close();
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            SubProgram.Controls.Add(childForm);
-            SubProgram.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-        }
-        private void exit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -83,13 +98,13 @@ namespace Login
         private void STORE_Click(object sender, EventArgs e)
         {
             subbar_Change(subbar2, STORE);
-            openPerformance(new Store_performence());
+            openPerformance(store);
         }
 
         private void PARTNER_Click(object sender, EventArgs e)
         {
             subbar_Change(subbar3, PARTNER);
-            openPerformance(new Partner_performance());
+            openPerformance(partner);
         }
 
         private void CUSTOMER_Click(object sender, EventArgs e)
@@ -135,9 +150,8 @@ namespace Login
 
         }
 
-        private void UI_Home_Load(object sender, EventArgs e)
-        {
+        
 
-        }
+        
     }
 }
