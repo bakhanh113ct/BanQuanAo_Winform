@@ -16,13 +16,6 @@ namespace Login
         public static List<Control_User.Item> ListItem;
         static string strCon = "Data Source=DESKTOP-LBAULH5;Initial Catalog=QuanLyKho;Integrated Security=True";
         static SqlConnection sqlCon = null;
-        static public Image ConvertoImage(byte[] data)
-        {
-            using (MemoryStream ms = new MemoryStream(data))
-            {
-                return Image.FromStream(ms);
-            }
-        }
         public static void Reload(string query)
         {
             ListItem = new List<Control_User.Item>();
@@ -58,6 +51,13 @@ namespace Login
                 ListItem.Add(u);
             }
             reader.Close();
+        }
+        static public Image ConvertoImage(byte[] data)
+        {
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms);
+            }
         }
     }
 }

@@ -36,7 +36,6 @@ namespace Login
                 flpnStore.Controls.Add(i);
                 list.Add(i);
             }
-            
         }
         //Load lại flowlayoutpanel
         public void btnReload_Click(object sender, EventArgs e)

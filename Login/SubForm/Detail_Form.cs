@@ -12,9 +12,11 @@ namespace Login.SubForm
 {
     public partial class Detail_Form : Form
     {
+        int i;
         public Detail_Form()
         {
             InitializeComponent();
+            i = 0;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -31,6 +33,14 @@ namespace Login.SubForm
         {
             UI_Home.i++;
             Partner_performance.reload(UI_Home.i);
+        }
+
+        private void btnAddSL_Click(object sender, EventArgs e)
+        {
+            if(i != 0)
+                i = Convert.ToInt32(txbSLMua.Text);
+            i++;
+            txbSLMua.Text = i.ToString();
         }
     }
 }

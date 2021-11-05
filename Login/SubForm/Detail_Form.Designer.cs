@@ -45,6 +45,8 @@ namespace Login.SubForm
             this.lbDetail = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAddSL = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.txbSLMua = new Guna.UI2.WinForms.Guna2TextBox();
             this.tool3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
@@ -182,7 +184,7 @@ namespace Login.SubForm
             // lbGia
             // 
             this.lbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGia.Location = new System.Drawing.Point(403, 82);
+            this.lbGia.Location = new System.Drawing.Point(403, 121);
             this.lbGia.Name = "lbGia";
             this.lbGia.Size = new System.Drawing.Size(251, 29);
             this.lbGia.TabIndex = 22;
@@ -192,7 +194,7 @@ namespace Login.SubForm
             // lbSL
             // 
             this.lbSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSL.Location = new System.Drawing.Point(403, 121);
+            this.lbSL.Location = new System.Drawing.Point(403, 84);
             this.lbSL.Name = "lbSL";
             this.lbSL.Size = new System.Drawing.Size(251, 28);
             this.lbSL.TabIndex = 23;
@@ -232,12 +234,60 @@ namespace Login.SubForm
             this.panel2.Size = new System.Drawing.Size(247, 2);
             this.panel2.TabIndex = 27;
             // 
+            // btnAddSL
+            // 
+            this.btnAddSL.BackgroundImage = global::Login.Properties.Resources.add;
+            this.btnAddSL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAddSL.CheckedState.Parent = this.btnAddSL;
+            this.btnAddSL.CustomImages.Parent = this.btnAddSL;
+            this.btnAddSL.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddSL.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddSL.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddSL.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddSL.DisabledState.Parent = this.btnAddSL;
+            this.btnAddSL.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddSL.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddSL.ForeColor = System.Drawing.Color.White;
+            this.btnAddSL.HoverState.Parent = this.btnAddSL;
+            this.btnAddSL.Location = new System.Drawing.Point(245, 307);
+            this.btnAddSL.Name = "btnAddSL";
+            this.btnAddSL.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnAddSL.ShadowDecoration.Parent = this.btnAddSL;
+            this.btnAddSL.Size = new System.Drawing.Size(40, 40);
+            this.btnAddSL.TabIndex = 28;
+            this.btnAddSL.Click += new System.EventHandler(this.btnAddSL_Click);
+            // 
+            // txbSLMua
+            // 
+            this.txbSLMua.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbSLMua.DefaultText = "";
+            this.txbSLMua.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txbSLMua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txbSLMua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbSLMua.DisabledState.Parent = this.txbSLMua;
+            this.txbSLMua.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbSLMua.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbSLMua.FocusedState.Parent = this.txbSLMua;
+            this.txbSLMua.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txbSLMua.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbSLMua.HoverState.Parent = this.txbSLMua;
+            this.txbSLMua.Location = new System.Drawing.Point(16, 309);
+            this.txbSLMua.Name = "txbSLMua";
+            this.txbSLMua.PasswordChar = '\0';
+            this.txbSLMua.PlaceholderText = "0";
+            this.txbSLMua.SelectedText = "";
+            this.txbSLMua.ShadowDecoration.Parent = this.txbSLMua;
+            this.txbSLMua.Size = new System.Drawing.Size(207, 38);
+            this.txbSLMua.TabIndex = 29;
+            // 
             // Detail_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(684, 361);
+            this.Controls.Add(this.txbSLMua);
+            this.Controls.Add(this.btnAddSL);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbDetail);
@@ -275,5 +325,7 @@ namespace Login.SubForm
         public System.Windows.Forms.Label lbSL;
         public System.Windows.Forms.Label lbGia;
         public System.Windows.Forms.Label lbName;
+        public Guna.UI2.WinForms.Guna2CircleButton btnAddSL;
+        private Guna.UI2.WinForms.Guna2TextBox txbSLMua;
     }
 }

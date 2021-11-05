@@ -229,7 +229,7 @@ namespace Login.Control_User
         }
 
         #endregion
-        private CustomLabel lbGia;
+        public CustomLabel lbGia;
         public Label lbName;
         public Label lbDaBan;
         public Label lbSoLuong;

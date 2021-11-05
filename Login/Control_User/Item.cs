@@ -68,13 +68,17 @@ namespace Login.Control_User
 
         private void btnItem_Click(object sender, EventArgs e)
         {
-            if (Parent_Store != null)
-                Parent_Store.item = this;
-            if (Parent_Partner != null)
-                Parent_Partner.item = this;
             foreach(Item i in DBA.ListItem)
             {
                 i.btnItem.FillColor = Color.Transparent;
+            }
+            if (Parent_Store != null)
+            {
+                Parent_Store.item = this;
+            }
+            if (Parent_Partner != null)
+            {
+                Parent_Partner.item = this;
             }
             btnItem.FillColor = Color.Yellow;
         }
