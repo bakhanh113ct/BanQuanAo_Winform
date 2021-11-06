@@ -99,22 +99,20 @@ namespace Login
             editform.txbNhacungcap.Text = "a";
             editform.picture.Image = item.picture.Image;
             editform.picture.SizeMode = PictureBoxSizeMode.CenterImage;
-            //
+            //reload panel
             editform.ShowDialog();
-            if (Check_Change(editform))
+            if (Check_update(editform))
             {
-                editform.Hide();
                 LoadPanel("select * from SanPham");
             }
             if (Check_delete(editform))
             {
-                editform.Hide();
                 LoadPanel("select * from SanPham");
             }
             item = null;
         }
 
-        private bool Check_Change(SubForm.Edit_Form editform)
+        private bool Check_update(SubForm.Edit_Form editform)
         {
             if (editform.check_save_click == true)
                 return true;

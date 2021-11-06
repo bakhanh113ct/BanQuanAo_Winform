@@ -36,7 +36,6 @@ namespace Login.SubForm
             this.exit = new Guna.UI2.WinForms.Guna2Button();
             this.zooe_in_out = new Guna.UI2.WinForms.Guna2Button();
             this.minimize = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
             this.picture = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbName = new System.Windows.Forms.Label();
             this.lbGia = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@ namespace Login.SubForm
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAddSL = new Guna.UI2.WinForms.Guna2CircleButton();
             this.txbSLMua = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.tool3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
@@ -136,30 +136,6 @@ namespace Login.SubForm
             this.minimize.ShadowDecoration.Parent = this.minimize;
             this.minimize.Size = new System.Drawing.Size(20, 21);
             this.minimize.TabIndex = 0;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BorderRadius = 10;
-            this.btnAdd.CheckedState.Parent = this.btnAdd;
-            this.btnAdd.CustomImages.Parent = this.btnAdd;
-            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAdd.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAdd.DisabledState.Parent = this.btnAdd;
-            this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(201)))), ((int)(((byte)(97)))));
-            this.btnAdd.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(201)))), ((int)(((byte)(97)))));
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.HoverState.Parent = this.btnAdd;
-            this.btnAdd.Location = new System.Drawing.Point(526, 316);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
-            this.btnAdd.Size = new System.Drawing.Size(128, 33);
-            this.btnAdd.TabIndex = 17;
-            this.btnAdd.Text = "ADD";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // picture
             // 
@@ -280,12 +256,35 @@ namespace Login.SubForm
             this.txbSLMua.Size = new System.Drawing.Size(207, 38);
             this.txbSLMua.TabIndex = 29;
             // 
+            // btnAdd
+            // 
+            this.btnAdd.BorderRadius = 10;
+            this.btnAdd.CheckedState.Parent = this.btnAdd;
+            this.btnAdd.CustomImages.Parent = this.btnAdd;
+            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdd.DisabledState.Parent = this.btnAdd;
+            this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(201)))), ((int)(((byte)(97)))));
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.HoverState.Parent = this.btnAdd;
+            this.btnAdd.Location = new System.Drawing.Point(526, 309);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
+            this.btnAdd.Size = new System.Drawing.Size(128, 33);
+            this.btnAdd.TabIndex = 30;
+            this.btnAdd.Text = "ADD";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // Detail_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(684, 361);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txbSLMua);
             this.Controls.Add(this.btnAddSL);
             this.Controls.Add(this.panel2);
@@ -296,7 +295,6 @@ namespace Login.SubForm
             this.Controls.Add(this.lbGia);
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.tool3);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.picture);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Detail_Form";
@@ -315,7 +313,6 @@ namespace Login.SubForm
         private Guna.UI2.WinForms.Guna2Button exit;
         private Guna.UI2.WinForms.Guna2Button zooe_in_out;
         private Guna.UI2.WinForms.Guna2Button minimize;
-        private Guna.UI2.WinForms.Guna2GradientButton btnAdd;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
@@ -327,5 +324,6 @@ namespace Login.SubForm
         public System.Windows.Forms.Label lbName;
         public Guna.UI2.WinForms.Guna2CircleButton btnAddSL;
         private Guna.UI2.WinForms.Guna2TextBox txbSLMua;
+        private Guna.UI2.WinForms.Guna2Button btnAdd;
     }
 }

@@ -14,10 +14,8 @@ namespace Login.SubForm
 {
     public partial class Edit_Form : Form
     {
-        public bool check_save_click = false;
-        public bool check_delete_click = false;
-        string strCon = "Data Source=DESKTOP-LBAULH5;Initial Catalog=QuanLyKho;Integrated Security=True";
-        SqlConnection sqlCon = null;
+        public bool check_save_click;
+        public bool check_delete_click;
         string old_Name;
         public Edit_Form()
         {
@@ -28,80 +26,24 @@ namespace Login.SubForm
         {
             this.Close();
         }
-        private void Update(byte[] image)
-        {
-            int check = 0;
-            if (sqlCon == null)
-            {
-                sqlCon = new SqlConnection(strCon);
-            }
-            if (sqlCon.State == ConnectionState.Closed)
-            {
-                sqlCon.Open();
-            }
-            SqlCommand sqlCmd = new SqlCommand();
-            sqlCmd.CommandType = CommandType.Text;
-
-            sqlCmd.CommandText = "update SanPham set TEN = @Ten, GIA = @Gia, SL = @SoLuong, DANHGIA = @DanhGia, DABAN = @DaBan, MOTA = @MoTa, LOAI = @Loai, ANH = @Anh where TEN = '" + old_Name + "'";
-            sqlCmd.Parameters.AddWithValue("@Ten", txbTen.Text);
-            sqlCmd.Parameters.AddWithValue("@Gia", txbGiaTien.Text);
-            sqlCmd.Parameters.AddWithValue("@SoLuong", txbSoLuong.Text);
-            sqlCmd.Parameters.AddWithValue("@DanhGia", "0");
-            sqlCmd.Parameters.AddWithValue("@DaBan", "0");
-            sqlCmd.Parameters.AddWithValue("@MoTa", txbMota.Text);
-            sqlCmd.Parameters.AddWithValue("@Loai", txbLoai.Text);
-            sqlCmd.Parameters.AddWithValue("@Anh", image);
-            sqlCmd.Connection = sqlCon;
-            try
-            {
-                check = sqlCmd.ExecuteNonQuery();
-            }
-            catch
-            {
-                MessageBox.Show("Cap nhat khong thanh cong.");
-            }
-            if (check != 0)
-            {
-                MessageBox.Show("Cap nhat thanh cong.");
-                check_save_click = true;
-                this.Close();
-            }
-        }
+        
         private void btnSave_Click(object sender, EventArgs e)
         {
             byte[] imgbyte = ConvertoByte(picture.Image);
             if (imgbyte != null)
-                Update(imgbyte);
+                if(DBA.Update(txbTen.Text, txbGiaTien.Text, txbSoLuong.Text, txbMota.Text, txbLoai.Text, imgbyte, old_Name))
+                {
+                    check_save_click = true;
+                    this.Hide();
+                }    
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int check = 0;
-            if (sqlCon == null)
-            {
-                sqlCon = new SqlConnection(strCon);
-            }
-            if (sqlCon.State == ConnectionState.Closed)
-            {
-                sqlCon.Open();
-            }
-            SqlCommand sqlCmd = new SqlCommand();
-            sqlCmd.CommandType = CommandType.Text;
-            sqlCmd.CommandText = "DELETE FROM SanPham WHERE Ten = '" + txbTen.Text + "'";
-            sqlCmd.Connection = sqlCon;
-            try
-            {
-                check = sqlCmd.ExecuteNonQuery();
-            }
-            catch
-            {
-                MessageBox.Show("Xoa khong thanh cong.");
-            }
-            if (check != 0)
-            {
+            if (DBA.Delete(txbTen.Text))
+            { 
                 check_delete_click = true;
-                MessageBox.Show("Xoa thanh cong.");
-                this.Close();
+                this.Hide();
             }
         }
         byte[] ConvertoByte(Image img)
