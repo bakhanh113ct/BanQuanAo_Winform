@@ -14,8 +14,6 @@ namespace Login.SubForm
 {
     public partial class Add_Item_Form : Form
     {
-        string strCon = "Data Source=DESKTOP-LBAULH5;Initial Catalog=QuanLyKho;Integrated Security=True";
-        SqlConnection sqlCon = null;
         public Add_Item_Form()
         {
             InitializeComponent();
@@ -34,47 +32,14 @@ namespace Login.SubForm
             }
             picture.SizeMode = PictureBoxSizeMode.CenterImage;
         }
-        public void Insert(byte[] image)
+        
+        private void btnSave_Click(object sender, EventArgs e)
         {
-            int check = 0;
-            if (sqlCon == null)
-            {
-                sqlCon = new SqlConnection(strCon);
-            }
-            if (sqlCon.State == ConnectionState.Closed)
-            {
-                sqlCon.Open();
-            }
-            SqlCommand sqlCmd = new SqlCommand();
-            sqlCmd.CommandType = CommandType.Text;
-            sqlCmd.CommandText = "insert into SanPham(Ten, Gia, SoLuong, DanhGia, DaBan, MoTa, Loai, Anh) values(@Ten, @Gia, @SoLuong, @DanhGia, @DaBan, @MoTa, @Loai, @Anh)";
-            sqlCmd.Parameters.AddWithValue("@Ten", txbTen.Text);
-            sqlCmd.Parameters.AddWithValue("@Gia", txbGiaTien.Text);
-            sqlCmd.Parameters.AddWithValue("@SoLuong", txbSoLuong.Text);
-            sqlCmd.Parameters.AddWithValue("@DanhGia", "0");
-            sqlCmd.Parameters.AddWithValue("@DaBan", "0");
-            sqlCmd.Parameters.AddWithValue("@MoTa", txbMota.Text);
-            sqlCmd.Parameters.AddWithValue("@Loai", txbLoai.Text);
-            sqlCmd.Parameters.AddWithValue("@Anh", image);
-            sqlCmd.Connection = sqlCon;
-            try
-            {
-                check = sqlCmd.ExecuteNonQuery();
-            }
-            catch
-            {
-                MessageBox.Show("Them khong thanh cong.");
-            }
-            if (check != 0)
-            {
-                DialogResult result =  MessageBox.Show("Them thanh cong.");
-                if(result == DialogResult.OK)
-                {
+            byte[] imgbyte = ConvertoByte(picture.Image);
+            if (imgbyte != null)
+                if(DBA.Insert(txbTen.Text, txbGiaTien.Text, txbSoLuong.Text, txbMota.Text, txbLoai.Text,imgbyte))
                     this.Hide();
-                }
-            }
         }
-
 
         byte[] ConvertoByte(Image img)
         {
@@ -92,13 +57,6 @@ namespace Login.SubForm
             }
             return null;
             
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            byte[] imgbyte = ConvertoByte(picture.Image);
-            if (imgbyte != null)
-                Insert(imgbyte);
         }
 
         private void exit_Click(object sender, EventArgs e)

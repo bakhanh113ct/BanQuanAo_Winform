@@ -42,7 +42,7 @@ namespace Login.SubForm
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = CommandType.Text;
 
-            sqlCmd.CommandText = "update SanPham set Ten = @Ten, Gia = @Gia, SoLuong = @SoLuong, DanhGia = @DanhGia, DaBan = @DaBan, MoTa = @MoTa, Loai = @Loai, Anh = @Anh where Ten = '"+old_Name+ "'";
+            sqlCmd.CommandText = "update SanPham set TEN = @Ten, GIA = @Gia, SL = @SoLuong, DANHGIA = @DanhGia, DABAN = @DaBan, MOTA = @MoTa, LOAI = @Loai, ANH = @Anh where TEN = '" + old_Name + "'";
             sqlCmd.Parameters.AddWithValue("@Ten", txbTen.Text);
             sqlCmd.Parameters.AddWithValue("@Gia", txbGiaTien.Text);
             sqlCmd.Parameters.AddWithValue("@SoLuong", txbSoLuong.Text);
