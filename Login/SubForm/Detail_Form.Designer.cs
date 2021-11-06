@@ -236,7 +236,7 @@ namespace Login.SubForm
             // txbSLMua
             // 
             this.txbSLMua.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbSLMua.DefaultText = "";
+            this.txbSLMua.DefaultText = "0";
             this.txbSLMua.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txbSLMua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txbSLMua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));

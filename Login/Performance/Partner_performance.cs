@@ -90,7 +90,8 @@ namespace Login
 
         private void btnCart_Click(object sender, EventArgs e)
         {
-            
+            SubForm.Cart_Form cart_Form = new SubForm.Cart_Form();
+            cart_Form.ShowDialog();
         }
 
         public static void reload(int i)

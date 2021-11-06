@@ -56,7 +56,7 @@ namespace Login.Control_User
         }
         private void btnBuy_Click(object sender, EventArgs e)
         {
-            SubForm.Detail_Form detail_form = new SubForm.Detail_Form();
+            SubForm.Detail_Form detail_form = new SubForm.Detail_Form(this);
             detail_form.lbName.Text = Ten;
             detail_form.lbGia.Text = gia.ToString();
             detail_form.lbSL.Text = soluong.ToString();
