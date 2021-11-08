@@ -26,37 +26,37 @@ namespace Login.SubForm
         private void Cart_Form_Load(object sender, EventArgs e)
         {
             
-            foreach (Item_HD item in Item_HD.item_HDs)
-            {
-                dtgrvItem.Rows.Add(item.Anh, item.Ten,item.Loai,item.Sl,item.Gia);
-            }
+            //foreach (Item_HD item in Item_HD.item_HDs)
+            //{
+            //    dtgrvItem.Rows.Add(item.Anh, item.Ten,item.Loai,item.Sl,item.Gia);
+            //}
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            List<int> list = new List<int>();
-            foreach (DataGridViewRow row in dtgrvItem.Rows)
-            {
-                DataGridViewCheckBoxCell chk = row.Cells[5] as DataGridViewCheckBoxCell;
+            //List<int> list = new List<int>();
+            //foreach (DataGridViewRow row in dtgrvItem.Rows)
+            //{
+            //    DataGridViewCheckBoxCell chk = row.Cells[5] as DataGridViewCheckBoxCell;
 
-                if (Convert.ToBoolean(chk.Value) == true)
-                    list.Add(row.Index);
-            }
-            list.Reverse();
-            foreach(int i in list)
-            {
-                dtgrvItem.Rows.RemoveAt(i);
-                Item_HD.item_HDs.RemoveAt(i);
-            }
-            Partner_performance.reload(UI_Home.i);
+            //    if (Convert.ToBoolean(chk.Value) == true)
+            //        list.Add(row.Index);
+            //}
+            //list.Reverse();
+            //foreach(int i in list)
+            //{
+            //    dtgrvItem.Rows.RemoveAt(i);
+            //    Item_HD.item_HDs.RemoveAt(i);
+            //}
+            //Partner_performance.reload(UI_Home.i);
         }
 
         private void btnXN_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dtgrvItem.Rows)
-            {
+            //foreach (DataGridViewRow row in dtgrvItem.Rows)
+            //{
                 
-            }
+            //}
         }
     }
 }

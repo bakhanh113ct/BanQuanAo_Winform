@@ -37,13 +37,13 @@ namespace Login.SubForm
         {
             byte[] imgbyte = ConvertoByte(picture.Image);
             if (imgbyte != null)
-                if(DBA.Insert(txbTen.Text, txbGiaTien.Text, txbSoLuong.Text, txbMota.Text,txbLoai.Text, imgbyte))
+                if (DAO.SanPhamDAO.InsertSP(txbTen.Text, txbGiaTien.Text, txbSoLuong.Text, txbMota.Text, txbLoai.Text, imgbyte))
                     this.Hide();
         }
 
         byte[] ConvertoByte(Image img)
         {
-            if(img != null)
+            if (img != null)
             {
                 using (MemoryStream ms = new MemoryStream())
                 {
@@ -56,7 +56,7 @@ namespace Login.SubForm
                 MessageBox.Show("Chua them anh");
             }
             return null;
-            
+
         }
 
         private void exit_Click(object sender, EventArgs e)

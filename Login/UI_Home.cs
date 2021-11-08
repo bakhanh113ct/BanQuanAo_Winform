@@ -14,6 +14,7 @@ namespace Login
 {
     public partial class UI_Home : Form
     {
+        public static List<Control_User.Item> ListItem;
         static public int i = 0;
         List<Panel> subbar = new List<Panel>();
         List<Guna2Button> Home_button = new List<Guna2Button>();
@@ -25,13 +26,14 @@ namespace Login
         {
             InitializeComponent();
             AddSubbarandHomeButton();
+            ListItem = new List<Control_User.Item>();
         }
 
         private void UI_Home_Load(object sender, EventArgs e)
         {
             partner = new Partner_performance();
             store = new Store_performence();
-            DBA.Reload("select * from SanPham");
+            //DBA.Reload("select * from SanPham");
         }
 
        
@@ -149,9 +151,6 @@ namespace Login
         {
 
         }
-
-        
-
         
     }
 }

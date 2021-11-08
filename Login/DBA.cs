@@ -13,12 +13,11 @@ namespace Login
 {
     public class DBA
     {
-        public static List<Control_User.Item> ListItem;
         static string strCon = "Data Source=DESKTOP-LBAULH5;Initial Catalog=QuanLyKho;Integrated Security=True";
         static SqlConnection sqlCon = null;
         public static void Reload(string query)
         {
-            ListItem = new List<Control_User.Item>();
+            //ListItem = new List<Control_User.Item>();
             if (sqlCon == null)
             {
                 sqlCon = new SqlConnection(strCon);
@@ -34,21 +33,21 @@ namespace Login
             SqlDataReader reader = sqlCmd.ExecuteReader();
             while (reader.Read())
             {
-                string Ten = reader.GetString(1).Trim();
-                double gia = reader.GetFloat(2);
-                int soluong = reader.GetInt32(3);
-                double danhgia = reader.GetFloat(4);
-                int daban = reader.GetInt32(5);
-                string mota = reader.GetString(6);
-                int Loai = reader.GetInt32(7);
-                //Tạo Usercontrol
-                Control_User.Item u = new Control_User.Item(Ten, gia, soluong, danhgia, daban, mota, Loai, UI_Home.store);
-                //Load ảnh
-                byte[] b = null;
-                b = (byte[])reader.GetValue(8);
-                u.picture.Image = ConvertoImage(b);
-                //u.picture.SizeMode = PictureBoxSizeMode.Zoom;
-                ListItem.Add(u);
+                //string Ten = reader.GetString(1).Trim();
+                //double gia = reader.GetFloat(2);
+                //int soluong = reader.GetInt32(3);
+                //double danhgia = reader.GetFloat(4);
+                //int daban = reader.GetInt32(5);
+                //string mota = reader.GetString(6);
+                //int Loai = reader.GetInt32(7);
+                ////Tạo Usercontrol
+                ////Control_User.Item u = new Control_User.Item(Ten, gia, soluong, danhgia, daban, mota, Loai, UI_Home.store);
+                ////Load ảnh
+                //byte[] b = null;
+                //b = (byte[])reader.GetValue(8);
+                //u.picture.Image = ConvertoImage(b);
+                ////u.picture.SizeMode = PictureBoxSizeMode.Zoom;
+                //ListItem.Add(u);
             }
             reader.Close();
         }

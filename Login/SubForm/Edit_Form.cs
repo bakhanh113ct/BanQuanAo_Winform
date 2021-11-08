@@ -29,58 +29,58 @@ namespace Login.SubForm
         
         private void btnSave_Click(object sender, EventArgs e)
         {
-            byte[] imgbyte = ConvertoByte(picture.Image);
-            if (imgbyte != null)
-                if(DBA.Update(txbTen.Text, txbGiaTien.Text, txbSoLuong.Text, txbMota.Text, txbLoai.Text, imgbyte, old_Name))
-                {
-                    check_save_click = true;
-                    this.Hide();
-                }    
+            //byte[] imgbyte = ConvertoByte(picture.Image);
+            //if (imgbyte != null)
+            //    if(DBA.Update(txbTen.Text, txbGiaTien.Text, txbSoLuong.Text, txbMota.Text, txbLoai.Text, imgbyte, old_Name))
+            //    {
+            //        check_save_click = true;
+            //        this.Hide();
+            //    }    
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (DBA.Delete(txbTen.Text))
-            { 
-                check_delete_click = true;
-                this.Hide();
-            }
+            //if (DBA.Delete(txbTen.Text))
+            //{ 
+            //    check_delete_click = true;
+            //    this.Hide();
+            //}
         }
         byte[] ConvertoByte(Image img)
         {
-            if (img != null)
-            {
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                    return ms.ToArray();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Chua them anh");
-            }
+            //if (img != null)
+            //{
+            //    using (MemoryStream ms = new MemoryStream())
+            //    {
+            //        img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+            //        return ms.ToArray();
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Chua them anh");
+            //}
             return null;
 
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
+            //OpenFileDialog ofd = new OpenFileDialog();
+            //ofd.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
 
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                picture.Image = Image.FromFile(ofd.FileName);
-            }
-            picture.SizeMode = PictureBoxSizeMode.CenterImage;
+            //if (ofd.ShowDialog() == DialogResult.OK)
+            //{
+            //    picture.Image = Image.FromFile(ofd.FileName);
+            //}
+            //picture.SizeMode = PictureBoxSizeMode.CenterImage;
         }
 
         private void Edit_Form_Load(object sender, EventArgs e)
         {
-            old_Name = txbTen.Text;
-            check_save_click = false;
-            check_delete_click = false;
+            //old_Name = txbTen.Text;
+            //check_save_click = false;
+            //check_delete_click = false;
         }
     }
 }

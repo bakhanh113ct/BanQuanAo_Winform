@@ -33,20 +33,20 @@ namespace Login.SubForm
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Item_HD item_HD = new Item_HD(item.Ten, item.Loai,Convert.ToInt32(txbSLMua.Text), item.gia, item.picture.Image);
+            //Item_HD item_HD = new Item_HD(item.Ten, item.Loai,Convert.ToInt32(txbSLMua.Text), item.gia, item.picture.Image);
 
-            Item_HD.item_HDs.Add(item_HD);
-            MessageBox.Show("Them vao gio hang thanh cong");
-            Partner_performance.reload(UI_Home.i);
-            this.Close();
+            //Item_HD.item_HDs.Add(item_HD);
+            //MessageBox.Show("Them vao gio hang thanh cong");
+            //Partner_performance.reload(UI_Home.i);
+            //this.Close();
         }
 
         private void btnAddSL_Click(object sender, EventArgs e)
         {
-            if(i != 0)
-                i = Convert.ToInt32(txbSLMua.Text);
-            i++;
-            txbSLMua.Text = i.ToString();
+            //if(i != 0)
+            //    i = Convert.ToInt32(txbSLMua.Text);
+            //i++;
+            //txbSLMua.Text = i.ToString();
         }
 
     }

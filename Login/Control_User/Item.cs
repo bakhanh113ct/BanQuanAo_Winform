@@ -12,6 +12,7 @@ namespace Login.Control_User
 {
     public partial class Item : UserControl
     {
+
         public Store_performence Parent_Store { get; set; }
         public Partner_performance Parent_Partner { get; set; }
         //Thông tin của từng item 
@@ -23,7 +24,7 @@ namespace Login.Control_User
         public string mota;
         public int Loai;
         public Item() { }
-        public Item(string Ten, double gia, int soluong, double danhgia, int daban, string mota, int Loai, Control panel)
+        public Item(string Ten, double gia, int soluong, float danhgia, int daban, string mota, int Loai, Control panel)
         {
             Parent_Store = panel as Store_performence;
             Parent_Partner = panel as Partner_performance;
@@ -56,19 +57,19 @@ namespace Login.Control_User
         }
         private void btnBuy_Click(object sender, EventArgs e)
         {
-            SubForm.Detail_Form detail_form = new SubForm.Detail_Form(this);
-            detail_form.lbName.Text = Ten;
-            detail_form.lbGia.Text = gia.ToString();
-            detail_form.lbSL.Text = soluong.ToString();
-            detail_form.lbDetail.Text = mota;
-            detail_form.picture.Image = picture.Image;
-            detail_form.picture.SizeMode = PictureBoxSizeMode.CenterImage;
-            detail_form.ShowDialog();
+            //SubForm.Detail_Form detail_form = new SubForm.Detail_Form(this);
+            //detail_form.lbName.Text = Ten;
+            //detail_form.lbGia.Text = gia.ToString();
+            //detail_form.lbSL.Text = soluong.ToString();
+            //detail_form.lbDetail.Text = mota;
+            //detail_form.picture.Image = picture.Image;
+            //detail_form.picture.SizeMode = PictureBoxSizeMode.CenterImage;
+            //detail_form.ShowDialog();
         }
 
         private void btnItem_Click(object sender, EventArgs e)
         {
-            foreach(Item i in DBA.ListItem)
+            foreach (Item i in UI_Home.ListItem)
             {
                 i.btnItem.FillColor = Color.Transparent;
             }
