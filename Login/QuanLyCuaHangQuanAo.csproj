@@ -58,6 +58,7 @@
     </Compile>
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DBA.cs" />
+    <Compile Include="DTO\SanPham.cs" />
     <Compile Include="Item_HD.cs" />
     <Compile Include="Performance\Analysis_performance.cs">
       <SubType>Form</SubType>
@@ -283,8 +284,6 @@
   <ItemGroup>
     <None Include="Resources\reload1.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DTO\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

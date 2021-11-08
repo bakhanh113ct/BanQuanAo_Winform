@@ -95,7 +95,7 @@ namespace Login
             editform.txbGiaTien.Text = item.gia.ToString();
             editform.txbSoLuong.Text = item.soluong.ToString();
             editform.txbMota.Text = item.mota;
-            editform.txbLoai.Text = item.Loai;
+            editform.txbLoai.Text = item.Loai.ToString();
             editform.txbNhacungcap.Text = "a";
             editform.picture.Image = item.picture.Image;
             editform.picture.SizeMode = PictureBoxSizeMode.CenterImage;

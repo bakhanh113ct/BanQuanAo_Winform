@@ -40,7 +40,7 @@ namespace Login
                 double danhgia = reader.GetFloat(4);
                 int daban = reader.GetInt32(5);
                 string mota = reader.GetString(6);
-                string Loai = reader.GetString(7);
+                int Loai = reader.GetInt32(7);
                 //Tạo Usercontrol
                 Control_User.Item u = new Control_User.Item(Ten, gia, soluong, danhgia, daban, mota, Loai, UI_Home.store);
                 //Load ảnh
@@ -72,7 +72,7 @@ namespace Login
             }
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = CommandType.Text;
-            sqlCmd.CommandText = "insert into SANPHAM(TEN, GIA, SL, DANHGIA, DABAN, MOTA, LOAI, ANH) values(@Ten, @Gia, @SoLuong, @DanhGia, @DaBan, @MoTa, @Loai, @Anh)";
+            sqlCmd.CommandText = "insert into SANPHAM(TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI, ANH) values(@Ten, @Gia, @SoLuong, @DanhGia, @DaBan, @MoTa, @Loai, @Anh)";
             sqlCmd.Parameters.AddWithValue("@Ten", ten);
             sqlCmd.Parameters.AddWithValue("@Gia", gia);
             sqlCmd.Parameters.AddWithValue("@SoLuong", SL);
@@ -115,7 +115,7 @@ namespace Login
             }
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = CommandType.Text;
-            sqlCmd.CommandText = "insert into SANPHAM(TEN, GIA, SL, DANHGIA, DABAN, MOTA, LOAI, ANH) values(@Ten, @Gia, @SoLuong, @DanhGia, @DaBan, @MoTa, @Loai, @Anh)";
+            sqlCmd.CommandText = "insert into SANPHAM(TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI, ANH) values(@Ten, @Gia, @SoLuong, @DanhGia, @DaBan, @MoTa, @Loai, @Anh)";
             sqlCmd.Parameters.AddWithValue("@Ten", ten);
             sqlCmd.Parameters.AddWithValue("@Gia", gia);
             sqlCmd.Parameters.AddWithValue("@SoLuong", SL);

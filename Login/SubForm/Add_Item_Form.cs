@@ -37,7 +37,7 @@ namespace Login.SubForm
         {
             byte[] imgbyte = ConvertoByte(picture.Image);
             if (imgbyte != null)
-                if(DBA.Insert(txbTen.Text, txbGiaTien.Text, txbSoLuong.Text, txbMota.Text, txbLoai.Text,imgbyte))
+                if(DBA.Insert(txbTen.Text, txbGiaTien.Text, txbSoLuong.Text, txbMota.Text,txbLoai.Text, imgbyte))
                     this.Hide();
         }
 

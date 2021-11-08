@@ -21,9 +21,9 @@ namespace Login.Control_User
         public double danhgia;
         public int daban;
         public string mota;
-        public string Loai;
+        public int Loai;
         public Item() { }
-        public Item(string Ten, double gia, int soluong, double danhgia, int daban, string mota, string Loai, Control panel)
+        public Item(string Ten, double gia, int soluong, double danhgia, int daban, string mota, int Loai, Control panel)
         {
             Parent_Store = panel as Store_performence;
             Parent_Partner = panel as Partner_performance;
@@ -32,7 +32,7 @@ namespace Login.Control_User
             
         }
 
-        private void Init(string Ten, double gia, int soluong, double danhgia, int daban, string mota, string Loai)
+        private void Init(string Ten, double gia, int soluong, double danhgia, int daban, string mota, int Loai)
         {
             this.Ten = Ten;
             this.gia = gia;

@@ -16,10 +16,10 @@ namespace Login
         private double gia;
         private Image anh;
 
-        public Item_HD(string ten, string loai, int sl, double gia, Image anh)
+        public Item_HD(string ten, int loai, int sl, double gia, Image anh)
         {
             this.ten = ten;
-            this.loai = loai;
+            this.loai = loai.ToString();
             this.sl = sl;
             this.gia = gia;
             this.anh = anh;
