@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Login
+namespace Login.Control_User
 {
-    public partial class Customer_performance : Form
-    {   
-        
-        public Customer_performance()
+    public partial class order_info : UserControl
+    {
+        public order_info()
         {
             InitializeComponent();
-            load();
-        }
-        void load()
-        {
-           
         }
     }
 }

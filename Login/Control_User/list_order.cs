@@ -8,19 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Login
+namespace Login.Control_User
 {
-    public partial class Customer_performance : Form
-    {   
-        
-        public Customer_performance()
+    public partial class list_order : UserControl
+    {
+        public list_order()
         {
             InitializeComponent();
-            load();
         }
-        void load()
+
+        private void label1_Click(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
