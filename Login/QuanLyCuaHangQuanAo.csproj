@@ -58,7 +58,11 @@
     </Compile>
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DBA.cs" />
-    <Compile Include="DTO\SanPham.cs" />
+    <Compile Include="DTO\CTHD.cs" />
+    <Compile Include="DTO\HOADON.cs" />
+    <Compile Include="DTO\KHACHHANG.cs" />
+    <Compile Include="DTO\LOAISP.cs" />
+    <Compile Include="DTO\SANPHAM.cs" />
     <Compile Include="Item_HD.cs" />
     <Compile Include="Performance\Analysis_performance.cs">
       <SubType>Form</SubType>
