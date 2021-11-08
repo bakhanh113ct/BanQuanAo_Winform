@@ -56,7 +56,14 @@
     <Compile Include="Control_User\Item.Designer.cs">
       <DependentUpon>Item.cs</DependentUpon>
     </Compile>
+    <Compile Include="Control_User\list_order.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control_User\list_order.Designer.cs">
+      <DependentUpon>list_order.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\OrderList.cs" />
     <Compile Include="DBA.cs" />
     <Compile Include="DTO\CTHD.cs" />
     <Compile Include="DTO\HOADON.cs" />
@@ -146,6 +153,9 @@
     </Compile>
     <EmbeddedResource Include="Control_User\Item.resx">
       <DependentUpon>Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control_User\list_order.resx">
+      <DependentUpon>list_order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Performance\Analysis_performance.resx">
       <DependentUpon>Analysis_performance.cs</DependentUpon>
@@ -288,6 +298,11 @@
   <ItemGroup>
     <None Include="Resources\reload1.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\avt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Dương cầm_ %2817%29.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

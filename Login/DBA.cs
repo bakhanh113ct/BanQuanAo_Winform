@@ -14,7 +14,7 @@ namespace Login
     public class DBA
     {
         public static List<Control_User.Item> ListItem;
-        static string strCon = "Data Source=DESKTOP-LBAULH5;Initial Catalog=QuanLyKho;Integrated Security=True";
+        static string strCon = "Data Source=DESKTOP-5E0I4OU\\SQLEXPRESS01;Initial Catalog=QuanLyKho;Integrated Security=True";
         static SqlConnection sqlCon = null;
         public static void Reload(string query)
         {

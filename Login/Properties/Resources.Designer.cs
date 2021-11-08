@@ -93,6 +93,16 @@ namespace Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap avt {
+            get {
+                object obj = ResourceManager.GetObject("avt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap customer_64px {
             get {
                 object obj = ResourceManager.GetObject("customer_64px", resourceCulture);
@@ -106,6 +116,16 @@ namespace Login.Properties {
         internal static System.Drawing.Bitmap delete_64px {
             get {
                 object obj = ResourceManager.GetObject("delete_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Dương_cầm___17_ {
+            get {
+                object obj = ResourceManager.GetObject("Dương cầm_ (17)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
