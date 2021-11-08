@@ -33,19 +33,22 @@ namespace Login.SubForm
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cart_Form));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.dtgrvItem = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.tool3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.exit = new Guna.UI2.WinForms.Guna2Button();
-            this.zooe_in_out = new Guna.UI2.WinForms.Guna2Button();
-            this.minimize = new Guna.UI2.WinForms.Guna2Button();
             this.anh = new System.Windows.Forms.DataGridViewImageColumn();
             this.ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.xoa = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.chon = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tool3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.exit = new Guna.UI2.WinForms.Guna2Button();
+            this.zooe_in_out = new Guna.UI2.WinForms.Guna2Button();
+            this.minimize = new Guna.UI2.WinForms.Guna2Button();
+            this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
+            this.btnXN = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvItem)).BeginInit();
             this.tool3.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +66,7 @@ namespace Login.SubForm
             this.dtgrvItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgrvItem.BackgroundColor = System.Drawing.Color.White;
             this.dtgrvItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgrvItem.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.dtgrvItem.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgrvItem.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -80,7 +83,7 @@ namespace Login.SubForm
             this.Loai,
             this.soluong,
             this.gia,
-            this.xoa});
+            this.chon});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -91,13 +94,13 @@ namespace Login.SubForm
             this.dtgrvItem.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgrvItem.EnableHeadersVisualStyles = false;
             this.dtgrvItem.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgrvItem.Location = new System.Drawing.Point(0, 62);
+            this.dtgrvItem.Location = new System.Drawing.Point(0, 78);
             this.dtgrvItem.Name = "dtgrvItem";
             this.dtgrvItem.RowHeadersVisible = false;
             this.dtgrvItem.RowHeadersWidth = 40;
             this.dtgrvItem.RowTemplate.Height = 60;
             this.dtgrvItem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgrvItem.Size = new System.Drawing.Size(684, 299);
+            this.dtgrvItem.Size = new System.Drawing.Size(684, 283);
             this.dtgrvItem.TabIndex = 0;
             this.dtgrvItem.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgrvItem.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -120,6 +123,52 @@ namespace Login.SubForm
             this.dtgrvItem.ThemeStyle.RowsStyle.Height = 60;
             this.dtgrvItem.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgrvItem.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // anh
+            // 
+            this.anh.HeaderText = "";
+            this.anh.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.anh.Name = "anh";
+            this.anh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.anh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // ten
+            // 
+            this.ten.FillWeight = 135F;
+            this.ten.HeaderText = "Tên";
+            this.ten.Name = "ten";
+            this.ten.ReadOnly = true;
+            // 
+            // Loai
+            // 
+            this.Loai.FillWeight = 130F;
+            this.Loai.HeaderText = "Loại";
+            this.Loai.Name = "Loai";
+            this.Loai.ReadOnly = true;
+            // 
+            // soluong
+            // 
+            this.soluong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.soluong.FillWeight = 121.8274F;
+            this.soluong.HeaderText = "Số lượng";
+            this.soluong.Name = "soluong";
+            this.soluong.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.soluong.Width = 88;
+            // 
+            // gia
+            // 
+            this.gia.FillWeight = 135.388F;
+            this.gia.HeaderText = "Giá";
+            this.gia.Name = "gia";
+            this.gia.ReadOnly = true;
+            // 
+            // chon
+            // 
+            this.chon.FillWeight = 40F;
+            this.chon.HeaderText = "Chọn";
+            this.chon.Name = "chon";
+            this.chon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.chon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // tool3
             // 
@@ -203,58 +252,56 @@ namespace Login.SubForm
             this.minimize.Size = new System.Drawing.Size(20, 21);
             this.minimize.TabIndex = 0;
             // 
-            // anh
+            // btnXoa
             // 
-            this.anh.HeaderText = "";
-            this.anh.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.anh.Name = "anh";
-            this.anh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.anh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.btnXoa.BackColor = System.Drawing.Color.Transparent;
+            this.btnXoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXoa.BackgroundImage")));
+            this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnXoa.CheckedState.Parent = this.btnXoa;
+            this.btnXoa.CustomImages.Parent = this.btnXoa;
+            this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXoa.DisabledState.Parent = this.btnXoa;
+            this.btnXoa.FillColor = System.Drawing.Color.Transparent;
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.HoverState.Parent = this.btnXoa;
+            this.btnXoa.Location = new System.Drawing.Point(561, 31);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.ShadowDecoration.Parent = this.btnXoa;
+            this.btnXoa.Size = new System.Drawing.Size(36, 41);
+            this.btnXoa.TabIndex = 22;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // ten
+            // btnXN
             // 
-            this.ten.FillWeight = 135F;
-            this.ten.HeaderText = "Tên";
-            this.ten.Name = "ten";
-            this.ten.ReadOnly = true;
-            // 
-            // Loai
-            // 
-            this.Loai.FillWeight = 130F;
-            this.Loai.HeaderText = "Loại";
-            this.Loai.Name = "Loai";
-            this.Loai.ReadOnly = true;
-            // 
-            // soluong
-            // 
-            this.soluong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.soluong.FillWeight = 121.8274F;
-            this.soluong.HeaderText = "Số lượng";
-            this.soluong.Name = "soluong";
-            this.soluong.Width = 88;
-            // 
-            // gia
-            // 
-            this.gia.FillWeight = 135.388F;
-            this.gia.HeaderText = "Giá";
-            this.gia.Name = "gia";
-            this.gia.ReadOnly = true;
-            // 
-            // xoa
-            // 
-            this.xoa.FillWeight = 40F;
-            this.xoa.HeaderText = "Xóa";
-            this.xoa.Name = "xoa";
-            this.xoa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.xoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.xoa.Text = "Xoa";
-            this.xoa.UseColumnTextForButtonValue = true;
+            this.btnXN.CheckedState.Parent = this.btnXN;
+            this.btnXN.CustomImages.Parent = this.btnXN;
+            this.btnXN.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXN.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXN.DisabledState.Parent = this.btnXN;
+            this.btnXN.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnXN.ForeColor = System.Drawing.Color.White;
+            this.btnXN.HoverState.Parent = this.btnXN;
+            this.btnXN.Location = new System.Drawing.Point(409, 38);
+            this.btnXN.Name = "btnXN";
+            this.btnXN.ShadowDecoration.Parent = this.btnXN;
+            this.btnXN.Size = new System.Drawing.Size(127, 34);
+            this.btnXN.TabIndex = 23;
+            this.btnXN.Text = "Xác nhận";
+            this.btnXN.Click += new System.EventHandler(this.btnXN_Click);
             // 
             // Cart_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 361);
+            this.Controls.Add(this.btnXN);
+            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.tool3);
             this.Controls.Add(this.dtgrvItem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -281,6 +328,8 @@ namespace Login.SubForm
         private System.Windows.Forms.DataGridViewTextBoxColumn Loai;
         private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
         private System.Windows.Forms.DataGridViewTextBoxColumn gia;
-        private System.Windows.Forms.DataGridViewButtonColumn xoa;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn chon;
+        private Guna.UI2.WinForms.Guna2Button btnXoa;
+        private Guna.UI2.WinForms.Guna2Button btnXN;
     }
 }

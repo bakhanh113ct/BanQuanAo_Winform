@@ -252,6 +252,7 @@ namespace Login.SubForm
             this.txbSLMua.PasswordChar = '\0';
             this.txbSLMua.PlaceholderText = "0";
             this.txbSLMua.SelectedText = "";
+            this.txbSLMua.SelectionStart = 1;
             this.txbSLMua.ShadowDecoration.Parent = this.txbSLMua;
             this.txbSLMua.Size = new System.Drawing.Size(207, 38);
             this.txbSLMua.TabIndex = 29;

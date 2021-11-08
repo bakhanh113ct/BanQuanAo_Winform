@@ -96,6 +96,7 @@ namespace Login
 
         public static void reload(int i)
         {
+            i = Item_HD.item_HDs.Count();
             label1.Text = i.ToString();
         }
 
