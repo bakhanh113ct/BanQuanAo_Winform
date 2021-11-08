@@ -36,8 +36,8 @@ namespace Login.DAO
         static public bool InsertSP(string ten, string gia, string SL, string mota, string loai, byte[] image)
         {
 
-            DAO.DataProvider.ExecuteNonQuery("InsertSP @TEN , @GIA , @SL ,  @DABAN ,  @MOTA ,  @IDLOAI , @ANH ", new object[] { ten, gia, SL , "0" , mota, loai, image });
-            
+            DAO.DataProvider.ExecuteNonQuery("InsertSP @TEN , @GIA , @SL ,  @DABAN ,  @MOTA ,  @IDLOAI , @ANH ", new object[] { ten, gia, SL, "0", mota, loai, image });
+
             return true;
         }
     }

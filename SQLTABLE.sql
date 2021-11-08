@@ -69,3 +69,23 @@ drop table  LOAISP
 insert into HOADON(NGHD,MAKH,TRIGIA) values ('2006-07-23','1','320000')
 insert into CTHD(SOHD,MASP,SL) values ('2','5','10')
 insert into KHACHHANG(HOTEN, DCHI, SODT,NGSINH) values('khanh', 'daklak', '039', '2002-03-04')
+
+
+
+create proc InsertSP
+@TEN nvarchar(50), @GIA real, @SL int,  @DABAN int,  @MOTA nvarchar(100),  @IDLOAI int, @ANH image
+as 
+begin
+	insert SANPHAM(TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI, ANH)
+	values
+	(@TEN,
+	 @GIA,
+	 @SL,
+	 '0',
+	 @DABAN ,
+	 @MOTA ,
+	 @IDLOAI ,
+	 @ANH
+	)
+end
+

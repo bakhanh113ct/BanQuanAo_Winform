@@ -64,6 +64,7 @@
     </Compile>
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\OrderList.cs" />
+    <Compile Include="DAO\SanPhamDAO.cs" />
     <Compile Include="DBA.cs" />
     <Compile Include="DTO\CTHD.cs" />
     <Compile Include="DTO\HOADON.cs" />
