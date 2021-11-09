@@ -17,6 +17,15 @@ namespace Login.DAO
 
         //public static List<Control_User.Item> ListItem;
         static string strCon = "Data Source=DESKTOP-LBAULH5;Initial Catalog=QuanLyKho;Integrated Security=True";
+        private static string connectionStr = "Data Source=DESKTOP-5E0I4OU\\SQLEXPRESS01;Initial Catalog=QuanLyKho;Integrated Security=True";
+        private static SqlConnection conn;
+        public static void IntializeConnection()
+        {
+            if (conn != null)
+                conn.Close();
+
+            conn = new SqlConnection(connectionStr);
+        }
 
         public static DataProvider Instance
         {
@@ -130,6 +139,32 @@ namespace Login.DAO
             adapter.Fill(dt);
             connect.Close();
             return dt;
+        }
+
+        //
+        
+        public static DataTable ExcuseQuery1(string strQuery)
+        {
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand(strQuery, conn);
+
+            DataTable result = new DataTable();
+            result.Load(cmd.ExecuteReader());
+
+            conn.Close();
+
+            return result;
+
+        }
+
+        public static void ExcuseNonQuery1(string Query)
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(Query, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
         }
     }
 }

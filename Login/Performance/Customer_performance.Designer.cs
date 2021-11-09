@@ -29,16 +29,17 @@ namespace Login
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.list_KH = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // list_KH
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 122);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(430, 430);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.list_KH.AutoScroll = true;
+            this.list_KH.Location = new System.Drawing.Point(0, 122);
+            this.list_KH.Name = "list_KH";
+            this.list_KH.Size = new System.Drawing.Size(430, 430);
+            this.list_KH.TabIndex = 0;
+            this.list_KH.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // Customer_performance
             // 
@@ -46,7 +47,7 @@ namespace Login
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(915, 543);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.list_KH);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Customer_performance";
@@ -57,6 +58,6 @@ namespace Login
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel list_KH;
     }
 }
