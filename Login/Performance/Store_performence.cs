@@ -39,6 +39,7 @@ namespace Login
                 //Load ảnh
                 byte[] b = item.Anh;
                 u.picture.Image = ConvertoImage(b);
+                u.btnItem.Tag = item;
                 UI_Home.ListItem.Add(u);
                 flpnStore.Controls.Add(u);
             }
@@ -92,30 +93,30 @@ namespace Login
 
         public void btnEdit_Click(object sender, EventArgs e)
         {
-            //if (item == null)
-            //{
-            //    MessageBox.Show("Vui lòng chọn item");
-            //    return;
-            //}
-            //editform.txbTen.Text = item.Ten;
-            //editform.txbGiaTien.Text = item.gia.ToString();
-            //editform.txbSoLuong.Text = item.soluong.ToString();
-            //editform.txbMota.Text = item.mota;
-            //editform.txbLoai.Text = item.Loai.ToString();
-            //editform.txbNhacungcap.Text = "a";
-            //editform.picture.Image = item.picture.Image;
-            //editform.picture.SizeMode = PictureBoxSizeMode.CenterImage;
-            ////reload panel
-            //editform.ShowDialog();
-            //if (Check_update(editform))
-            //{
-            //    LoadPanel("select * from SanPham");
-            //}
-            //if (Check_delete(editform))
-            //{
-            //    LoadPanel("select * from SanPham");
-            //}
-            //item = null;
+            if (item == null)
+            {
+                MessageBox.Show("Vui lòng chọn item");
+                return;
+            }
+            editform.txbTen.Text = item.Ten;
+            editform.txbGiaTien.Text = item.gia.ToString();
+            editform.txbSoLuong.Text = item.soluong.ToString();
+            editform.txbMota.Text = item.mota;
+            editform.txbLoai.Text = item.Loai.ToString();
+            editform.txbNhacungcap.Text = "a";
+            editform.picture.Image = item.picture.Image;
+            editform.picture.SizeMode = PictureBoxSizeMode.CenterImage;
+            //reload panel
+            editform.ShowDialog();
+            if (Check_update(editform))
+            {
+                LoadPanel();
+            }
+            if (Check_delete(editform))
+            {
+                LoadPanel();
+            }
+            item = null;
         }
 
         private bool Check_update(SubForm.Edit_Form editform)

@@ -236,6 +236,6 @@ namespace Login.Control_User
         public Guna.UI2.WinForms.Guna2PictureBox picture;
         public Guna.UI2.WinForms.Guna2CircleButton btnBuy;
         public Guna.UI2.WinForms.Guna2Button btnTinhTrang;
-        private Guna.UI2.WinForms.Guna2Button btnItem;
+        public Guna.UI2.WinForms.Guna2Button btnItem;
     }
 }

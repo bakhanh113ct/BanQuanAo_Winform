@@ -48,39 +48,39 @@ namespace Login.SubForm
         }
         byte[] ConvertoByte(Image img)
         {
-            //if (img != null)
-            //{
-            //    using (MemoryStream ms = new MemoryStream())
-            //    {
-            //        img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-            //        return ms.ToArray();
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Chua them anh");
-            //}
+            if (img != null)
+            {
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                    return ms.ToArray();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chua them anh");
+            }
             return null;
 
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            //OpenFileDialog ofd = new OpenFileDialog();
-            //ofd.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
 
-            //if (ofd.ShowDialog() == DialogResult.OK)
-            //{
-            //    picture.Image = Image.FromFile(ofd.FileName);
-            //}
-            //picture.SizeMode = PictureBoxSizeMode.CenterImage;
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                picture.Image = Image.FromFile(ofd.FileName);
+            }
+            picture.SizeMode = PictureBoxSizeMode.CenterImage;
         }
 
         private void Edit_Form_Load(object sender, EventArgs e)
         {
-            //old_Name = txbTen.Text;
-            //check_save_click = false;
-            //check_delete_click = false;
+            old_Name = txbTen.Text;
+            check_save_click = false;
+            check_delete_click = false;
         }
     }
 }

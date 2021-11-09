@@ -35,9 +35,21 @@ namespace Login.DAO
 
         static public bool InsertSP(string ten, string gia, string SL, string mota, string loai, byte[] image)
         {
-
-            DAO.DataProvider.ExecuteNonQuery("InsertSP @TEN , @GIA , @SL ,  @DABAN ,  @MOTA ,  @IDLOAI , @ANH ", new object[] { ten, gia, SL, "0", mota, loai, image });
-
+            int check = DAO.DataProvider.ExecuteNonQuery("InsertSP @TEN , @GIA , @SL ,  @DABAN ,  @MOTA ,  @IDLOAI , @ANH ", 
+                                             new object[] { ten, gia, SL, "0", mota, loai, image });
+            if (check == 0)
+            {
+                MessageBox.Show("Them khong thanh cong.");
+                return false;
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Them thanh cong.");
+                if (result == DialogResult.OK)
+                {
+                    return true;
+                }
+            }
             return true;
         }
     }

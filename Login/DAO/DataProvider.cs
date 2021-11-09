@@ -74,7 +74,14 @@ namespace Login.DAO
                         }
                     }
                 }
-                kq = command.ExecuteNonQuery();
+                try
+                {
+                    kq = command.ExecuteNonQuery();
+                }
+                catch
+                {
+                    return kq;
+                }
                 sqlCon.Close();
             }
             return kq;
