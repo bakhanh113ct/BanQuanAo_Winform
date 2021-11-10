@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Login.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,47 +13,47 @@ namespace Login.Control_User
 {
     public partial class Item : UserControl
     {
-
+        SANPHAM sanpham;
         public Store_performence Parent_Store { get; set; }
         public Partner_performance Parent_Partner { get; set; }
-        //Thông tin của từng item 
-        public string Ten;
-        public double gia;
-        public int soluong;
-        public double danhgia;
-        public int daban;
-        public string mota;
-        public int Loai;
+        ////Thông tin của từng item 
+        //public string Ten;
+        //public double gia;
+        //public int soluong;
+        //public double danhgia;
+        //public int daban;
+        //public string mota;
+        //public int Loai;
         public Item() { }
-        public Item(string Ten, double gia, int soluong, float danhgia, int daban, string mota, int Loai, Control panel)
+        public Item(SANPHAM item, Control panel)
         {
             Parent_Store = panel as Store_performence;
             Parent_Partner = panel as Partner_performance;
             InitializeComponent();
-            Init(Ten, gia, soluong, danhgia, daban, mota, Loai);
-            
+            Init(item);
+            this.sanpham = item;
         }
 
-        private void Init(string Ten, double gia, int soluong, double danhgia, int daban, string mota, int Loai)
+        private void Init(SANPHAM item)
         {
-            this.Ten = Ten;
-            this.gia = gia;
-            this.soluong = soluong;
-            this.danhgia = danhgia;
-            this.daban = daban;
-            this.mota = mota;
-            this.Loai = Loai;
+            //this.Ten = Ten;
+            //this.gia = gia;
+            //this.soluong = soluong;
+            //this.danhgia = danhgia;
+            //this.daban = daban;
+            //this.mota = mota;
+            //this.Loai = Loai;
             btnTinhTrang.BackColor = Color.Transparent;
-            lbName.Text = Ten;
-            if (soluong > 0)
+            lbName.Text = item.Ten;
+            if (item.SL > 0)
             {
                 btnTinhTrang.Text = "Còn";
                 btnTinhTrang.BackColor = Color.Transparent;
                 btnTinhTrang.FillColor = Color.FromArgb(68, 201, 97);
             }
-            lbGia.Text = gia.ToString() + " VND";
-            lbSoLuong.Text = "SL: " + soluong.ToString();
-            lbDaBan.Text = "Ban: " + daban.ToString();
+            lbGia.Text = item.Gia.ToString() + " VND";
+            lbSoLuong.Text = "SL: " + item.SL.ToString();
+            lbDaBan.Text = "Ban: " + item.SL.ToString();
             lbName.ForeColor = Color.FromKnownColor(KnownColor.Black);
         }
         private void btnBuy_Click(object sender, EventArgs e)
@@ -75,11 +76,11 @@ namespace Login.Control_User
             }
             if (Parent_Store != null)
             {
-                Parent_Store.item = this;
+                Store_performence.sanpham = sanpham;
             }
             if (Parent_Partner != null)
             {
-                Parent_Partner.item = this;
+                Parent_Partner.sanpham = sanpham;
             }
             btnItem.FillColor = Color.Yellow;
         }
