@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Login.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,9 +15,9 @@ namespace Login
 {
     public partial class Partner_performance : Form
     {
+        public SANPHAM sanpham;
         static public Guna.UI2.WinForms.Guna2Chip btnSoHang;
         static public Label label1;
-        public Control_User.Item item;
         public Partner_performance()
         {
             InitializeComponent();

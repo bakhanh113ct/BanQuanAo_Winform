@@ -16,13 +16,14 @@ namespace Login
 {
     public partial class Store_performence : Form
     {
-
-        public Control_User.Item item;
-        public static List<Control_User.Item> list = new List<Control_User.Item>();
+        static public SANPHAM sanpham;
+        List<SANPHAM> listsp;
+        //public static List<Control_User.Item> list = new List<Control_User.Item>();
         public SubForm.Edit_Form editform = new SubForm.Edit_Form();    //mọi item đều có chung 1 form edit
         public Store_performence()
         {
             InitializeComponent();
+            cbbFilter.SelectedIndex = 4;
         }
         private void Store_performence_Load(object sender, EventArgs e)
         {
@@ -31,15 +32,21 @@ namespace Login
 
         public void LoadPanel()
         {
+            if(UI_Home.ListItem != null) UI_Home.ListItem.Clear();
             flpnStore.Controls.Clear();
-            List<SANPHAM> listsp = SanPhamDAO.LoadSP();
+            listsp = SanPhamDAO.LoadSP();
             foreach (SANPHAM item in listsp)
             {
-                Control_User.Item u = new Control_User.Item(item.Ten, item.Gia, item.SL, item.DanhGia, item.DaBan, item.MoTa, item.IDLoai, UI_Home.store);
+                Control_User.Item u = new Control_User.Item(item ,UI_Home.store);
                 //Load ảnh
+                u.btnItem.Tag = item;
                 byte[] b = item.Anh;
                 u.picture.Image = ConvertoImage(b);
+                //gan the tag = item de dung luc sau...
+                u.btnItem.Tag = item;
+                //them vao danh sach item o UI_HOME
                 UI_Home.ListItem.Add(u);
+                //them vao panel
                 flpnStore.Controls.Add(u);
             }
         }
@@ -64,58 +71,80 @@ namespace Login
             SubForm.Add_Item_Form additem = new SubForm.Add_Item_Form();
             additem.ShowDialog(this);
             LoadPanel();
-            additem.Hide();
+            additem.Close();
+        }
+
+        private void Filter(string Loai)
+        {
+            flpnStore.Controls.Clear();
+           
+            foreach(Control_User.Item item in UI_Home.ListItem)
+            {
+                int i = (item.btnItem.Tag as SANPHAM).IDLoai;
+                if (i == 1 && Loai == "Quan")
+                    flpnStore.Controls.Add(item);
+                else if (i == 2 && Loai == "Ao")
+                    flpnStore.Controls.Add(item);
+                else if (i == 3 && Loai == "Mu")
+                    flpnStore.Controls.Add(item);
+                else if (i == 4 && Loai == "Giay")
+                    flpnStore.Controls.Add(item);
+                else if (Loai == "All")
+                    flpnStore.Controls.Add(item);
+            }
+
         }
 
         private void cbbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //Guna.UI2.WinForms.Guna2ComboBox i = (Guna.UI2.WinForms.Guna2ComboBox)sender;
-            //switch (i.SelectedIndex)
-            //{
-            //    case 0:
-            //        LoadPanel("select * from SanPham where Loai = 'ao' or Loai = 'Ao'");
-            //        break;
-            //    case 1:
-            //        LoadPanel("select * from SanPham where Loai = 'quan' or Loai = 'Quan'");
-            //        break;
-            //    case 2:
-            //        LoadPanel("select * from SanPham where Loai = 'giay' or Loai = 'Giay' or Loai = 'dep' or Loai = 'Dep'");
-            //        break;
-            //    case 3:
-            //        LoadPanel("select * from SanPham where Loai = 'mu' or Loai = 'Mu'");
-            //        break;
-            //    case 4:
-            //        LoadPanel("select * from SanPham");
-            //        break;
-            //}
+            Guna.UI2.WinForms.Guna2ComboBox i = (Guna.UI2.WinForms.Guna2ComboBox)sender;
+            switch (i.SelectedIndex)
+            {
+                case 0:
+                    Filter("Quan");
+                    break;
+                case 1:
+                    Filter("Ao");
+                    break;
+                case 2:
+                    Filter("Mu");
+                    break;
+                case 3:
+                    Filter("Giay");
+                    break;
+                case 4:
+                    Filter("All");
+                    break;
+            }
         }
 
         public void btnEdit_Click(object sender, EventArgs e)
         {
-            //if (item == null)
-            //{
-            //    MessageBox.Show("Vui lòng chọn item");
-            //    return;
-            //}
-            //editform.txbTen.Text = item.Ten;
-            //editform.txbGiaTien.Text = item.gia.ToString();
-            //editform.txbSoLuong.Text = item.soluong.ToString();
-            //editform.txbMota.Text = item.mota;
-            //editform.txbLoai.Text = item.Loai.ToString();
-            //editform.txbNhacungcap.Text = "a";
-            //editform.picture.Image = item.picture.Image;
-            //editform.picture.SizeMode = PictureBoxSizeMode.CenterImage;
-            ////reload panel
-            //editform.ShowDialog();
-            //if (Check_update(editform))
-            //{
-            //    LoadPanel("select * from SanPham");
-            //}
-            //if (Check_delete(editform))
-            //{
-            //    LoadPanel("select * from SanPham");
-            //}
-            //item = null;
+            if (sanpham == null)
+            {
+                MessageBox.Show("Vui lòng chọn item");
+                return;
+            }
+            editform.txbTen.Text = sanpham.Ten;
+            editform.txbGiaTien.Text = sanpham.Gia.ToString();
+            editform.txbSoLuong.Text = sanpham.SL.ToString();
+            editform.txbMota.Text = sanpham.MoTa;
+            editform.txbLoai.Text = sanpham.IDLoai.ToString();
+            editform.txbNhacungcap.Text = "a";
+            editform.picture.Image = ConvertoImage(sanpham.Anh);
+            editform.picture.SizeMode = PictureBoxSizeMode.CenterImage;
+            editform.id = sanpham.Masp.ToString();
+            //reload panel
+            editform.ShowDialog();
+            if (Check_update(editform))
+            {
+                LoadPanel();
+            }
+            if (Check_delete(editform))
+            {
+                LoadPanel();
+            }
+            sanpham = null;
         }
 
         private bool Check_update(SubForm.Edit_Form editform)

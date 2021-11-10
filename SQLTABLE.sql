@@ -63,8 +63,8 @@ SELECT * FROM SANPHAM
 SELECT * FROM HOADON
 SELECT * FROM KHACHHANG
 SELECT * FROM CTHD
+SELECT * FROM LOAISP
 
-drop table  LOAISP
 
 insert into HOADON(NGHD,MAKH,TRIGIA) values ('2006-07-23','1','320000')
 insert into CTHD(SOHD,MASP,SL) values ('2','5','10')
@@ -88,4 +88,11 @@ begin
 	 @ANH
 	)
 end
-
+--create proc InsertSP
+--@TEN nvarchar(50), @GIA real, @SL int,  @DABAN int,  @MOTA nvarchar(100),  @IDLOAI int, @ANH image
+--as 
+--begin
+--	update SANPHAM
+--	set TEN=@TEN, GIA=@GIA, SL=@SL, DANHGIA = SANPHAM.DANHGIA, DABAN=@DABAN, MOTA=@MOTA, IDLOAI=@IDLOAI, ANH=@ANH
+--	where 
+--end

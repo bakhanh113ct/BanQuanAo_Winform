@@ -75,10 +75,10 @@ namespace Login
             this.cbbFilter.HoverState.Parent = this.cbbFilter;
             this.cbbFilter.ItemHeight = 30;
             this.cbbFilter.Items.AddRange(new object[] {
-            "Áo",
             "Quần",
-            "Giày, Dép",
+            "Áo",
             "Mũ",
+            "Giày, Dép",
             "Tất cả"});
             this.cbbFilter.ItemsAppearance.Parent = this.cbbFilter;
             this.cbbFilter.Location = new System.Drawing.Point(13, 5);

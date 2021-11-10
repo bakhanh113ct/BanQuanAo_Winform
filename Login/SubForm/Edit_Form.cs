@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
+using Login.DTO;
+using Login.DAO;
 
 namespace Login.SubForm
 {
@@ -16,10 +18,16 @@ namespace Login.SubForm
     {
         public bool check_save_click;
         public bool check_delete_click;
-        string old_Name;
+        public string id;
         public Edit_Form()
         {
             InitializeComponent();
+        }
+
+        private void Edit_Form_Load(object sender, EventArgs e)
+        {
+            check_save_click = false;
+            check_delete_click = false;
         }
 
         private void exit_Click(object sender, EventArgs e)
@@ -29,58 +37,53 @@ namespace Login.SubForm
         
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //byte[] imgbyte = ConvertoByte(picture.Image);
-            //if (imgbyte != null)
-            //    if(DBA.Update(txbTen.Text, txbGiaTien.Text, txbSoLuong.Text, txbMota.Text, txbLoai.Text, imgbyte, old_Name))
-            //    {
-            //        check_save_click = true;
-            //        this.Hide();
-            //    }    
+            byte[] imgbyte = ConvertoByte(picture.Image);
+            if (imgbyte != null)
+                if (SanPhamDAO.UpdateSP(txbTen.Text, txbGiaTien.Text, txbSoLuong.Text, txbMota.Text, txbLoai.Text, imgbyte, id))
+                {
+                    check_save_click = true;
+                    this.Close();
+                }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            //if (DBA.Delete(txbTen.Text))
-            //{ 
-            //    check_delete_click = true;
-            //    this.Hide();
-            //}
+            if (SanPhamDAO.DeleteSP(id))
+            {
+                check_delete_click = true;
+                this.Close();
+            }
         }
         byte[] ConvertoByte(Image img)
         {
-            //if (img != null)
-            //{
-            //    using (MemoryStream ms = new MemoryStream())
-            //    {
-            //        img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-            //        return ms.ToArray();
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Chua them anh");
-            //}
+            if (img != null)
+            {
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                    return ms.ToArray();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chua them anh");
+            }
             return null;
 
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            //OpenFileDialog ofd = new OpenFileDialog();
-            //ofd.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
 
-            //if (ofd.ShowDialog() == DialogResult.OK)
-            //{
-            //    picture.Image = Image.FromFile(ofd.FileName);
-            //}
-            //picture.SizeMode = PictureBoxSizeMode.CenterImage;
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                picture.Image = Image.FromFile(ofd.FileName);
+            }
+            picture.SizeMode = PictureBoxSizeMode.CenterImage;
         }
 
-        private void Edit_Form_Load(object sender, EventArgs e)
-        {
-            //old_Name = txbTen.Text;
-            //check_save_click = false;
-            //check_delete_click = false;
-        }
+        
     }
 }
