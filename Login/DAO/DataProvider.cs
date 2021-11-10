@@ -150,7 +150,6 @@ namespace Login.DAO
             return result;
 
         }
-
         public static void ExcuseNonQuery1(string Query)
         {
             conn.Open();

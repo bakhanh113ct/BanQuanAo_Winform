@@ -66,6 +66,7 @@
     <Compile Include="DAO\OrderList.cs" />
     <Compile Include="DAO\SanPhamDAO.cs" />
     <Compile Include="DBA.cs" />
+    <Compile Include="DTO\BillInfo.cs" />
     <Compile Include="DTO\CTHD.cs" />
     <Compile Include="DTO\HOADON.cs" />
     <Compile Include="DTO\KHACHHANG.cs" />
@@ -207,6 +208,9 @@
     <EmbeddedResource Include="UI_Home.resx">
       <DependentUpon>UI_Home.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

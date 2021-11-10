@@ -62,6 +62,8 @@ namespace Login.Control_User
             // 
             // thao_tac
             // 
+            this.thao_tac.CausesValidation = false;
+            this.thao_tac.Cursor = System.Windows.Forms.Cursors.Hand;
             this.thao_tac.Dock = System.Windows.Forms.DockStyle.Fill;
             this.thao_tac.Location = new System.Drawing.Point(0, 0);
             this.thao_tac.Name = "thao_tac";
@@ -153,13 +155,12 @@ namespace Login.Control_User
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2ShadowPanel BackGround;
         private Guna.UI2.WinForms.Guna2PictureBox avt_khachhang;
         private System.Windows.Forms.Label so_luong_san_pham;
         private System.Windows.Forms.Label ten_khach_hang;
         private System.Windows.Forms.Label ngay_mua_hang;
         private Guna.UI2.WinForms.Guna2Button trang_thai;
         public Guna.UI2.WinForms.Guna2Panel thao_tac;
+        public Guna.UI2.WinForms.Guna2ShadowPanel BackGround;
     }
 }
