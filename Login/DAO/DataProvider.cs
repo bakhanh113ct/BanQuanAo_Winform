@@ -115,7 +115,6 @@ namespace Login.DAO
                             command.Parameters.AddWithValue(item, parameter[i]);
                             i++;
                         }
-
                     }
 
                 }
@@ -140,9 +139,7 @@ namespace Login.DAO
             connect.Close();
             return dt;
         }
-
         //
-        
         public static DataTable ExcuseQuery1(string strQuery)
         {
             conn.Open();
@@ -155,12 +152,12 @@ namespace Login.DAO
             conn.Close();
 
             return result;
-
         }
         public static void ExcuseNonQuery1(string Query)
         {
             conn.Open();
             SqlCommand cmd = new SqlCommand(Query, conn);
+
             cmd.ExecuteNonQuery();
             conn.Close();
 

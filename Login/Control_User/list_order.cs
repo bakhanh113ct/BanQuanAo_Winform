@@ -12,6 +12,7 @@ namespace Login.Control_User
 {
     public partial class list_order : UserControl
     {
+
         private string tenKH;
         private string status;
         private int sL;
@@ -40,9 +41,23 @@ namespace Login.Control_User
             so_luong_san_pham.Text = (row["SOHANG"]).ToString() + " Item";
             ngay_mua_hang.Text = row["NGHD"].ToString();
             SoHD = (int)row["SOHD"];
+            Status = row["TRANG_THAI"].ToString();
+            trang_thai.Text = Status;
+
+            if(Status == "Complete")
+            {
+                trang_thai.FillColor = Color.FromArgb(242, 203, 66);
+                trang_thai.ForeColor = Color.Black;
+            }
         }
 
-       
+        public void change_trang_thai()
+        {
+            Status = "Complete";
+            trang_thai.Text = Status;
+            trang_thai.FillColor = Color.FromArgb(242, 203, 66);
+            trang_thai.ForeColor = Color.Black;
+        }
 
         private void change()
         {
@@ -53,13 +68,13 @@ namespace Login.Control_User
                 item.ngay_mua_hang.ForeColor =  Color.Black;
                 item.avt_khachhang.BackColor =  Color.White;
             }
+
             BackGround.FillColor = Color.FromArgb(118, 53, 210);
             ten_khach_hang.ForeColor = Color.White;
             ngay_mua_hang.ForeColor = Color.White;
             avt_khachhang.ForeColor = Color.White;
             avt_khachhang.BackColor = Color.FromArgb(118, 53, 210);
         }
-
         private void thao_tac_Click(object sender, EventArgs e)
         {
             change();
