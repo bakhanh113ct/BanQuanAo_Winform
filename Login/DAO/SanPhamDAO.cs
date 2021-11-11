@@ -32,7 +32,18 @@ namespace Login.DAO
             }
             return lll;
         }
+        public static List<SANPHAM> LoadSP1()
+        {
+            List<SANPHAM> lll = new List<SANPHAM>();
 
+            DataTable data = DataProvider.ExcuseQuery1("select * from SANPHAM");
+            foreach (DataRow item in data.Rows)
+            {
+                SANPHAM sanpham = new SANPHAM(item);
+                lll.Add(sanpham);
+            }
+            return lll;
+        }
         static public bool InsertSP(string ten, string gia, string SL, string mota, string loai, byte[] image)
         {
             int check = DAO.DataProvider.ExecuteNonQuery("InsertSP @TEN , @GIA , @SL ,  @DABAN ,  @MOTA ,  @IDLOAI , @ANH ", 

@@ -56,7 +56,7 @@ namespace Login.DTO
             anh = (byte[])row["ANH"];
         }
         
-
+        
         public int Masp { get => masp; set => masp = value; }
         public string Ten { get => tenSP; set => tenSP = value; }
         public float Gia { get => gia; set => gia = value; }
@@ -66,5 +66,12 @@ namespace Login.DTO
         public int IDLoai { get => iDLoai; set => iDLoai = value; }
         public byte[] Anh { get => anh; set => anh = value; }
         public int SL { get => sL; set => sL = value; }
+
+        public int get_SLSP(int x)
+        {
+            if (x == Masp)
+                return sL;
+            return -1;
+        }
     }
 }

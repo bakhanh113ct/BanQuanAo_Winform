@@ -11,32 +11,94 @@ using System.Windows.Forms;
 namespace Login
 {
     public partial class Customer_performance : Form
-    {   
-        
+    {
+        public static List<Control_User.list_order> dcm = new List<Control_User.list_order>();
+        int index;
         public Customer_performance()
         {
             InitializeComponent();
             DAO.DataProvider.IntializeConnection();
-            DAO.OrderList.load();
             load();
+            loadBill.Visible = false;
+            thanh_toan.Visible = false;
+            tong.Visible = false;
         }
         void load()
         {
-            //Control_User.list_order x = new Control_User.list_order();
-            //list_KH.Controls.Add(x);
-            //Control_User.list_order x1 = new Control_User.list_order();
-            //list_KH.Controls.Add(x1);
-            //Control_User.list_order x2 = new Control_User.list_order();
-            //list_KH.Controls.Add(x2);
-            //Control_User.list_order x3 = new Control_User.list_order();
-            //list_KH.Controls.Add(x3);
-            foreach(Control_User.list_order x in  DAO.OrderList.dcm)
-            {
+           dcm = DAO.OrderList.Instance.load();
+           foreach(Control_User.list_order x in dcm)
+           {
                 list_KH.Controls.Add(x);
+                x.thao_tac.Click += show_chi_tiet;
+           }
+        }
+        private void show_chi_tiet(object sender, EventArgs e)
+        {
+            loadBill.Visible = true;
+            thanh_toan.Visible = true;
+
+            foreach (Control_User.list_order x in dcm)
+            {
+                if (x.BackGround.FillColor == Color.FromArgb(118, 53, 210))
+                {   
+                    showBill(x.SoHD);
+                    return;
+                }
             }
+
+        }
+        private void showBill(int soHD)
+        {
+            DataTable Bill = DAO.OrderList.Instance.loadBill(soHD);
+            index = soHD;
+            loadBilltoBill(Bill);
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void loadBilltoBill(DataTable Bill)
+        {
+            tong.Visible = true;
+            int total = 0;
+            loadBill.Rows.Clear();
+
+            foreach(DataRow x in Bill.Rows)
+            {
+                DTO.BillInfo temp = new DTO.BillInfo(x);
+                loadBill.Rows.Add(temp.MaSP, temp.TenSP, temp.SL, temp.Gia);
+                total += temp.Gia;
+            }
+            //loadBill.Rows.Add("", "", "Tổng:", total);
+            tong.Text = "Tổng: " + total.ToString();
+            
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void thanh_toan_Click(object sender, EventArgs e)
+        {
+
+            if (DAO.OrderList.Instance.thanh_toan(index))
+            {
+                //(sender as Guna.UI2.WinForms.Guna2Button).FillColor = Color.White;
+                MessageBox.Show("Hoàn thành");
+                //DAO.OrderList.Instance.update_SLSP();
+
+                list_KH.Controls.Clear();
+
+                foreach (Control_User.list_order x in dcm)
+                {
+                    list_KH.Controls.Add(x);
+                }
+            }
+            else
+                MessageBox.Show("Hóa đơn này đã được thanh toán");
+            
+        }
+
+        private void loadBill_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
