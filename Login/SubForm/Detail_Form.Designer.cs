@@ -165,7 +165,6 @@ namespace Login.SubForm
             this.lbGia.Size = new System.Drawing.Size(251, 29);
             this.lbGia.TabIndex = 22;
             this.lbGia.Text = "$$$";
-            this.lbGia.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbSL
             // 
@@ -301,6 +300,7 @@ namespace Login.SubForm
             this.Name = "Detail_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Detail_Form";
+            this.Load += new System.EventHandler(this.Detail_Form_Load);
             this.tool3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.ResumeLayout(false);

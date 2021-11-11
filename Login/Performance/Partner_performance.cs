@@ -1,4 +1,5 @@
-﻿using Login.DTO;
+﻿using Login.DAO;
+using Login.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace Login
     public partial class Partner_performance : Form
     {
         public SANPHAM sanpham;
+        List<SANPHAM> listsp;
         static public Guna.UI2.WinForms.Guna2Chip btnSoHang;
         static public Label label1;
         public Partner_performance()
@@ -32,23 +34,31 @@ namespace Login
 
         private void Partner_performance_Load(object sender, EventArgs e)
         {
-            //LoadPanel("select * from SanPham");
-            //btnSoHang = new Guna.UI2.WinForms.Guna2Chip();
-            //label1 = new Label();
-            //AddThongBao();
+            LoadPanel();
+            btnSoHang = new Guna.UI2.WinForms.Guna2Chip();
+            label1 = new Label();
+            AddThongBao();
         }
 
 
 
-        public void LoadPanel(string query)
+        public void LoadPanel()
         {
-            //flpnStore.Controls.Clear();
-            //DBA.Reload("select * from SanPham");
-            //foreach (Control_User.Item i in DBA.ListItem)
-            //{
-            //    flpnStore.Controls.Add(i);
-            //}
-            
+            if (UI_Home.ListItem != null) UI_Home.ListItem.Clear();
+            flpnStore.Controls.Clear();
+            listsp = SanPhamDAO.LoadSP();
+            foreach (SANPHAM item in listsp)
+            {
+                Control_User.Item u = new Control_User.Item(item, UI_Home.store);
+
+                u.btnItem.Tag = item;
+                //gan the tag = item de dung luc sau...
+                //them vao danh sach item o UI_HOME
+                UI_Home.ListItem.Add(u);
+                //them vao panel
+                flpnStore.Controls.Add(u);
+            }
+
         }
         //Load lại flowlayoutpanel
         public void btnReload_Click(object sender, EventArgs e)

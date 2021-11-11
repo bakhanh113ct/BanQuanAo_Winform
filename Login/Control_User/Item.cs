@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,6 +44,9 @@ namespace Login.Control_User
             //this.daban = daban;
             //this.mota = mota;
             //this.Loai = Loai;
+            //Load ảnh
+            byte[] b = item.Anh;
+            this.picture.Image = ConvertoImage(b);
             btnTinhTrang.BackColor = Color.Transparent;
             lbName.Text = item.Ten;
             if (item.SL > 0)
@@ -58,14 +62,9 @@ namespace Login.Control_User
         }
         private void btnBuy_Click(object sender, EventArgs e)
         {
-            //SubForm.Detail_Form detail_form = new SubForm.Detail_Form(this);
-            //detail_form.lbName.Text = Ten;
-            //detail_form.lbGia.Text = gia.ToString();
-            //detail_form.lbSL.Text = soluong.ToString();
-            //detail_form.lbDetail.Text = mota;
-            //detail_form.picture.Image = picture.Image;
-            //detail_form.picture.SizeMode = PictureBoxSizeMode.CenterImage;
-            //detail_form.ShowDialog();
+            SubForm.Detail_Form detail_form = new SubForm.Detail_Form();
+            detail_form.id = (btnItem.Tag as SANPHAM).Masp.ToString();
+            detail_form.ShowDialog();
         }
 
         private void btnItem_Click(object sender, EventArgs e)
@@ -83,6 +82,14 @@ namespace Login.Control_User
                 Parent_Partner.sanpham = sanpham;
             }
             btnItem.FillColor = Color.Yellow;
+        }
+
+        public Image ConvertoImage(byte[] data)
+        {
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms);
+            }
         }
 
     }

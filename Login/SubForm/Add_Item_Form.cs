@@ -37,8 +37,15 @@ namespace Login.SubForm
         {
             byte[] imgbyte = ConvertoByte(picture.Image);
             if (imgbyte != null)
-                if (DAO.SanPhamDAO.InsertSP(txbTen.Text, txbGiaTien.Text, txbSoLuong.Text, txbMota.Text, txbLoai.Text, imgbyte))
+                if (!DAO.SanPhamDAO.InsertSP(txbTen.Text, txbGiaTien.Text, txbSoLuong.Text, txbMota.Text, txbLoai.Text, imgbyte))
+                {
+                    MessageBox.Show("Them khong thanh cong.");
                     this.Hide();
+                }
+                else
+                {
+                    DialogResult result = MessageBox.Show("Them thanh cong.");
+                }
         }
 
         byte[] ConvertoByte(Image img)
@@ -56,7 +63,6 @@ namespace Login.SubForm
                 MessageBox.Show("Chua them anh");
             }
             return null;
-
         }
 
         private void exit_Click(object sender, EventArgs e)

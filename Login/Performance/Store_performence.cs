@@ -16,10 +16,12 @@ namespace Login
 {
     public partial class Store_performence : Form
     {
+        static public int slhangtronggio = 0;
         static public SANPHAM sanpham;
         List<SANPHAM> listsp;
-        //public static List<Control_User.Item> list = new List<Control_User.Item>();
-        public SubForm.Edit_Form editform = new SubForm.Edit_Form();    //mọi item đều có chung 1 form edit
+        static public Guna.UI2.WinForms.Guna2Chip btnSoHang = new Guna.UI2.WinForms.Guna2Chip();
+        static public Label label1 = new Label();
+
         public Store_performence()
         {
             InitializeComponent();
@@ -28,6 +30,7 @@ namespace Login
         private void Store_performence_Load(object sender, EventArgs e)
         {
             LoadPanel();
+            AddThongBao();
         }
 
         public void LoadPanel()
@@ -38,12 +41,9 @@ namespace Login
             foreach (SANPHAM item in listsp)
             {
                 Control_User.Item u = new Control_User.Item(item ,UI_Home.store);
-                //Load ảnh
+                
                 u.btnItem.Tag = item;
-                byte[] b = item.Anh;
-                u.picture.Image = ConvertoImage(b);
                 //gan the tag = item de dung luc sau...
-                u.btnItem.Tag = item;
                 //them vao danh sach item o UI_HOME
                 UI_Home.ListItem.Add(u);
                 //them vao panel
@@ -57,14 +57,7 @@ namespace Login
             LoadPanel();
         }
 
-        //Chuyển byte sang ảnh
-        public Image ConvertoImage(byte[] data)
-        {
-            using (MemoryStream ms = new MemoryStream(data))
-            {
-                return Image.FromStream(ms);
-            }
-        }
+        
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -74,25 +67,39 @@ namespace Login
             additem.Close();
         }
 
-        private void Filter(string Loai)
+        public void btnEdit_Click(object sender, EventArgs e)
         {
-            flpnStore.Controls.Clear();
-           
-            foreach(Control_User.Item item in UI_Home.ListItem)
+            if (sanpham == null)
             {
-                int i = (item.btnItem.Tag as SANPHAM).IDLoai;
-                if (i == 1 && Loai == "Quan")
-                    flpnStore.Controls.Add(item);
-                else if (i == 2 && Loai == "Ao")
-                    flpnStore.Controls.Add(item);
-                else if (i == 3 && Loai == "Mu")
-                    flpnStore.Controls.Add(item);
-                else if (i == 4 && Loai == "Giay")
-                    flpnStore.Controls.Add(item);
-                else if (Loai == "All")
-                    flpnStore.Controls.Add(item);
+                MessageBox.Show("Vui lòng chọn item");
+                return;
             }
+            SubForm.Edit_Form editform = new SubForm.Edit_Form();
+            editform.id = sanpham.Masp.ToString();
+            //reload panel
+            editform.ShowDialog();
+            if (Check_update(editform))
+            {
+                LoadPanel();
+            }
+            if (Check_delete(editform))
+            {
+                LoadPanel();
+            }
+            sanpham = null;
+        }
 
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            SubForm.Cart_Form cart_Form = new SubForm.Cart_Form();
+            //cart_Form.
+            cart_Form.ShowDialog();
+        }
+
+        public static void reloadlb(int i)
+        {
+            i = Item_HD.item_HDs.Count();
+            label1.Text = i.ToString();
         }
 
         private void cbbFilter_SelectedIndexChanged(object sender, EventArgs e)
@@ -118,35 +125,6 @@ namespace Login
             }
         }
 
-        public void btnEdit_Click(object sender, EventArgs e)
-        {
-            if (sanpham == null)
-            {
-                MessageBox.Show("Vui lòng chọn item");
-                return;
-            }
-            editform.txbTen.Text = sanpham.Ten;
-            editform.txbGiaTien.Text = sanpham.Gia.ToString();
-            editform.txbSoLuong.Text = sanpham.SL.ToString();
-            editform.txbMota.Text = sanpham.MoTa;
-            editform.txbLoai.Text = sanpham.IDLoai.ToString();
-            editform.txbNhacungcap.Text = "a";
-            editform.picture.Image = ConvertoImage(sanpham.Anh);
-            editform.picture.SizeMode = PictureBoxSizeMode.CenterImage;
-            editform.id = sanpham.Masp.ToString();
-            //reload panel
-            editform.ShowDialog();
-            if (Check_update(editform))
-            {
-                LoadPanel();
-            }
-            if (Check_delete(editform))
-            {
-                LoadPanel();
-            }
-            sanpham = null;
-        }
-
         private bool Check_update(SubForm.Edit_Form editform)
         {
             if (editform.check_save_click == true)
@@ -158,6 +136,65 @@ namespace Login
             if (editform.check_delete_click == true)
                 return true;
             return false;
+        }
+
+
+        //Chuyển byte sang ảnh
+        public Image ConvertoImage(byte[] data)
+        {
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+
+        private void Filter(string Loai)
+        {
+            flpnStore.Controls.Clear();
+
+            foreach (Control_User.Item item in UI_Home.ListItem)
+            {
+                int i = (item.btnItem.Tag as SANPHAM).IDLoai;
+                if (i == 1 && Loai == "Quan")
+                    flpnStore.Controls.Add(item);
+                else if (i == 2 && Loai == "Ao")
+                    flpnStore.Controls.Add(item);
+                else if (i == 3 && Loai == "Mu")
+                    flpnStore.Controls.Add(item);
+                else if (i == 4 && Loai == "Giay")
+                    flpnStore.Controls.Add(item);
+                else if (Loai == "All")
+                    flpnStore.Controls.Add(item);
+            }
+
+        }
+
+        private void AddThongBao()
+        {
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(2, 2);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(14, 13);
+            label1.TabIndex = 16;
+            label1.Text = slhangtronggio.ToString();
+
+            btnSoHang.Controls.Add(label1);
+            btnCart.Controls.Add(btnSoHang);
+            btnSoHang.AutoRoundedCorners = true;
+            btnSoHang.BackColor = System.Drawing.Color.Transparent;
+            btnSoHang.BorderRadius = 9;
+            btnSoHang.FillColor = System.Drawing.Color.Red;
+            btnSoHang.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            btnSoHang.ForeColor = System.Drawing.Color.White;
+            btnSoHang.IsClosable = false;
+            btnSoHang.Location = new System.Drawing.Point(22, 3);
+            btnSoHang.Margin = new System.Windows.Forms.Padding(-2);
+            btnSoHang.Name = "btnSoHang";
+            btnSoHang.ShadowDecoration.Parent = btnSoHang;
+            btnSoHang.Size = new System.Drawing.Size(17, 17);
+            btnSoHang.TabIndex = 0;
+            btnSoHang.Text = "";
         }
     }
 }

@@ -15,7 +15,6 @@ namespace Login
     public partial class UI_Home : Form
     {
         public static List<Control_User.Item> ListItem;
-        static public int i = 0;
         List<Panel> subbar = new List<Panel>();
         List<Guna2Button> Home_button = new List<Guna2Button>();
         private Form activeForm = null;

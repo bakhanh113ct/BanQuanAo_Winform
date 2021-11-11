@@ -68,7 +68,7 @@ SELECT * FROM LOAISP
 
 insert into HOADON(NGHD,MAKH,TRIGIA) values ('2006-07-23','1','320000')
 insert into CTHD(SOHD,MASP,SL) values ('2','5','10')
-insert into KHACHHANG(HOTEN, DCHI, SODT,NGSINH) values('khanh', 'daklak', '039', '2002-03-04')
+insert into KHACHHANG(HOTEN, DCHI, SODT,NGSINH) values('long', 'daklak', '039', '2002-03-04')
 
 
 
@@ -96,3 +96,4 @@ end
 --	set TEN=@TEN, GIA=@GIA, SL=@SL, DANHGIA = SANPHAM.DANHGIA, DABAN=@DABAN, MOTA=@MOTA, IDLOAI=@IDLOAI, ANH=@ANH
 --	where 
 --end
+

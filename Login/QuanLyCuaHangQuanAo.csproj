@@ -62,7 +62,9 @@
     <Compile Include="Control_User\list_order.Designer.cs">
       <DependentUpon>list_order.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\CTHDDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\HoaDonDAO.cs" />
     <Compile Include="DAO\OrderList.cs" />
     <Compile Include="DAO\SanPhamDAO.cs" />
     <Compile Include="DBA.cs" />
@@ -71,7 +73,7 @@
     <Compile Include="DTO\KHACHHANG.cs" />
     <Compile Include="DTO\LOAISP.cs" />
     <Compile Include="DTO\SANPHAM.cs" />
-    <Compile Include="Item_HD.cs" />
+    <Compile Include="DTO\Item_HD.cs" />
     <Compile Include="Performance\Analysis_performance.cs">
       <SubType>Form</SubType>
     </Compile>

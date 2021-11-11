@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Login.DTO
 {
-    class HOADON
+    public class HOADON
     {
         /*
          CREATE TABLE HOADON
@@ -20,9 +21,9 @@ namespace Login.DTO
         private int soHD;
         private DateTime ngHD;
         private int maKH;
-        private int triGia;
+        private double triGia;
 
-        public HOADON(int soHD, DateTime ngHD, int maKH, int triGia)
+        public HOADON(int soHD, DateTime ngHD, int maKH, double triGia)
         {
             this.soHD = soHD;
             this.ngHD = ngHD;
@@ -30,9 +31,17 @@ namespace Login.DTO
             this.triGia = triGia;
         }
 
+        public HOADON(DataRow row)
+        {
+            soHD = (int)row["SOHD"];
+            ngHD = (DateTime)row["NGHD"];
+            maKH = (int)row["GIA"];
+            triGia = (double)row["TRIGIA"];
+        }
+
         public int SoHD { get => soHD; set => soHD = value; }
         public DateTime NgHD { get => ngHD; set => ngHD = value; }
         public int MaKH { get => maKH; set => maKH = value; }
-        public int TriGia { get => triGia; set => triGia = value; }
+        public double TriGia { get => triGia; set => triGia = value; }
     }
 }

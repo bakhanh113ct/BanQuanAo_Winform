@@ -287,7 +287,7 @@ namespace Login.SubForm
             this.btnXN.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnXN.ForeColor = System.Drawing.Color.White;
             this.btnXN.HoverState.Parent = this.btnXN;
-            this.btnXN.Location = new System.Drawing.Point(409, 38);
+            this.btnXN.Location = new System.Drawing.Point(24, 12);
             this.btnXN.Name = "btnXN";
             this.btnXN.ShadowDecoration.Parent = this.btnXN;
             this.btnXN.Size = new System.Drawing.Size(127, 34);
@@ -306,6 +306,7 @@ namespace Login.SubForm
             this.Controls.Add(this.dtgrvItem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Cart_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cart_Form";
             this.Load += new System.EventHandler(this.Cart_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvItem)).EndInit();

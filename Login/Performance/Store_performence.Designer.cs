@@ -35,6 +35,7 @@ namespace Login
             this.flpnStore = new System.Windows.Forms.FlowLayoutPanel();
             this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.btnReload = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnCart = new Guna.UI2.WinForms.Guna2CircleButton();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -103,13 +104,13 @@ namespace Login
             this.txbSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbSearch.HoverState.Parent = this.txbSearch;
-            this.txbSearch.Location = new System.Drawing.Point(518, 5);
+            this.txbSearch.Location = new System.Drawing.Point(520, 5);
             this.txbSearch.Name = "txbSearch";
             this.txbSearch.PasswordChar = '\0';
             this.txbSearch.PlaceholderText = "Search";
             this.txbSearch.SelectedText = "";
             this.txbSearch.ShadowDecoration.Parent = this.txbSearch;
-            this.txbSearch.Size = new System.Drawing.Size(156, 36);
+            this.txbSearch.Size = new System.Drawing.Size(154, 36);
             this.txbSearch.TabIndex = 6;
             this.txbSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -169,12 +170,37 @@ namespace Login
             this.btnReload.TabIndex = 16;
             this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
+            // btnCart
+            // 
+            this.btnCart.BackColor = System.Drawing.Color.Transparent;
+            this.btnCart.BackgroundImage = global::Login.Properties.Resources.shopping_cart;
+            this.btnCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCart.CheckedState.Parent = this.btnCart;
+            this.btnCart.CustomImages.Parent = this.btnCart;
+            this.btnCart.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCart.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCart.DisabledState.Parent = this.btnCart;
+            this.btnCart.FillColor = System.Drawing.Color.Transparent;
+            this.btnCart.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCart.ForeColor = System.Drawing.Color.White;
+            this.btnCart.HoverState.Parent = this.btnCart;
+            this.btnCart.Location = new System.Drawing.Point(219, 0);
+            this.btnCart.Name = "btnCart";
+            this.btnCart.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnCart.ShadowDecoration.Parent = this.btnCart;
+            this.btnCart.Size = new System.Drawing.Size(39, 39);
+            this.btnCart.TabIndex = 15;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
+            // 
             // Store_performence
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(686, 441);
+            this.Controls.Add(this.btnCart);
             this.Controls.Add(this.btnReload);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.flpnStore);
@@ -199,5 +225,6 @@ namespace Login
         private System.Windows.Forms.FlowLayoutPanel flpnStore;
         private Guna.UI2.WinForms.Guna2Button btnEdit;
         private Guna.UI2.WinForms.Guna2CircleButton btnReload;
+        private Guna.UI2.WinForms.Guna2CircleButton btnCart;
     }
 }
