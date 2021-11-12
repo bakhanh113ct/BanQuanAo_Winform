@@ -39,7 +39,7 @@ namespace Login
 
             foreach (Control_User.list_order x in dcm)
             {
-                if (x.BackGround.FillColor == Color.FromArgb(118, 53, 210))
+                if (x.BackGround.FillColor == Color.FromArgb(174, 78, 191))
                 {   
                     showBill(x.SoHD);
                     return;
@@ -99,6 +99,11 @@ namespace Login
         }
 
         private void loadBill_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void list_KH_Paint(object sender, PaintEventArgs e)
         {
 
         }

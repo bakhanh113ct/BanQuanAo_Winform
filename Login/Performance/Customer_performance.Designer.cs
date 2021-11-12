@@ -34,12 +34,12 @@ namespace Login
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.list_KH = new System.Windows.Forms.FlowLayoutPanel();
             this.loadBill = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.thanh_toan = new Guna.UI2.WinForms.Guna2Button();
             this.MASP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TENSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.thanh_toan = new Guna.UI2.WinForms.Guna2Button();
             this.tong = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.loadBill)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +51,7 @@ namespace Login
             this.list_KH.Name = "list_KH";
             this.list_KH.Size = new System.Drawing.Size(430, 430);
             this.list_KH.TabIndex = 0;
+            this.list_KH.Paint += new System.Windows.Forms.PaintEventHandler(this.list_KH_Paint);
             // 
             // loadBill
             // 
@@ -67,10 +68,10 @@ namespace Login
             this.loadBill.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.loadBill.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(53)))), ((int)(((byte)(210)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(78)))), ((int)(((byte)(191)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(53)))), ((int)(((byte)(210)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(78)))), ((int)(((byte)(191)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.loadBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -124,6 +125,34 @@ namespace Login
             this.loadBill.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.loadBill.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.loadBill_CellContentClick);
             // 
+            // MASP
+            // 
+            this.MASP.HeaderText = "MASP";
+            this.MASP.MinimumWidth = 6;
+            this.MASP.Name = "MASP";
+            this.MASP.ReadOnly = true;
+            // 
+            // TENSP
+            // 
+            this.TENSP.HeaderText = "Tên sản phẩm";
+            this.TENSP.MinimumWidth = 6;
+            this.TENSP.Name = "TENSP";
+            this.TENSP.ReadOnly = true;
+            // 
+            // SL
+            // 
+            this.SL.HeaderText = "SL";
+            this.SL.MinimumWidth = 6;
+            this.SL.Name = "SL";
+            this.SL.ReadOnly = true;
+            // 
+            // GIA
+            // 
+            this.GIA.HeaderText = "Giá";
+            this.GIA.MinimumWidth = 6;
+            this.GIA.Name = "GIA";
+            this.GIA.ReadOnly = true;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -156,34 +185,6 @@ namespace Login
             this.thanh_toan.TabIndex = 3;
             this.thanh_toan.Text = "Thanh toán ";
             this.thanh_toan.Click += new System.EventHandler(this.thanh_toan_Click);
-            // 
-            // MASP
-            // 
-            this.MASP.HeaderText = "MASP";
-            this.MASP.MinimumWidth = 6;
-            this.MASP.Name = "MASP";
-            this.MASP.ReadOnly = true;
-            // 
-            // TENSP
-            // 
-            this.TENSP.HeaderText = "Tên sản phẩm";
-            this.TENSP.MinimumWidth = 6;
-            this.TENSP.Name = "TENSP";
-            this.TENSP.ReadOnly = true;
-            // 
-            // SL
-            // 
-            this.SL.HeaderText = "SL";
-            this.SL.MinimumWidth = 6;
-            this.SL.Name = "SL";
-            this.SL.ReadOnly = true;
-            // 
-            // GIA
-            // 
-            this.GIA.HeaderText = "Giá";
-            this.GIA.MinimumWidth = 6;
-            this.GIA.Name = "GIA";
-            this.GIA.ReadOnly = true;
             // 
             // tong
             // 

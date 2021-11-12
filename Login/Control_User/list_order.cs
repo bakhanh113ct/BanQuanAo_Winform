@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,7 @@ namespace Login.Control_User
         private int sL;
         private DateTime ngHD;
         private int soHD;
+        private byte[] anh;
 
         
 
@@ -43,6 +45,8 @@ namespace Login.Control_User
             SoHD = (int)row["SOHD"];
             Status = row["TRANG_THAI"].ToString();
             trang_thai.Text = Status;
+            anh = (byte[])row["ANH"];
+            avt_khachhang.Image = ConvertoImage(anh);
 
             if(Status == "Complete")
             {
@@ -69,15 +73,28 @@ namespace Login.Control_User
                 item.avt_khachhang.BackColor =  Color.White;
             }
 
-            BackGround.FillColor = Color.FromArgb(118, 53, 210);
+            BackGround.FillColor = Color.FromArgb(174, 78, 191);
             ten_khach_hang.ForeColor = Color.White;
             ngay_mua_hang.ForeColor = Color.White;
             avt_khachhang.ForeColor = Color.White;
-            avt_khachhang.BackColor = Color.FromArgb(118, 53, 210);
+            avt_khachhang.BackColor = Color.FromArgb(174, 78, 191);
+        }
+
+        public Image ConvertoImage(byte[] data)
+        {
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms);
+            }
         }
         private void thao_tac_Click(object sender, EventArgs e)
         {
             change();
+        }
+
+        private void thao_tac_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

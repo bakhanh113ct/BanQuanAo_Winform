@@ -72,6 +72,7 @@ namespace Login.Control_User
             this.thao_tac.TabIndex = 5;
             this.thao_tac.UseTransparentBackground = true;
             this.thao_tac.Click += new System.EventHandler(this.thao_tac_Click);
+            this.thao_tac.Paint += new System.Windows.Forms.PaintEventHandler(this.thao_tac_Paint);
             // 
             // trang_thai
             // 
