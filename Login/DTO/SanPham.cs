@@ -23,7 +23,7 @@ namespace Login.DTO
         //)    
         private int masp;
         private string tenSP;
-        private float gia;
+        private int gia;
         private float danhGia;
         private int daBan;
         private int sL;
@@ -31,7 +31,7 @@ namespace Login.DTO
         private int iDLoai;
         private byte[] anh;
 
-        public SANPHAM(int masp, string ten, float gia, float danhGia, int daBan, string moTa, int iDLoai, byte[] anh)
+        public SANPHAM(int masp, string ten, int gia, float danhGia, int daBan, string moTa, int iDLoai, byte[] anh)
         {
             this.masp = masp;
             this.tenSP = ten;
@@ -47,7 +47,7 @@ namespace Login.DTO
         {
             masp = (int)row["MASP"];
             tenSP = row["TEN"].ToString();
-            gia = (float)row["GIA"];
+            gia = (int)row["GIA"];
             danhGia = (float)row["DANHGIA"];
             daBan = (int)row["DABAN"];
             sL = (int)row["SL"];
@@ -59,7 +59,7 @@ namespace Login.DTO
         
         public int Masp { get => masp; set => masp = value; }
         public string Ten { get => tenSP; set => tenSP = value; }
-        public float Gia { get => gia; set => gia = value; }
+        public int Gia { get => gia; set => gia = value; }
         public float DanhGia { get => danhGia; set => danhGia = value; }
         public int DaBan { get => daBan; set => daBan = value; }
         public string MoTa { get => moTa; set => moTa = value; }

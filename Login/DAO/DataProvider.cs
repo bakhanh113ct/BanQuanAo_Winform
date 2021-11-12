@@ -24,7 +24,7 @@ namespace Login.DAO
             if (conn != null)
                 conn.Close();
 
-            conn = new SqlConnection(connectionStr);
+            conn = new SqlConnection(strCon);
         }
 
         public static DataProvider Instance

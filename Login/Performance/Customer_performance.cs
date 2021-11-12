@@ -63,7 +63,7 @@ namespace Login
             foreach(DataRow x in Bill.Rows)
             {
                 DTO.BillInfo temp = new DTO.BillInfo(x);
-                loadBill.Rows.Add(temp.MaSP, temp.TenSP, temp.SL, temp.Gia);
+                loadBill.Rows.Add(temp.MaSP, temp.TenSP, temp.SL, temp.Gia.ToString());
                 total += temp.Gia;
             }
             //loadBill.Rows.Add("", "", "Tổng:", total);

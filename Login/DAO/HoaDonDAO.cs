@@ -32,9 +32,9 @@ namespace Login.DAO
             return lll;
         }
 
-        static public bool InsertHD(string nghd, string makh, string trigia)
+        static public bool InsertHD(string nghd, string makh, string trigia, string tt)
         {
-            int check = DAO.DataProvider.ExecuteNonQuery("insert into HOADON(NGHD,MAKH,TRIGIA) values ( @NGHD , @MAKH , @TRIGIA )", new object[] { nghd, makh, trigia});
+            int check = DAO.DataProvider.ExecuteNonQuery("insert into HOADON(NGHD,MAKH,TRIGIA, TRANG_THAI) values ( @NGHD , @MAKH , @TRIGIA , @TRANG_THAI )", new object[] { nghd, makh, trigia, tt});
             if (check == 0)
                 return false;
             else
