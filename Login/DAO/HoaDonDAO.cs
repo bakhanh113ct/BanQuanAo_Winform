@@ -34,12 +34,12 @@ namespace Login.DAO
 
         static public bool InsertHD(string nghd, string makh, string trigia, string tt)
         {
-            int check = DAO.DataProvider.ExecuteNonQuery("insert into HOADON(NGHD,MAKH,TRIGIA, TRANG_THAI) values ( @NGHD , @MAKH , @TRIGIA , @TRANG_THAI )", new object[] { nghd, makh, trigia, tt});
+            int check = DAO.DataProvider.ExecuteNonQuery("insert into HOADON(NGHD,MAKH,TRIGIA,TRANG_THAI) values ( @NGHD , @MAKH , @TRIGIA , @TRANG_THAI )", new object[] { nghd, makh, trigia, tt });
             if (check == 0)
                 return false;
             else
                 return true;
-            return false;
+            return true;
         }
 
         //static public bool UpdateSP(string ten, string gia, string SL, string mota, string loai, byte[] image, string old_Name)

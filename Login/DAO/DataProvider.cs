@@ -116,7 +116,6 @@ namespace Login.DAO
                             i++;
                         }
                     }
-
                 }
                 kq = command.ExecuteScalar();
                 sqlCon.Close();

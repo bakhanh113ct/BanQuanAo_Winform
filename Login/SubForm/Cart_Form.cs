@@ -65,7 +65,7 @@ namespace Login.SubForm
             {
                 Trigia += Convert.ToDouble(item.Gia)*item.Sl;
             }
-            if (HoaDonDAO.InsertHD(DateTime.Now.ToString(), "1", Trigia.ToString(), "Waiting"))
+            if (HoaDonDAO.InsertHD(DateTime.Now.ToString(), "2", Trigia.ToString(), "Waiting"))
             {
                 MessageBox.Show("Them thanh cong.");
                 this.Close();

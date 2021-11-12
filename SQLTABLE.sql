@@ -215,3 +215,5 @@ select * from HOADON
 select * from CTHD
 
 delete from CTHD
+
+exec test

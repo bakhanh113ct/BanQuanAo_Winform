@@ -68,11 +68,11 @@ namespace Login.DAO
 
         static public bool DeleteSP(string id)
         {
-            int check = DAO.DataProvider.ExecuteNonQuery("delete from SANPHAM where MASP = @MaSP", new object[] { id });
-            if (check == 0)
-                return false;
-            else
-                return true;
+           DAO.DataProvider.ExcuseNonQuery1("delete from SANPHAM where MASP = '10'");
+            //if (check == 0)
+            //    return false;
+            //else
+            //    return true;
             return false;
         }
     }
