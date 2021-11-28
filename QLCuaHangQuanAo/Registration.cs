@@ -20,7 +20,7 @@ namespace QLCuaHangQuanAo
         }
         private void exit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
         private void minimize_Click(object sender, EventArgs e)
         {

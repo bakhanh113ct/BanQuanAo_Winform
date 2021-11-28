@@ -12,8 +12,8 @@ namespace QLCuaHangQuanAo
 {
     public partial class Login : Form
     {
-        public static DTO.KHACHHANG kh;
-        public static DTO.TAIKHOAN tk;
+        public static DTO.KHACHHANG kh = null;
+        public static DTO.TAIKHOAN tk = null;
         public static int admin_user; //1. User, 0. Amin
         public Login()
         {
@@ -107,7 +107,6 @@ namespace QLCuaHangQuanAo
                 this.Hide();
                 UI_Home H = new UI_Home(kh);
                 H.ShowDialog();
-                //this.Show();
             }
         }
 

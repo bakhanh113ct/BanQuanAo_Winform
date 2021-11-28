@@ -26,21 +26,19 @@ namespace QLCuaHangQuanAo
         public UI_Home(DTO.KHACHHANG kh)
         {
             InitializeComponent();
+            home = new Home_perfomancecs();
             AddSubbarandHomeButton();
             ListItem = new List<Control_User.Item>();
-            //Home_perfomancecs.Open();
             subbar_Change(subbar1, HOME);
-            openPerformance(new Home_perfomancecs());
+            openPerformance(home);
           
         }
 
         private void UI_Home_Load(object sender, EventArgs e)
         {
-            home = new Home_perfomancecs();
             store = new Store_performence();
             invoice = new Invoice_performance();
             setting = new Settings_performance();
-            //DBA.Reload("select * from SanPham");
         }
 
        
