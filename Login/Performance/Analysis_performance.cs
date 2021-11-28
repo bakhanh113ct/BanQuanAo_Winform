@@ -15,6 +15,11 @@ namespace Login
         public Analysis_performance()
         {
             InitializeComponent();
+            for(int i =0; i < 3; i++)
+            {
+                Control_User.topList temp = new Control_User.topList();
+                flowLayoutPanel1.Controls.Add(temp);
+            }
         }
     }
 }

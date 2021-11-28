@@ -33,12 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Guna.UI2, Version=2.0.2.4, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.4\lib\net40\Guna.UI2.dll</HintPath>
+    <Reference Include="Guna.UI2, Version=2.0.2.5, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.5\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,11 +63,18 @@
     <Compile Include="Control_User\list_order.Designer.cs">
       <DependentUpon>list_order.cs</DependentUpon>
     </Compile>
+    <Compile Include="Control_User\topList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control_User\topList.Designer.cs">
+      <DependentUpon>topList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\CTHDDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\HoaDonDAO.cs" />
-    <Compile Include="DAO\OrderList.cs" />
     <Compile Include="DAO\SanPhamDAO.cs" />
+    <Compile Include="DAO\Sound.cs" />
     <Compile Include="DBA.cs" />
     <Compile Include="DTO\BillInfo.cs" />
     <Compile Include="DTO\CTHD.cs" />
@@ -87,11 +95,11 @@
     <Compile Include="Performance\Avatar_performance.Designer.cs">
       <DependentUpon>Avatar_performance.cs</DependentUpon>
     </Compile>
-    <Compile Include="Performance\Customer_performance.cs">
+    <Compile Include="Performance\Invoice_performance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Performance\Customer_performance.Designer.cs">
-      <DependentUpon>Customer_performance.cs</DependentUpon>
+    <Compile Include="Performance\Invoice_performance.Designer.cs">
+      <DependentUpon>Invoice_performance.cs</DependentUpon>
     </Compile>
     <Compile Include="Performance\Home_perfomancecs.cs">
       <SubType>Form</SubType>
@@ -131,6 +139,12 @@
     <Compile Include="SubForm\Add_Item_Form.Designer.cs">
       <DependentUpon>Add_Item_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubForm\BILL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\BILL.Designer.cs">
+      <DependentUpon>BILL.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubForm\Cart_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,14 +175,17 @@
     <EmbeddedResource Include="Control_User\list_order.resx">
       <DependentUpon>list_order.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Control_User\topList.resx">
+      <DependentUpon>topList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Performance\Analysis_performance.resx">
       <DependentUpon>Analysis_performance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Performance\Avatar_performance.resx">
       <DependentUpon>Avatar_performance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Performance\Customer_performance.resx">
-      <DependentUpon>Customer_performance.cs</DependentUpon>
+    <EmbeddedResource Include="Performance\Invoice_performance.resx">
+      <DependentUpon>Invoice_performance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Performance\Home_perfomancecs.resx">
       <DependentUpon>Home_perfomancecs.cs</DependentUpon>
@@ -197,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Add_Item_Form.resx">
       <DependentUpon>Add_Item_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\BILL.resx">
+      <DependentUpon>BILL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Cart_Form.resx">
       <DependentUpon>Cart_Form.cs</DependentUpon>
@@ -306,9 +326,21 @@
     <None Include="Resources\reload1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\avt.jpg" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="Resources\filter_50px.png" />
+    <None Include="Resources\hourglass1.png" />
+    <None Include="Resources\hourglass.png" />
+    <None Include="Resources\x-button1.png" />
+    <None Include="Resources\x-button.png" />
+    <None Include="Resources\sand-clock.png" />
+    <None Include="Resources\shipped_48px.png" />
+    <None Include="Resources\shipped_24px.png" />
+    <None Include="Resources\invoice.png" />
+    <None Include="Resources\clock.png" />
+    <None Include="Resources\chronometer.png" />
+    <None Include="Resources\chronometer1.png" />
+    <None Include="Resources\crowd %281%29.png" />
+    <None Include="Resources\crown.png" />
+    <Content Include="Resources\avt.jpg" />
     <Content Include="Resources\Dương cầm_ %2817%29.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

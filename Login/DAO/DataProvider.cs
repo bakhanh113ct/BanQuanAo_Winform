@@ -16,15 +16,15 @@ namespace Login.DAO
         private static DataProvider instance;
 
         //public static List<Control_User.Item> ListItem;
-        static string strCon = "Data Source=DESKTOP-LBAULH5;Initial Catalog=QuanLyKho;Integrated Security=True";
-        private static string connectionStr = "Data Source=DESKTOP-5E0I4OU\\SQLEXPRESS01;Initial Catalog=QuanLyKho;Integrated Security=True";
-        private static SqlConnection conn;
+       // static string strCon = "Data Source=DESKTOP-LBAULH5;Initial Catalog=QuanLyKho;Integrated Security=True";
+        private static string strCon = "Data Source=DESKTOP-5E0I4OU\\SQLEXPRESS01;Initial Catalog=QuanLyKho;Integrated Security=True";
+        //private static SqlConnection conn;
         public static void IntializeConnection()
         {
-            if (conn != null)
-                conn.Close();
+            //if (conn != null)
+            //    conn.Close();
 
-            conn = new SqlConnection(strCon);
+            //conn = new SqlConnection(strCon);
         }
 
         public static DataProvider Instance
@@ -142,24 +142,29 @@ namespace Login.DAO
         //
         public static DataTable ExcuseQuery1(string strQuery)
         {
-            conn.Open();
+            using (SqlConnection sqlCon = new SqlConnection(strCon))
+            {
+                sqlCon.Open();
+                SqlCommand cmd = new SqlCommand(strQuery, sqlCon);
 
-            SqlCommand cmd = new SqlCommand(strQuery, conn);
+                DataTable result = new DataTable();
+                result.Load(cmd.ExecuteReader());
 
-            DataTable result = new DataTable();
-            result.Load(cmd.ExecuteReader());
+                sqlCon.Close();
 
-            conn.Close();
-
-            return result;
+                return result;
+            }
         }
         public static void ExcuseNonQuery1(string Query)
         {
-            conn.Open();
-            SqlCommand cmd = new SqlCommand(Query, conn);
+            using (SqlConnection sqlCon = new SqlConnection(strCon))
+            {
+                sqlCon.Open();
+                SqlCommand cmd = new SqlCommand(Query, sqlCon);
 
-            cmd.ExecuteNonQuery();
-            conn.Close();
+                cmd.ExecuteNonQuery();
+                sqlCon.Close();
+            }
 
         }
     }
