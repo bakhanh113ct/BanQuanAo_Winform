@@ -93,16 +93,6 @@ namespace QLCuaHangQuanAo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap avt {
-            get {
-                object obj = ResourceManager.GetObject("avt", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap baseball_cap {
             get {
                 object obj = ResourceManager.GetObject("baseball-cap", resourceCulture);
@@ -196,16 +186,6 @@ namespace QLCuaHangQuanAo.Properties {
         internal static System.Drawing.Bitmap delete_64px {
             get {
                 object obj = ResourceManager.GetObject("delete_64px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Dương_cầm___17_ {
-            get {
-                object obj = ResourceManager.GetObject("Dương cầm_ (17)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

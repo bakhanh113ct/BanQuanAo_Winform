@@ -332,8 +332,6 @@
     <None Include="Resources\chronometer1.png" />
     <None Include="Resources\crowd %281%29.png" />
     <None Include="Resources\crown.png" />
-    <Content Include="Resources\avt.jpg" />
-    <Content Include="Resources\Dương cầm_ %2817%29.jpg" />
     <None Include="Resources\female_User.png" />
     <None Include="Resources\male_User.png" />
     <None Include="Resources\Image1.png" />
