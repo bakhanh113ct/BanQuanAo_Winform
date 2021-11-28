@@ -29,23 +29,602 @@ namespace Login
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            this.topList = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.SLKH = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.top_list = new System.Windows.Forms.FlowLayoutPanel();
+            this.hangtrongkho = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.doanhso = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.ngaythang = new System.Windows.Forms.Label();
+            this.thoigian = new System.Windows.Forms.Label();
+            this.time = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.guna2ShadowPanel4 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.tongkh = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.cmp = new System.Windows.Forms.Label();
+            this.Muiten = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Delivered = new System.Windows.Forms.Label();
+            this.Items = new System.Windows.Forms.Label();
+            this.SLHD_delevery = new System.Windows.Forms.Label();
+            this.guna2ShadowPanel5 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Sl_CC = new System.Windows.Forms.Label();
+            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.SLSP = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.top_listSP = new System.Windows.Forms.FlowLayoutPanel();
+            this.topList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hangtrongkho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doanhso)).BeginInit();
+            this.guna2ShadowPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.time)).BeginInit();
+            this.guna2ShadowPanel3.SuspendLayout();
+            this.guna2ShadowPanel4.SuspendLayout();
+            this.tongkh.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2ShadowPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.guna2ShadowPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             this.SuspendLayout();
+            // 
+            // topList
+            // 
+            this.topList.BackColor = System.Drawing.Color.Transparent;
+            this.topList.Controls.Add(this.guna2PictureBox3);
+            this.topList.Controls.Add(this.SLKH);
+            this.topList.Controls.Add(this.comboBox1);
+            this.topList.Controls.Add(this.label1);
+            this.topList.Controls.Add(this.top_list);
+            this.topList.FillColor = System.Drawing.Color.White;
+            this.topList.Location = new System.Drawing.Point(609, 0);
+            this.topList.Name = "topList";
+            this.topList.Radius = 10;
+            this.topList.ShadowColor = System.Drawing.Color.BlueViolet;
+            this.topList.Size = new System.Drawing.Size(306, 289);
+            this.topList.TabIndex = 0;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = global::Login.Properties.Resources.crown;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(134, 40);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
+            this.guna2PictureBox3.Size = new System.Drawing.Size(30, 30);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox3.TabIndex = 4;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // SLKH
+            // 
+            this.SLKH.AutoSize = true;
+            this.SLKH.Font = new System.Drawing.Font("Quicksand", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SLKH.ForeColor = System.Drawing.Color.DarkOrange;
+            this.SLKH.Location = new System.Drawing.Point(67, 8);
+            this.SLKH.Name = "SLKH";
+            this.SLKH.Size = new System.Drawing.Size(55, 25);
+            this.SLKH.TabIndex = 3;
+            this.SLKH.Text = "SLKH";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(195, 43);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(93, 24);
+            this.comboBox1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(16, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 30);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "TOP SALES";
+            // 
+            // top_list
+            // 
+            this.top_list.Location = new System.Drawing.Point(21, 73);
+            this.top_list.Name = "top_list";
+            this.top_list.Size = new System.Drawing.Size(267, 200);
+            this.top_list.TabIndex = 0;
+            // 
+            // hangtrongkho
+            // 
+            this.hangtrongkho.BorderlineColor = System.Drawing.Color.Transparent;
+            this.hangtrongkho.BorderlineWidth = 10;
+            chartArea1.BackColor = System.Drawing.Color.White;
+            chartArea1.BorderColor = System.Drawing.Color.SeaShell;
+            chartArea1.BorderWidth = 10;
+            chartArea1.Name = "ChartArea1";
+            this.hangtrongkho.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.White;
+            legend1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            this.hangtrongkho.Legends.Add(legend1);
+            this.hangtrongkho.Location = new System.Drawing.Point(18, 17);
+            this.hangtrongkho.Name = "hangtrongkho";
+            series1.BackImageTransparentColor = System.Drawing.Color.Gray;
+            series1.BorderColor = System.Drawing.Color.Transparent;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Color = System.Drawing.Color.DimGray;
+            series1.Font = new System.Drawing.Font("Quicksand Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.IsValueShownAsLabel = true;
+            series1.LabelBackColor = System.Drawing.Color.Transparent;
+            series1.LabelForeColor = System.Drawing.Color.White;
+            series1.Legend = "Legend1";
+            series1.MarkerColor = System.Drawing.Color.WhiteSmoke;
+            series1.Name = "sohang";
+            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+            series1.ShadowColor = System.Drawing.Color.Red;
+            this.hangtrongkho.Series.Add(series1);
+            this.hangtrongkho.Size = new System.Drawing.Size(294, 208);
+            this.hangtrongkho.TabIndex = 1;
+            this.hangtrongkho.Text = "hangtrongkho";
+            title1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "sohang";
+            title1.Text = "Số hàng còn trong kho";
+            this.hangtrongkho.Titles.Add(title1);
+            // 
+            // doanhso
+            // 
+            this.doanhso.BorderlineColor = System.Drawing.Color.Violet;
+            this.doanhso.BorderlineWidth = 10;
+            this.doanhso.BorderSkin.BorderWidth = 10;
+            chartArea2.AxisX.LineColor = System.Drawing.Color.Violet;
+            chartArea2.AxisX.LineWidth = 5;
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea2.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            chartArea2.AxisY.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
+            chartArea2.AxisY.LabelStyle.Enabled = false;
+            chartArea2.AxisY.LineColor = System.Drawing.Color.Fuchsia;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
+            chartArea2.BackColor = System.Drawing.Color.White;
+            chartArea2.Name = "ChartArea1";
+            this.doanhso.ChartAreas.Add(chartArea2);
+            legend2.Enabled = false;
+            legend2.Name = "Legend1";
+            this.doanhso.Legends.Add(legend2);
+            this.doanhso.Location = new System.Drawing.Point(26, 13);
+            this.doanhso.Name = "doanhso";
+            this.doanhso.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series2.IsValueShownAsLabel = true;
+            series2.Legend = "Legend1";
+            series2.Name = "doanhso";
+            series2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            this.doanhso.Series.Add(series2);
+            this.doanhso.Size = new System.Drawing.Size(513, 212);
+            this.doanhso.TabIndex = 2;
+            this.doanhso.Text = "chart1";
+            title2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.Name = "Title1";
+            title2.Text = "Doanh số bán hàng trong các tháng";
+            this.doanhso.Titles.Add(title2);
+            // 
+            // guna2ShadowPanel2
+            // 
+            this.guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel2.Controls.Add(this.ngaythang);
+            this.guna2ShadowPanel2.Controls.Add(this.thoigian);
+            this.guna2ShadowPanel2.Controls.Add(this.time);
+            this.guna2ShadowPanel2.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel2.Location = new System.Drawing.Point(318, 0);
+            this.guna2ShadowPanel2.Name = "guna2ShadowPanel2";
+            this.guna2ShadowPanel2.Radius = 10;
+            this.guna2ShadowPanel2.ShadowColor = System.Drawing.Color.DimGray;
+            this.guna2ShadowPanel2.Size = new System.Drawing.Size(282, 70);
+            this.guna2ShadowPanel2.TabIndex = 4;
+            // 
+            // ngaythang
+            // 
+            this.ngaythang.AutoSize = true;
+            this.ngaythang.Font = new System.Drawing.Font("Quicksand SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngaythang.Location = new System.Drawing.Point(72, 4);
+            this.ngaythang.Name = "ngaythang";
+            this.ngaythang.Size = new System.Drawing.Size(51, 21);
+            this.ngaythang.TabIndex = 2;
+            this.ngaythang.Text = "label3";
+            // 
+            // thoigian
+            // 
+            this.thoigian.AutoSize = true;
+            this.thoigian.Font = new System.Drawing.Font("Quicksand SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thoigian.Location = new System.Drawing.Point(91, 28);
+            this.thoigian.Name = "thoigian";
+            this.thoigian.Size = new System.Drawing.Size(84, 35);
+            this.thoigian.TabIndex = 1;
+            this.thoigian.Text = "label3";
+            // 
+            // time
+            // 
+            this.time.FillColor = System.Drawing.SystemColors.Window;
+            this.time.Image = global::Login.Properties.Resources.hourglass1;
+            this.time.ImageRotate = 0F;
+            this.time.Location = new System.Drawing.Point(8, 8);
+            this.time.Name = "time";
+            this.time.ShadowDecoration.Parent = this.time;
+            this.time.Size = new System.Drawing.Size(55, 55);
+            this.time.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.time.TabIndex = 0;
+            this.time.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // guna2ShadowPanel3
+            // 
+            this.guna2ShadowPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel3.Controls.Add(this.doanhso);
+            this.guna2ShadowPanel3.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel3.Location = new System.Drawing.Point(1, 306);
+            this.guna2ShadowPanel3.Name = "guna2ShadowPanel3";
+            this.guna2ShadowPanel3.Radius = 10;
+            this.guna2ShadowPanel3.ShadowColor = System.Drawing.Color.Orange;
+            this.guna2ShadowPanel3.Size = new System.Drawing.Size(564, 234);
+            this.guna2ShadowPanel3.TabIndex = 5;
+            // 
+            // guna2ShadowPanel4
+            // 
+            this.guna2ShadowPanel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel4.Controls.Add(this.hangtrongkho);
+            this.guna2ShadowPanel4.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel4.Location = new System.Drawing.Point(585, 306);
+            this.guna2ShadowPanel4.Name = "guna2ShadowPanel4";
+            this.guna2ShadowPanel4.Radius = 10;
+            this.guna2ShadowPanel4.ShadowColor = System.Drawing.Color.MediumPurple;
+            this.guna2ShadowPanel4.ShadowDepth = 70;
+            this.guna2ShadowPanel4.Size = new System.Drawing.Size(330, 234);
+            this.guna2ShadowPanel4.TabIndex = 6;
+            // 
+            // tongkh
+            // 
+            this.tongkh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tongkh.BackColor = System.Drawing.Color.Transparent;
+            this.tongkh.Controls.Add(this.cmp);
+            this.tongkh.Controls.Add(this.Muiten);
+            this.tongkh.Controls.Add(this.guna2PictureBox1);
+            this.tongkh.Controls.Add(this.Delivered);
+            this.tongkh.Controls.Add(this.Items);
+            this.tongkh.Controls.Add(this.SLHD_delevery);
+            this.tongkh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(240)))), ((int)(((byte)(215)))));
+            this.tongkh.Location = new System.Drawing.Point(341, 76);
+            this.tongkh.Name = "tongkh";
+            this.tongkh.Radius = 10;
+            this.tongkh.ShadowColor = System.Drawing.Color.Lime;
+            this.tongkh.ShadowDepth = 70;
+            this.tongkh.Size = new System.Drawing.Size(241, 110);
+            this.tongkh.TabIndex = 7;
+            // 
+            // cmp
+            // 
+            this.cmp.AutoSize = true;
+            this.cmp.Font = new System.Drawing.Font("Quicksand", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmp.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.cmp.Location = new System.Drawing.Point(154, 69);
+            this.cmp.Name = "cmp";
+            this.cmp.Size = new System.Drawing.Size(70, 25);
+            this.cmp.TabIndex = 7;
+            this.cmp.Text = "+23,4%";
+            // 
+            // Muiten
+            // 
+            this.Muiten.AutoSize = true;
+            this.Muiten.Font = new System.Drawing.Font("Quicksand Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Muiten.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Muiten.Location = new System.Drawing.Point(156, 24);
+            this.Muiten.Name = "Muiten";
+            this.Muiten.Size = new System.Drawing.Size(25, 23);
+            this.Muiten.TabIndex = 6;
+            this.Muiten.Text = "🠉";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::Login.Properties.Resources.shipped_48px;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(188, 17);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 5;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // Delivered
+            // 
+            this.Delivered.AutoSize = true;
+            this.Delivered.Font = new System.Drawing.Font("Quicksand", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delivered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Delivered.Location = new System.Drawing.Point(16, 80);
+            this.Delivered.Name = "Delivered";
+            this.Delivered.Size = new System.Drawing.Size(80, 23);
+            this.Delivered.TabIndex = 4;
+            this.Delivered.Text = "Delivered";
+            // 
+            // Items
+            // 
+            this.Items.AutoSize = true;
+            this.Items.Font = new System.Drawing.Font("Quicksand", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Items.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Items.Location = new System.Drawing.Point(16, 59);
+            this.Items.Name = "Items";
+            this.Items.Size = new System.Drawing.Size(50, 23);
+            this.Items.TabIndex = 3;
+            this.Items.Text = "Items";
+            // 
+            // SLHD_delevery
+            // 
+            this.SLHD_delevery.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.SLHD_delevery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SLHD_delevery.AutoSize = true;
+            this.SLHD_delevery.Font = new System.Drawing.Font("Quicksand", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SLHD_delevery.ForeColor = System.Drawing.Color.Black;
+            this.SLHD_delevery.Location = new System.Drawing.Point(43, 3);
+            this.SLHD_delevery.Name = "SLHD_delevery";
+            this.SLHD_delevery.Size = new System.Drawing.Size(71, 49);
+            this.SLHD_delevery.TabIndex = 1;
+            this.SLHD_delevery.Text = "173";
+            // 
+            // guna2ShadowPanel5
+            // 
+            this.guna2ShadowPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.guna2ShadowPanel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel5.Controls.Add(this.label5);
+            this.guna2ShadowPanel5.Controls.Add(this.label6);
+            this.guna2ShadowPanel5.Controls.Add(this.guna2PictureBox2);
+            this.guna2ShadowPanel5.Controls.Add(this.label9);
+            this.guna2ShadowPanel5.Controls.Add(this.label10);
+            this.guna2ShadowPanel5.Controls.Add(this.Sl_CC);
+            this.guna2ShadowPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(211)))), ((int)(((byte)(219)))));
+            this.guna2ShadowPanel5.Location = new System.Drawing.Point(340, 193);
+            this.guna2ShadowPanel5.Name = "guna2ShadowPanel5";
+            this.guna2ShadowPanel5.Radius = 10;
+            this.guna2ShadowPanel5.ShadowColor = System.Drawing.Color.Red;
+            this.guna2ShadowPanel5.ShadowDepth = 70;
+            this.guna2ShadowPanel5.Size = new System.Drawing.Size(241, 110);
+            this.guna2ShadowPanel5.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Quicksand", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label5.Location = new System.Drawing.Point(154, 71);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 25);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "-12.3%";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Quicksand Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(155, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(25, 23);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "🠋";
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::Login.Properties.Resources.x_button1;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(188, 17);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 5;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Quicksand", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(16, 80);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 23);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Cencelled";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Quicksand", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(16, 59);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 23);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Orders";
+            // 
+            // Sl_CC
+            // 
+            this.Sl_CC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Sl_CC.AutoSize = true;
+            this.Sl_CC.Font = new System.Drawing.Font("Quicksand", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sl_CC.ForeColor = System.Drawing.Color.Black;
+            this.Sl_CC.Location = new System.Drawing.Point(43, 3);
+            this.Sl_CC.Name = "Sl_CC";
+            this.Sl_CC.Size = new System.Drawing.Size(54, 49);
+            this.Sl_CC.TabIndex = 1;
+            this.Sl_CC.Text = "12";
+            // 
+            // guna2ShadowPanel1
+            // 
+            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.guna2PictureBox4);
+            this.guna2ShadowPanel1.Controls.Add(this.SLSP);
+            this.guna2ShadowPanel1.Controls.Add(this.comboBox2);
+            this.guna2ShadowPanel1.Controls.Add(this.label2);
+            this.guna2ShadowPanel1.Controls.Add(this.top_listSP);
+            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(7, 0);
+            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
+            this.guna2ShadowPanel1.Radius = 10;
+            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Goldenrod;
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(300, 289);
+            this.guna2ShadowPanel1.TabIndex = 9;
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.Image = global::Login.Properties.Resources.crown;
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(134, 41);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
+            this.guna2PictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox4.TabIndex = 5;
+            this.guna2PictureBox4.TabStop = false;
+            // 
+            // SLSP
+            // 
+            this.SLSP.AutoSize = true;
+            this.SLSP.Font = new System.Drawing.Font("Quicksand", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SLSP.ForeColor = System.Drawing.Color.DarkOrange;
+            this.SLSP.Location = new System.Drawing.Point(65, 8);
+            this.SLSP.Name = "SLSP";
+            this.SLSP.Size = new System.Drawing.Size(52, 25);
+            this.SLSP.TabIndex = 4;
+            this.SLSP.Text = "SLSP";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(203, 46);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(85, 24);
+            this.comboBox2.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(16, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 30);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "TOP SALES";
+            // 
+            // top_listSP
+            // 
+            this.top_listSP.Location = new System.Drawing.Point(16, 73);
+            this.top_listSP.Name = "top_listSP";
+            this.top_listSP.Size = new System.Drawing.Size(267, 200);
+            this.top_listSP.TabIndex = 0;
             // 
             // Home_perfomancecs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Maroon;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(915, 543);
-            this.Enabled = false;
+            this.Controls.Add(this.guna2ShadowPanel1);
+            this.Controls.Add(this.guna2ShadowPanel5);
+            this.Controls.Add(this.tongkh);
+            this.Controls.Add(this.guna2ShadowPanel4);
+            this.Controls.Add(this.guna2ShadowPanel3);
+            this.Controls.Add(this.guna2ShadowPanel2);
+            this.Controls.Add(this.topList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "Home_perfomancecs";
             this.Text = "Home_perfomancecs";
+            this.topList.ResumeLayout(false);
+            this.topList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hangtrongkho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doanhso)).EndInit();
+            this.guna2ShadowPanel2.ResumeLayout(false);
+            this.guna2ShadowPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.time)).EndInit();
+            this.guna2ShadowPanel3.ResumeLayout(false);
+            this.guna2ShadowPanel4.ResumeLayout(false);
+            this.tongkh.ResumeLayout(false);
+            this.tongkh.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2ShadowPanel5.ResumeLayout(false);
+            this.guna2ShadowPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            this.guna2ShadowPanel1.ResumeLayout(false);
+            this.guna2ShadowPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private Guna.UI2.WinForms.Guna2ShadowPanel topList;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart hangtrongkho;
+        private System.Windows.Forms.DataVisualization.Charting.Chart doanhso;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.FlowLayoutPanel top_list;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
+        private Guna.UI2.WinForms.Guna2PictureBox time;
+        private System.Windows.Forms.Label thoigian;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label ngaythang;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel3;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel4;
+        private Guna.UI2.WinForms.Guna2ShadowPanel tongkh;
+        private System.Windows.Forms.Label Delivered;
+        private System.Windows.Forms.Label Items;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.Label cmp;
+        private System.Windows.Forms.Label Muiten;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel5;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label Sl_CC;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.FlowLayoutPanel top_listSP;
+        private System.Windows.Forms.Label SLKH;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        public System.Windows.Forms.Label SLHD_delevery;
+        private System.Windows.Forms.Label SLSP;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
     }
 }

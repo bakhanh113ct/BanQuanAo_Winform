@@ -37,6 +37,7 @@ namespace Login.Control_User
             this.ngay_mua_hang = new System.Windows.Forms.Label();
             this.avt_khachhang = new Guna.UI2.WinForms.Guna2PictureBox();
             this.BackGround.SuspendLayout();
+            this.thao_tac.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avt_khachhang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +45,6 @@ namespace Login.Control_User
             // 
             this.BackGround.BackColor = System.Drawing.Color.Transparent;
             this.BackGround.Controls.Add(this.thao_tac);
-            this.BackGround.Controls.Add(this.trang_thai);
             this.BackGround.Controls.Add(this.so_luong_san_pham);
             this.BackGround.Controls.Add(this.ten_khach_hang);
             this.BackGround.Controls.Add(this.ngay_mua_hang);
@@ -54,25 +54,26 @@ namespace Login.Control_User
             this.BackGround.Location = new System.Drawing.Point(0, 0);
             this.BackGround.Name = "BackGround";
             this.BackGround.Radius = 7;
-            this.BackGround.ShadowColor = System.Drawing.Color.Black;
-            this.BackGround.ShadowDepth = 0;
-            this.BackGround.ShadowShift = 0;
-            this.BackGround.Size = new System.Drawing.Size(400, 80);
+            this.BackGround.ShadowColor = System.Drawing.Color.BlueViolet;
+            this.BackGround.ShadowDepth = 80;
+            this.BackGround.ShadowShift = 2;
+            this.BackGround.Size = new System.Drawing.Size(401, 80);
             this.BackGround.TabIndex = 0;
             // 
             // thao_tac
             // 
             this.thao_tac.CausesValidation = false;
+            this.thao_tac.Controls.Add(this.trang_thai);
             this.thao_tac.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.thao_tac.Dock = System.Windows.Forms.DockStyle.Fill;
             this.thao_tac.Location = new System.Drawing.Point(0, 0);
             this.thao_tac.Name = "thao_tac";
             this.thao_tac.ShadowDecoration.Parent = this.thao_tac;
-            this.thao_tac.Size = new System.Drawing.Size(400, 80);
+            this.thao_tac.Size = new System.Drawing.Size(401, 80);
             this.thao_tac.TabIndex = 5;
             this.thao_tac.UseTransparentBackground = true;
             this.thao_tac.Click += new System.EventHandler(this.thao_tac_Click);
-            this.thao_tac.Paint += new System.Windows.Forms.PaintEventHandler(this.thao_tac_Paint);
+            this.thao_tac.MouseLeave += new System.EventHandler(this.thao_tac_MouseLeave);
+            this.thao_tac.MouseHover += new System.EventHandler(this.thao_tac_MouseHover);
             // 
             // trang_thai
             // 
@@ -85,13 +86,13 @@ namespace Login.Control_User
             this.trang_thai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.trang_thai.DisabledState.Parent = this.trang_thai;
             this.trang_thai.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(186)))), ((int)(((byte)(247)))));
-            this.trang_thai.Font = new System.Drawing.Font("Quicksand", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trang_thai.Font = new System.Drawing.Font("Quicksand", 9F, System.Drawing.FontStyle.Bold);
             this.trang_thai.ForeColor = System.Drawing.Color.White;
             this.trang_thai.HoverState.Parent = this.trang_thai;
-            this.trang_thai.Location = new System.Drawing.Point(275, 0);
+            this.trang_thai.Location = new System.Drawing.Point(276, 0);
             this.trang_thai.Name = "trang_thai";
             this.trang_thai.ShadowDecoration.Parent = this.trang_thai;
-            this.trang_thai.Size = new System.Drawing.Size(125, 30);
+            this.trang_thai.Size = new System.Drawing.Size(125, 33);
             this.trang_thai.TabIndex = 4;
             this.trang_thai.Text = "Delivery";
             // 
@@ -147,9 +148,10 @@ namespace Login.Control_User
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
             this.Controls.Add(this.BackGround);
             this.Name = "list_order";
-            this.Size = new System.Drawing.Size(400, 80);
+            this.Size = new System.Drawing.Size(401, 80);
             this.BackGround.ResumeLayout(false);
             this.BackGround.PerformLayout();
+            this.thao_tac.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.avt_khachhang)).EndInit();
             this.ResumeLayout(false);
 
@@ -160,8 +162,8 @@ namespace Login.Control_User
         private System.Windows.Forms.Label so_luong_san_pham;
         private System.Windows.Forms.Label ten_khach_hang;
         private System.Windows.Forms.Label ngay_mua_hang;
-        private Guna.UI2.WinForms.Guna2Button trang_thai;
         public Guna.UI2.WinForms.Guna2Panel thao_tac;
         public Guna.UI2.WinForms.Guna2ShadowPanel BackGround;
+        public Guna.UI2.WinForms.Guna2Button trang_thai;
     }
 }

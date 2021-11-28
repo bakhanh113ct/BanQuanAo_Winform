@@ -146,12 +146,13 @@ namespace Login.DAO
 
             SqlCommand cmd = new SqlCommand(strQuery, conn);
 
-            DataTable result = new DataTable();
-            result.Load(cmd.ExecuteReader());
+                DataTable result = new DataTable();
+                result.Load(cmd.ExecuteReader());
 
-            conn.Close();
+                sqlCon.Close();
 
-            return result;
+                return result;
+            }
         }
         public static void ExcuseNonQuery1(string Query)
         {
@@ -162,8 +163,9 @@ namespace Login.DAO
             conn.Open();
             SqlCommand cmd = new SqlCommand(Query, conn);
 
-            cmd.ExecuteNonQuery();
-            conn.Close();
+                cmd.ExecuteNonQuery();
+                sqlCon.Close();
+            }
 
         }
     }

@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,12 +27,17 @@ namespace Login
             InitializeComponent();
             AddSubbarandHomeButton();
             ListItem = new List<Control_User.Item>();
+            //Home_perfomancecs.Open();
+            subbar_Change(subbar1, HOME);
+            openPerformance(new Home_perfomancecs());
+          
         }
 
         private void UI_Home_Load(object sender, EventArgs e)
         {
             partner = new Partner_performance();
             store = new Store_performence();
+            //home = new Home_perfomancecs();
             //DBA.Reload("select * from SanPham");
         }
 
@@ -92,6 +98,7 @@ namespace Login
 
         private void HOME_Click(object sender, EventArgs e)
         {
+            DAO.Sound.Instance.sound_Click();
             subbar_Change(subbar1, HOME);
             openPerformance(new Home_perfomancecs());
         }
@@ -112,6 +119,13 @@ namespace Login
         {
             subbar_Change(subbar4, CUSTOMER);
             openPerformance(new Customer_performance());
+            //System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+
+            //player.SoundLocation = @"‪C:\sound\click.wav";
+            //player.Play();
+            
+            DAO.Sound.Instance.sound_Click();
+
         }
 
         private void ANALYSIS_Click(object sender, EventArgs e)
@@ -143,13 +157,7 @@ namespace Login
 
         private void MyLogo_MouseHover(object sender, EventArgs e)
         {
-            MyLogo.FillColor = Color.White;
+           // MyLogo.FillColor = Color.White;
         }
-
-        private void zooe_in_out_Click(object sender, EventArgs e)
-        {
-
-        }
-        
     }
 }
