@@ -17,6 +17,12 @@ namespace Login.DAO
             private set => instance = value;
         }
         public DataTable loadtopKH()
+        {
+            return DataProvider.ExcuseQuery1("select top 3  HOTEN, ANH, sum(TRIGIA) AS DOANHSO " +
+               "FROM KHACHHANG, HOADON WHERE HOADON.MAKH = KHACHHANG.MAKH " +
+               "group by  HOTEN, ANH " +
+               "order by sum(TRIGIA) DESC");
+        }
 
         public DTO.KHACHHANG LoadKH(int id)
         {
@@ -25,32 +31,32 @@ namespace Login.DAO
             DataRow row = data.Rows[0];
             kh = new DTO.KHACHHANG(row);
             return kh;
-            return DataProvider.ExcuseQuery1("select top 3  HOTEN, ANH, sum(TRIGIA) AS DOANHSO " +
-                "FROM KHACHHANG, HOADON WHERE HOADON.MAKH = KHACHHANG.MAKH " +
-                "group by  HOTEN, ANH " +
-                "order by sum(TRIGIA) DESC");
+           
         }
         public int GetIdMax()
-        public int SLKH()
         {
             object kq = DAO.DataProvider.ExecuteScalar("select max(MAKH) from KHACHHANG");
             if (kq is System.DBNull)
                 return 0;
             return (int)kq;
         }
-
-        public bool InsertKH(DTO.KHACHHANG kh)
+        public int SLKH()
+        {
             int dem = 0;
             DataTable sl = DataProvider.ExcuseQuery1("Select count(MAKH) as SLKH from KHACHHANG");
-            foreach(DataRow x in sl.Rows)
+            foreach (DataRow x in sl.Rows)
             {
+                dem = (int)x["SLKH"];
+            }
+            return dem;
+        }
+
+        public bool InsertKH(DTO.KHACHHANG kh) {
             int kq = DAO.DataProvider.ExecuteNonQuery("insert into KHACHHANG(IDUSERNAME, HOTEN, DCHI, SODT, NGSINH, GIOITINH, ANH) values('" + kh.IdUsername + "','" + kh.HoTen + "','" + kh.DiaChi + "','" + kh.SoDT + "', '" + kh.NgSinh + "', '" + kh.Gioitinh + "', null)");
             if (kq != 0)
                 return true;
             return false;
-                dem = (int)x["SLKH"];
-            }
-            return dem;
+
         }
         public bool Update(DTO.KHACHHANG kh)
         {
@@ -59,21 +65,22 @@ namespace Login.DAO
                 check = DAO.DataProvider.ExecuteNonQuery("update KHACHHANG set HOTEN = @Ten , DCHI = @Diachi , SODT = @SDT , NGSINH = @Ngsinh , GIOITINH = @Gioitinh , ANH = @Anh where MAKH = '" + Login.kh.MaKH + "'",
                                                             new object[] { kh.HoTen, kh.DiaChi, kh.SoDT, kh.NgSinh, kh.Gioitinh, "NULL" });
             else
-
-        internal DataTable loadInfo(int SOHD)
-        {
                 check = DAO.DataProvider.ExecuteNonQuery("update KHACHHANG set HOTEN = @Ten , DCHI = @Diachi , SODT = @SDT , NGSINH = @Ngsinh , GIOITINH = @Gioitinh , ANH = @Anh where MAKH = '" + Login.kh.MaKH + "'",
-                                                            new object[] { kh.HoTen, kh.DiaChi, kh.SoDT, kh.NgSinh, kh.Gioitinh, kh.Anh });
-            }
+                                                           new object[] { kh.HoTen, kh.DiaChi, kh.SoDT, kh.NgSinh, kh.Gioitinh, kh.Anh });
             if (check == 0)
                 return false;
             else
                 return true;
             return false;
-             return DataProvider.ExcuseQuery1("select HOTEN, DCHI, SOHD, NGHD, TRANG_THAI from KHACHHANG, HOADON " +
+        }
+            
+             
+                
+        internal DataTable loadInfo(int SOHD)
+        {
+           return DataProvider.ExcuseQuery1("select HOTEN, DCHI, SOHD, NGHD, TRANG_THAI from KHACHHANG, HOADON " +
                  "where SOHD = " + SOHD + " and KHACHHANG.MAKH = HOADON.MAKH");
         }
 
-        
     }
 }

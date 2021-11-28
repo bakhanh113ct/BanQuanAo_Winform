@@ -9,28 +9,36 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace Login.DAO
 {
     class DataProvider
     {
         private static DataProvider instance;
-
-        static string strCon = "Data Source=.\\;Initial Catalog=QuanLyKho;Integrated Security=True";
-        private static string connectionStr = "Data Source=DESKTOP-5E0I4OU\\SQLEXPRESS01;Initial Catalog=QuanLyKho;Integrated Security=True";
-        private static SqlConnection conn;
+        //public static List<Control_User.Item> ListItem;
+        //static string strCon = "Data Source=.\\;Initial Catalog=QuanLyKho;Integrated Security=True";
+        private static string strCon = "Data Source=.\\;Initial Catalog=QuanLyKho;Integrated Security=True";
+        //private static SqlConnection conn;
         public static void IntializeConnection()
         {
             //if (conn != null)
-            //    conn.Close();
+            // conn.Close();
+
+
 
             //conn = new SqlConnection(strCon);
         }
+
+
 
         public static DataProvider Instance
         {
             get { if (instance == null) instance = new DataProvider(); return instance; }
             private set => instance = value;
         }
+
+
 
         public static DataTable ExecuteQuery(string query, object[] parameter = null)
         {
@@ -39,11 +47,11 @@ namespace Login.DAO
             {
                 sqlCon.Open();
                 SqlCommand command = new SqlCommand(query, sqlCon);
-                if(parameter != null)
+                if (parameter != null)
                 {
                     string[] listpara = query.Split(' ');
                     int i = 0;
-                    foreach(string item in listpara)
+                    foreach (string item in listpara)
                     {
                         if (item.Contains('@'))
                         {
@@ -93,6 +101,8 @@ namespace Login.DAO
             return kq;
         }
 
+
+
         public static object ExecuteScalar(string query, object[] parameter = null)
         {
             object kq = 0;
@@ -113,12 +123,17 @@ namespace Login.DAO
                             i++;
                         }
                     }
+
+
+
                 }
                 kq = command.ExecuteScalar();
                 sqlCon.Close();
             }
             return kq;
         }
+
+
 
         //View Stored Procedure
         public static DataTable ViewStoredProc(string procName, int SoHD)
@@ -138,34 +153,27 @@ namespace Login.DAO
         //
         public static DataTable ExcuseQuery1(string strQuery)
         {
-            if (conn != null)
-                conn.Close();
-
-            conn = new SqlConnection(strCon);
-            conn.Open();
-
-            SqlCommand cmd = new SqlCommand(strQuery, conn);
-
+            using (SqlConnection sqlCon = new SqlConnection(strCon))
+            {
+                sqlCon.Open();
+                SqlCommand cmd = new SqlCommand(strQuery, sqlCon);
                 DataTable result = new DataTable();
                 result.Load(cmd.ExecuteReader());
-
                 sqlCon.Close();
-
                 return result;
             }
         }
         public static void ExcuseNonQuery1(string Query)
         {
-            if (conn != null)
-                conn.Close();
-
-            conn = new SqlConnection(strCon);
-            conn.Open();
-            SqlCommand cmd = new SqlCommand(Query, conn);
-
+            using (SqlConnection sqlCon = new SqlConnection(strCon))
+            {
+                sqlCon.Open();
+                SqlCommand cmd = new SqlCommand(Query, sqlCon);
                 cmd.ExecuteNonQuery();
                 sqlCon.Close();
             }
+
+
 
         }
     }

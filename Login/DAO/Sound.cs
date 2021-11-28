@@ -19,7 +19,7 @@ namespace Login.DAO
         }
         public void sound_Click()
         {
-            using (var soundPlayer = new SoundPlayer(@"C:\Users\duclo\Downloads\ES_Switch Click 1 - SFX Producer.wav"))
+            using (var soundPlayer = new SoundPlayer(@"..\..\Resources\ES_Switch Click 1 - SFX Producer.wav"))
             {
                 soundPlayer.Play();
             }
@@ -30,6 +30,7 @@ namespace Login.DAO
             using (var soundPlayer = new SoundPlayer(@"C:\Windows\Media\tada.wav"))
             {
                 soundPlayer.PlaySync();
+                
                 
             }
         }

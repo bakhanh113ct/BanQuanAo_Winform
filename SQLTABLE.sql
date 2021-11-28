@@ -35,7 +35,7 @@ CREATE TABLE SANPHAM
 	DABAN int,
 	MOTA nvarchar(100),
 	IDLOAI int,
-	ANH image
+	ANH varbinary(max)
 )
 
 CREATE TABLE LOAISP
@@ -50,7 +50,8 @@ CREATE TABLE HOADON
 	NGHD SMALLDATETIME,
 	MAKH INT,
 	TRIGIA MONEY, 
-	TRANG_THAI nvarchar(50)
+	TRANG_THAI nvarchar(50),
+	NGXN smalldatetime
 )
 
 CREATE TABLE CTHD
