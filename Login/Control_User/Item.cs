@@ -17,14 +17,7 @@ namespace Login.Control_User
         SANPHAM sanpham;
         public Store_performence Parent_Store { get; set; }
         public Partner_performance Parent_Partner { get; set; }
-        ////Thông tin của từng item 
-        //public string Ten;
-        //public double gia;
-        //public int soluong;
-        //public double danhgia;
-        //public int daban;
-        //public string mota;
-        //public int Loai;
+        
         public Item() { }
         public Item(SANPHAM item, Control panel)
         {
@@ -37,13 +30,6 @@ namespace Login.Control_User
 
         private void Init(SANPHAM item)
         {
-            //this.Ten = Ten;
-            //this.gia = gia;
-            //this.soluong = soluong;
-            //this.danhgia = danhgia;
-            //this.daban = daban;
-            //this.mota = mota;
-            //this.Loai = Loai;
             //Load ảnh
             byte[] b = item.Anh;
             this.picture.Image = ConvertoImage(b);
@@ -57,13 +43,12 @@ namespace Login.Control_User
             }
             lbGia.Text = item.Gia.ToString() + " VND";
             lbSoLuong.Text = "SL: " + item.SL.ToString();
-            lbDaBan.Text = "Ban: " + item.SL.ToString();
+            lbDaBan.Text = "Ban: " + item.DaBan.ToString();
             lbName.ForeColor = Color.FromKnownColor(KnownColor.Black);
         }
         private void btnBuy_Click(object sender, EventArgs e)
         {
-            SubForm.Detail_Form detail_form = new SubForm.Detail_Form();
-            detail_form.id = (btnItem.Tag as SANPHAM).Masp.ToString();
+            SubForm.Detail_Form detail_form = new SubForm.Detail_Form((btnItem.Tag as SANPHAM).Masp.ToString());
             detail_form.ShowDialog();
         }
 
@@ -92,5 +77,9 @@ namespace Login.Control_User
             }
         }
 
+        private void picture_Click(object sender, EventArgs e)
+        {
+            btnItem_Click(btnItem, e);
+        }
     }
 }

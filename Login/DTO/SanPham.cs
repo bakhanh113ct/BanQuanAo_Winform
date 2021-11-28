@@ -51,7 +51,7 @@ namespace Login.DTO
             danhGia = (float)row["DANHGIA"];
             daBan = (int)row["DABAN"];
             sL = (int)row["SL"];
-            moTa = row["DABAN"].ToString();
+            moTa = row["MOTA"].ToString();
             iDLoai = (int)row["IDLOAI"];
             anh = (byte[])row["ANH"];
         }

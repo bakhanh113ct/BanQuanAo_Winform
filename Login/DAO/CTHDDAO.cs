@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,16 @@ namespace Login.DAO
             else
                 return true;
             return false;
+        }
+
+        public DataTable LoadCTHD(string SoHD)
+        {
+            DataTable data = DAO.DataProvider.ExecuteQuery("select ANH, TEN, TENLOAI, CTHD.SL, GIA " +
+                                                        "from CTHD, SANPHAM, LOAISP " +
+                                                        "where CTHD.MASP = SANPHAM.MASP " +
+                                                        "AND IDLOAI = LOAISP.ID " +
+                                                        "AND SOHD = '"+SoHD+"'");
+            return data;
         }
     }
 }

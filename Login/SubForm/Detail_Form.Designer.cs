@@ -47,6 +47,8 @@ namespace Login.SubForm
             this.btnAddSL = new Guna.UI2.WinForms.Guna2CircleButton();
             this.txbSLMua = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.tool3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
@@ -141,7 +143,7 @@ namespace Login.SubForm
             // 
             this.picture.FillColor = System.Drawing.Color.Silver;
             this.picture.ImageRotate = 0F;
-            this.picture.Location = new System.Drawing.Point(16, 27);
+            this.picture.Location = new System.Drawing.Point(16, 49);
             this.picture.Name = "picture";
             this.picture.ShadowDecoration.Parent = this.picture;
             this.picture.Size = new System.Drawing.Size(267, 248);
@@ -151,7 +153,7 @@ namespace Login.SubForm
             // lbName
             // 
             this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(403, 28);
+            this.lbName.Location = new System.Drawing.Point(403, 49);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(251, 39);
             this.lbName.TabIndex = 21;
@@ -160,7 +162,7 @@ namespace Login.SubForm
             // lbGia
             // 
             this.lbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGia.Location = new System.Drawing.Point(403, 121);
+            this.lbGia.Location = new System.Drawing.Point(403, 142);
             this.lbGia.Name = "lbGia";
             this.lbGia.Size = new System.Drawing.Size(251, 29);
             this.lbGia.TabIndex = 22;
@@ -169,7 +171,7 @@ namespace Login.SubForm
             // lbSL
             // 
             this.lbSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSL.Location = new System.Drawing.Point(403, 84);
+            this.lbSL.Location = new System.Drawing.Point(403, 105);
             this.lbSL.Name = "lbSL";
             this.lbSL.Size = new System.Drawing.Size(251, 28);
             this.lbSL.TabIndex = 23;
@@ -178,7 +180,7 @@ namespace Login.SubForm
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(403, 179);
+            this.label3.Location = new System.Drawing.Point(403, 200);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 24);
             this.label3.TabIndex = 24;
@@ -187,16 +189,16 @@ namespace Login.SubForm
             // lbDetail
             // 
             this.lbDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDetail.Location = new System.Drawing.Point(403, 209);
+            this.lbDetail.Location = new System.Drawing.Point(403, 230);
             this.lbDetail.Name = "lbDetail";
-            this.lbDetail.Size = new System.Drawing.Size(251, 88);
+            this.lbDetail.Size = new System.Drawing.Size(251, 67);
             this.lbDetail.TabIndex = 25;
             this.lbDetail.Text = "...";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(407, 67);
+            this.panel1.Location = new System.Drawing.Point(407, 88);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(247, 2);
             this.panel1.TabIndex = 26;
@@ -204,7 +206,7 @@ namespace Login.SubForm
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(407, 160);
+            this.panel2.Location = new System.Drawing.Point(407, 181);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(247, 2);
             this.panel2.TabIndex = 27;
@@ -255,6 +257,7 @@ namespace Login.SubForm
             this.txbSLMua.ShadowDecoration.Parent = this.txbSLMua;
             this.txbSLMua.Size = new System.Drawing.Size(207, 38);
             this.txbSLMua.TabIndex = 29;
+            this.txbSLMua.TextChanged += new System.EventHandler(this.txbSLMua_TextChanged);
             // 
             // btnAdd
             // 
@@ -278,12 +281,34 @@ namespace Login.SubForm
             this.btnAdd.Text = "ADD";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(3)))), ((int)(((byte)(121)))));
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(3, 29);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(42, 4);
+            this.guna2GradientPanel1.TabIndex = 35;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(-3, -1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 29);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Detail";
+            // 
             // Detail_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(684, 361);
+            this.Controls.Add(this.guna2GradientPanel1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txbSLMua);
             this.Controls.Add(this.btnAddSL);
@@ -304,6 +329,7 @@ namespace Login.SubForm
             this.tool3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -326,5 +352,7 @@ namespace Login.SubForm
         public Guna.UI2.WinForms.Guna2CircleButton btnAddSL;
         private Guna.UI2.WinForms.Guna2TextBox txbSLMua;
         private Guna.UI2.WinForms.Guna2Button btnAdd;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private System.Windows.Forms.Label label1;
     }
 }

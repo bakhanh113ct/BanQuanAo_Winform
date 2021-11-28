@@ -32,6 +32,12 @@ namespace Login.DAO
             return lll;
         }
 
+        public DataTable LoadHDtoDatatable(string makh)
+        {
+            DataTable data = DataProvider.ExecuteQuery("select SOHD, NGHD, TRIGIA, TRANG_THAI from HOADON ");
+            return data;
+        }
+
         static public bool InsertHD(string nghd, string makh, string trigia, string tt)
         {
             int check = DAO.DataProvider.ExecuteNonQuery("insert into HOADON(NGHD,MAKH,TRIGIA,TRANG_THAI) values ( @NGHD , @MAKH , @TRIGIA , @TRANG_THAI )", new object[] { nghd, makh, trigia, tt });
@@ -84,6 +90,27 @@ namespace Login.DAO
         static public int getSoHD_MAX()
         {
             return (int)DAO.DataProvider.ExecuteScalar("select max(SOHD) from HOADON");
+        }
+
+        public List<DTO.HOADON> LoadHD(string makh)
+        {
+            List<DTO.HOADON> kq = new List<DTO.HOADON>();
+            DataTable data = DataProvider.ExecuteQuery("select SOHD, NGHD, TRIGIA, TRANG_THAI from HOADON where MAKH = '" + makh + "'");
+            foreach (DataRow item in data.Rows)
+            {
+                DTO.HOADON sanpham = new DTO.HOADON(item);
+                kq.Add(sanpham);
+            }
+            return kq;
+            //List < SANPHAM > lll = new List<SANPHAM>();
+
+            //DataTable data = DataProvider.ExecuteQuery("select * from SANPHAM");
+            //foreach (DataRow item in data.Rows)
+            //{
+            //    SANPHAM sanpham = new SANPHAM(item);
+            //    lll.Add(sanpham);
+            //}
+            //return lll;
         }
     }
 }

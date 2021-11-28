@@ -59,7 +59,7 @@ namespace Login
             this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
             this.btnAdd.Size = new System.Drawing.Size(103, 26);
             this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Thêm mới";
+            this.btnAdd.Text = "Add";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // cbbFilter
@@ -113,6 +113,8 @@ namespace Login
             this.txbSearch.Size = new System.Drawing.Size(154, 36);
             this.txbSearch.TabIndex = 6;
             this.txbSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txbSearch.TextChanged += new System.EventHandler(this.txbSearch_TextChanged);
+            this.txbSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbSearch_KeyPress);
             // 
             // flpnStore
             // 

@@ -21,27 +21,31 @@ namespace Login.DTO
         private int soHD;
         private DateTime ngHD;
         private int maKH;
-        private double triGia;
+        private decimal triGia;
+        private string trangthai;
 
-        public HOADON(int soHD, DateTime ngHD, int maKH, double triGia)
+        public HOADON(int soHD, DateTime ngHD, int maKH, decimal triGia, string trangthai)
         {
             this.soHD = soHD;
             this.ngHD = ngHD;
-            this.maKH = maKH;
+            this.MaKH = maKH;
             this.triGia = triGia;
+            this.Trangthai = trangthai;
         }
 
         public HOADON(DataRow row)
         {
             soHD = (int)row["SOHD"];
             ngHD = (DateTime)row["NGHD"];
-            maKH = (int)row["GIA"];
-            triGia = (double)row["TRIGIA"];
+            MaKH = (int)row["MAKH"];
+            triGia = (decimal)row["TRIGIA"];
+            trangthai = row["TRANG_THAI"].ToString();
         }
 
         public int SoHD { get => soHD; set => soHD = value; }
         public DateTime NgHD { get => ngHD; set => ngHD = value; }
+        public decimal TriGia { get => triGia; set => triGia = value; }
+        public string Trangthai { get => trangthai; set => trangthai = value; }
         public int MaKH { get => maKH; set => maKH = value; }
-        public double TriGia { get => triGia; set => triGia = value; }
     }
 }

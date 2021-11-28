@@ -153,6 +153,16 @@ namespace Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap female_User {
+            get {
+                object obj = ResourceManager.GetObject("female_User", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap handshake_64px {
             get {
                 object obj = ResourceManager.GetObject("handshake_64px", resourceCulture);
@@ -196,6 +206,16 @@ namespace Login.Properties {
         internal static System.Drawing.Bitmap Logo1 {
             get {
                 object obj = ResourceManager.GetObject("Logo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap male_User {
+            get {
+                object obj = ResourceManager.GetObject("male_User", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

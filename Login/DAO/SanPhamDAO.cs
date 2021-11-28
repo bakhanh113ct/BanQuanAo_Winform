@@ -46,8 +46,8 @@ namespace Login.DAO
         }
         static public bool InsertSP(string ten, string gia, string SL, string mota, string loai, byte[] image)
         {
-            int check = DAO.DataProvider.ExecuteNonQuery("InsertSP @TEN , @GIA , @SL ,  @DABAN ,  @MOTA ,  @IDLOAI , @ANH ", 
-                                             new object[] { ten, gia, SL, "0", mota, loai, image });
+            int check = DAO.DataProvider.ExecuteNonQuery("Insert into SANPHAM(TEN, GIA, SL, DABAN, DANHGIA, MOTA, IDLOAI, ANH) values( @TEN , @GIA , @SL ,  @DABAN , @DANHGIA , @MOTA ,  @IDLOAI , @ANH )", 
+                                             new object[] { ten, gia, SL, "0", "0" , mota, loai, image });
             if (check == 0)
                 return false;
             else
@@ -74,6 +74,21 @@ namespace Login.DAO
             //else
             //    return true;
             return false;
+        }
+
+        public bool ReduceSL(string sl, string id)
+        {
+            int check = DataProvider.ExecuteNonQuery("update SANPHAM set SL -= '" + sl + "' where MASP = '" + id + "'");
+            if (check == 0)
+                return false;
+            else
+                return true;
+            return false;
+        }
+
+        public void IncreaseDaban(string sl, string id)
+        {
+            DataProvider.ExecuteNonQuery("update SANPHAM set DABAN += '" + sl + "' where MASP = '" + id + "'");
         }
     }
 }

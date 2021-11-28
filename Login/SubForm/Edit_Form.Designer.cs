@@ -46,6 +46,8 @@ namespace Login.SubForm
             this.txbSoLuong = new Guna.UI2.WinForms.Guna2TextBox();
             this.txbGiaTien = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnUpload = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.tool3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
@@ -184,7 +186,7 @@ namespace Login.SubForm
             // 
             this.picture.FillColor = System.Drawing.Color.Silver;
             this.picture.ImageRotate = 0F;
-            this.picture.Location = new System.Drawing.Point(385, 41);
+            this.picture.Location = new System.Drawing.Point(384, 60);
             this.picture.Name = "picture";
             this.picture.ShadowDecoration.Parent = this.picture;
             this.picture.Size = new System.Drawing.Size(280, 259);
@@ -209,7 +211,7 @@ namespace Login.SubForm
             this.txbNhacungcap.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txbNhacungcap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbNhacungcap.HoverState.Parent = this.txbNhacungcap;
-            this.txbNhacungcap.Location = new System.Drawing.Point(21, 256);
+            this.txbNhacungcap.Location = new System.Drawing.Point(21, 275);
             this.txbNhacungcap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbNhacungcap.Name = "txbNhacungcap";
             this.txbNhacungcap.PasswordChar = '\0';
@@ -233,7 +235,7 @@ namespace Login.SubForm
             this.txbLoai.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txbLoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbLoai.HoverState.Parent = this.txbLoai;
-            this.txbLoai.Location = new System.Drawing.Point(21, 213);
+            this.txbLoai.Location = new System.Drawing.Point(21, 232);
             this.txbLoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbLoai.Name = "txbLoai";
             this.txbLoai.PasswordChar = '\0';
@@ -257,7 +259,7 @@ namespace Login.SubForm
             this.txbMota.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txbMota.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbMota.HoverState.Parent = this.txbMota;
-            this.txbMota.Location = new System.Drawing.Point(21, 170);
+            this.txbMota.Location = new System.Drawing.Point(21, 189);
             this.txbMota.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbMota.Name = "txbMota";
             this.txbMota.PasswordChar = '\0';
@@ -281,7 +283,7 @@ namespace Login.SubForm
             this.txbTen.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txbTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbTen.HoverState.Parent = this.txbTen;
-            this.txbTen.Location = new System.Drawing.Point(21, 41);
+            this.txbTen.Location = new System.Drawing.Point(21, 60);
             this.txbTen.Margin = new System.Windows.Forms.Padding(0);
             this.txbTen.Name = "txbTen";
             this.txbTen.PasswordChar = '\0';
@@ -305,7 +307,7 @@ namespace Login.SubForm
             this.txbSoLuong.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txbSoLuong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbSoLuong.HoverState.Parent = this.txbSoLuong;
-            this.txbSoLuong.Location = new System.Drawing.Point(21, 127);
+            this.txbSoLuong.Location = new System.Drawing.Point(21, 146);
             this.txbSoLuong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbSoLuong.Name = "txbSoLuong";
             this.txbSoLuong.PasswordChar = '\0';
@@ -329,7 +331,7 @@ namespace Login.SubForm
             this.txbGiaTien.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txbGiaTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbGiaTien.HoverState.Parent = this.txbGiaTien;
-            this.txbGiaTien.Location = new System.Drawing.Point(21, 84);
+            this.txbGiaTien.Location = new System.Drawing.Point(21, 103);
             this.txbGiaTien.Margin = new System.Windows.Forms.Padding(0);
             this.txbGiaTien.Name = "txbGiaTien";
             this.txbGiaTien.PasswordChar = '\0';
@@ -363,11 +365,33 @@ namespace Login.SubForm
             this.btnUpload.Text = "Upload";
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(3)))), ((int)(((byte)(121)))));
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(3, 31);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(30, 4);
+            this.guna2GradientPanel1.TabIndex = 35;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(-3, 1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 29);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Edit";
+            // 
             // Edit_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 400);
+            this.Controls.Add(this.guna2GradientPanel1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.txbNhacungcap);
             this.Controls.Add(this.txbLoai);
@@ -387,6 +411,7 @@ namespace Login.SubForm
             this.tool3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -408,5 +433,7 @@ namespace Login.SubForm
         public Guna.UI2.WinForms.Guna2TextBox txbSoLuong;
         public Guna.UI2.WinForms.Guna2TextBox txbGiaTien;
         private Guna.UI2.WinForms.Guna2GradientButton btnUpload;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private System.Windows.Forms.Label label1;
     }
 }

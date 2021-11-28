@@ -65,8 +65,10 @@
     <Compile Include="DAO\CTHDDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\HoaDonDAO.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\OrderList.cs" />
     <Compile Include="DAO\SanPhamDAO.cs" />
+    <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DBA.cs" />
     <Compile Include="DTO\BillInfo.cs" />
     <Compile Include="DTO\CTHD.cs" />
@@ -75,6 +77,7 @@
     <Compile Include="DTO\LOAISP.cs" />
     <Compile Include="DTO\SANPHAM.cs" />
     <Compile Include="DTO\Item_HD.cs" />
+    <Compile Include="DTO\TAIKHOAN.cs" />
     <Compile Include="Performance\Analysis_performance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +128,12 @@
     <Compile Include="Performance\Store_performence.Designer.cs">
       <DependentUpon>Store_performence.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubForm\Add_Item_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +157,12 @@
     </Compile>
     <Compile Include="SubForm\Edit_Form.Designer.cs">
       <DependentUpon>Edit_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Product_Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Product_Bill.Designer.cs">
+      <DependentUpon>Product_Bill.cs</DependentUpon>
     </Compile>
     <Compile Include="UI_Home.cs">
       <SubType>Form</SubType>
@@ -195,6 +210,9 @@
     <EmbeddedResource Include="Performance\Store_performence.resx">
       <DependentUpon>Store_performence.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Add_Item_Form.resx">
       <DependentUpon>Add_Item_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Edit_Form.resx">
       <DependentUpon>Edit_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Product_Bill.resx">
+      <DependentUpon>Product_Bill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI_Home.resx">
       <DependentUpon>UI_Home.cs</DependentUpon>
@@ -310,6 +331,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Dương cầm_ %2817%29.jpg" />
+    <None Include="Resources\female_User.png" />
+    <None Include="Resources\male_User.png" />
+    <None Include="Resources\Image1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Login.DTO
 {
-    class KHACHHANG
+    public class KHACHHANG
     {
         /*
          CREATE TABLE KHACHHANG
@@ -20,27 +20,54 @@ namespace Login.DTO
         )
          */
         private int maKH;
+        private int idUsername;
         private string hoTen;
         private string diaChi;
         private string soDT;
         private DateTime ngSinh;
+        private int gioitinh;
         private byte[] anh;
+
+        public KHACHHANG()
+        {
+        }
+
+        public KHACHHANG(int maKH, int idUsername, string hoTen, string diaChi, string soDT, DateTime ngSinh, int gioitinh, byte[] anh)
+        {
+            this.maKH = maKH;
+            this.idUsername = idUsername;
+            this.hoTen = hoTen;
+            this.diaChi = diaChi;
+            this.soDT = soDT;
+            this.ngSinh = ngSinh;
+            this.gioitinh = gioitinh;
+            this.anh = anh;
+        }
 
         public KHACHHANG(DataRow row)
         {
-            this.maKH = (int)row["MAKH"];
-            this.hoTen = row["HOTEN"].ToString();
-            this.diaChi = row["DIACHI"].ToString();
-            this.soDT = row["SODT"].ToString();
-            this.ngSinh = (DateTime)row["NGSINH"];
-            
+            maKH = (int)row["MAKH"];
+            idUsername = (int)row["IDUSERNAME"];
+            hoTen = row["HOTEN"].ToString();
+            diaChi = row["DCHI"].ToString();
+            soDT = row["SODT"].ToString();
+            ngSinh = (DateTime)row["NGSINH"];
+            gioitinh = (int)row["GIOITINH"];
+            if (!row.IsNull("ANH"))
+                anh = (byte[])row["ANH"];
+            else
+            {
+                anh = null;
+            }
         }
 
         public int MaKH { get => maKH; set => maKH = value; }
+        public int IdUsername { get => idUsername; set => idUsername = value; }
         public string HoTen { get => hoTen; set => hoTen = value; }
         public string DiaChi { get => diaChi; set => diaChi = value; }
         public string SoDT { get => soDT; set => soDT = value; }
         public DateTime NgSinh { get => ngSinh; set => ngSinh = value; }
-        private byte[] Anh { get => anh; set => anh = value;}
+        public byte[] Anh { get => anh; set => anh = value; }
+        public int Gioitinh { get => gioitinh; set => gioitinh = value; }
     }
 }

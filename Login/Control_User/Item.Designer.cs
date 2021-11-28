@@ -58,7 +58,6 @@ namespace Login.Control_User
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbGia = new Control_User.CustomLabel();
             this.lbName = new System.Windows.Forms.Label();
             this.lbDaBan = new System.Windows.Forms.Label();
             this.lbSoLuong = new System.Windows.Forms.Label();
@@ -66,6 +65,7 @@ namespace Login.Control_User
             this.btnBuy = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnTinhTrang = new Guna.UI2.WinForms.Guna2Button();
             this.btnItem = new Guna.UI2.WinForms.Guna2Button();
+            this.lbGia = new CustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.picture.SuspendLayout();
             this.btnItem.SuspendLayout();
@@ -124,6 +124,7 @@ namespace Login.Control_User
             this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picture.TabIndex = 7;
             this.picture.TabStop = false;
+            this.picture.Click += new System.EventHandler(this.picture_Click);
             // 
             // btnBuy
             // 

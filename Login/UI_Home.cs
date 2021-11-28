@@ -21,7 +21,7 @@ namespace Login
         public static Store_performence store = null;
         private Home_perfomancecs home = null;
         private Partner_performance partner = null;
-        public UI_Home()
+        public UI_Home(DTO.KHACHHANG kh)
         {
             InitializeComponent();
             AddSubbarandHomeButton();
@@ -67,7 +67,10 @@ namespace Login
         {
             Application.Exit();
         }
-
+        private void minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
         private void subbar_Change(Panel panel, Guna.UI2.WinForms.Guna2Button button)
         {
             foreach (Panel x in subbar)
@@ -85,10 +88,7 @@ namespace Login
             txtPerformance.Text = "> " + button.Text;
         }
 
-        private void minimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
+        
 
         private void HOME_Click(object sender, EventArgs e)
         {

@@ -18,9 +18,9 @@ namespace Login
     {
         static public int slhangtronggio = 0;
         static public SANPHAM sanpham;
-        List<SANPHAM> listsp;
         static public Guna.UI2.WinForms.Guna2Chip btnSoHang = new Guna.UI2.WinForms.Guna2Chip();
         static public Label label1 = new Label();
+        List<SANPHAM> listsp;
 
         public Store_performence()
         {
@@ -53,7 +53,7 @@ namespace Login
         //Load lại flowlayoutpanel
         public void btnReload_Click(object sender, EventArgs e)
         {
-            //flpnStore.Controls.Clear();
+            cbbFilter.SelectedIndex = 4;
             LoadPanel();
         }
 
@@ -81,12 +81,13 @@ namespace Login
             if (Check_update(editform))
             {
                 LoadPanel();
+                sanpham = null;
             }
             if (Check_delete(editform))
             {
                 LoadPanel();
+                sanpham = null;
             }
-            sanpham = null;
         }
 
         private void btnCart_Click(object sender, EventArgs e)
@@ -94,6 +95,7 @@ namespace Login
             SubForm.Cart_Form cart_Form = new SubForm.Cart_Form();
             //cart_Form.
             cart_Form.ShowDialog();
+            LoadPanel();
         }
 
         public static void reloadlb(int i)
@@ -151,7 +153,7 @@ namespace Login
         private void Filter(string Loai)
         {
             flpnStore.Controls.Clear();
-
+            //1. Quần, 2.Áo, 3.Mũ, 4. Giày,Dép
             foreach (Control_User.Item item in UI_Home.ListItem)
             {
                 int i = (item.btnItem.Tag as SANPHAM).IDLoai;
@@ -166,7 +168,6 @@ namespace Login
                 else if (Loai == "All")
                     flpnStore.Controls.Add(item);
             }
-
         }
 
         private void AddThongBao()
@@ -195,6 +196,46 @@ namespace Login
             btnSoHang.Size = new System.Drawing.Size(17, 17);
             btnSoHang.TabIndex = 0;
             btnSoHang.Text = "";
+        }
+
+        private void txbSearch_TextChanged(object sender, EventArgs e)
+        {
+            int k = 0;
+            foreach (Control_User.Item item in UI_Home.ListItem)
+            {
+                SANPHAM i = (item.btnItem.Tag as SANPHAM);
+                if (i.Ten.Contains(txbSearch.Text) && (i.IDLoai == cbbFilter.SelectedIndex + 1 || cbbFilter.SelectedIndex == 4))
+                {
+                    k++;
+                    if (k == 1)
+                        flpnStore.Controls.Clear();
+                    flpnStore.Controls.Add(item);
+                }
+            }
+        }
+
+
+        private void txbSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Convert.ToInt32(e.KeyChar) == 13)
+            {
+                int k = 0;
+                foreach (Control_User.Item item in UI_Home.ListItem)
+                {
+                    SANPHAM i = (item.btnItem.Tag as SANPHAM);
+                    if (i.Ten.Contains(txbSearch.Text) && (i.IDLoai == cbbFilter.SelectedIndex + 1 || cbbFilter.SelectedIndex == 4))
+                    {
+                        k++;
+                        if (k == 1)
+                            flpnStore.Controls.Clear();
+                        flpnStore.Controls.Add(item);
+                    }
+                }
+                if (k == 0)
+                {
+                    MessageBox.Show("Không tìm thấy sản phẩm");
+                }
+            }
         }
     }
 }
