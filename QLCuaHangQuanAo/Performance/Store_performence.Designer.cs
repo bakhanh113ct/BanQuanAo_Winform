@@ -59,7 +59,7 @@ namespace QLCuaHangQuanAo
             this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
             this.btnAdd.Size = new System.Drawing.Size(103, 26);
             this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Add";
+            this.btnAdd.Text = "Thêm";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // cbbFilter
@@ -107,7 +107,7 @@ namespace QLCuaHangQuanAo
             this.txbSearch.Location = new System.Drawing.Point(520, 5);
             this.txbSearch.Name = "txbSearch";
             this.txbSearch.PasswordChar = '\0';
-            this.txbSearch.PlaceholderText = "Search";
+            this.txbSearch.PlaceholderText = "Tìm kiếm";
             this.txbSearch.SelectedText = "";
             this.txbSearch.ShadowDecoration.Parent = this.txbSearch;
             this.txbSearch.Size = new System.Drawing.Size(154, 36);
@@ -145,7 +145,7 @@ namespace QLCuaHangQuanAo
             this.btnEdit.ShadowDecoration.Parent = this.btnEdit;
             this.btnEdit.Size = new System.Drawing.Size(103, 26);
             this.btnEdit.TabIndex = 9;
-            this.btnEdit.Text = "Edit";
+            this.btnEdit.Text = "Sửa";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnReload
