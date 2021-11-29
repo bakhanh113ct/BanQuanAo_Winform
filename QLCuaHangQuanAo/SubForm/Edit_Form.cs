@@ -39,7 +39,7 @@ namespace QLCuaHangQuanAo.SubForm
                     txbSoLuong.Text = sp.SL.ToString();
                     txbMota.Text = sp.MoTa;
                     txbLoai.Text = sp.IDLoai.ToString();
-                    picture.Image = ConvertoImage(sp.Anh);
+                    picture.Image = Library.ConvertoImage(sp.Anh) == null ? Properties.Resources.NoImage : Library.ConvertoImage(sp.Anh);
                     picture.SizeMode = PictureBoxSizeMode.Zoom;
                 }
             }
@@ -47,7 +47,7 @@ namespace QLCuaHangQuanAo.SubForm
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            byte[] imgbyte = ConvertoByte(picture.Image);
+            byte[] imgbyte = Library.ConvertoByte(picture.Image);
             if (imgbyte != null)
                 if (SanPhamDAO.UpdateSP(txbTen.Text, txbGiaTien.Text, txbSoLuong.Text, txbMota.Text, txbLoai.Text, imgbyte, id))
                 {
@@ -77,44 +77,12 @@ namespace QLCuaHangQuanAo.SubForm
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
-
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                picture.Image = Image.FromFile(ofd.FileName);
-            }
-            picture.SizeMode = PictureBoxSizeMode.CenterImage;
+            Library.LoadFromDialog(picture);
         }
 
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-        
-        public Image ConvertoImage(byte[] data)
-        {
-            using (MemoryStream ms = new MemoryStream(data))
-            {
-                return Image.FromStream(ms);
-            }
-        }
-        byte[] ConvertoByte(Image img)
-        {
-            if (img != null)
-            {
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                    return ms.ToArray();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Chua them anh");
-            }
-            return null;
-
         }
 
     }

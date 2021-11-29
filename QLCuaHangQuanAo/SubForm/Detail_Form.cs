@@ -66,20 +66,14 @@ namespace QLCuaHangQuanAo.SubForm
                     lbGia.Text = "Giá: " + sp.Gia.ToString();
                     lbSL.Text = "Số lượng: "+sp.SL.ToString();
                     lbDetail.Text = sp.MoTa;
-                    picture.Image = ConvertoImage(sp.Anh);
-                    picture.SizeMode = PictureBoxSizeMode.CenterImage;
+                    picture.Image = Library.ConvertoImage(sp.Anh) == null ? Properties.Resources.NoImage : Library.ConvertoImage(sp.Anh);
+                    picture.SizeMode = PictureBoxSizeMode.Zoom;
                     return;
                 }
             }
             
         }
-        public Image ConvertoImage(byte[] data)
-        {
-            using (MemoryStream ms = new MemoryStream(data))
-            {
-                return Image.FromStream(ms);
-            }
-        }
+        
 
         private void txbSLMua_TextChanged(object sender, EventArgs e)
         {

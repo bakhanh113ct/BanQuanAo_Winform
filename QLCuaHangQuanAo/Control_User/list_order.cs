@@ -36,8 +36,13 @@ namespace QLCuaHangQuanAo.Control_User
             trang_thai.Text = Status;
             set_tt(Status);
 
-            anh = (byte[])row["ANH"];
-            avt_khachhang.Image = ConvertoImage(anh);
+            if (!row.IsNull("ANH"))
+                anh = (byte[])row["ANH"];
+            else
+            {
+                anh = null;
+            }
+            avt_khachhang.Image = Library.ConvertoImage(anh) == null ? Properties.Resources.male_User : Library.ConvertoImage(anh);
         }
 
 
@@ -53,13 +58,7 @@ namespace QLCuaHangQuanAo.Control_User
        
       
 
-        public Image ConvertoImage(byte[] data)//Hàm chuyển chuỗi byte thành ảnh
-        {
-            using (MemoryStream ms = new MemoryStream(data))
-            {
-                return Image.FromStream(ms);
-            }
-        }
+       
      
         private void thao_tac_Click(object sender, EventArgs e) //khi click vào list_order thì sẽ đỗi màu
         {

@@ -105,6 +105,7 @@
     <Compile Include="DTO\SANPHAM.cs" />
     <Compile Include="DTO\Item_HD.cs" />
     <Compile Include="DTO\TAIKHOAN.cs" />
+    <Compile Include="Library.cs" />
     <Compile Include="Performance\Invoice_performance.cs">
       <SubType>Form</SubType>
     </Compile>

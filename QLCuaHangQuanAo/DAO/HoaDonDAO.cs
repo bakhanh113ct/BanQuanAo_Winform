@@ -34,7 +34,7 @@ namespace QLCuaHangQuanAo.DAO
 
         public DataTable LoadHDtoDatatable(string makh)
         {
-            DataTable data = DataProvider.ExecuteQuery("select SOHD, NGHD, TRIGIA, TRANG_THAI from HOADON ");
+            DataTable data = DataProvider.ExecuteQuery("select SOHD, NGHD, TRIGIA, TRANG_THAI from HOADON where MAKH = '"+makh+"'");
             return data;
         }
 

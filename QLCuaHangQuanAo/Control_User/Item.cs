@@ -30,7 +30,7 @@ namespace QLCuaHangQuanAo.Control_User
         {
             //Load ảnh
             byte[] b = item.Anh;
-            this.picture.Image = ConvertoImage(b) == null ? Properties.Resources.NoImage : ConvertoImage(b);
+            this.picture.Image = Library.ConvertoImage(b) == null ? Properties.Resources.NoImage : Library.ConvertoImage(b);
             btnTinhTrang.BackColor = Color.Transparent;
             lbName.Text = item.Ten;
             if (item.SL > 0)
@@ -40,8 +40,8 @@ namespace QLCuaHangQuanAo.Control_User
                 btnTinhTrang.FillColor = Color.FromArgb(68, 201, 97);
             }
             lbGia.Text = item.Gia.ToString() + " VND";
-            lbSoLuong.Text = "SL: " + item.SL.ToString();
-            lbDaBan.Text = "Ban: " + item.DaBan.ToString();
+            lbSoLuong.Text = "Còn: " + ((item.SL) <= 0 ? 0 : item.SL).ToString();
+            lbDaBan.Text = "Bán: " + item.DaBan.ToString();
             lbName.ForeColor = Color.FromKnownColor(KnownColor.Black);
         }
         private void btnBuy_Click(object sender, EventArgs e)
@@ -63,16 +63,7 @@ namespace QLCuaHangQuanAo.Control_User
             btnItem.FillColor = Color.Yellow;
         }
 
-        public Image ConvertoImage(byte[] data)
-        {
-            if (data != null)
-                using (MemoryStream ms = new MemoryStream(data))
-                {
-                    return Image.FromStream(ms);
-                }
-            else
-                return null;
-        }
+        
 
         private void picture_Click(object sender, EventArgs e)
         {

@@ -92,7 +92,7 @@ namespace QLCuaHangQuanAo
             this.Gif_Logo.Image = global::QLCuaHangQuanAo.Properties.Resources.Logo;
             this.Gif_Logo.Location = new System.Drawing.Point(31, 88);
             this.Gif_Logo.Name = "Gif_Logo";
-            this.Gif_Logo.Size = new System.Drawing.Size(296, 374);
+            this.Gif_Logo.Size = new System.Drawing.Size(302, 374);
             this.Gif_Logo.TabIndex = 34;
             this.Gif_Logo.TabStop = false;
             this.Gif_Logo.Visible = false;

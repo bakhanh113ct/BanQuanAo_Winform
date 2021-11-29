@@ -22,8 +22,11 @@ namespace QLCuaHangQuanAo
         private void Settings_performance_Load(object sender, EventArgs e)
         {
             //Note **SỬa phần database IDUSERNAME trùng
-            dtgv.DataSource = DAO.HoaDonDAO.Instance.LoadHDtoDatatable(Login.kh.MaKH.ToString());
-            Loadform();
+            if (Login.tk.Typetk != 0)
+            {
+                dtgv.DataSource = DAO.HoaDonDAO.Instance.LoadHDtoDatatable(Login.kh.MaKH.ToString());
+                Loadform();
+            }
             //cbDay.DataSource = Enumerable.Range(1, DateTime.DaysInMonth(DateTime.Now.Year, Convert.ToInt32(cbMonth.SelectedValue)));
         }
 
@@ -42,7 +45,7 @@ namespace QLCuaHangQuanAo
             cbYear.SelectedText = Login.kh.NgSinh.Year.ToString();
             if (Login.kh.Anh != null)
             {
-                Avatar.Image = ConvertoImage(Login.kh.Anh);
+                Avatar.Image = Library.ConvertoImage(Login.kh.Anh);
                 picAvatar.Image = Avatar.Image;
                 Avatar.SizeMode = PictureBoxSizeMode.Zoom;
                 picAvatar.SizeMode = PictureBoxSizeMode.Zoom;
@@ -91,23 +94,11 @@ namespace QLCuaHangQuanAo
 
             }
         }
-        public Image ConvertoImage(byte[] data)
-        {
-            using (MemoryStream ms = new MemoryStream(data))
-            {
-                return Image.FromStream(ms);
-            }
-        }
+       
 
         private void btnChonAnh_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
-
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                picAvatar.Image = Image.FromFile(ofd.FileName);
-            }
+            Library.LoadFromDialog(picAvatar);
         }
 
         public void btnEdit(object a)
@@ -132,7 +123,7 @@ namespace QLCuaHangQuanAo
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            byte[] anh = ConvertoByte(picAvatar.Image);
+            byte[] anh = Library.ConvertoByte(picAvatar.Image);
             DTO.KHACHHANG kh = new DTO.KHACHHANG(Login.kh.MaKH, Login.kh.IdUsername, txbName.Text, txbAddress.Text, txbPhone.Text, new DateTime(Convert.ToInt32(cbYear.Text), Convert.ToInt32(cbMonth.Text), Convert.ToInt32(cbDay.Text)), Login.kh.Gioitinh, anh == null ? null : anh, txbEmail.Text);
             if (DAO.KhachHangDAO.Instance.Update(kh))
             {
@@ -149,19 +140,6 @@ namespace QLCuaHangQuanAo
             {
                 MessageBox.Show("TB");
             }
-
-        }
-        byte[] ConvertoByte(Image img)
-        {
-            if (img != null)
-            {
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                    return ms.ToArray();
-                }
-            }
-            return null;
 
         }
 

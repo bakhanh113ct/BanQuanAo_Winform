@@ -27,8 +27,14 @@ namespace QLCuaHangQuanAo.Control_User
             hoten.Text = (string)row["HOTEN"];
             int DoanhSo = Convert.ToInt32(row["DOANHSO"]);
             doanhso.Text = DoanhSo.ToString() + "₫";
-            byte[] anh = (byte[])row["ANH"];
-            anhdd.Image = ConvertoImage(anh);
+            byte[] anh;
+            if (!row.IsNull("ANH"))
+                anh = (byte[])row["ANH"];
+            else
+            {
+                anh = null;
+            }
+            anhdd.Image = Library.ConvertoImage(anh) == null ? Properties.Resources.male_User : Library.ConvertoImage(anh);
             if (topp == 3)
             {
                 top.FillColor = Color.Orange;
@@ -48,7 +54,7 @@ namespace QLCuaHangQuanAo.Control_User
             int DoanhSo = Convert.ToInt32(row["SL"]);
             doanhso.Text = "Bán được " + DoanhSo.ToString() + " SP";
             byte[] anh = (byte[])row["ANH"];
-            anhdd.Image = ConvertoImage(anh);
+            anhdd.Image = Library.ConvertoImage(anh) == null ? Properties.Resources.male_User : Library.ConvertoImage(anh);
             if (topp == 3)
             {
                 top.FillColor = Color.Orange;
@@ -60,12 +66,6 @@ namespace QLCuaHangQuanAo.Control_User
                 topp = 1;
             }
         }
-        public Image ConvertoImage(byte[] data)
-        {
-            using (MemoryStream ms = new MemoryStream(data))
-            {
-                return Image.FromStream(ms);
-            }
-        }
+        
     }
 }

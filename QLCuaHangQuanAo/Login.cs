@@ -38,6 +38,7 @@ namespace QLCuaHangQuanAo
             bool kq = DAO.TaiKhoanDAO.Instance.CheckUsername_Password(txtUsername.Text, txtPassword.Text);
             if (kq)
             {
+                tk = DAO.TaiKhoanDAO.Instance.LoadTK(txtUsername.Text);
                 int loaitk = DAO.TaiKhoanDAO.Instance.GetLoaiTK(txtUsername.Text);
                 if (loaitk == 0)
                 {
@@ -118,15 +119,15 @@ namespace QLCuaHangQuanAo
 
         private void Admin_User_Lg_Click(object sender, EventArgs e)
         {
-            if (Admin_User_Lg.Text == "Login as Admin")
+            if (Admin_User_Lg.Text == "Đăng nhập với quyền admin")
             {
-                Admin_User_Lg.Text = "Login as User";
+                Admin_User_Lg.Text = "Đăng nhập với người dùng";
                 btnAdmin_User.Text = "Admin";
                 admin_user = 0;
             }
             else
             {
-                Admin_User_Lg.Text = "Login as Admin";
+                Admin_User_Lg.Text = "Đăng nhập với quyền admin";
                 btnAdmin_User.Text = "User";
                 admin_user = 1;
             }
