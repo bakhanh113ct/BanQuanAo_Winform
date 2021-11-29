@@ -39,7 +39,6 @@ namespace QLCuaHangQuanAo.SubForm
                     txbSoLuong.Text = sp.SL.ToString();
                     txbMota.Text = sp.MoTa;
                     txbLoai.Text = sp.IDLoai.ToString();
-                    txbNhacungcap.Text = "a";
                     picture.Image = ConvertoImage(sp.Anh);
                     picture.SizeMode = PictureBoxSizeMode.Zoom;
                 }

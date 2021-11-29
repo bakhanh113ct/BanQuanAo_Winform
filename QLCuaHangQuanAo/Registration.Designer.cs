@@ -58,6 +58,8 @@ namespace QLCuaHangQuanAo
             this.exit = new Guna.UI2.WinForms.Guna2Button();
             this.zooe_in_out = new Guna.UI2.WinForms.Guna2Button();
             this.minimize = new Guna.UI2.WinForms.Guna2Button();
+            this.tbEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.email = new System.Windows.Forms.Label();
             this.tool3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,9 +71,10 @@ namespace QLCuaHangQuanAo
             this.rdOther.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdOther.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rdOther.CheckedState.InnerOffset = -4;
-            this.rdOther.Location = new System.Drawing.Point(593, 365);
+            this.rdOther.Font = new System.Drawing.Font("Quicksand Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdOther.Location = new System.Drawing.Point(433, 402);
             this.rdOther.Name = "rdOther";
-            this.rdOther.Size = new System.Drawing.Size(51, 17);
+            this.rdOther.Size = new System.Drawing.Size(59, 20);
             this.rdOther.TabIndex = 30;
             this.rdOther.Text = "Other";
             this.rdOther.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -87,9 +90,10 @@ namespace QLCuaHangQuanAo
             this.rdMale.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdMale.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rdMale.CheckedState.InnerOffset = -4;
-            this.rdMale.Location = new System.Drawing.Point(398, 365);
+            this.rdMale.Font = new System.Drawing.Font("Quicksand Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdMale.Location = new System.Drawing.Point(238, 402);
             this.rdMale.Name = "rdMale";
-            this.rdMale.Size = new System.Drawing.Size(48, 17);
+            this.rdMale.Size = new System.Drawing.Size(55, 20);
             this.rdMale.TabIndex = 28;
             this.rdMale.Text = "Male";
             this.rdMale.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -111,7 +115,7 @@ namespace QLCuaHangQuanAo
             this.btnRegister.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.btnRegister.ForeColor = System.Drawing.Color.White;
             this.btnRegister.HoverState.Parent = this.btnRegister;
-            this.btnRegister.Location = new System.Drawing.Point(119, 414);
+            this.btnRegister.Location = new System.Drawing.Point(119, 426);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.ShadowDecoration.Parent = this.btnRegister;
             this.btnRegister.Size = new System.Drawing.Size(477, 45);
@@ -123,6 +127,7 @@ namespace QLCuaHangQuanAo
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this;
+            this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // guna2AnimateWindow1
             // 
@@ -142,9 +147,10 @@ namespace QLCuaHangQuanAo
             this.rdFemale.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdFemale.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rdFemale.CheckedState.InnerOffset = -4;
-            this.rdFemale.Location = new System.Drawing.Point(490, 365);
+            this.rdFemale.Font = new System.Drawing.Font("Quicksand Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdFemale.Location = new System.Drawing.Point(330, 402);
             this.rdFemale.Name = "rdFemale";
-            this.rdFemale.Size = new System.Drawing.Size(59, 17);
+            this.rdFemale.Size = new System.Drawing.Size(70, 20);
             this.rdFemale.TabIndex = 29;
             this.rdFemale.Text = "Female";
             this.rdFemale.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -162,7 +168,7 @@ namespace QLCuaHangQuanAo
             this.pickerBirthday.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.pickerBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.pickerBirthday.HoverState.Parent = this.pickerBirthday;
-            this.pickerBirthday.Location = new System.Drawing.Point(398, 186);
+            this.pickerBirthday.Location = new System.Drawing.Point(398, 171);
             this.pickerBirthday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.pickerBirthday.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.pickerBirthday.Name = "pickerBirthday";
@@ -174,10 +180,10 @@ namespace QLCuaHangQuanAo
             // lbGender
             // 
             this.lbGender.AutoSize = true;
-            this.lbGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGender.Location = new System.Drawing.Point(394, 323);
+            this.lbGender.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGender.Location = new System.Drawing.Point(73, 399);
             this.lbGender.Name = "lbGender";
-            this.lbGender.Size = new System.Drawing.Size(63, 20);
+            this.lbGender.Size = new System.Drawing.Size(65, 24);
             this.lbGender.TabIndex = 41;
             this.lbGender.Text = "Gender";
             // 
@@ -196,7 +202,7 @@ namespace QLCuaHangQuanAo
             this.tbCfPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbCfPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCfPassword.HoverState.Parent = this.tbCfPassword;
-            this.tbCfPassword.Location = new System.Drawing.Point(61, 358);
+            this.tbCfPassword.Location = new System.Drawing.Point(394, 348);
             this.tbCfPassword.Name = "tbCfPassword";
             this.tbCfPassword.PasswordChar = '\0';
             this.tbCfPassword.PlaceholderText = "Confirm Password";
@@ -208,10 +214,10 @@ namespace QLCuaHangQuanAo
             // lbCfPassword
             // 
             this.lbCfPassword.AutoSize = true;
-            this.lbCfPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCfPassword.Location = new System.Drawing.Point(61, 323);
+            this.lbCfPassword.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCfPassword.Location = new System.Drawing.Point(394, 313);
             this.lbCfPassword.Name = "lbCfPassword";
-            this.lbCfPassword.Size = new System.Drawing.Size(137, 20);
+            this.lbCfPassword.Size = new System.Drawing.Size(150, 24);
             this.lbCfPassword.TabIndex = 40;
             this.lbCfPassword.Text = "Confirm Password";
             // 
@@ -230,7 +236,7 @@ namespace QLCuaHangQuanAo
             this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbPassword.HoverState.Parent = this.tbPassword;
-            this.tbPassword.Location = new System.Drawing.Point(394, 272);
+            this.tbPassword.Location = new System.Drawing.Point(71, 348);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '\0';
             this.tbPassword.PlaceholderText = "Password";
@@ -242,10 +248,10 @@ namespace QLCuaHangQuanAo
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
-            this.lbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPassword.Location = new System.Drawing.Point(394, 237);
+            this.lbPassword.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPassword.Location = new System.Drawing.Point(71, 313);
             this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(78, 20);
+            this.lbPassword.Size = new System.Drawing.Size(85, 24);
             this.lbPassword.TabIndex = 39;
             this.lbPassword.Tag = "";
             this.lbPassword.Text = "Password";
@@ -253,10 +259,10 @@ namespace QLCuaHangQuanAo
             // lbBirthday
             // 
             this.lbBirthday.AutoSize = true;
-            this.lbBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBirthday.Location = new System.Drawing.Point(394, 151);
+            this.lbBirthday.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBirthday.Location = new System.Drawing.Point(394, 136);
             this.lbBirthday.Name = "lbBirthday";
-            this.lbBirthday.Size = new System.Drawing.Size(67, 20);
+            this.lbBirthday.Size = new System.Drawing.Size(75, 24);
             this.lbBirthday.TabIndex = 37;
             this.lbBirthday.Text = "Birthday";
             // 
@@ -275,7 +281,7 @@ namespace QLCuaHangQuanAo
             this.tbAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbAddress.HoverState.Parent = this.tbAddress;
-            this.tbAddress.Location = new System.Drawing.Point(394, 100);
+            this.tbAddress.Location = new System.Drawing.Point(394, 85);
             this.tbAddress.Name = "tbAddress";
             this.tbAddress.PasswordChar = '\0';
             this.tbAddress.PlaceholderText = "Address";
@@ -299,7 +305,7 @@ namespace QLCuaHangQuanAo
             this.tbPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbPhone.HoverState.Parent = this.tbPhone;
-            this.tbPhone.Location = new System.Drawing.Point(61, 186);
+            this.tbPhone.Location = new System.Drawing.Point(71, 171);
             this.tbPhone.Name = "tbPhone";
             this.tbPhone.PasswordChar = '\0';
             this.tbPhone.PlaceholderText = "Phone";
@@ -311,20 +317,20 @@ namespace QLCuaHangQuanAo
             // lbAddress
             // 
             this.lbAddress.AutoSize = true;
-            this.lbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAddress.Location = new System.Drawing.Point(394, 65);
+            this.lbAddress.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAddress.Location = new System.Drawing.Point(394, 50);
             this.lbAddress.Name = "lbAddress";
-            this.lbAddress.Size = new System.Drawing.Size(68, 20);
+            this.lbAddress.Size = new System.Drawing.Size(72, 24);
             this.lbAddress.TabIndex = 35;
             this.lbAddress.Text = "Address";
             // 
             // lbPhone
             // 
             this.lbPhone.AutoSize = true;
-            this.lbPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPhone.Location = new System.Drawing.Point(61, 151);
+            this.lbPhone.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPhone.Location = new System.Drawing.Point(71, 136);
             this.lbPhone.Name = "lbPhone";
-            this.lbPhone.Size = new System.Drawing.Size(55, 20);
+            this.lbPhone.Size = new System.Drawing.Size(57, 24);
             this.lbPhone.TabIndex = 36;
             this.lbPhone.Text = "Phone";
             // 
@@ -343,7 +349,7 @@ namespace QLCuaHangQuanAo
             this.tbUserName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbUserName.HoverState.Parent = this.tbUserName;
-            this.tbUserName.Location = new System.Drawing.Point(61, 272);
+            this.tbUserName.Location = new System.Drawing.Point(394, 261);
             this.tbUserName.Name = "tbUserName";
             this.tbUserName.PasswordChar = '\0';
             this.tbUserName.PlaceholderText = "User Name";
@@ -367,7 +373,7 @@ namespace QLCuaHangQuanAo
             this.tbFullName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbFullName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbFullName.HoverState.Parent = this.tbFullName;
-            this.tbFullName.Location = new System.Drawing.Point(61, 100);
+            this.tbFullName.Location = new System.Drawing.Point(71, 85);
             this.tbFullName.Name = "tbFullName";
             this.tbFullName.PasswordChar = '\0';
             this.tbFullName.PlaceholderText = "Full Name";
@@ -379,20 +385,20 @@ namespace QLCuaHangQuanAo
             // lbUsername
             // 
             this.lbUsername.AutoSize = true;
-            this.lbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUsername.Location = new System.Drawing.Point(61, 237);
+            this.lbUsername.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUsername.Location = new System.Drawing.Point(394, 226);
             this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(89, 20);
+            this.lbUsername.Size = new System.Drawing.Size(95, 24);
             this.lbUsername.TabIndex = 38;
             this.lbUsername.Text = "User Name";
             // 
             // lbfullname
             // 
             this.lbfullname.AutoSize = true;
-            this.lbfullname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbfullname.Location = new System.Drawing.Point(61, 65);
+            this.lbfullname.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbfullname.Location = new System.Drawing.Point(71, 50);
             this.lbfullname.Name = "lbfullname";
-            this.lbfullname.Size = new System.Drawing.Size(80, 20);
+            this.lbfullname.Size = new System.Drawing.Size(86, 24);
             this.lbfullname.TabIndex = 34;
             this.lbfullname.Text = "Full Name";
             // 
@@ -409,12 +415,12 @@ namespace QLCuaHangQuanAo
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 8);
+            this.label1.Font = new System.Drawing.Font("Quicksand", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 29);
+            this.label1.Size = new System.Drawing.Size(98, 34);
             this.label1.TabIndex = 32;
-            this.label1.Text = "Registration";
+            this.label1.Text = "Đăng kí";
             // 
             // tool3
             // 
@@ -424,7 +430,7 @@ namespace QLCuaHangQuanAo
             this.tool3.Controls.Add(this.minimize);
             this.tool3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
             this.tool3.Location = new System.Drawing.Point(651, 1);
-            this.tool3.Margin = new System.Windows.Forms.Padding(2);
+            this.tool3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tool3.Name = "tool3";
             this.tool3.ShadowColor = System.Drawing.Color.Black;
             this.tool3.ShadowShift = 0;
@@ -447,7 +453,7 @@ namespace QLCuaHangQuanAo
             this.exit.Image = global::QLCuaHangQuanAo.Properties.Resources.delete_64px;
             this.exit.ImageSize = new System.Drawing.Size(22, 22);
             this.exit.Location = new System.Drawing.Point(47, 2);
-            this.exit.Margin = new System.Windows.Forms.Padding(2);
+            this.exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.exit.Name = "exit";
             this.exit.ShadowDecoration.Parent = this.exit;
             this.exit.Size = new System.Drawing.Size(20, 21);
@@ -470,7 +476,7 @@ namespace QLCuaHangQuanAo
             this.zooe_in_out.Image = global::QLCuaHangQuanAo.Properties.Resources.toggle_full_screen_64px;
             this.zooe_in_out.ImageSize = new System.Drawing.Size(22, 22);
             this.zooe_in_out.Location = new System.Drawing.Point(25, 2);
-            this.zooe_in_out.Margin = new System.Windows.Forms.Padding(2);
+            this.zooe_in_out.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.zooe_in_out.Name = "zooe_in_out";
             this.zooe_in_out.ShadowDecoration.Parent = this.zooe_in_out;
             this.zooe_in_out.Size = new System.Drawing.Size(20, 21);
@@ -492,18 +498,55 @@ namespace QLCuaHangQuanAo
             this.minimize.Image = global::QLCuaHangQuanAo.Properties.Resources.minimize_window_64px2;
             this.minimize.ImageSize = new System.Drawing.Size(22, 22);
             this.minimize.Location = new System.Drawing.Point(2, 2);
-            this.minimize.Margin = new System.Windows.Forms.Padding(2);
+            this.minimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.minimize.Name = "minimize";
             this.minimize.ShadowDecoration.Parent = this.minimize;
             this.minimize.Size = new System.Drawing.Size(20, 21);
             this.minimize.TabIndex = 0;
             this.minimize.Click += new System.EventHandler(this.minimize_Click);
             // 
+            // tbEmail
+            // 
+            this.tbEmail.BorderRadius = 7;
+            this.tbEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbEmail.DefaultText = "";
+            this.tbEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbEmail.DisabledState.Parent = this.tbEmail;
+            this.tbEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbEmail.FocusedState.Parent = this.tbEmail;
+            this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbEmail.HoverState.Parent = this.tbEmail;
+            this.tbEmail.Location = new System.Drawing.Point(73, 261);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.PasswordChar = '\0';
+            this.tbEmail.PlaceholderText = "Email";
+            this.tbEmail.SelectedText = "";
+            this.tbEmail.ShadowDecoration.Parent = this.tbEmail;
+            this.tbEmail.Size = new System.Drawing.Size(248, 36);
+            this.tbEmail.TabIndex = 43;
+            // 
+            // email
+            // 
+            this.email.AutoSize = true;
+            this.email.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.email.Location = new System.Drawing.Point(73, 226);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(52, 24);
+            this.email.TabIndex = 44;
+            this.email.Tag = "";
+            this.email.Text = "Email";
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 483);
+            this.Controls.Add(this.tbEmail);
+            this.Controls.Add(this.email);
             this.Controls.Add(this.tool3);
             this.Controls.Add(this.rdOther);
             this.Controls.Add(this.rdMale);
@@ -568,5 +611,7 @@ namespace QLCuaHangQuanAo
         private Guna.UI2.WinForms.Guna2Button exit;
         private Guna.UI2.WinForms.Guna2Button zooe_in_out;
         private Guna.UI2.WinForms.Guna2Button minimize;
+        private Guna.UI2.WinForms.Guna2TextBox tbEmail;
+        private System.Windows.Forms.Label email;
     }
 }

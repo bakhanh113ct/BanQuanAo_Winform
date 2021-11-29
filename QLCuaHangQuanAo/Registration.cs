@@ -34,6 +34,7 @@ namespace QLCuaHangQuanAo
             listtb.Add(tbPassword);
             listtb.Add(tbCfPassword);
             listtb.Add(tbAddress);
+            listtb.Add(tbEmail);
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -69,7 +70,7 @@ namespace QLCuaHangQuanAo
                     int idkh = DAO.KhachHangDAO.Instance.GetIdMax();
                     int gt = GetGioiTinh();
 
-                    DTO.KHACHHANG kh = new DTO.KHACHHANG(idkh, idtk + 1, tbFullName.Text, tbAddress.Text, tbPhone.Text, pickerBirthday.Value, gt, null);
+                    DTO.KHACHHANG kh = new DTO.KHACHHANG(idkh, idtk + 1, tbFullName.Text, tbAddress.Text, tbPhone.Text, pickerBirthday.Value, gt, null, tbEmail.Text);
 
                     if (DAO.KhachHangDAO.Instance.InsertKH(kh))
                     {

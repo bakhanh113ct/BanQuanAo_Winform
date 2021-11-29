@@ -46,7 +46,7 @@ namespace QLCuaHangQuanAo.DAO
         }
         static public bool InsertSP(string ten, string gia, string SL, string mota, string loai, byte[] image)
         {
-            int check = DAO.DataProvider.ExecuteNonQuery("Insert into SANPHAM(TEN, GIA, SL,DANHGIA ,DABAN , MOTA, IDLOAI, ANH) values( @TEN , @GIA , @SL ,  @DABAN , @DANHGIA , @MOTA ,  @IDLOAI , @ANH )", 
+            int check = DAO.DataProvider.ExecuteNonQuery("Insert into SANPHAM(TEN, GIA, SL, DANHGIA, DABAN , MOTA, IDLOAI, ANH) values( @TEN , @GIA , @SL , @DANHGIA , @DABAN  , @MOTA ,  @IDLOAI , @ANH )", 
                                              new object[] { ten, gia, SL, "0", "0" , mota, loai, image });
             if (check == 0)
                 return false;

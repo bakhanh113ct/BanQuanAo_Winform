@@ -34,6 +34,7 @@ namespace QLCuaHangQuanAo
             txbUserName.Text = Login.tk.Username;
             txbAddress.Text = Login.kh.DiaChi;
             txbPhone.Text = Login.kh.SoDT;
+            txbEmail.Text = Login.kh.Email;
             cbYear.DataSource = (Enumerable.Range(1950, DateTime.Now.Year).ToList());
             cbMonth.SelectedItem = Login.kh.NgSinh.Month.ToString();
             cbDay.SelectedItem = Login.kh.NgSinh.Day.ToString();
@@ -51,13 +52,13 @@ namespace QLCuaHangQuanAo
                 //Ảnh thay thế
                 if (Login.kh.Gioitinh == 1)
                 {
-                    picAvatar.Image = global::QLCuaHangQuanAo.Properties.Resources.male_User;
-                    Avatar.Image = global::QLCuaHangQuanAo.Properties.Resources.male_User;
+                    picAvatar.Image = Properties.Resources.male_User;
+                    Avatar.Image = Properties.Resources.male_User;
                 }
                 else
                 {
-                    picAvatar.Image = global::QLCuaHangQuanAo.Properties.Resources.female_User;
-                    Avatar.Image = global::QLCuaHangQuanAo.Properties.Resources.female_User;
+                    picAvatar.Image = Properties.Resources.female_User;
+                    Avatar.Image = Properties.Resources.female_User;
                 }
             }
             //List<DTO.HOADON> listHD = DAO.HoaDonDAO.Instance.LoadHD(Login.kh.MaKH.ToString());
@@ -132,7 +133,7 @@ namespace QLCuaHangQuanAo
         private void btnSave_Click(object sender, EventArgs e)
         {
             byte[] anh = ConvertoByte(picAvatar.Image);
-            DTO.KHACHHANG kh = new DTO.KHACHHANG(0, 0, txbName.Text, txbAddress.Text, txbPhone.Text, new DateTime(Convert.ToInt32(cbYear.Text), Convert.ToInt32(cbMonth.Text), Convert.ToInt32(cbDay.Text)), Login.kh.Gioitinh, anh == null ? null : anh);
+            DTO.KHACHHANG kh = new DTO.KHACHHANG(Login.kh.MaKH, Login.kh.IdUsername, txbName.Text, txbAddress.Text, txbPhone.Text, new DateTime(Convert.ToInt32(cbYear.Text), Convert.ToInt32(cbMonth.Text), Convert.ToInt32(cbDay.Text)), Login.kh.Gioitinh, anh == null ? null : anh, txbEmail.Text);
             if (DAO.KhachHangDAO.Instance.Update(kh))
             {
                 MessageBox.Show("TC");

@@ -8,6 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Gmail.v1;
+using Google.Apis.Services;
+using Google.Apis.Util.Store;
+using System.IO;
+using System.Threading;
 
 namespace QLCuaHangQuanAo.SubForm
 {
@@ -16,11 +22,17 @@ namespace QLCuaHangQuanAo.SubForm
         private string Status;
         int SOHD;
         static bool kt = false;
+        string[] Scopes = { GmailService.Scope.GmailSend };
+        string ApplicationName = "SendMail";
+        string messageDilivery = "Đơn hàng của bạn đang được vận chuyển, cảm ơn đã sử dụng dịch vụ của shop.";
+        string messageCancel = "Đơn hàng của bạn đã bị hủy vì lý do hết hàng. Shop thành thật xin lỗi vì sự bất tiện này.";
+
         public BILL()
         {
             InitializeComponent();
             
         }
+        
         public BILL(int SOHD)
         {
             InitializeComponent();
@@ -60,8 +72,6 @@ namespace QLCuaHangQuanAo.SubForm
                 DateTime nGXN = DAO.HoaDonDAO.Instance.getTimeXN(SOHD);
                 if(getDuaday(row["TRANG_THAI"].ToString(), nGXN) == null)
                     DueDate.Text = x.AddDays(7).ToShortDateString();
-                
-                
             }
             
         }
@@ -102,6 +112,7 @@ namespace QLCuaHangQuanAo.SubForm
             Cancel.Visible = false;
             Delivery.Visible = false;
             kt = true;
+            SendEmail(0);
         }
         private void Delivery_Click(object sender, EventArgs e)
         {
@@ -112,7 +123,7 @@ namespace QLCuaHangQuanAo.SubForm
             DAO.DataProvider.ExcuseNonQuery1("update HOADON set NGXN = " + time + " Where SOHD = " + SOHD);
             MessageBox.Show("Đang vận chuyển");
             Delivery.Visible = false;
-            
+            SendEmail(1);
         }
         public static bool getChange()
         {
@@ -134,9 +145,34 @@ namespace QLCuaHangQuanAo.SubForm
                 Delivery.Visible = false;
         }
 
-        
+        private void SendEmail(int i)
+        {
+            UserCredential credential;
+            //read your credentials file
+            using (FileStream stream = new FileStream(Application.StartupPath + @"/credentials.json", FileMode.Open, FileAccess.Read))
+            {
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+                path = Path.Combine(path, ".credentials/gmail-dotnet-quickstart.json");
+                credential = GoogleWebAuthorizationBroker.AuthorizeAsync(GoogleClientSecrets.Load(stream).Secrets, Scopes, "user", CancellationToken.None, new FileDataStore(path, true)).Result;
+            }
+            string message;
+            if (i == 1)
+                message = $"To: {Login.kh.Email}\r\nSubject: {"Tinh trang don hang"}\r\nContent-Type: text/html;charset=utf-8\r\n\r\n<h2>{messageDilivery}</h2>";
+            else 
+                message = $"To: {Login.kh.Email}\r\nSubject: {"Tinh trang don hang"}\r\nContent-Type: text/html;charset=utf-8\r\n\r\n<h2>{messageCancel}</h2>";
+            //call your gmail service
+            var service = new GmailService(new BaseClientService.Initializer() { HttpClientInitializer = credential, ApplicationName = ApplicationName });
+            var msg = new Google.Apis.Gmail.v1.Data.Message();
+            msg.Raw = Base64UrlEncode(message.ToString());
+            service.Users.Messages.Send(msg, "me").Execute();
+            //MessageBox.Show("Your email has been successfully sent !", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        string Base64UrlEncode(string input)
+        {
+            var data = Encoding.UTF8.GetBytes(input);
+            return Convert.ToBase64String(data).Replace("+", "-").Replace("/", "_").Replace("=", "");
+        }
 
-       
     }
     
 }

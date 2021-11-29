@@ -56,6 +56,8 @@ namespace QLCuaHangQuanAo.SubForm
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // tool3
             // 
@@ -64,6 +66,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.tool3.Controls.Add(this.zooe_in_out);
             this.tool3.Controls.Add(this.minimize);
             this.tool3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
+            this.tool3.Font = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tool3.Location = new System.Drawing.Point(609, -3);
             this.tool3.Margin = new System.Windows.Forms.Padding(2);
             this.tool3.Name = "tool3";
@@ -152,7 +155,7 @@ namespace QLCuaHangQuanAo.SubForm
             // 
             // lbName
             // 
-            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Font = new System.Drawing.Font("Quicksand Medium", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.Location = new System.Drawing.Point(403, 49);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(251, 39);
@@ -161,7 +164,7 @@ namespace QLCuaHangQuanAo.SubForm
             // 
             // lbGia
             // 
-            this.lbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGia.Font = new System.Drawing.Font("Quicksand Medium", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGia.Location = new System.Drawing.Point(403, 142);
             this.lbGia.Name = "lbGia";
             this.lbGia.Size = new System.Drawing.Size(251, 29);
@@ -170,7 +173,7 @@ namespace QLCuaHangQuanAo.SubForm
             // 
             // lbSL
             // 
-            this.lbSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSL.Font = new System.Drawing.Font("Quicksand Medium", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSL.Location = new System.Drawing.Point(403, 105);
             this.lbSL.Name = "lbSL";
             this.lbSL.Size = new System.Drawing.Size(251, 28);
@@ -179,7 +182,7 @@ namespace QLCuaHangQuanAo.SubForm
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Quicksand Medium", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(403, 200);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 24);
@@ -188,7 +191,7 @@ namespace QLCuaHangQuanAo.SubForm
             // 
             // lbDetail
             // 
-            this.lbDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDetail.Font = new System.Drawing.Font("Quicksand Medium", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDetail.Location = new System.Drawing.Point(403, 230);
             this.lbDetail.Name = "lbDetail";
             this.lbDetail.Size = new System.Drawing.Size(251, 67);
@@ -198,6 +201,7 @@ namespace QLCuaHangQuanAo.SubForm
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Font = new System.Drawing.Font("Quicksand Medium", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(407, 88);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(247, 2);
@@ -206,6 +210,7 @@ namespace QLCuaHangQuanAo.SubForm
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Font = new System.Drawing.Font("Quicksand Medium", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(407, 181);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(247, 2);
@@ -270,7 +275,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnAdd.DisabledState.Parent = this.btnAdd;
             this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(201)))), ((int)(((byte)(97)))));
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.Font = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.HoverState.Parent = this.btnAdd;
             this.btnAdd.Location = new System.Drawing.Point(526, 309);
@@ -285,7 +290,7 @@ namespace QLCuaHangQuanAo.SubForm
             // 
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(3)))), ((int)(((byte)(121)))));
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(3, 29);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(4, 31);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
             this.guna2GradientPanel1.Size = new System.Drawing.Size(42, 4);
@@ -294,10 +299,10 @@ namespace QLCuaHangQuanAo.SubForm
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(-3, -1);
+            this.label1.Font = new System.Drawing.Font("Quicksand Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(-3, -3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 29);
+            this.label1.Size = new System.Drawing.Size(87, 35);
             this.label1.TabIndex = 34;
             this.label1.Text = "Detail";
             // 

@@ -45,9 +45,13 @@ namespace QLCuaHangQuanAo.SubForm
             this.txbMota = new Guna.UI2.WinForms.Guna2TextBox();
             this.txbLoai = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnUpload = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.txbNhacungcap = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.tool3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +59,8 @@ namespace QLCuaHangQuanAo.SubForm
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // guna2AnimateWindow1
             // 
@@ -74,7 +80,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.txbGiaTien.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txbGiaTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbGiaTien.HoverState.Parent = this.txbGiaTien;
-            this.txbGiaTien.Location = new System.Drawing.Point(26, 96);
+            this.txbGiaTien.Location = new System.Drawing.Point(97, 114);
             this.txbGiaTien.Margin = new System.Windows.Forms.Padding(0);
             this.txbGiaTien.Name = "txbGiaTien";
             this.txbGiaTien.PasswordChar = '\0';
@@ -98,7 +104,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.txbSoLuong.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txbSoLuong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbSoLuong.HoverState.Parent = this.txbSoLuong;
-            this.txbSoLuong.Location = new System.Drawing.Point(26, 139);
+            this.txbSoLuong.Location = new System.Drawing.Point(97, 157);
             this.txbSoLuong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbSoLuong.Name = "txbSoLuong";
             this.txbSoLuong.PasswordChar = '\0';
@@ -121,7 +127,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.btnSave.DisabledState.Parent = this.btnSave;
             this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(201)))), ((int)(((byte)(97)))));
             this.btnSave.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(201)))), ((int)(((byte)(97)))));
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSave.Font = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.HoverState.Parent = this.btnSave;
             this.btnSave.Location = new System.Drawing.Point(175, 336);
@@ -145,7 +151,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.btnCancel.DisabledState.Parent = this.btnCancel;
             this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(83)))), ((int)(((byte)(75)))));
             this.btnCancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(83)))), ((int)(((byte)(75)))));
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.Font = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.HoverState.Parent = this.btnCancel;
             this.btnCancel.Location = new System.Drawing.Point(26, 336);
@@ -263,7 +269,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.txbTen.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txbTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbTen.HoverState.Parent = this.txbTen;
-            this.txbTen.Location = new System.Drawing.Point(26, 53);
+            this.txbTen.Location = new System.Drawing.Point(97, 71);
             this.txbTen.Margin = new System.Windows.Forms.Padding(0);
             this.txbTen.Name = "txbTen";
             this.txbTen.PasswordChar = '\0';
@@ -287,7 +293,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.txbMota.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txbMota.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbMota.HoverState.Parent = this.txbMota;
-            this.txbMota.Location = new System.Drawing.Point(26, 182);
+            this.txbMota.Location = new System.Drawing.Point(97, 200);
             this.txbMota.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbMota.Name = "txbMota";
             this.txbMota.PasswordChar = '\0';
@@ -311,7 +317,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.txbLoai.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txbLoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbLoai.HoverState.Parent = this.txbLoai;
-            this.txbLoai.Location = new System.Drawing.Point(26, 225);
+            this.txbLoai.Location = new System.Drawing.Point(97, 243);
             this.txbLoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbLoai.Name = "txbLoai";
             this.txbLoai.PasswordChar = '\0';
@@ -334,7 +340,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.btnUpload.DisabledState.Parent = this.btnUpload;
             this.btnUpload.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(201)))), ((int)(((byte)(97)))));
             this.btnUpload.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(201)))), ((int)(((byte)(97)))));
-            this.btnUpload.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnUpload.Font = new System.Drawing.Font("Quicksand Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpload.ForeColor = System.Drawing.Color.White;
             this.btnUpload.HoverState.Parent = this.btnUpload;
             this.btnUpload.Location = new System.Drawing.Point(546, 336);
@@ -344,30 +350,6 @@ namespace QLCuaHangQuanAo.SubForm
             this.btnUpload.TabIndex = 5;
             this.btnUpload.Text = "Upload";
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
-            // 
-            // txbNhacungcap
-            // 
-            this.txbNhacungcap.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbNhacungcap.DefaultText = "";
-            this.txbNhacungcap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txbNhacungcap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txbNhacungcap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbNhacungcap.DisabledState.Parent = this.txbNhacungcap;
-            this.txbNhacungcap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbNhacungcap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbNhacungcap.FocusedState.Parent = this.txbNhacungcap;
-            this.txbNhacungcap.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txbNhacungcap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbNhacungcap.HoverState.Parent = this.txbNhacungcap;
-            this.txbNhacungcap.Location = new System.Drawing.Point(26, 268);
-            this.txbNhacungcap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txbNhacungcap.Name = "txbNhacungcap";
-            this.txbNhacungcap.PasswordChar = '\0';
-            this.txbNhacungcap.PlaceholderText = "Nhà cung cấp";
-            this.txbNhacungcap.SelectedText = "";
-            this.txbNhacungcap.ShadowDecoration.Parent = this.txbNhacungcap;
-            this.txbNhacungcap.Size = new System.Drawing.Size(277, 30);
-            this.txbNhacungcap.TabIndex = 10;
             // 
             // guna2GradientPanel1
             // 
@@ -382,12 +364,62 @@ namespace QLCuaHangQuanAo.SubForm
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 2);
+            this.label1.Font = new System.Drawing.Font("Quicksand", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 29);
+            this.label1.Size = new System.Drawing.Size(159, 28);
             this.label1.TabIndex = 34;
-            this.label1.Text = "Add Product";
+            this.label1.Text = "Thêm sản phẩm";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Quicksand", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(52, 71);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 23);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "Tên:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Quicksand", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(54, 114);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 23);
+            this.label4.TabIndex = 38;
+            this.label4.Text = "Giá:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Quicksand", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(37, 200);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 23);
+            this.label5.TabIndex = 40;
+            this.label5.Text = "Mô tả:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Quicksand", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(14, 157);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 23);
+            this.label6.TabIndex = 39;
+            this.label6.Text = "Số lượng:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Quicksand", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(47, 250);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 23);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "Loại:";
             // 
             // Add_Item_Form
             // 
@@ -395,9 +427,13 @@ namespace QLCuaHangQuanAo.SubForm
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(700, 400);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txbNhacungcap);
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.txbLoai);
             this.Controls.Add(this.txbMota);
@@ -435,8 +471,12 @@ namespace QLCuaHangQuanAo.SubForm
         private Guna.UI2.WinForms.Guna2TextBox txbMota;
         private Guna.UI2.WinForms.Guna2TextBox txbLoai;
         private Guna.UI2.WinForms.Guna2GradientButton btnUpload;
-        private Guna.UI2.WinForms.Guna2TextBox txbNhacungcap;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

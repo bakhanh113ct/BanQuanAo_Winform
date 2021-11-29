@@ -33,17 +33,17 @@ namespace QLCuaHangQuanAo.SubForm
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgrvItem = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.anh = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tool3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.exit = new Guna.UI2.WinForms.Guna2Button();
             this.zooe_in_out = new Guna.UI2.WinForms.Guna2Button();
             this.minimize = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.anh = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvItem)).BeginInit();
             this.tool3.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +61,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.dtgrvItem.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Quicksand Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -114,6 +114,50 @@ namespace QLCuaHangQuanAo.SubForm
             this.dtgrvItem.ThemeStyle.RowsStyle.Height = 60;
             this.dtgrvItem.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgrvItem.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // anh
+            // 
+            this.anh.DataPropertyName = "ANH";
+            this.anh.HeaderText = "";
+            this.anh.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.anh.Name = "anh";
+            this.anh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.anh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // ten
+            // 
+            this.ten.DataPropertyName = "TEN";
+            this.ten.FillWeight = 135F;
+            this.ten.HeaderText = "Tên";
+            this.ten.Name = "ten";
+            this.ten.ReadOnly = true;
+            // 
+            // Loai
+            // 
+            this.Loai.DataPropertyName = "TENLOAI";
+            this.Loai.FillWeight = 130F;
+            this.Loai.HeaderText = "Loại";
+            this.Loai.Name = "Loai";
+            this.Loai.ReadOnly = true;
+            // 
+            // soluong
+            // 
+            this.soluong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.soluong.DataPropertyName = "SL";
+            this.soluong.FillWeight = 121.8274F;
+            this.soluong.HeaderText = "Số lượng";
+            this.soluong.Name = "soluong";
+            this.soluong.ReadOnly = true;
+            this.soluong.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.soluong.Width = 105;
+            // 
+            // gia
+            // 
+            this.gia.DataPropertyName = "GIA";
+            this.gia.FillWeight = 135.388F;
+            this.gia.HeaderText = "Giá";
+            this.gia.Name = "gia";
+            this.gia.ReadOnly = true;
             // 
             // tool3
             // 
@@ -210,56 +254,12 @@ namespace QLCuaHangQuanAo.SubForm
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 6);
+            this.label1.Font = new System.Drawing.Font("Quicksand SemiBold", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(7, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 29);
+            this.label1.Size = new System.Drawing.Size(112, 34);
             this.label1.TabIndex = 36;
-            this.label1.Text = "Product_Bill";
-            // 
-            // anh
-            // 
-            this.anh.DataPropertyName = "ANH";
-            this.anh.HeaderText = "";
-            this.anh.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.anh.Name = "anh";
-            this.anh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.anh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // ten
-            // 
-            this.ten.DataPropertyName = "TEN";
-            this.ten.FillWeight = 135F;
-            this.ten.HeaderText = "Tên";
-            this.ten.Name = "ten";
-            this.ten.ReadOnly = true;
-            // 
-            // Loai
-            // 
-            this.Loai.DataPropertyName = "TENLOAI";
-            this.Loai.FillWeight = 130F;
-            this.Loai.HeaderText = "Loại";
-            this.Loai.Name = "Loai";
-            this.Loai.ReadOnly = true;
-            // 
-            // soluong
-            // 
-            this.soluong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.soluong.DataPropertyName = "SL";
-            this.soluong.FillWeight = 121.8274F;
-            this.soluong.HeaderText = "Số lượng";
-            this.soluong.Name = "soluong";
-            this.soluong.ReadOnly = true;
-            this.soluong.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.soluong.Width = 88;
-            // 
-            // gia
-            // 
-            this.gia.DataPropertyName = "GIA";
-            this.gia.FillWeight = 135.388F;
-            this.gia.HeaderText = "Giá";
-            this.gia.Name = "gia";
-            this.gia.ReadOnly = true;
+            this.label1.Text = "Giỏ hàng";
             // 
             // Product_Bill
             // 

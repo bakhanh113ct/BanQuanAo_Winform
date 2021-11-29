@@ -73,6 +73,8 @@ namespace QLCuaHangQuanAo
             this.TRIGIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TRANG_THAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.txbEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -194,6 +196,8 @@ namespace QLCuaHangQuanAo
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.txbEmail);
+            this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.txbName);
             this.tabPage1.Controls.Add(this.btnChange);
             this.tabPage1.Controls.Add(this.btnSave);
@@ -256,7 +260,7 @@ namespace QLCuaHangQuanAo
             this.btnChange.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnChange.ForeColor = System.Drawing.Color.White;
             this.btnChange.HoverState.Parent = this.btnChange;
-            this.btnChange.Location = new System.Drawing.Point(289, 214);
+            this.btnChange.Location = new System.Drawing.Point(289, 256);
             this.btnChange.Name = "btnChange";
             this.btnChange.ShadowDecoration.Parent = this.btnChange;
             this.btnChange.Size = new System.Drawing.Size(100, 34);
@@ -277,7 +281,7 @@ namespace QLCuaHangQuanAo
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.HoverState.Parent = this.btnSave;
-            this.btnSave.Location = new System.Drawing.Point(399, 214);
+            this.btnSave.Location = new System.Drawing.Point(399, 256);
             this.btnSave.Name = "btnSave";
             this.btnSave.ShadowDecoration.Parent = this.btnSave;
             this.btnSave.Size = new System.Drawing.Size(100, 34);
@@ -684,7 +688,7 @@ namespace QLCuaHangQuanAo
             this.dtgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgv.BackgroundColor = System.Drawing.Color.White;
             this.dtgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dtgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumOrchid;
@@ -787,6 +791,40 @@ namespace QLCuaHangQuanAo
             this.tabPage4.Text = "Đăng xuất";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // txbEmail
+            // 
+            this.txbEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbEmail.DefaultText = "";
+            this.txbEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txbEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txbEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbEmail.DisabledState.Parent = this.txbEmail;
+            this.txbEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbEmail.Enabled = false;
+            this.txbEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbEmail.FocusedState.Parent = this.txbEmail;
+            this.txbEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txbEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbEmail.HoverState.Parent = this.txbEmail;
+            this.txbEmail.Location = new System.Drawing.Point(289, 210);
+            this.txbEmail.Name = "txbEmail";
+            this.txbEmail.PasswordChar = '\0';
+            this.txbEmail.PlaceholderText = "";
+            this.txbEmail.SelectedText = "";
+            this.txbEmail.ShadowDecoration.Parent = this.txbEmail;
+            this.txbEmail.Size = new System.Drawing.Size(210, 25);
+            this.txbEmail.TabIndex = 59;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(230, 211);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(42, 17);
+            this.label11.TabIndex = 58;
+            this.label11.Text = "Email";
+            // 
             // Settings_performance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -857,5 +895,7 @@ namespace QLCuaHangQuanAo
         private System.Windows.Forms.DataGridViewTextBoxColumn TRIGIA;
         private System.Windows.Forms.DataGridViewTextBoxColumn TRANG_THAI;
         private System.Windows.Forms.TabPage tabPage4;
+        private Guna.UI2.WinForms.Guna2TextBox txbEmail;
+        private System.Windows.Forms.Label label11;
     }
 }
