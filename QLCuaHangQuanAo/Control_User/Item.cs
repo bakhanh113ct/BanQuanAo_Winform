@@ -30,7 +30,7 @@ namespace QLCuaHangQuanAo.Control_User
         {
             //Load ảnh
             byte[] b = item.Anh;
-            this.picture.Image = ConvertoImage(b);
+            this.picture.Image = ConvertoImage(b) == null ? Properties.Resources.NoImage : ConvertoImage(b);
             btnTinhTrang.BackColor = Color.Transparent;
             lbName.Text = item.Ten;
             if (item.SL > 0)
@@ -65,10 +65,13 @@ namespace QLCuaHangQuanAo.Control_User
 
         public Image ConvertoImage(byte[] data)
         {
-            using (MemoryStream ms = new MemoryStream(data))
-            {
-                return Image.FromStream(ms);
-            }
+            if (data != null)
+                using (MemoryStream ms = new MemoryStream(data))
+                {
+                    return Image.FromStream(ms);
+                }
+            else
+                return null;
         }
 
         private void picture_Click(object sender, EventArgs e)

@@ -53,7 +53,12 @@ namespace QLCuaHangQuanAo.DTO
             sL = (int)row["SL"];
             moTa = row["MOTA"].ToString();
             iDLoai = (int)row["IDLOAI"];
-            anh = (byte[])row["ANH"];
+            if (!row.IsNull("ANH"))
+                anh = (byte[])row["ANH"];
+            else
+            {
+                anh = null;
+            }
         }
         
         

@@ -41,6 +41,8 @@ namespace QLCuaHangQuanAo
             this.Avatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txbEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.txbName = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnChange = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -73,8 +75,6 @@ namespace QLCuaHangQuanAo
             this.TRIGIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TRANG_THAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.txbEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -222,6 +222,40 @@ namespace QLCuaHangQuanAo
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Thông tin";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // txbEmail
+            // 
+            this.txbEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbEmail.DefaultText = "";
+            this.txbEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txbEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txbEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbEmail.DisabledState.Parent = this.txbEmail;
+            this.txbEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbEmail.Enabled = false;
+            this.txbEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbEmail.FocusedState.Parent = this.txbEmail;
+            this.txbEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txbEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbEmail.HoverState.Parent = this.txbEmail;
+            this.txbEmail.Location = new System.Drawing.Point(289, 210);
+            this.txbEmail.Name = "txbEmail";
+            this.txbEmail.PasswordChar = '\0';
+            this.txbEmail.PlaceholderText = "";
+            this.txbEmail.SelectedText = "";
+            this.txbEmail.ShadowDecoration.Parent = this.txbEmail;
+            this.txbEmail.Size = new System.Drawing.Size(210, 25);
+            this.txbEmail.TabIndex = 59;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(230, 211);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(42, 17);
+            this.label11.TabIndex = 58;
+            this.label11.Text = "Email";
             // 
             // txbName
             // 
@@ -790,40 +824,6 @@ namespace QLCuaHangQuanAo
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Đăng xuất";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // txbEmail
-            // 
-            this.txbEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbEmail.DefaultText = "";
-            this.txbEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txbEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txbEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbEmail.DisabledState.Parent = this.txbEmail;
-            this.txbEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbEmail.Enabled = false;
-            this.txbEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbEmail.FocusedState.Parent = this.txbEmail;
-            this.txbEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txbEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbEmail.HoverState.Parent = this.txbEmail;
-            this.txbEmail.Location = new System.Drawing.Point(289, 210);
-            this.txbEmail.Name = "txbEmail";
-            this.txbEmail.PasswordChar = '\0';
-            this.txbEmail.PlaceholderText = "";
-            this.txbEmail.SelectedText = "";
-            this.txbEmail.ShadowDecoration.Parent = this.txbEmail;
-            this.txbEmail.Size = new System.Drawing.Size(210, 25);
-            this.txbEmail.TabIndex = 59;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(230, 211);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 17);
-            this.label11.TabIndex = 58;
-            this.label11.Text = "Email";
             // 
             // Settings_performance
             // 
