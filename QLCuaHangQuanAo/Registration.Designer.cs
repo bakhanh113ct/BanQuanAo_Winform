@@ -72,11 +72,11 @@ namespace QLCuaHangQuanAo
             this.rdOther.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rdOther.CheckedState.InnerOffset = -4;
             this.rdOther.Font = new System.Drawing.Font("Quicksand Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdOther.Location = new System.Drawing.Point(433, 402);
+            this.rdOther.Location = new System.Drawing.Point(434, 390);
             this.rdOther.Name = "rdOther";
-            this.rdOther.Size = new System.Drawing.Size(59, 20);
+            this.rdOther.Size = new System.Drawing.Size(56, 20);
             this.rdOther.TabIndex = 30;
-            this.rdOther.Text = "Other";
+            this.rdOther.Text = "Khác";
             this.rdOther.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rdOther.UncheckedState.BorderThickness = 2;
             this.rdOther.UncheckedState.FillColor = System.Drawing.Color.Transparent;
@@ -91,11 +91,11 @@ namespace QLCuaHangQuanAo
             this.rdMale.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rdMale.CheckedState.InnerOffset = -4;
             this.rdMale.Font = new System.Drawing.Font("Quicksand Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdMale.Location = new System.Drawing.Point(238, 402);
+            this.rdMale.Location = new System.Drawing.Point(239, 390);
             this.rdMale.Name = "rdMale";
-            this.rdMale.Size = new System.Drawing.Size(55, 20);
+            this.rdMale.Size = new System.Drawing.Size(54, 20);
             this.rdMale.TabIndex = 28;
-            this.rdMale.Text = "Male";
+            this.rdMale.Text = "Nam";
             this.rdMale.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rdMale.UncheckedState.BorderThickness = 2;
             this.rdMale.UncheckedState.FillColor = System.Drawing.Color.Transparent;
@@ -120,7 +120,7 @@ namespace QLCuaHangQuanAo
             this.btnRegister.ShadowDecoration.Parent = this.btnRegister;
             this.btnRegister.Size = new System.Drawing.Size(477, 45);
             this.btnRegister.TabIndex = 31;
-            this.btnRegister.Text = "Register";
+            this.btnRegister.Text = "Đăng kí";
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // guna2DragControl1
@@ -148,11 +148,11 @@ namespace QLCuaHangQuanAo
             this.rdFemale.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rdFemale.CheckedState.InnerOffset = -4;
             this.rdFemale.Font = new System.Drawing.Font("Quicksand Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdFemale.Location = new System.Drawing.Point(330, 402);
+            this.rdFemale.Location = new System.Drawing.Point(331, 390);
             this.rdFemale.Name = "rdFemale";
-            this.rdFemale.Size = new System.Drawing.Size(70, 20);
+            this.rdFemale.Size = new System.Drawing.Size(42, 20);
             this.rdFemale.TabIndex = 29;
-            this.rdFemale.Text = "Female";
+            this.rdFemale.Text = "Nữ";
             this.rdFemale.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rdFemale.UncheckedState.BorderThickness = 2;
             this.rdFemale.UncheckedState.FillColor = System.Drawing.Color.Transparent;
@@ -181,11 +181,11 @@ namespace QLCuaHangQuanAo
             // 
             this.lbGender.AutoSize = true;
             this.lbGender.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGender.Location = new System.Drawing.Point(73, 399);
+            this.lbGender.Location = new System.Drawing.Point(74, 387);
             this.lbGender.Name = "lbGender";
-            this.lbGender.Size = new System.Drawing.Size(65, 24);
+            this.lbGender.Size = new System.Drawing.Size(71, 24);
             this.lbGender.TabIndex = 41;
-            this.lbGender.Text = "Gender";
+            this.lbGender.Text = "Giới tính";
             // 
             // tbCfPassword
             // 
@@ -217,9 +217,9 @@ namespace QLCuaHangQuanAo
             this.lbCfPassword.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCfPassword.Location = new System.Drawing.Point(394, 313);
             this.lbCfPassword.Name = "lbCfPassword";
-            this.lbCfPassword.Size = new System.Drawing.Size(150, 24);
+            this.lbCfPassword.Size = new System.Drawing.Size(155, 24);
             this.lbCfPassword.TabIndex = 40;
-            this.lbCfPassword.Text = "Confirm Password";
+            this.lbCfPassword.Text = "Xác nhận mật khẩu";
             // 
             // tbPassword
             // 
@@ -251,10 +251,10 @@ namespace QLCuaHangQuanAo
             this.lbPassword.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPassword.Location = new System.Drawing.Point(71, 313);
             this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(85, 24);
+            this.lbPassword.Size = new System.Drawing.Size(80, 24);
             this.lbPassword.TabIndex = 39;
             this.lbPassword.Tag = "";
-            this.lbPassword.Text = "Password";
+            this.lbPassword.Text = "Mật khẩu";
             // 
             // lbBirthday
             // 
@@ -262,9 +262,9 @@ namespace QLCuaHangQuanAo
             this.lbBirthday.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBirthday.Location = new System.Drawing.Point(394, 136);
             this.lbBirthday.Name = "lbBirthday";
-            this.lbBirthday.Size = new System.Drawing.Size(75, 24);
+            this.lbBirthday.Size = new System.Drawing.Size(85, 24);
             this.lbBirthday.TabIndex = 37;
-            this.lbBirthday.Text = "Birthday";
+            this.lbBirthday.Text = "Ngày sinh";
             // 
             // tbAddress
             // 
@@ -320,9 +320,9 @@ namespace QLCuaHangQuanAo
             this.lbAddress.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAddress.Location = new System.Drawing.Point(394, 50);
             this.lbAddress.Name = "lbAddress";
-            this.lbAddress.Size = new System.Drawing.Size(72, 24);
+            this.lbAddress.Size = new System.Drawing.Size(60, 24);
             this.lbAddress.TabIndex = 35;
-            this.lbAddress.Text = "Address";
+            this.lbAddress.Text = "Địa chỉ";
             // 
             // lbPhone
             // 
@@ -330,9 +330,9 @@ namespace QLCuaHangQuanAo
             this.lbPhone.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPhone.Location = new System.Drawing.Point(71, 136);
             this.lbPhone.Name = "lbPhone";
-            this.lbPhone.Size = new System.Drawing.Size(57, 24);
+            this.lbPhone.Size = new System.Drawing.Size(108, 24);
             this.lbPhone.TabIndex = 36;
-            this.lbPhone.Text = "Phone";
+            this.lbPhone.Text = "Số điện thoại";
             // 
             // tbUserName
             // 
@@ -388,9 +388,9 @@ namespace QLCuaHangQuanAo
             this.lbUsername.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUsername.Location = new System.Drawing.Point(394, 226);
             this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(95, 24);
+            this.lbUsername.Size = new System.Drawing.Size(111, 24);
             this.lbUsername.TabIndex = 38;
-            this.lbUsername.Text = "User Name";
+            this.lbUsername.Text = "Tên tài khoản";
             // 
             // lbfullname
             // 
@@ -398,9 +398,9 @@ namespace QLCuaHangQuanAo
             this.lbfullname.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbfullname.Location = new System.Drawing.Point(71, 50);
             this.lbfullname.Name = "lbfullname";
-            this.lbfullname.Size = new System.Drawing.Size(86, 24);
+            this.lbfullname.Size = new System.Drawing.Size(60, 24);
             this.lbfullname.TabIndex = 34;
-            this.lbfullname.Text = "Full Name";
+            this.lbfullname.Text = "Họ tên";
             // 
             // guna2GradientPanel1
             // 
