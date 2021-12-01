@@ -33,16 +33,6 @@ namespace QLCuaHangQuanAo
             openPerformance(home);
             
         }
-        public UI_Home()
-        {
-            InitializeComponent();
-            home = new Home_perfomancecs();
-            AddSubbarandHomeButton();
-            ListItem = new List<Control_User.Item>();
-            subbar_Change(subbar1, HOME);
-            openPerformance(home);
-
-        }
 
         private void UI_Home_Load(object sender, EventArgs e)
         {
