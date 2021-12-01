@@ -32,7 +32,7 @@ namespace QLCuaHangQuanAo.SubForm
             InitializeComponent();
             
         }
-        
+
         public BILL(int SOHD)
         {
             InitializeComponent();
@@ -103,27 +103,47 @@ namespace QLCuaHangQuanAo.SubForm
 
         private void Cancel_Click(object sender, EventArgs e)
         {
-            DAO.Sound.Instance.cancel();
-            DateTime x = DateTime.Now;
-            string time = "'" + x.Year + "-" + x.Month + "-" + x.Day + " " + x.Hour + ":" + x.Minute + ":" + x.Second + "'";
-            DAO.DataProvider.ExcuseNonQuery1("update HOADON set TRANG_THAI = 'Cancel' where SOHD = " + SOHD);
-            DAO.DataProvider.ExcuseNonQuery1("update HOADON set NGXN = " + time + " Where SOHD = " + SOHD);
-            MessageBox.Show("Đã hủy thành công đơn hàng");
-            Cancel.Visible = false;
-            Delivery.Visible = false;
-            kt = true;
-            SendEmail(0);
+            DAO.Sound.Instance.sound_Click();
+            DialogResult temp = MessageBox.Show("Bạn thật sự muốn hủy hàng", "Xác nhận", MessageBoxButtons.OKCancel);
+            if (temp == DialogResult.OK)
+            {
+                DAO.Sound.Instance.cancel();
+                DateTime x = DateTime.Now;
+                string time = "'" + x.Year + "-" + x.Month + "-" + x.Day + " " + x.Hour + ":" + x.Minute + ":" + x.Second + "'";
+                DAO.DataProvider.ExcuseNonQuery1("update HOADON set TRANG_THAI = 'Cancel' where SOHD = " + SOHD);
+                DAO.DataProvider.ExcuseNonQuery1("update HOADON set NGXN = " + time + " Where SOHD = " + SOHD);
+                return_SP();
+                MessageBox.Show("Đã hủy thành công đơn hàng");
+                Cancel.Visible = false;
+                Delivery.Visible = false;
+                kt = true;
+                SendEmail(0);
+            }
         }
+        private void return_SP()
+        {
+            DataTable list_sp = DAO.HoaDonDAO.Instance.getSlSP_inHD(SOHD);
+            foreach(DataRow row in list_sp.Rows)
+            {
+                DAO.SanPhamDAO.Instance.SLSP_in_MASP((int)row["MASP"], (int)row["SL"]);
+            }
+        }
+
         private void Delivery_Click(object sender, EventArgs e)
         {
-            DAO.Sound.Instance.tada();
-            DateTime x = DateTime.Now;
-            string time = "'" + x.Year + "-" + x.Month + "-" + x.Day + " " + x.Hour + ":" + x.Minute + ":" + x.Second + "'";
-            DAO.DataProvider.ExcuseNonQuery1("update HOADON set TRANG_THAI = 'Delivery' where SOHD = " + SOHD);
-            DAO.DataProvider.ExcuseNonQuery1("update HOADON set NGXN = " + time + " Where SOHD = " + SOHD);
-            MessageBox.Show("Đang vận chuyển");
-            Delivery.Visible = false;
-            SendEmail(1);
+            DAO.Sound.Instance.sound_Click();
+            DialogResult temp = MessageBox.Show("Đơn hàng sẽ được chuyển đi.", "Xác nhận", MessageBoxButtons.OKCancel);
+            if (temp == DialogResult.OK)
+            {
+                DAO.Sound.Instance.tada();
+                DateTime x = DateTime.Now;
+                string time = "'" + x.Year + "-" + x.Month + "-" + x.Day + " " + x.Hour + ":" + x.Minute + ":" + x.Second + "'";
+                DAO.DataProvider.ExcuseNonQuery1("update HOADON set TRANG_THAI = 'Delivery' where SOHD = " + SOHD);
+                DAO.DataProvider.ExcuseNonQuery1("update HOADON set NGXN = " + time + " Where SOHD = " + SOHD);
+                MessageBox.Show("Đang vận chuyển");
+                Delivery.Visible = false;
+                SendEmail(1);
+            }
         }
         public static bool getChange()
         {

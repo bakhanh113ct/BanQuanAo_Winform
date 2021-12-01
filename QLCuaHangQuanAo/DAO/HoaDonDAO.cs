@@ -77,6 +77,16 @@ namespace QLCuaHangQuanAo.DAO
             return DateTime.Now;
         }
 
+        internal object SLHD_huy()
+        {
+            DataTable temp = DataProvider.ExcuseQuery1("Select COUNT(SOHD) as SL from HOADON where TRANG_THAI = 'Cancel' and MONTH(NGHD) = " + DateTime.Now.Month);
+            foreach(DataRow row in temp.Rows)
+            {
+                return row["SL"];
+            }
+            return 1;
+        }
+
         //static public bool UpdateSP(string ten, string gia, string SL, string mota, string loai, byte[] image, string old_Name)
         //{
         //    int check = DAO.DataProvider.ExecuteNonQuery("update SANPHAM set TEN = @Ten , GIA = @Gia , SL = @SoLuong , DANHGIA = @DanhGia , DABAN = @DaBan , MOTA = @MoTa , IDLOAI = @Loai , ANH = @Anh where MASP = '" + old_Name + "'",
@@ -148,24 +158,28 @@ namespace QLCuaHangQuanAo.DAO
                 "and SANPHAM.MASP = CTHD.MASP");
             return bill;
         }
-        public bool thanh_toan(int index)
-        {
-            foreach (Control_User.list_order x in Invoice_performance.dcm)
-            {
-                if (x.SoHD == index && x.Status == "Waiting")
-                {
-                    DataProvider.ExcuseNonQuery1("Update HOADON set TRANG_THAI = 'Complete' where SOHD = " + index);
-                    SanPhamDAO.Instance.update_SLSP(index);
-                    //x.change_trang_thai();
-                    return true;
-                }
-            }
-            return false;
-        }
-        public List<Control_User.list_order> load()//load tất cả hóa đơn vào một danh sách
+        //public bool thanh_toan(int index)
+        //{
+        //    foreach (Control_User.list_order x in Invoice_performance.dcm)
+        //    {
+        //        if (x.SoHD == index && x.Status == "Waiting")
+        //        {
+        //            DataProvider.ExcuseNonQuery1("Update HOADON set TRANG_THAI = 'Complete' where SOHD = " + index);
+        //           // SanPhamDAO.Instance.update_SLSP(index);
+        //            //x.change_trang_thai();
+        //            return true;
+        //        }
+        //    }
+        //    return false;
+        //}
+        public List<Control_User.list_order> load(string month)//load tất cả hóa đơn vào một danh sách
         {
             List<Control_User.list_order> loadInfoFromDB = new List<Control_User.list_order>();
-            DataTable dt = DataProvider.ExcuseQuery1("exec test");
+            DataTable dt = DataProvider.ExcuseQuery1("select KHACHHANG.MAKH, HOTEN, NGHD, HOADON.SOHD, TRANG_THAI, ANH, SUM(SL) as SOHANG " +
+                "from KHACHHANG, HOADON, CTHD " +
+                "where KHACHHANG.MAKH = HOADON.MAKH and HOADON.SOHD = CTHD.SOHD " + month + " "+
+                //"and MONTH(NGHD) = " + month +
+                "group by KHACHHANG.MAKH, HOTEN, NGHD, HOADON.SOHD, TRANG_THAI, ANH order by NGHD DESC ");
 
             foreach (DataRow row in dt.Rows)
             {
@@ -199,6 +213,12 @@ namespace QLCuaHangQuanAo.DAO
             }
             return 0;
          }
+
+        public DataTable getSlSP_inHD(int SOHD)
+        {
+            return DataProvider.ExcuseQuery1("select MASP, SL from CTHD, HOADON where CTHD.SOHD = HOADON.SOHD and CTHD.SOHD = " + SOHD);
+        }
+
         public int SLHD_HOANTHANH()//Lấy số lượng hóa đơn trong tháng này trong trạng thái hoàn thành
         {
             DataTable sl = DataProvider.ExcuseQuery1("select count(SOHD) as SL from HOADON " +

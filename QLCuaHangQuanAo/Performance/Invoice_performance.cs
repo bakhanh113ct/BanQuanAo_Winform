@@ -14,20 +14,33 @@ namespace QLCuaHangQuanAo
     {
         public static List<Control_User.list_order> dcm = new List<Control_User.list_order>();
         int index;//Đánh dấu đối tượng đang trỏ vào(SỐ hóa đơn)
+        int dem = 0;
         public Invoice_performance()
         {
             InitializeComponent();
-            load();
+            addthanglencombobox();
         }
-        void load()//lấy thông tất cả hóa đơn
+        void load(string thang)//lấy thông tất cả hóa đơn
         {
-            dcm = DAO.HoaDonDAO.Instance.load();
+            dcm = DAO.HoaDonDAO.Instance.load(thang);
             foreach (Control_User.list_order x in dcm)
             {
                 list_KH.Controls.Add(x);
                 x.thao_tac.Click += show_chi_tiet;//them sự kiện click cho Control_user 
             }
             hide();
+
+        }
+        void addthanglencombobox()
+        {
+            int month = 1;
+            thang.Items.Add("All");
+            while (month <= DateTime.Now.Month)
+            {
+                thang.Items.Add("Tháng " + month++.ToString());
+            }
+            thang.SelectedIndex = 0;
+            dem = 1;
         }
         private void hide()//Ẩn những thứ không cần thiết 
         {
@@ -39,9 +52,9 @@ namespace QLCuaHangQuanAo
         private void unhide()//Ẩn những thứ không cần thiết 
         {
             loadBill.Visible = true;
-            View.Visible =     true;
-            time.Visible =     true;
-            label2.Visible =   true;
+            View.Visible = true;
+            time.Visible = true;
+            label2.Visible = true;
         }
 
         private void show_chi_tiet(object sender, EventArgs e)//Tìm kiếm đối tượng đang được trỏ đến
@@ -59,7 +72,7 @@ namespace QLCuaHangQuanAo
                     return;//tìm thấy rồi thì không tim nữa load mất công
                 }
             }
-            
+
         }
 
         private void getHSD(int index)
@@ -97,11 +110,11 @@ namespace QLCuaHangQuanAo
                     break;
                 case "Complete":
                     NGHD.Text = nghd.ToString();
-                    label3.Text = "Thời gian hoàn thành đơn hàng";
-                    timeXN.Text = xn.AddDays(2).ToString();
-                    timeXN.ForeColor = Color.Goldenrod;
-                    label4.Text = "";
-                    hanHD.Text = "";
+                    label3.Text = "Thời gian vận chuyển đơn hàng";
+                    timeXN.Text = xn.ToString();
+                    timeXN.ForeColor = Color.FromArgb(0, 192, 0);
+                    label4.Text = "Thời gian hoàn thành đơn hàng";
+                    hanHD.Text = xn.AddDays(2).ToString();
                     break;
             }
         }
@@ -123,7 +136,7 @@ namespace QLCuaHangQuanAo
             SubForm.BILL temp = new SubForm.BILL(index);//Tạo một cái bill mới
             DAO.Sound.Instance.sound_Click();
             temp.ShowDialog(this);//cái này để tránh thao tác trên chương trình chính
-            //temp.Hide();
+
             foreach (Control_User.list_order x in dcm)//kiếm đối tượng đang trỏ vào
             {
                 if (x.BackGround.FillColor == Color.FromArgb(174, 78, 191))
@@ -134,7 +147,44 @@ namespace QLCuaHangQuanAo
                 }
             }
         }
+        private void thang_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            list_KH.Controls.Clear();
+            if (thang.SelectedIndex == 0)
+            {
+                load("");
+            }
+            else
+            {
+                load("and MONTH(NGHD) = " + (int)thang.SelectedIndex);
+                if (dem != 0)
+                {
+                    if (list_KH.Controls.Count > 0)
+                        DAO.Sound.Instance.load_click();
+                    else
+                    {
+                        Label tb = new Label();
+                        tb.AutoSize = true;
+                        tb.Font = new System.Drawing.Font("Quicksand SemiBold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                        tb.ForeColor = System.Drawing.Color.Red;
+                        tb.Location = new System.Drawing.Point(0, 0);
+                        tb.Name = "label1";
+                        tb.Size = new System.Drawing.Size(179, 57);
+                        tb.TabIndex = 2;
+                        tb.Text = "Không có dữ liệu";
+                        //Font = new System.Drawing.Font("Quicksand SemiBold", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                        list_KH.Controls.Add(tb);
+                        DAO.Sound.Instance.Noload_click();
+                        //MessageBox.Show("Khong co du lieu");
+                    }
+                }
+            }
 
-       
+        }
+
+        private void thang_Click(object sender, EventArgs e)
+        {
+            DAO.Sound.Instance.sound_Click();
+        }
     }
 }

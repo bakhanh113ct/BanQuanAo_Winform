@@ -17,21 +17,34 @@ namespace QLCuaHangQuanAo.DAO
             get { if (instance == null) instance = new Sound(); return instance; }
             private set => instance = value;
         }
+        private SoundPlayer SoundPlayer;
         public void sound_Click()
         {
-            using (var soundPlayer = new SoundPlayer(@"..\..\Resources\ES_Switch Click 1 - SFX Producer.wav"))
-            {
-                soundPlayer.Play();
-            }
+            SoundPlayer = new SoundPlayer(@"..\..\Resources\ES_Switch Click 1 - SFX Producer.wav");
+            SoundPlayer.Stop();
+            SoundPlayer.Play();
         }
+        public void load_click()
+        {
+            SoundPlayer = new SoundPlayer(@"C:\Windows\Media\chimes.wav");
+            SoundPlayer.Stop();
+            SoundPlayer.Play();
+        }
+        public void Noload_click()
+        {
+            SoundPlayer = new SoundPlayer(@"C:\Windows\Media\Windows Hardware Fail.wav");
+            SoundPlayer.Stop();
+            SoundPlayer.Play();
+           
+        }
+
 
         internal void tada()
         {
             using (var soundPlayer = new SoundPlayer(@"C:\Windows\Media\tada.wav"))
             {
                 soundPlayer.PlaySync();
-                
-                
+
             }
         }
         internal void cancel()
