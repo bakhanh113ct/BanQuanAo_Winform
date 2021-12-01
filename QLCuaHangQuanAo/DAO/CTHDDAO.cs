@@ -23,7 +23,6 @@ namespace QLCuaHangQuanAo.DAO
                 return false;
             else
                 return true;
-            return false;
         }
 
         public DataTable LoadCTHD(string SoHD)

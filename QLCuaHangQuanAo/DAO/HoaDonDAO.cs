@@ -45,7 +45,6 @@ namespace QLCuaHangQuanAo.DAO
                 return false;
             else
                 return true;
-            return true;
         }
 
         public DateTime getTimeXN(int index)

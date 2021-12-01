@@ -163,14 +163,23 @@ namespace QLCuaHangQuanAo.DAO
                 return result;
             }
         }
-        public static void ExcuseNonQuery1(string Query)
+        public static int ExcuseNonQuery1(string Query)
         {
+            int kq = 0;
             using (SqlConnection sqlCon = new SqlConnection(strCon))
             {
                 sqlCon.Open();
                 SqlCommand cmd = new SqlCommand(Query, sqlCon);
-                cmd.ExecuteNonQuery();
+                try
+                {
+                    kq = cmd.ExecuteNonQuery();
+                }
+                catch
+                {
+                    return kq;
+                }
                 sqlCon.Close();
+                return kq;
             }
 
 

@@ -15,12 +15,10 @@ namespace QLCuaHangQuanAo.Control_User
     public partial class Item : UserControl
     {
         SANPHAM sanpham;
-        public Store_performence Parent_Store { get; set; }
-        
+        public List<Item_HD> item_HDs = new List<Item_HD>();
         public Item() { }
-        public Item(SANPHAM item, Control panel)
+        public Item(SANPHAM item)
         {
-            Parent_Store = panel as Store_performence;
             InitializeComponent();
             Init(item);
             this.sanpham = item;
@@ -56,18 +54,19 @@ namespace QLCuaHangQuanAo.Control_User
             {
                 i.btnItem.FillColor = Color.Transparent;
             }
-            if (Parent_Store != null)
-            {
-                Store_performence.sanpham = sanpham;
-            }
+            Store_performence.sanpham = sanpham;
             btnItem.FillColor = Color.Yellow;
         }
-
-        
-
         private void picture_Click(object sender, EventArgs e)
         {
             btnItem_Click(btnItem, e);
         }
+
+        private void btnItem_DoubleClick(object sender, EventArgs e)
+        {
+            
+        }
+
+        
     }
 }

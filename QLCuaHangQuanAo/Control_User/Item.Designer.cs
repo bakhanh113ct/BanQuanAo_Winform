@@ -65,7 +65,7 @@ namespace QLCuaHangQuanAo.Control_User
             this.btnBuy = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnTinhTrang = new Guna.UI2.WinForms.Guna2Button();
             this.btnItem = new Guna.UI2.WinForms.Guna2Button();
-            this.lbGia = new CustomLabel();
+            this.lbGia = new QLCuaHangQuanAo.Control_User.CustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.picture.SuspendLayout();
             this.btnItem.SuspendLayout();
@@ -198,6 +198,7 @@ namespace QLCuaHangQuanAo.Control_User
             this.btnItem.Size = new System.Drawing.Size(155, 185);
             this.btnItem.TabIndex = 8;
             this.btnItem.Click += new System.EventHandler(this.btnItem_Click);
+            this.btnItem.DoubleClick += new System.EventHandler(this.btnItem_DoubleClick);
             // 
             // lbGia
             // 

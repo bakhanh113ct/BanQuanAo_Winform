@@ -153,7 +153,7 @@ namespace QLCuaHangQuanAo.SubForm
             {
                 string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
                 path = Path.Combine(path, ".credentials/gmail-dotnet-quickstart.json");
-                credential = GoogleWebAuthorizationBroker.AuthorizeAsync(GoogleClientSecrets.Load(stream).Secrets, Scopes, "user", CancellationToken.None, new FileDataStore(path, true)).Result;
+                credential = GoogleWebAuthorizationBroker.AuthorizeAsync(GoogleClientSecrets.FromStream(stream).Secrets, Scopes, "user", CancellationToken.None, new FileDataStore(path, true)).Result;
             }
             string message;
             if (i == 1)

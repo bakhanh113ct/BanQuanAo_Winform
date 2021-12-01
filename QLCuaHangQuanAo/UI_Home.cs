@@ -15,7 +15,7 @@ namespace QLCuaHangQuanAo
 {
     public partial class UI_Home : Form
     {
-        public static List<Control_User.Item> ListItem;
+        static public List<Control_User.Item> ListItem;
         List<Panel> subbar = new List<Panel>();
         List<Guna2Button> Home_button = new List<Guna2Button>();
         private Form activeForm = null;
@@ -23,7 +23,7 @@ namespace QLCuaHangQuanAo
         private Home_perfomancecs home = null;
         private Invoice_performance invoice = null;
         private Settings_performance setting = null;
-        public UI_Home(DTO.KHACHHANG kh)
+        public UI_Home()
         {
             InitializeComponent();
             home = new Home_perfomancecs();

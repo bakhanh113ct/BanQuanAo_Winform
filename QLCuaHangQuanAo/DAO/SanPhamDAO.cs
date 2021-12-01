@@ -20,7 +20,7 @@ namespace QLCuaHangQuanAo.DAO
             private set => instance = value;
         }
 
-        public static List<SANPHAM> LoadSP()
+        public List<SANPHAM> LoadListSP()
         {
             List<SANPHAM> lll = new List<SANPHAM>();
 
@@ -32,17 +32,19 @@ namespace QLCuaHangQuanAo.DAO
             }
             return lll;
         }
-        public static List<SANPHAM> LoadSP1()
+
+        public SANPHAM LoadSP(string id)
         {
             List<SANPHAM> lll = new List<SANPHAM>();
 
-            DataTable data = DataProvider.ExcuseQuery1("select * from SANPHAM");
+            DataTable data = DataProvider.ExecuteQuery("select * from SANPHAM where MASP = '"+id+"'");
             foreach (DataRow item in data.Rows)
             {
                 SANPHAM sanpham = new SANPHAM(item);
                 lll.Add(sanpham);
             }
-            return lll;
+            return lll[0];
+
         }
         static public bool InsertSP(string ten, string gia, string SL, string mota, string loai, byte[] image)
         {
@@ -52,18 +54,16 @@ namespace QLCuaHangQuanAo.DAO
                 return false;
             else
                 return true;
-            return false;
         }
 
-        static public bool UpdateSP(string ten, string gia, string SL, string mota, string loai, byte[] image, string old_Name)
+        static public bool UpdateSP(string ten, string gia, string SL, string daban, string mota, string loai, byte[] image, string old_Name)
         {
             int check = DAO.DataProvider.ExecuteNonQuery("update SANPHAM set TEN = @Ten , GIA = @Gia , SL = @SoLuong , DANHGIA = @DanhGia , DABAN = @DaBan , MOTA = @MoTa , IDLOAI = @Loai , ANH = @Anh where MASP = '" + old_Name + "'",
-                                                            new object[] { ten , gia , SL , "0" , "0" , mota , loai , image });
+                                                            new object[] { ten , gia , SL , "0" , daban , mota , loai , image });
             if (check == 0)
                 return false;
             else
                 return true;
-            return false;
         }
 
         internal object SLSP()
@@ -78,12 +78,11 @@ namespace QLCuaHangQuanAo.DAO
 
         static public bool DeleteSP(string id)
         {
-           DAO.DataProvider.ExcuseNonQuery1("delete from SANPHAM where MASP = '"+id+"'");
-            //if (check == 0)
-            //    return false;
-            //else
-            //    return true;
-            return false;
+           int check = DAO.DataProvider.ExcuseNonQuery1("delete from SANPHAM where MASP = '"+id+"'");
+            if (check == 0)
+                return false;
+            else
+                return true;
         }
 
         public bool ReduceSL(string sl, string id)
@@ -93,7 +92,6 @@ namespace QLCuaHangQuanAo.DAO
                 return false;
             else
                 return true;
-            return false;
         }
 
         public void IncreaseDaban(string sl, string id)

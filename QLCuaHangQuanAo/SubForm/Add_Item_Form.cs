@@ -37,8 +37,9 @@ namespace QLCuaHangQuanAo.SubForm
                 }
                 else
                 {
-                    DialogResult result = MessageBox.Show("Them thanh cong.");
+                    MessageBox.Show("Them thanh cong.");
                 }
+            this.Close();
         }
 
         private void exit_Click(object sender, EventArgs e)

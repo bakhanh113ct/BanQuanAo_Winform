@@ -206,7 +206,7 @@ insert into CTHD ( SOHD, MASP, SL)
 values(4, 3, 9)
 
 go
-insert into TAIKHOAN(DISPLAYNAME, USERNAME, PASSWORD, TYPETK) values ('admin', 'admin', 'admin', 0)
+
 
 create proc test
 as select KHACHHANG.MAKH, HOTEN, NGHD, HOADON.SOHD, TRANG_THAI, ANH, SUM(SL) as SOHANG
@@ -226,3 +226,7 @@ delete from TAIKHOAN
 
 delete from SANPHAM
 exec test
+
+
+--Thêm admin
+insert into TAIKHOAN(DISPLAYNAME, USERNAME, PASSWORD, TYPETK) values ('admin', 'admin', 'admin', 0)

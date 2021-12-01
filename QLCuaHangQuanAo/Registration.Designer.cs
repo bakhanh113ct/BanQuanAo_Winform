@@ -75,7 +75,7 @@ namespace QLCuaHangQuanAo
             this.rdOther.Location = new System.Drawing.Point(434, 390);
             this.rdOther.Name = "rdOther";
             this.rdOther.Size = new System.Drawing.Size(56, 20);
-            this.rdOther.TabIndex = 30;
+            this.rdOther.TabIndex = 10;
             this.rdOther.Text = "Khác";
             this.rdOther.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rdOther.UncheckedState.BorderThickness = 2;
@@ -94,7 +94,7 @@ namespace QLCuaHangQuanAo
             this.rdMale.Location = new System.Drawing.Point(239, 390);
             this.rdMale.Name = "rdMale";
             this.rdMale.Size = new System.Drawing.Size(54, 20);
-            this.rdMale.TabIndex = 28;
+            this.rdMale.TabIndex = 8;
             this.rdMale.Text = "Nam";
             this.rdMale.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rdMale.UncheckedState.BorderThickness = 2;
@@ -119,7 +119,7 @@ namespace QLCuaHangQuanAo
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.ShadowDecoration.Parent = this.btnRegister;
             this.btnRegister.Size = new System.Drawing.Size(477, 45);
-            this.btnRegister.TabIndex = 31;
+            this.btnRegister.TabIndex = 11;
             this.btnRegister.Text = "Đăng kí";
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
@@ -151,7 +151,7 @@ namespace QLCuaHangQuanAo
             this.rdFemale.Location = new System.Drawing.Point(331, 390);
             this.rdFemale.Name = "rdFemale";
             this.rdFemale.Size = new System.Drawing.Size(42, 20);
-            this.rdFemale.TabIndex = 29;
+            this.rdFemale.TabIndex = 9;
             this.rdFemale.Text = "Nữ";
             this.rdFemale.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rdFemale.UncheckedState.BorderThickness = 2;
@@ -174,7 +174,7 @@ namespace QLCuaHangQuanAo
             this.pickerBirthday.Name = "pickerBirthday";
             this.pickerBirthday.ShadowDecoration.Parent = this.pickerBirthday;
             this.pickerBirthday.Size = new System.Drawing.Size(244, 36);
-            this.pickerBirthday.TabIndex = 24;
+            this.pickerBirthday.TabIndex = 3;
             this.pickerBirthday.Value = new System.DateTime(2021, 11, 13, 18, 14, 13, 691);
             // 
             // lbGender
@@ -184,7 +184,7 @@ namespace QLCuaHangQuanAo
             this.lbGender.Location = new System.Drawing.Point(74, 387);
             this.lbGender.Name = "lbGender";
             this.lbGender.Size = new System.Drawing.Size(71, 24);
-            this.lbGender.TabIndex = 41;
+            this.lbGender.TabIndex = 22;
             this.lbGender.Text = "Giới tính";
             // 
             // tbCfPassword
@@ -209,7 +209,7 @@ namespace QLCuaHangQuanAo
             this.tbCfPassword.SelectedText = "";
             this.tbCfPassword.ShadowDecoration.Parent = this.tbCfPassword;
             this.tbCfPassword.Size = new System.Drawing.Size(248, 36);
-            this.tbCfPassword.TabIndex = 27;
+            this.tbCfPassword.TabIndex = 7;
             // 
             // lbCfPassword
             // 
@@ -218,7 +218,7 @@ namespace QLCuaHangQuanAo
             this.lbCfPassword.Location = new System.Drawing.Point(394, 313);
             this.lbCfPassword.Name = "lbCfPassword";
             this.lbCfPassword.Size = new System.Drawing.Size(155, 24);
-            this.lbCfPassword.TabIndex = 40;
+            this.lbCfPassword.TabIndex = 21;
             this.lbCfPassword.Text = "Xác nhận mật khẩu";
             // 
             // tbPassword
@@ -243,7 +243,7 @@ namespace QLCuaHangQuanAo
             this.tbPassword.SelectedText = "";
             this.tbPassword.ShadowDecoration.Parent = this.tbPassword;
             this.tbPassword.Size = new System.Drawing.Size(248, 36);
-            this.tbPassword.TabIndex = 26;
+            this.tbPassword.TabIndex = 6;
             // 
             // lbPassword
             // 
@@ -252,7 +252,7 @@ namespace QLCuaHangQuanAo
             this.lbPassword.Location = new System.Drawing.Point(71, 313);
             this.lbPassword.Name = "lbPassword";
             this.lbPassword.Size = new System.Drawing.Size(80, 24);
-            this.lbPassword.TabIndex = 39;
+            this.lbPassword.TabIndex = 20;
             this.lbPassword.Tag = "";
             this.lbPassword.Text = "Mật khẩu";
             // 
@@ -263,7 +263,7 @@ namespace QLCuaHangQuanAo
             this.lbBirthday.Location = new System.Drawing.Point(394, 136);
             this.lbBirthday.Name = "lbBirthday";
             this.lbBirthday.Size = new System.Drawing.Size(85, 24);
-            this.lbBirthday.TabIndex = 37;
+            this.lbBirthday.TabIndex = 17;
             this.lbBirthday.Text = "Ngày sinh";
             // 
             // tbAddress
@@ -288,7 +288,7 @@ namespace QLCuaHangQuanAo
             this.tbAddress.SelectedText = "";
             this.tbAddress.ShadowDecoration.Parent = this.tbAddress;
             this.tbAddress.Size = new System.Drawing.Size(248, 36);
-            this.tbAddress.TabIndex = 22;
+            this.tbAddress.TabIndex = 1;
             // 
             // tbPhone
             // 
@@ -312,7 +312,7 @@ namespace QLCuaHangQuanAo
             this.tbPhone.SelectedText = "";
             this.tbPhone.ShadowDecoration.Parent = this.tbPhone;
             this.tbPhone.Size = new System.Drawing.Size(248, 36);
-            this.tbPhone.TabIndex = 23;
+            this.tbPhone.TabIndex = 2;
             // 
             // lbAddress
             // 
@@ -321,7 +321,7 @@ namespace QLCuaHangQuanAo
             this.lbAddress.Location = new System.Drawing.Point(394, 50);
             this.lbAddress.Name = "lbAddress";
             this.lbAddress.Size = new System.Drawing.Size(60, 24);
-            this.lbAddress.TabIndex = 35;
+            this.lbAddress.TabIndex = 15;
             this.lbAddress.Text = "Địa chỉ";
             // 
             // lbPhone
@@ -331,7 +331,7 @@ namespace QLCuaHangQuanAo
             this.lbPhone.Location = new System.Drawing.Point(71, 136);
             this.lbPhone.Name = "lbPhone";
             this.lbPhone.Size = new System.Drawing.Size(108, 24);
-            this.lbPhone.TabIndex = 36;
+            this.lbPhone.TabIndex = 16;
             this.lbPhone.Text = "Số điện thoại";
             // 
             // tbUserName
@@ -356,7 +356,7 @@ namespace QLCuaHangQuanAo
             this.tbUserName.SelectedText = "";
             this.tbUserName.ShadowDecoration.Parent = this.tbUserName;
             this.tbUserName.Size = new System.Drawing.Size(248, 36);
-            this.tbUserName.TabIndex = 25;
+            this.tbUserName.TabIndex = 5;
             // 
             // tbFullName
             // 
@@ -380,7 +380,7 @@ namespace QLCuaHangQuanAo
             this.tbFullName.SelectedText = "";
             this.tbFullName.ShadowDecoration.Parent = this.tbFullName;
             this.tbFullName.Size = new System.Drawing.Size(248, 36);
-            this.tbFullName.TabIndex = 21;
+            this.tbFullName.TabIndex = 0;
             // 
             // lbUsername
             // 
@@ -389,7 +389,7 @@ namespace QLCuaHangQuanAo
             this.lbUsername.Location = new System.Drawing.Point(394, 226);
             this.lbUsername.Name = "lbUsername";
             this.lbUsername.Size = new System.Drawing.Size(111, 24);
-            this.lbUsername.TabIndex = 38;
+            this.lbUsername.TabIndex = 19;
             this.lbUsername.Text = "Tên tài khoản";
             // 
             // lbfullname
@@ -399,7 +399,7 @@ namespace QLCuaHangQuanAo
             this.lbfullname.Location = new System.Drawing.Point(71, 50);
             this.lbfullname.Name = "lbfullname";
             this.lbfullname.Size = new System.Drawing.Size(60, 24);
-            this.lbfullname.TabIndex = 34;
+            this.lbfullname.TabIndex = 14;
             this.lbfullname.Text = "Họ tên";
             // 
             // guna2GradientPanel1
@@ -410,7 +410,7 @@ namespace QLCuaHangQuanAo
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
             this.guna2GradientPanel1.Size = new System.Drawing.Size(42, 4);
-            this.guna2GradientPanel1.TabIndex = 33;
+            this.guna2GradientPanel1.TabIndex = 13;
             // 
             // label1
             // 
@@ -419,7 +419,7 @@ namespace QLCuaHangQuanAo
             this.label1.Location = new System.Drawing.Point(9, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 34);
-            this.label1.TabIndex = 32;
+            this.label1.TabIndex = 12;
             this.label1.Text = "Đăng kí";
             // 
             // tool3
@@ -430,12 +430,12 @@ namespace QLCuaHangQuanAo
             this.tool3.Controls.Add(this.minimize);
             this.tool3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
             this.tool3.Location = new System.Drawing.Point(651, 1);
-            this.tool3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tool3.Margin = new System.Windows.Forms.Padding(2);
             this.tool3.Name = "tool3";
             this.tool3.ShadowColor = System.Drawing.Color.Black;
             this.tool3.ShadowShift = 0;
             this.tool3.Size = new System.Drawing.Size(69, 24);
-            this.tool3.TabIndex = 42;
+            this.tool3.TabIndex = 23;
             // 
             // exit
             // 
@@ -453,7 +453,7 @@ namespace QLCuaHangQuanAo
             this.exit.Image = global::QLCuaHangQuanAo.Properties.Resources.delete_64px;
             this.exit.ImageSize = new System.Drawing.Size(22, 22);
             this.exit.Location = new System.Drawing.Point(47, 2);
-            this.exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.exit.Margin = new System.Windows.Forms.Padding(2);
             this.exit.Name = "exit";
             this.exit.ShadowDecoration.Parent = this.exit;
             this.exit.Size = new System.Drawing.Size(20, 21);
@@ -476,7 +476,7 @@ namespace QLCuaHangQuanAo
             this.zooe_in_out.Image = global::QLCuaHangQuanAo.Properties.Resources.toggle_full_screen_64px;
             this.zooe_in_out.ImageSize = new System.Drawing.Size(22, 22);
             this.zooe_in_out.Location = new System.Drawing.Point(25, 2);
-            this.zooe_in_out.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.zooe_in_out.Margin = new System.Windows.Forms.Padding(2);
             this.zooe_in_out.Name = "zooe_in_out";
             this.zooe_in_out.ShadowDecoration.Parent = this.zooe_in_out;
             this.zooe_in_out.Size = new System.Drawing.Size(20, 21);
@@ -498,7 +498,7 @@ namespace QLCuaHangQuanAo
             this.minimize.Image = global::QLCuaHangQuanAo.Properties.Resources.minimize_window_64px2;
             this.minimize.ImageSize = new System.Drawing.Size(22, 22);
             this.minimize.Location = new System.Drawing.Point(2, 2);
-            this.minimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.minimize.Margin = new System.Windows.Forms.Padding(2);
             this.minimize.Name = "minimize";
             this.minimize.ShadowDecoration.Parent = this.minimize;
             this.minimize.Size = new System.Drawing.Size(20, 21);
@@ -527,7 +527,7 @@ namespace QLCuaHangQuanAo
             this.tbEmail.SelectedText = "";
             this.tbEmail.ShadowDecoration.Parent = this.tbEmail;
             this.tbEmail.Size = new System.Drawing.Size(248, 36);
-            this.tbEmail.TabIndex = 43;
+            this.tbEmail.TabIndex = 4;
             // 
             // email
             // 
@@ -536,12 +536,13 @@ namespace QLCuaHangQuanAo
             this.email.Location = new System.Drawing.Point(73, 226);
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(52, 24);
-            this.email.TabIndex = 44;
+            this.email.TabIndex = 18;
             this.email.Tag = "";
             this.email.Text = "Email";
             // 
             // Registration
             // 
+            this.AcceptButton = this.btnRegister;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 483);

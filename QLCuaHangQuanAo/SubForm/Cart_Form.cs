@@ -51,7 +51,7 @@ namespace QLCuaHangQuanAo.SubForm
                 dtgrvItem.Rows.RemoveAt(i);
                 Item_HD.item_HDs.RemoveAt(i);
             }
-            Store_performence.reloadlb(Store_performence.slhangtronggio);
+            Store_performence.reloadlb();
         }
 
         private void btnXN_Click(object sender, EventArgs e)
@@ -92,8 +92,9 @@ namespace QLCuaHangQuanAo.SubForm
             if(Item_HD.item_HDs.Count != 0)
             {
                 Item_HD.item_HDs.Clear();
-                Store_performence.slhangtronggio = 0;
             }
+            //Load lại label số lượng hàng trong giỏ
+            Store_performence.reloadlb();
             
         }
         private void dtgrvItem_CellEndEdit(object sender, DataGridViewCellEventArgs e)
