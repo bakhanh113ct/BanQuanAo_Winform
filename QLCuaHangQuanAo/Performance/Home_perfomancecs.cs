@@ -25,6 +25,7 @@ namespace QLCuaHangQuanAo
             LoadBarChar();
             LoadTime();
             loadSLHD();
+            addthanglencombobox();
         }
 
         private void LoadTime()
@@ -46,23 +47,23 @@ namespace QLCuaHangQuanAo
             DataTable loadPieChart = DAO.SanPhamDAO.Instance.loadSL();
             hangtrongkho.DataSource = loadPieChart;
             hangtrongkho.Series["sohang"].XValueMember = "TENLOAI";
-            hangtrongkho.Series["sohang"].YValueMembers = "SL";
+            hangtrongkho.Series["sohang"].YValueMembers = "SL"; 
+        }
+        void loadSPbanDc(int month)
+        {
+            DataTable loadPieChart1 = DAO.SanPhamDAO.Instance.loadSLBanDc(month);
+            sohang.DataSource = loadPieChart1;
+            sohang.Series["sohang"].XValueMember = "TENLOAI";
+            sohang.Series["sohang"].YValueMembers = "SL";
         }
         private void Loadtoplist()
         {
-            SLKH.Text = "Total: " + DAO.KhachHangDAO.Instance.SLKH().ToString() + " Khách hàng";
+            SLKH.Text = "Tổng: " + DAO.KhachHangDAO.Instance.SLKH().ToString() + " Khách hàng";
             DataTable loadtopKH = DAO.KhachHangDAO.Instance.loadtopKH();
             foreach(DataRow row in loadtopKH.Rows)
             {
                 Control_User.topList temp = new Control_User.topList(row);
                 top_list.Controls.Add(temp);
-            }
-            SLSP.Text = "Total: " + DAO.SanPhamDAO.Instance.SLSP().ToString() + " Sản phẩm";
-            DataTable loadtopSP = DAO.SanPhamDAO.Instance.loadtopSP();
-            foreach (DataRow row in loadtopSP.Rows)
-            {
-                Control_User.topList temp = new Control_User.topList(row, "Knull");
-                top_listSP.Controls.Add(temp);
             }
         }
 
@@ -86,8 +87,46 @@ namespace QLCuaHangQuanAo
             cmp.Text = DAO.HoaDonDAO.Instance.cmpHD().ToString() + "%";
             Items.Text = "Items: " + DAO.SanPhamDAO.Instance.countSPsold().ToString();
             Delivered.Text = "Delivered: " + DAO.HoaDonDAO.Instance.SLHD_HOANTHANH().ToString();
+            Sl_HD_huy.Text = DAO.HoaDonDAO.Instance.SLHD_huy().ToString();
 
 
+        }
+        int dem = 0;
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {   
+            if (dem == 0)
+            {
+                top_list.Controls.Clear();
+                SLKH.Text = "Tổng: " + DAO.SanPhamDAO.Instance.SLSP().ToString() + " Sản phẩm";
+                DataTable loadtopSP = DAO.SanPhamDAO.Instance.loadtopSP();
+                foreach (DataRow row in loadtopSP.Rows)
+                {
+                    Control_User.topList temp = new Control_User.topList(row, "Knull");
+                    top_list.Controls.Add(temp);
+                }
+                dem = 1;
+            }else
+            {
+                top_list.Controls.Clear();
+                Loadtoplist();
+                dem = 0;
+            }
+        }
+        void addthanglencombobox()
+        {
+            int month = 1;
+            //thang.Items.Add("All");
+            while (month <= DateTime.Now.Month)
+            {
+                thang.Items.Add("Tháng " + month++.ToString());
+            }
+            thang.SelectedIndex = DateTime.Now.Month - 1;
+            //dem = 1;
+        }
+
+        private void thang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            loadSPbanDc(5);
         }
     }
 }

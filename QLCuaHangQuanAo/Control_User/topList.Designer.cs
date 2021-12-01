@@ -32,7 +32,6 @@ namespace QLCuaHangQuanAo.Control_User
             this.hi = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.top = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.tang = new System.Windows.Forms.Label();
             this.doanhso = new System.Windows.Forms.Label();
             this.hoten = new System.Windows.Forms.Label();
             this.anhdd = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -45,7 +44,6 @@ namespace QLCuaHangQuanAo.Control_User
             // 
             this.hi.BackColor = System.Drawing.Color.Transparent;
             this.hi.Controls.Add(this.top);
-            this.hi.Controls.Add(this.tang);
             this.hi.Controls.Add(this.doanhso);
             this.hi.Controls.Add(this.hoten);
             this.hi.Controls.Add(this.anhdd);
@@ -86,17 +84,6 @@ namespace QLCuaHangQuanAo.Control_User
             this.label1.TabIndex = 0;
             this.label1.Text = "1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tang
-            // 
-            this.tang.AutoSize = true;
-            this.tang.Font = new System.Drawing.Font("Quicksand SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tang.ForeColor = System.Drawing.Color.Lime;
-            this.tang.Location = new System.Drawing.Point(197, 32);
-            this.tang.Name = "tang";
-            this.tang.Size = new System.Drawing.Size(44, 23);
-            this.tang.TabIndex = 3;
-            this.tang.Text = "+99$";
             // 
             // doanhso
             // 
@@ -156,7 +143,6 @@ namespace QLCuaHangQuanAo.Control_User
 
         private Guna.UI2.WinForms.Guna2ShadowPanel hi;
         private Guna.UI2.WinForms.Guna2CirclePictureBox anhdd;
-        private System.Windows.Forms.Label tang;
         private System.Windows.Forms.Label doanhso;
         private System.Windows.Forms.Label hoten;
         private Guna.UI2.WinForms.Guna2ShadowPanel top;

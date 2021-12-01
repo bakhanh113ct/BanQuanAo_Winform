@@ -18,19 +18,8 @@ namespace QLCuaHangQuanAo.DAO
         private static DataProvider instance;
         //public static List<Control_User.Item> ListItem;
         //static string strCon = "Data Source=.\\;Initial Catalog=QuanLyKho;Integrated Security=True";
-        private static string strCon = "Data Source=.\\;Initial Catalog=QuanLyKho;Integrated Security=True";
+        static string strCon = "Data Source=DESKTOP-5E0I4OU\\SQLEXPRESS01;Initial Catalog=QuanLyKho;Integrated Security=True";
         //private static SqlConnection conn;
-        public static void IntializeConnection()
-        {
-            //if (conn != null)
-            // conn.Close();
-
-
-
-            //conn = new SqlConnection(strCon);
-        }
-
-
 
         public static DataProvider Instance
         {
@@ -184,6 +173,7 @@ namespace QLCuaHangQuanAo.DAO
 
 
 
+            }
         }
     }
 }

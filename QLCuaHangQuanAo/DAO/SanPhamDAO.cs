@@ -56,7 +56,14 @@ namespace QLCuaHangQuanAo.DAO
                 return true;
         }
 
-        static public bool UpdateSP(string ten, string gia, string SL, string daban, string mota, string loai, byte[] image, string old_Name)
+        internal DataTable loadSLBanDc(int month)
+        {
+            return DataProvider.ExcuseQuery1("select TENLOAI, sum(CTHD.SL) as SL FROM LOAISP,SANPHAM, CTHD, HOADON " +
+                "WHERE CTHD.MASP = SANPHAM.MASP and HOADON.SOHD = CTHD.SOHD " +
+                "AND IDLOAI = ID and month(NGHD) = "+ month +" GROUP BY TENLOAI");
+        }
+
+        static public bool UpdateSP(string ten, string gia, string SL, string mota, string loai, byte[] image, string old_Name)
         {
             int check = DAO.DataProvider.ExecuteNonQuery("update SANPHAM set TEN = @Ten , GIA = @Gia , SL = @SoLuong , DANHGIA = @DanhGia , DABAN = @DaBan , MOTA = @MoTa , IDLOAI = @Loai , ANH = @Anh where MASP = '" + old_Name + "'",
                                                             new object[] { ten , gia , SL , "0" , daban , mota , loai , image });
@@ -98,27 +105,33 @@ namespace QLCuaHangQuanAo.DAO
         {
             DataProvider.ExecuteNonQuery("update SANPHAM set DABAN += '" + sl + "' where MASP = '" + id + "'");
         }
-        public void update_SLSP(int SOHD)
-        {
-            DataTable list_sp = DataProvider.ExcuseQuery1("select MASP, SL from CTHD where CTHD.SOHD = " + SOHD);
+        //public void update_SLSP(int SOHD)
+        //{
+        //    DataTable list_sp = DataProvider.ExcuseQuery1("select MASP, SL from CTHD where CTHD.SOHD = " + SOHD);
 
-            foreach (DataRow row in list_sp.Rows)
-            {
-                int sl = (int)row["SL"];
-                int masp = (int)row["MASP"];
-                int soluong = 0;
-                DataTable SL = DataProvider.ExcuseQuery1("select SL from SANPHAM where MASP = " + masp);
-                foreach (DataRow row1 in SL.Rows)
-                {
-                    soluong = (int)row1["SL"];
-                }
-                soluong -= sl;
-                if (soluong >= 0)
-                {
-                    DataProvider.ExcuseNonQuery1("update SANPHAM set SL = " + soluong + " where MASP =  " + masp);
-                }
-            }
+        //    foreach (DataRow row in list_sp.Rows)
+        //    {
+        //        int sl = (int)row["SL"];
+        //        int masp = (int)row["MASP"];
+        //        int soluong = 0;
+        //        DataTable SL = DataProvider.ExcuseQuery1("select SL from SANPHAM where MASP = " + masp);
+        //        foreach (DataRow row1 in SL.Rows)
+        //        {
+        //            soluong = (int)row1["SL"];
+        //        }
+        //        soluong -= sl;
+        //        if (soluong >= 0)
+        //        {
+        //            DataProvider.ExcuseNonQuery1("update SANPHAM set SL = " + soluong + " where MASP =  " + masp);
+        //        }
+        //    }
+        //}
+
+        internal void SLSP_in_MASP(int MASP, int SL)
+        {
+            DataProvider.ExcuseNonQuery1("Update SANPHAM set SL += " + SL + " Where MASP = " + MASP);
         }
+
         public DataTable loadtopSP()
         {
             return DataProvider.ExcuseQuery1("select top 3 TEN,ANH, SUM(CTHD.SL) AS SL  " +

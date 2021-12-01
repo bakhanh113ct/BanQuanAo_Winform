@@ -21,7 +21,7 @@ namespace QLCuaHangQuanAo
         private Form activeForm = null;
         public static Store_performence store = null;
         private Home_perfomancecs home = null;
-        private Invoice_performance invoice = null;
+       // private Invoice_performance invoice = null;
         private Settings_performance setting = null;
         public UI_Home()
         {
@@ -31,14 +31,25 @@ namespace QLCuaHangQuanAo
             ListItem = new List<Control_User.Item>();
             subbar_Change(subbar1, HOME);
             openPerformance(home);
-          
+            
+        }
+        public UI_Home()
+        {
+            InitializeComponent();
+            home = new Home_perfomancecs();
+            AddSubbarandHomeButton();
+            ListItem = new List<Control_User.Item>();
+            subbar_Change(subbar1, HOME);
+            openPerformance(home);
+
         }
 
         private void UI_Home_Load(object sender, EventArgs e)
         {
             store = new Store_performence();
-            invoice = new Invoice_performance();
+            //invoice = new Invoice_performance();
             setting = new Settings_performance();
+            time.Text = DateTime.Now.ToShortDateString();
         }
 
        
@@ -108,7 +119,7 @@ namespace QLCuaHangQuanAo
         private void btnINVOICE_Click(object sender, EventArgs e)
         {
             subbar_Change(subbar3, btnINVOICE);
-            openPerformance(invoice);
+            openPerformance(new Invoice_performance());
 
             DAO.Sound.Instance.sound_Click();
         }
