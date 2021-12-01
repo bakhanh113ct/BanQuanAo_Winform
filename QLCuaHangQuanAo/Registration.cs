@@ -70,7 +70,7 @@ namespace QLCuaHangQuanAo
                     int idkh = DAO.KhachHangDAO.Instance.GetIdMax();
                     int gt = GetGioiTinh();
 
-                    DTO.KHACHHANG kh = new DTO.KHACHHANG(idkh, idtk + 1, tbFullName.Text, tbAddress.Text, tbPhone.Text, pickerBirthday.Value, gt, null, tbEmail.Text);
+                    DTO.KHACHHANG kh = new DTO.KHACHHANG(idkh, idtk + 1, tbFullName.Text, tbAddress.Text, tbPhone.Text, pickerBirthday.Value.Date.ToString("yyyy/MM/dd"), gt, null, tbEmail.Text);
 
                     if (DAO.KhachHangDAO.Instance.InsertKH(kh))
                     {
