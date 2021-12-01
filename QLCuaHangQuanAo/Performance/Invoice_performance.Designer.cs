@@ -29,16 +29,15 @@ namespace QLCuaHangQuanAo
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.list_KH = new System.Windows.Forms.FlowLayoutPanel();
             this.loadBill = new Guna.UI2.WinForms.Guna2DataGridView();
             this.MASP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TENSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
             this.View = new Guna.UI2.WinForms.Guna2Button();
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@ namespace QLCuaHangQuanAo
             this.label5 = new System.Windows.Forms.Label();
             this.NGHD = new System.Windows.Forms.Label();
             this.time = new Guna.UI2.WinForms.Guna2Panel();
+            this.tim_theo_ten = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.loadBill)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.time.SuspendLayout();
@@ -71,21 +71,21 @@ namespace QLCuaHangQuanAo
             this.loadBill.AllowUserToDeleteRows = false;
             this.loadBill.AllowUserToOrderColumns = true;
             this.loadBill.AllowUserToResizeRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(205)))), ((int)(((byte)(233)))));
-            this.loadBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(205)))), ((int)(((byte)(233)))));
+            this.loadBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.loadBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.loadBill.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
             this.loadBill.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.loadBill.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.loadBill.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(78)))), ((int)(((byte)(191)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.loadBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(78)))), ((int)(((byte)(191)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.loadBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.loadBill.ColumnHeadersHeight = 52;
             this.loadBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.loadBill.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -93,14 +93,14 @@ namespace QLCuaHangQuanAo
             this.TENSP,
             this.SL,
             this.GIA});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(221)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.loadBill.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(221)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.loadBill.DefaultCellStyle = dataGridViewCellStyle9;
             this.loadBill.EnableHeadersVisualStyles = false;
             this.loadBill.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
             this.loadBill.Location = new System.Drawing.Point(435, 58);
@@ -163,17 +163,6 @@ namespace QLCuaHangQuanAo
             this.GIA.MinimumWidth = 6;
             this.GIA.Name = "GIA";
             this.GIA.ReadOnly = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Quicksand SemiBold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 57);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Hóa đơn";
             // 
             // View
             // 
@@ -241,7 +230,7 @@ namespace QLCuaHangQuanAo
             this.thang.HoverState.Parent = this.thang;
             this.thang.ItemHeight = 30;
             this.thang.ItemsAppearance.Parent = this.thang;
-            this.thang.Location = new System.Drawing.Point(262, 12);
+            this.thang.Location = new System.Drawing.Point(46, 8);
             this.thang.Name = "thang";
             this.thang.ShadowDecoration.Parent = this.thang;
             this.thang.Size = new System.Drawing.Size(143, 36);
@@ -253,7 +242,7 @@ namespace QLCuaHangQuanAo
             // 
             this.guna2PictureBox1.Image = global::QLCuaHangQuanAo.Properties.Resources.filter_50px;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(216, 11);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 8);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
             this.guna2PictureBox1.Size = new System.Drawing.Size(40, 40);
@@ -341,17 +330,43 @@ namespace QLCuaHangQuanAo
             this.time.Size = new System.Drawing.Size(399, 179);
             this.time.TabIndex = 13;
             // 
+            // tim_theo_ten
+            // 
+            this.tim_theo_ten.BorderRadius = 5;
+            this.tim_theo_ten.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tim_theo_ten.DefaultText = "";
+            this.tim_theo_ten.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tim_theo_ten.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tim_theo_ten.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tim_theo_ten.DisabledState.Parent = this.tim_theo_ten;
+            this.tim_theo_ten.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tim_theo_ten.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tim_theo_ten.FocusedState.Parent = this.tim_theo_ten;
+            this.tim_theo_ten.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tim_theo_ten.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tim_theo_ten.HoverState.Parent = this.tim_theo_ten;
+            this.tim_theo_ten.Location = new System.Drawing.Point(209, 8);
+            this.tim_theo_ten.Name = "tim_theo_ten";
+            this.tim_theo_ten.PasswordChar = '\0';
+            this.tim_theo_ten.PlaceholderText = "Tìm theo tên";
+            this.tim_theo_ten.SelectedText = "";
+            this.tim_theo_ten.ShadowDecoration.Parent = this.tim_theo_ten;
+            this.tim_theo_ten.Size = new System.Drawing.Size(200, 43);
+            this.tim_theo_ten.TabIndex = 14;
+            this.tim_theo_ten.TextChanged += new System.EventHandler(this.tim_theo_ten_TextChanged);
+            this.tim_theo_ten.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tim_theo_ten_KeyPress);
+            // 
             // Invoice_performance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(915, 543);
+            this.Controls.Add(this.tim_theo_ten);
             this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.thang);
             this.Controls.Add(this.time);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.View);
             this.Controls.Add(this.loadBill);
@@ -372,7 +387,6 @@ namespace QLCuaHangQuanAo
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel list_KH;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button View;
         private Guna.UI2.WinForms.Guna2DataGridView loadBill;
         private System.Windows.Forms.DataGridViewTextBoxColumn MASP;
@@ -390,5 +404,6 @@ namespace QLCuaHangQuanAo
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label NGHD;
         private Guna.UI2.WinForms.Guna2Panel time;
+        private Guna.UI2.WinForms.Guna2TextBox tim_theo_ten;
     }
 }

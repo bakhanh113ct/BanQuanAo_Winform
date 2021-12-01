@@ -186,5 +186,44 @@ namespace QLCuaHangQuanAo
         {
             DAO.Sound.Instance.sound_Click();
         }
+
+        private void tim_theo_ten_TextChanged(object sender, EventArgs e)
+        {
+            int k = 0;
+            foreach (Control_User.list_order i in dcm)
+            {
+                //ie i = (item.btnItem.Tag as SANPHAM);
+                if (i.TenKH.Contains(tim_theo_ten.Text))
+                {
+                    k++;
+                    if (k == 1)
+                        list_KH.Controls.Clear();
+                    list_KH.Controls.Add(i);
+                }
+            }
+        }
+
+        private void tim_theo_ten_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Convert.ToInt32(e.KeyChar) == 13)
+            {
+                int k = 0;
+                foreach (Control_User.list_order item in dcm)
+                {
+                    //SANPHAM i = (item.btnItem.Tag as SANPHAM);
+                    if (item.TenKH.Contains(tim_theo_ten.Text))
+                    {
+                        k++;
+                        if (k == 1)
+                            list_KH.Controls.Clear();
+                        list_KH.Controls.Add(item);
+                    }
+                }
+                if (k == 0)
+                {
+                    MessageBox.Show("Không tìm thấy hóa đơn", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }

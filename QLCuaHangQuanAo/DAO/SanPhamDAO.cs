@@ -56,11 +56,11 @@ namespace QLCuaHangQuanAo.DAO
                 return true;
         }
 
-        internal DataTable loadSLBanDc(int month)
+        internal DataTable loadSLBanDc(string month)
         {
             return DataProvider.ExcuseQuery1("select TENLOAI, sum(CTHD.SL) as SL FROM LOAISP,SANPHAM, CTHD, HOADON " +
                 "WHERE CTHD.MASP = SANPHAM.MASP and HOADON.SOHD = CTHD.SOHD " +
-                "AND IDLOAI = ID and month(NGHD) = "+ month +" GROUP BY TENLOAI");
+                "AND IDLOAI = ID " + month + " GROUP BY TENLOAI");
         }
 
         static public bool UpdateSP(string ten, string gia, string SL,string daban, string mota, string loai, byte[] image, string old_Name)

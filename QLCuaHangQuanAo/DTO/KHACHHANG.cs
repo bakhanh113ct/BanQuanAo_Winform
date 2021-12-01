@@ -53,7 +53,7 @@ namespace QLCuaHangQuanAo.DTO
             hoTen = row["HOTEN"].ToString();
             diaChi = row["DCHI"].ToString();
             soDT = row["SODT"].ToString();
-            ngSinh = ((string)row["NGSINH"]).ToString();
+            ngSinh = ((DateTime)row["NGSINH"]).ToString();
             gioitinh = (int)row["GIOITINH"];
             if (!row.IsNull("ANH"))
                 anh = (byte[])row["ANH"];

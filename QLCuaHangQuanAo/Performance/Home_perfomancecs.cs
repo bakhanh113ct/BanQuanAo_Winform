@@ -49,9 +49,12 @@ namespace QLCuaHangQuanAo
             hangtrongkho.Series["sohang"].XValueMember = "TENLOAI";
             hangtrongkho.Series["sohang"].YValueMembers = "SL"; 
         }
-        void loadSPbanDc(int month)
+        void loadSPbanDc(string month)
         {
+
             DataTable loadPieChart1 = DAO.SanPhamDAO.Instance.loadSLBanDc(month);
+            sohang.Series["sohang"].Points.Clear();
+            sohang.Titles.Clear();
             sohang.DataSource = loadPieChart1;
             sohang.Series["sohang"].XValueMember = "TENLOAI";
             sohang.Series["sohang"].YValueMembers = "SL";
@@ -115,18 +118,29 @@ namespace QLCuaHangQuanAo
         void addthanglencombobox()
         {
             int month = 1;
-            //thang.Items.Add("All");
+            thang.Items.Add("Năm " + DateTime.Now.Year);
             while (month <= DateTime.Now.Month)
             {
                 thang.Items.Add("Tháng " + month++.ToString());
             }
-            thang.SelectedIndex = DateTime.Now.Month - 1;
+            thang.SelectedIndex = 0;
             //dem = 1;
         }
 
         private void thang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            loadSPbanDc(5);
+            if (thang.SelectedIndex == 0)
+            {
+                loadSPbanDc("");
+                Text = "Số hàng bán được trong năm 2021";
+                sohang.Titles.Add(Text);
+            }
+            else
+            {
+                loadSPbanDc("and month(NGHD) = " + thang.SelectedIndex);
+                Text = "Số hàng bán được trong tháng " + thang.SelectedIndex;
+                sohang.Titles.Add(Text);
+            }
         }
     }
 }

@@ -96,7 +96,7 @@ namespace QLCuaHangQuanAo
             // 
             this.pic_Logo.Image = global::QLCuaHangQuanAo.Properties.Resources.Logo1;
             this.pic_Logo.Location = new System.Drawing.Point(28, 4);
-            this.pic_Logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_Logo.Margin = new System.Windows.Forms.Padding(4);
             this.pic_Logo.Name = "pic_Logo";
             this.pic_Logo.Size = new System.Drawing.Size(133, 127);
             this.pic_Logo.TabIndex = 0;
@@ -106,7 +106,7 @@ namespace QLCuaHangQuanAo
             // 
             this.subbar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(19)))), ((int)(((byte)(248)))));
             this.subbar1.Location = new System.Drawing.Point(189, 140);
-            this.subbar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.subbar1.Margin = new System.Windows.Forms.Padding(4);
             this.subbar1.Name = "subbar1";
             this.subbar1.Size = new System.Drawing.Size(7, 46);
             this.subbar1.TabIndex = 5;
@@ -116,7 +116,7 @@ namespace QLCuaHangQuanAo
             this.subbar3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(19)))), ((int)(((byte)(248)))));
             this.subbar3.Controls.Add(this.panel3);
             this.subbar3.Location = new System.Drawing.Point(189, 231);
-            this.subbar3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.subbar3.Margin = new System.Windows.Forms.Padding(4);
             this.subbar3.Name = "subbar3";
             this.subbar3.Size = new System.Drawing.Size(7, 46);
             this.subbar3.TabIndex = 6;
@@ -126,7 +126,7 @@ namespace QLCuaHangQuanAo
             // 
             this.panel3.BackColor = System.Drawing.Color.Fuchsia;
             this.panel3.Location = new System.Drawing.Point(0, 46);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(13, 46);
             this.panel3.TabIndex = 6;
@@ -136,7 +136,7 @@ namespace QLCuaHangQuanAo
             // 
             this.subbar4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(19)))), ((int)(((byte)(248)))));
             this.subbar4.Location = new System.Drawing.Point(189, 277);
-            this.subbar4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.subbar4.Margin = new System.Windows.Forms.Padding(4);
             this.subbar4.Name = "subbar4";
             this.subbar4.Size = new System.Drawing.Size(7, 46);
             this.subbar4.TabIndex = 6;
@@ -146,7 +146,7 @@ namespace QLCuaHangQuanAo
             // 
             this.subbar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(19)))), ((int)(((byte)(248)))));
             this.subbar2.Location = new System.Drawing.Point(189, 186);
-            this.subbar2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.subbar2.Margin = new System.Windows.Forms.Padding(4);
             this.subbar2.Name = "subbar2";
             this.subbar2.Size = new System.Drawing.Size(7, 46);
             this.subbar2.TabIndex = 6;
@@ -308,23 +308,24 @@ namespace QLCuaHangQuanAo
             // txtPerformance
             // 
             this.txtPerformance.AutoSize = true;
-            this.txtPerformance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtPerformance.Location = new System.Drawing.Point(403, 15);
+            this.txtPerformance.Font = new System.Drawing.Font("Quicksand SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPerformance.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtPerformance.Location = new System.Drawing.Point(415, 9);
             this.txtPerformance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtPerformance.Name = "txtPerformance";
-            this.txtPerformance.Size = new System.Drawing.Size(75, 20);
+            this.txtPerformance.Size = new System.Drawing.Size(90, 25);
             this.txtPerformance.TabIndex = 5;
-            this.txtPerformance.Text = "> HOME";
+            this.txtPerformance.Text = ">    HOME";
             // 
             // txtworkspace
             // 
             this.txtworkspace.AutoSize = true;
-            this.txtworkspace.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtworkspace.Font = new System.Drawing.Font("Quicksand SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtworkspace.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtworkspace.Location = new System.Drawing.Point(280, 12);
+            this.txtworkspace.Location = new System.Drawing.Point(277, 9);
             this.txtworkspace.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtworkspace.Name = "txtworkspace";
-            this.txtworkspace.Size = new System.Drawing.Size(117, 23);
+            this.txtworkspace.Size = new System.Drawing.Size(129, 25);
             this.txtworkspace.TabIndex = 4;
             this.txtworkspace.Text = "My workspace";
             // 
@@ -579,6 +580,7 @@ namespace QLCuaHangQuanAo
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this;
+            this.guna2DragControl1.TransparentWhileDrag = true;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // SubProgram
@@ -618,7 +620,7 @@ namespace QLCuaHangQuanAo
             this.Controls.Add(this.SubProgram);
             this.Controls.Add(this.Tool2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1821, 896);
             this.Name = "UI_Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

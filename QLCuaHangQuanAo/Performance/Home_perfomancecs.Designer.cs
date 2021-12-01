@@ -528,10 +528,10 @@ namespace QLCuaHangQuanAo
             this.thang.HoverState.Parent = this.thang;
             this.thang.ItemHeight = 30;
             this.thang.ItemsAppearance.Parent = this.thang;
-            this.thang.Location = new System.Drawing.Point(192, 226);
+            this.thang.Location = new System.Drawing.Point(172, 226);
             this.thang.Name = "thang";
             this.thang.ShadowDecoration.Parent = this.thang;
-            this.thang.Size = new System.Drawing.Size(140, 36);
+            this.thang.Size = new System.Drawing.Size(160, 36);
             this.thang.TabIndex = 2;
             this.thang.SelectedIndexChanged += new System.EventHandler(this.thang_SelectedIndexChanged);
             // 
