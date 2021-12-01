@@ -25,7 +25,7 @@ namespace QLCuaHangQuanAo.DTO
         private string diaChi;
         private string soDT;
         private string email;
-        private DateTime ngSinh;
+        private string ngSinh;
         private int gioitinh;
         private byte[] anh;
 
@@ -33,7 +33,7 @@ namespace QLCuaHangQuanAo.DTO
         {
         }
 
-        public KHACHHANG(int maKH, int idUsername, string hoTen, string diaChi, string soDT, DateTime ngSinh, int gioitinh, byte[] anh, string email)
+        public KHACHHANG(int maKH, int idUsername, string hoTen, string diaChi, string soDT, string ngSinh, int gioitinh, byte[] anh, string email)
         {
             this.maKH = maKH;
             this.idUsername = idUsername;
@@ -53,7 +53,7 @@ namespace QLCuaHangQuanAo.DTO
             hoTen = row["HOTEN"].ToString();
             diaChi = row["DCHI"].ToString();
             soDT = row["SODT"].ToString();
-            ngSinh = (DateTime)row["NGSINH"];
+            ngSinh = ((string)row["NGSINH"]).ToString();
             gioitinh = (int)row["GIOITINH"];
             if (!row.IsNull("ANH"))
                 anh = (byte[])row["ANH"];
@@ -69,7 +69,7 @@ namespace QLCuaHangQuanAo.DTO
         public string HoTen { get => hoTen; set => hoTen = value; }
         public string DiaChi { get => diaChi; set => diaChi = value; }
         public string SoDT { get => soDT; set => soDT = value; }
-        public DateTime NgSinh { get => ngSinh; set => ngSinh = value; }
+        public string NgSinh { get => ngSinh; set => ngSinh = value; }
         public byte[] Anh { get => anh; set => anh = value; }
         public int Gioitinh { get => gioitinh; set => gioitinh = value; }
         public string Email { get => email; set => email = value; }
