@@ -106,8 +106,8 @@ namespace QLCuaHangQuanAo
             {
                 timer1.Stop();
                 this.Hide();
-                UI_Home H = new UI_Home();
-                H.ShowDialog();
+                UI_Home Home = new UI_Home();
+                Home.ShowDialog();
             }
         }
 

@@ -52,8 +52,6 @@ namespace QLCuaHangQuanAo
                 MessageBox.Show("Mat khau khong giong nhau");
                 return;
             }
-            //if (tbFullName.Text == "" || tbUserName.Text == "" || tbPhone.Text == "" || tbPassword.Text == "" || tbAddress.Text == "" || tbCfPassword.Text == "" || (rdMale.Checked == false  && rdFemale.Checked == false && rdOther.Checked == false))
-            //    MessageBox.Show("Điền đầy đủ thông tin");
             if (DAO.TaiKhoanDAO.Instance.CheckUserNameExists(tbUserName.Text))
                 MessageBox.Show("Tên tài khoản đã tồn tại");
             else
@@ -78,7 +76,10 @@ namespace QLCuaHangQuanAo
                         this.Close();
                     }
                     else
+                    {
                         MessageBox.Show("Dang ki that bai");
+                        DAO.TaiKhoanDAO.Instance.DeleteAccount();
+                    }
                 }
                 else
                     MessageBox.Show("Dang ki that bai");

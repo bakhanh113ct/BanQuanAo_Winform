@@ -46,7 +46,7 @@ namespace QLCuaHangQuanAo.DAO
 
         public bool InsertAccount(DTO.TAIKHOAN tk)
         {
-            int kq = DAO.DataProvider.ExecuteNonQuery("insert into TAIKHOAN(DISPLAYNAME, USERNAME, PASSWORD, TYPETK) values('" + tk.Displayname + "','" + tk.Username + "','" + tk.Password + "','" + tk.Typetk + "')");
+            int kq = DAO.DataProvider.ExecuteNonQuery("insert into TAIKHOAN(DISPLAYNAME, USERNAME, PASSWORD, TYPETK) values(N'" + tk.Displayname + "','" + tk.Username + "','" + tk.Password + "','" + tk.Typetk + "')");
             if (kq != 0)
                 return true;
             return false;
@@ -76,6 +76,15 @@ namespace QLCuaHangQuanAo.DAO
             if (kq != 0)
                 return true;
             return false;
+        }
+
+        public bool DeleteAccount()
+        {
+            int id = GetIdMax();
+            if(DAO.DataProvider.ExecuteNonQuery("delete from TAIKHOAN where ID = '" + id + "'") != 0)
+                return true;
+            return false;
+
         }
     }
 }

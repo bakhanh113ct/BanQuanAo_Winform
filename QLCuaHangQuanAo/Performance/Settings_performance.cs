@@ -42,10 +42,11 @@ namespace QLCuaHangQuanAo
             txbPhone.Text = Login.kh.SoDT;
             txbEmail.Text = Login.kh.Email;
             cbYear.DataSource = (Enumerable.Range(1950, DateTime.Now.Year).ToList());
-            //cbMonth.SelectedItem = Login.kh.NgSinh.Month.ToString();
-            //cbDay.SelectedItem = Login.kh.NgSinh.Day.ToString();
-            //cbYear.Text = "";
-            //cbYear.SelectedText = Login.kh.NgSinh.Year.ToString();
+            DateTime ngsinh = DateTime.Parse(Login.kh.NgSinh);
+            cbMonth.SelectedItem = ngsinh.Month.ToString();
+            cbDay.SelectedItem = ngsinh.Day.ToString();
+            cbYear.Text = "";
+            cbYear.SelectedText = ngsinh.Year.ToString();
             if (Login.kh.Anh != null)
             {
                 Avatar.Image = Library.ConvertoImage(Login.kh.Anh);
@@ -121,7 +122,8 @@ namespace QLCuaHangQuanAo
         {
             byte[] anh = Library.ConvertoByte(picAvatar.Image);
             //Convert.ToInt32(cbYear.Text), Convert.ToInt32(cbMonth.Text), Convert.ToInt32(cbDay.Text)
-            DTO.KHACHHANG kh = new DTO.KHACHHANG(Login.kh.MaKH, Login.kh.IdUsername, txbName.Text, txbAddress.Text, txbPhone.Text, "2002/12/12", Login.kh.Gioitinh, anh == null ? null : anh, txbEmail.Text);
+            string ngsinh = cbYear.Text + "-" + cbMonth.Text + "-" + cbDay.Text;
+            DTO.KHACHHANG kh = new DTO.KHACHHANG(Login.kh.MaKH, Login.kh.IdUsername, txbName.Text, txbAddress.Text, txbPhone.Text, ngsinh, Login.kh.Gioitinh, anh == null ? null : anh, txbEmail.Text);
             if (DAO.KhachHangDAO.Instance.Update(kh))
             {
                 MessageBox.Show("Cập nhật thành công");

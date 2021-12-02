@@ -52,7 +52,7 @@ namespace QLCuaHangQuanAo.DAO
         }
 
         public bool InsertKH(DTO.KHACHHANG kh) {
-            int kq = DAO.DataProvider.ExcuseNonQuery1("insert into KHACHHANG(IDUSERNAME, HOTEN, DCHI, SODT, EMAIL, NGSINH, GIOITINH, ANH) values('" + kh.IdUsername + "','" + kh.HoTen + "','" + kh.DiaChi + "','" + kh.SoDT + "', '" + kh.Email + "','" + kh.NgSinh + "', '" + kh.Gioitinh + "', null)");
+            int kq = DAO.DataProvider.ExcuseNonQuery1("insert into KHACHHANG(IDUSERNAME, HOTEN, DCHI, SODT, EMAIL, NGSINH, GIOITINH, ANH) values('" + kh.IdUsername + "', N'" + kh.HoTen + "',N'" + kh.DiaChi + "', N'" + kh.SoDT + "', '" + kh.Email + "','" + kh.NgSinh + "', '" + kh.Gioitinh + "', null)");
             if (kq != 0)
                 return true;
             return false;
