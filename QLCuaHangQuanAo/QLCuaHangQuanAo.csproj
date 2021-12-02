@@ -180,6 +180,12 @@
     <Compile Include="SubForm\Product_Bill.Designer.cs">
       <DependentUpon>Product_Bill.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubForm\Show_creator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Show_creator.Designer.cs">
+      <DependentUpon>Show_creator.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI_Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Product_Bill.resx">
       <DependentUpon>Product_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Show_creator.resx">
+      <DependentUpon>Show_creator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI_Home.resx">
       <DependentUpon>UI_Home.cs</DependentUpon>
@@ -360,6 +369,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\NoImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hiiii1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
