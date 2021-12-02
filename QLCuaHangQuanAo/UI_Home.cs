@@ -157,6 +157,8 @@ namespace QLCuaHangQuanAo
                 //MessageBox.Show("Đăng xuất thành công");
                 for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
                 {
+                    if (Application.OpenForms.Count <= i)
+                        i = Application.OpenForms.Count - 1;
                     if (Application.OpenForms[i].Name != "Login")
                         Application.OpenForms[i].Close();
                 }

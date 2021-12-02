@@ -81,11 +81,6 @@ namespace QLCuaHangQuanAo
                 ListHD = DAO.HoaDonDAO.Instance.LoadHDtoDatatable(Login.kh.MaKH.ToString());
                 dtgv.DataSource = ListHD;
             }
-            else if (guna2TabControl1.SelectedTab == tabPage4)
-            {
-                
-
-            }
         }
         private void btnChonAnh_Click(object sender, EventArgs e)
         {

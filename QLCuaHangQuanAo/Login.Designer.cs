@@ -37,7 +37,7 @@ namespace QLCuaHangQuanAo
             this.PhanTram = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.btnExit = new Guna.UI2.WinForms.Guna2ControlBox();
             this.lbSignUp = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pwshow = new Guna.UI2.WinForms.Guna2ToggleSwitch();
@@ -109,7 +109,7 @@ namespace QLCuaHangQuanAo
             // guna2Panel1
             // 
             this.guna2Panel1.Controls.Add(this.guna2ControlBox2);
-            this.guna2Panel1.Controls.Add(this.guna2ControlBox1);
+            this.guna2Panel1.Controls.Add(this.btnExit);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -132,18 +132,19 @@ namespace QLCuaHangQuanAo
             this.guna2ControlBox2.TabIndex = 6;
             this.guna2ControlBox2.TabStop = false;
             // 
-            // guna2ControlBox1
+            // btnExit
             // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(310, 0);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(51, 38);
-            this.guna2ControlBox1.TabIndex = 7;
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.FillColor = System.Drawing.Color.White;
+            this.btnExit.ForeColor = System.Drawing.Color.Black;
+            this.btnExit.HoverState.Parent = this.btnExit;
+            this.btnExit.IconColor = System.Drawing.Color.Black;
+            this.btnExit.Location = new System.Drawing.Point(310, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.ShadowDecoration.Parent = this.btnExit;
+            this.btnExit.Size = new System.Drawing.Size(51, 38);
+            this.btnExit.TabIndex = 7;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lbSignUp
             // 
@@ -382,7 +383,7 @@ namespace QLCuaHangQuanAo
         private Guna.UI2.WinForms.Guna2HtmlLabel PhanTram;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2ControlBox btnExit;
         private System.Windows.Forms.Label lbSignUp;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ToggleSwitch pwshow;

@@ -107,7 +107,7 @@ namespace QLCuaHangQuanAo
                 timer1.Stop();
                 this.Hide();
                 UI_Home Home = new UI_Home();
-                Home.ShowDialog();
+                Home.Show();
             }
         }
 
@@ -131,6 +131,11 @@ namespace QLCuaHangQuanAo
                 btnAdmin_User.Text = "User";
                 admin_user = 1;
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
