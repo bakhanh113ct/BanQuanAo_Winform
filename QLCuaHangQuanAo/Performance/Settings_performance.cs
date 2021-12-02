@@ -83,18 +83,7 @@ namespace QLCuaHangQuanAo
             }
             else if (guna2TabControl1.SelectedTab == tabPage4)
             {
-                DialogResult kq = MessageBox.Show("Ban co muon dang xuat?", "Thong bao", MessageBoxButtons.YesNo);
-                if (kq == DialogResult.Yes)
-                {
-                    MessageBox.Show("DX TC");
-                    for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
-                    {
-                        if (Application.OpenForms[i].Name != "Menu")
-                            Application.OpenForms[i].Hide();
-                    }
-                    Login newLogin = new Login();
-                    newLogin.Show();
-                }
+                
 
             }
         }

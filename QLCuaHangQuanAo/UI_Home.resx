@@ -118,6 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnLogout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAARkSURBVHhe7ZrdS91lHMCfixr9CxVJbb5Lr2s0nM5lNeZUXC0XiyarbVpa0SBSg8JIfNlGEgQV
+        gRdBEdRmZW5uvpwtp1e7WpdzNzq7aFdpN159er76/Yn4nB8uj8/vGXQ+8OH4+T6H8/2pRznKMVmyZMmS
+        JUs8Oc3UPtRCKqeFf6wkrOwct9bo5STLwy10PdIMd4mdelnJkNtEbd6bYF20flDwNg/oUWLIzty3aNVr
+        kGtJ7plQ2ETKSlETrToKRmEjbXIt1jEd+aekkQUrRY3cL22/EPttz8osIWeLT1C1tNteg87mpRPh8eMg
+        akrPRrMEndH1zvV456ljIGo67ZvQ+82O10HUdNo3ofebnUdB1HTaN6H3m7IGEDWd9k3o/abiCIiaTvsm
+        9H5T+RqImk77JvR+s/dVEDWd9k3o/abqMIiaTvsm9H5T8wqImk77JvR+U3cIRE2nfRN6vzlYD6Km074J
+        vd8cOgiiptO+Cb3fHH4JRE2nfRN6vzlyAERNp+vr2WK71/pnwwHmGl6kR2Z6nDFr963t1klG265ys32S
+        l3W0uRytA1EzXfdEs1V263HGRI+p6XTHBKxyvGOKQj3aHI7VgqiZruekT9RR+kYtZXo+p8cZo48Xu7/7
+        Cqxx0drTkeI+vUtmNNaAqJmuby/N7Cd/vJpyPf9Lj73Tl4IYp/suL/8nKSOaq0HUTNeno9mK++nVY+98
+        OQbrOPj1CDl69//OO1UgajrdsYd73q2iN5pbe2Smx7H0jzJpJSHn+0c4aX8s1r0uh/f2gajpdETcPI7v
+        L0EAU7r+znl/L4iaTkfEzeM4OwxJe254A1+A1hdA1HQ6Im4ex2/nmRg6Dwk5P3SBk6mN/Ah8+DyImk5H
+        xM19MzoE6zg4MpjBL8GPKkHUdLpxO/d+/Bynorl8fCe/BDeLq4MQ4/TEEPv0bhvnk2dB1HS7kjPRbJWn
+        9DhjosfUdPraL7DGxWs/02Of7pvzQqizAkTNdH17abab0s49lOn5pr0Q0seL3f/HAEReH2Ds+k+b/FK4
+        e7d9eWnVTNdz0j32k++qoFzPb+lxxujjxe6fHmDkxjlu3jjr6Y+h02Ugajp9pozuaLZiOV16nDHRY2o6
+        7Z3PdoGo6XRHCVtsd/ftYs7e3rK3XTLT44xZu29te+fzUhA1nfZN6P3mi50gajrtm9D7zVfPgKjptG9C
+        7zff7ABR02nfhN5v+p+2f05aNZ32Tej95tvtIGo67ZvQ+813T4Ko6bRvQu83PzwBoqbTvgm93/z4GIia
+        Tvsm9H4z8CiImk77JvR+82sJiJpO+yb0fjNUDKKm9Gw0S9CVN0pGM03/XCxiwcqlguU3SV8spsr2jMwS
+        cma4ZPk/O2P5PKizv6UTYbSAcSsj+bTpKBijhbTLtViTe7N0Ko+aVD5czmfR3rZFz4Qkke+83d+u18B4
+        HtV6lAxX8uj8PRfuBie28aleVrJMbaVmahtj1gUrCSs7xya3Jvydz5IlS5Ys/wuM+ReVk2v25N7xngAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnINVOICE.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAA6hJREFUSEvt

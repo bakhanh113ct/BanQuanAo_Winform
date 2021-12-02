@@ -148,5 +148,21 @@ namespace QLCuaHangQuanAo
             DAO.Sound.Instance.tada();
             
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult kq = MessageBox.Show("Ban co muon dang xuat?", "Thong bao", MessageBoxButtons.YesNo);
+            if (kq == DialogResult.Yes)
+            {
+                //MessageBox.Show("Đăng xuất thành công");
+                for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+                {
+                    if (Application.OpenForms[i].Name != "Login")
+                        Application.OpenForms[i].Close();
+                }
+                Login newLogin = new Login();
+                newLogin.Show();
+            }
+        }
     }
 }

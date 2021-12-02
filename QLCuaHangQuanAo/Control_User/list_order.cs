@@ -29,7 +29,8 @@ namespace QLCuaHangQuanAo.Control_User
             InitializeComponent();
             ten_khach_hang.Text = row["HOTEN"].ToString();
             so_luong_san_pham.Text = (row["SOHANG"]).ToString() + " Item";
-            ngay_mua_hang.Text = row["NGHD"].ToString();
+            DateTime ngaymua = (DateTime)(row["NGHD"]);
+            ngay_mua_hang.Text =  ngaymua.ToString("dd/MM/yyyy");
             SoHD = (int)row["SOHD"];
 
             Status = row["TRANG_THAI"].ToString();
