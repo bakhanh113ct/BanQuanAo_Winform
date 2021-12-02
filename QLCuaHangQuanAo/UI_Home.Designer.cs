@@ -99,8 +99,10 @@ namespace QLCuaHangQuanAo
             this.pic_Logo.Margin = new System.Windows.Forms.Padding(4);
             this.pic_Logo.Name = "pic_Logo";
             this.pic_Logo.Size = new System.Drawing.Size(133, 127);
+            this.pic_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Logo.TabIndex = 0;
             this.pic_Logo.TabStop = false;
+            this.pic_Logo.Click += new System.EventHandler(this.MyLogo_Click);
             // 
             // subbar1
             // 
@@ -285,6 +287,7 @@ namespace QLCuaHangQuanAo
             this.MyLogo.Size = new System.Drawing.Size(196, 140);
             this.MyLogo.TabIndex = 0;
             this.MyLogo.Text = "My Logo";
+            this.MyLogo.Click += new System.EventHandler(this.MyLogo_Click);
             this.MyLogo.MouseHover += new System.EventHandler(this.MyLogo_MouseHover);
             // 
             // Tool2

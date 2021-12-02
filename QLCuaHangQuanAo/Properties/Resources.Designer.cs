@@ -193,6 +193,16 @@ namespace QLCuaHangQuanAo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap f1 {
+            get {
+                object obj = ResourceManager.GetObject("f1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap facebook_64px {
             get {
                 object obj = ResourceManager.GetObject("facebook_64px", resourceCulture);
@@ -246,6 +256,16 @@ namespace QLCuaHangQuanAo.Properties {
         internal static System.Drawing.Bitmap hiiii {
             get {
                 object obj = ResourceManager.GetObject("hiiii", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hiiii1 {
+            get {
+                object obj = ResourceManager.GetObject("hiiii1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -326,6 +346,16 @@ namespace QLCuaHangQuanAo.Properties {
         internal static System.Drawing.Bitmap male_User {
             get {
                 object obj = ResourceManager.GetObject("male_User", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minimize {
+            get {
+                object obj = ResourceManager.GetObject("minimize", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -113,8 +113,6 @@ namespace QLCuaHangQuanAo.DAO
                         }
                     }
 
-
-
                 }
                 kq = command.ExecuteScalar();
                 sqlCon.Close();

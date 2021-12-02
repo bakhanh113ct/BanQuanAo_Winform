@@ -140,5 +140,13 @@ namespace QLCuaHangQuanAo
            // MyLogo.FillColor = Color.White;
         }
 
+        private void MyLogo_Click(object sender, EventArgs e)
+        {
+            DAO.Sound.Instance.sound_Click();
+            SubForm.Show_creator creator = new SubForm.Show_creator();
+            creator.Show();
+            DAO.Sound.Instance.tada();
+            
+        }
     }
 }
