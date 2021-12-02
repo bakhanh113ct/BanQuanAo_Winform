@@ -12,7 +12,7 @@ CREATE TABLE TAIKHOAN
 	TYPETK	INT	NOT NULL
 )
 
-
+drop database QuanLyKho
 select * from TAIKHOAN
 CREATE TABLE KHACHHANG
 (
