@@ -11,6 +11,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using QLCuaHangQuanAo.Performance;
+
 namespace QLCuaHangQuanAo
 {
     public partial class UI_Home : Form
@@ -19,39 +21,41 @@ namespace QLCuaHangQuanAo
         List<Panel> subbar = new List<Panel>();
         List<Guna2Button> Home_button = new List<Guna2Button>();
         private Form activeForm = null;
-        public static Store_performence store = null;
+        public Store_performence store = null;
+        private Statistics_perfomancecs statistics = null;
         private Home_perfomancecs home = null;
-       // private Invoice_performance invoice = null;
         private Settings_performance setting = null;
         public UI_Home()
         {
             InitializeComponent();
-            home = new Home_perfomancecs();
             AddSubbarandHomeButton();
             ListItem = new List<Control_User.Item>();
             subbar_Change(subbar1, HOME);
-            openPerformance(home);
-            
         }
 
         private void UI_Home_Load(object sender, EventArgs e)
         {
             store = new Store_performence();
-            //invoice = new Invoice_performance();
             setting = new Settings_performance();
+            home = new Home_perfomancecs();
             time.Text = DateTime.Now.ToShortDateString();
+            //statistics = new Statistics_perfomancecs();
+            //invoice = new Invoice_performance();
+            openPerformance(home);
         }
 
-       
+
         private void AddSubbarandHomeButton()
         {
             subbar.Add(subbar1);
             subbar.Add(subbar2);
             subbar.Add(subbar3);
             subbar.Add(subbar4);
+            subbar.Add(subbar5);
             Home_button.Add(HOME);
             Home_button.Add(STORE);
             Home_button.Add(btnINVOICE);
+            Home_button.Add(STATISTIC);
             Home_button.Add(SETTING);
         }
        
@@ -114,9 +118,17 @@ namespace QLCuaHangQuanAo
             DAO.Sound.Instance.sound_Click();
         }
 
+        private void STATISTIC_Click(object sender, EventArgs e)
+        {
+            subbar_Change(subbar4, btnINVOICE);
+            openPerformance(new Statistics_perfomancecs());
+
+            DAO.Sound.Instance.sound_Click();
+        }
+
         private void SETTING_Click(object sender, EventArgs e)
         {
-            subbar_Change(subbar4, SETTING);
+            subbar_Change(subbar5, STATISTIC);
             openPerformance(setting);
         }
 
@@ -166,5 +178,7 @@ namespace QLCuaHangQuanAo
                 newLogin.Show();
             }
         }
+
+        
     }
 }

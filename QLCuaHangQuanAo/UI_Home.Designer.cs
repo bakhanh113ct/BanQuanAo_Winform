@@ -32,14 +32,16 @@ namespace QLCuaHangQuanAo
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UI_Home));
             this.Tool = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.subbar5 = new System.Windows.Forms.Panel();
+            this.SETTING = new Guna.UI2.WinForms.Guna2Button();
+            this.subbar4 = new System.Windows.Forms.Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pic_Logo = new System.Windows.Forms.PictureBox();
             this.subbar1 = new System.Windows.Forms.Panel();
             this.subbar3 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.subbar4 = new System.Windows.Forms.Panel();
             this.subbar2 = new System.Windows.Forms.Panel();
-            this.SETTING = new Guna.UI2.WinForms.Guna2Button();
+            this.STATISTIC = new Guna.UI2.WinForms.Guna2Button();
             this.btnINVOICE = new Guna.UI2.WinForms.Guna2Button();
             this.STORE = new Guna.UI2.WinForms.Guna2Button();
             this.HOME = new Guna.UI2.WinForms.Guna2Button();
@@ -73,13 +75,15 @@ namespace QLCuaHangQuanAo
             // Tool
             // 
             this.Tool.BackColor = System.Drawing.Color.Transparent;
+            this.Tool.Controls.Add(this.subbar5);
+            this.Tool.Controls.Add(this.SETTING);
+            this.Tool.Controls.Add(this.subbar4);
             this.Tool.Controls.Add(this.btnLogout);
             this.Tool.Controls.Add(this.pic_Logo);
             this.Tool.Controls.Add(this.subbar1);
             this.Tool.Controls.Add(this.subbar3);
-            this.Tool.Controls.Add(this.subbar4);
             this.Tool.Controls.Add(this.subbar2);
-            this.Tool.Controls.Add(this.SETTING);
+            this.Tool.Controls.Add(this.STATISTIC);
             this.Tool.Controls.Add(this.btnINVOICE);
             this.Tool.Controls.Add(this.STORE);
             this.Tool.Controls.Add(this.HOME);
@@ -93,6 +97,52 @@ namespace QLCuaHangQuanAo
             this.Tool.ShadowShift = 0;
             this.Tool.Size = new System.Drawing.Size(147, 441);
             this.Tool.TabIndex = 0;
+            // 
+            // subbar5
+            // 
+            this.subbar5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(19)))), ((int)(((byte)(248)))));
+            this.subbar5.Location = new System.Drawing.Point(142, 262);
+            this.subbar5.Name = "subbar5";
+            this.subbar5.Size = new System.Drawing.Size(5, 37);
+            this.subbar5.TabIndex = 10;
+            this.subbar5.Visible = false;
+            // 
+            // SETTING
+            // 
+            this.SETTING.BorderColor = System.Drawing.Color.BlueViolet;
+            this.SETTING.CheckedState.Parent = this.SETTING;
+            this.SETTING.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SETTING.CustomImages.Parent = this.SETTING;
+            this.SETTING.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SETTING.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SETTING.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SETTING.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SETTING.DisabledState.Parent = this.SETTING;
+            this.SETTING.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SETTING.FillColor = System.Drawing.Color.White;
+            this.SETTING.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.SETTING.ForeColor = System.Drawing.Color.Black;
+            this.SETTING.HoverState.Parent = this.SETTING;
+            this.SETTING.Image = global::QLCuaHangQuanAo.Properties.Resources.settings_64px;
+            this.SETTING.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.SETTING.ImageSize = new System.Drawing.Size(30, 30);
+            this.SETTING.Location = new System.Drawing.Point(0, 262);
+            this.SETTING.Margin = new System.Windows.Forms.Padding(2);
+            this.SETTING.Name = "SETTING";
+            this.SETTING.ShadowDecoration.Parent = this.SETTING;
+            this.SETTING.Size = new System.Drawing.Size(147, 37);
+            this.SETTING.TabIndex = 9;
+            this.SETTING.Text = "  SETTING";
+            this.SETTING.Click += new System.EventHandler(this.SETTING_Click);
+            // 
+            // subbar4
+            // 
+            this.subbar4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(19)))), ((int)(((byte)(248)))));
+            this.subbar4.Location = new System.Drawing.Point(142, 225);
+            this.subbar4.Name = "subbar4";
+            this.subbar4.Size = new System.Drawing.Size(5, 37);
+            this.subbar4.TabIndex = 8;
+            this.subbar4.Visible = false;
             // 
             // btnLogout
             // 
@@ -164,15 +214,6 @@ namespace QLCuaHangQuanAo
             this.panel3.TabIndex = 6;
             this.panel3.Visible = false;
             // 
-            // subbar4
-            // 
-            this.subbar4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(19)))), ((int)(((byte)(248)))));
-            this.subbar4.Location = new System.Drawing.Point(142, 225);
-            this.subbar4.Name = "subbar4";
-            this.subbar4.Size = new System.Drawing.Size(5, 37);
-            this.subbar4.TabIndex = 6;
-            this.subbar4.Visible = false;
-            // 
             // subbar2
             // 
             this.subbar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(19)))), ((int)(((byte)(248)))));
@@ -182,33 +223,33 @@ namespace QLCuaHangQuanAo
             this.subbar2.TabIndex = 6;
             this.subbar2.Visible = false;
             // 
-            // SETTING
+            // STATISTIC
             // 
-            this.SETTING.BorderColor = System.Drawing.Color.BlueViolet;
-            this.SETTING.CheckedState.Parent = this.SETTING;
-            this.SETTING.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SETTING.CustomImages.Parent = this.SETTING;
-            this.SETTING.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.SETTING.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.SETTING.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.SETTING.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.SETTING.DisabledState.Parent = this.SETTING;
-            this.SETTING.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SETTING.FillColor = System.Drawing.Color.White;
-            this.SETTING.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.SETTING.ForeColor = System.Drawing.Color.Black;
-            this.SETTING.HoverState.Parent = this.SETTING;
-            this.SETTING.Image = global::QLCuaHangQuanAo.Properties.Resources.settings_64px;
-            this.SETTING.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.SETTING.ImageSize = new System.Drawing.Size(30, 30);
-            this.SETTING.Location = new System.Drawing.Point(0, 225);
-            this.SETTING.Margin = new System.Windows.Forms.Padding(2);
-            this.SETTING.Name = "SETTING";
-            this.SETTING.ShadowDecoration.Parent = this.SETTING;
-            this.SETTING.Size = new System.Drawing.Size(147, 37);
-            this.SETTING.TabIndex = 6;
-            this.SETTING.Text = "  SETTING";
-            this.SETTING.Click += new System.EventHandler(this.SETTING_Click);
+            this.STATISTIC.BorderColor = System.Drawing.Color.BlueViolet;
+            this.STATISTIC.CheckedState.Parent = this.STATISTIC;
+            this.STATISTIC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.STATISTIC.CustomImages.Parent = this.STATISTIC;
+            this.STATISTIC.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.STATISTIC.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.STATISTIC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.STATISTIC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.STATISTIC.DisabledState.Parent = this.STATISTIC;
+            this.STATISTIC.Dock = System.Windows.Forms.DockStyle.Top;
+            this.STATISTIC.FillColor = System.Drawing.Color.White;
+            this.STATISTIC.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.STATISTIC.ForeColor = System.Drawing.Color.Black;
+            this.STATISTIC.HoverState.Parent = this.STATISTIC;
+            this.STATISTIC.Image = global::QLCuaHangQuanAo.Properties.Resources.settings_64px;
+            this.STATISTIC.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.STATISTIC.ImageSize = new System.Drawing.Size(30, 30);
+            this.STATISTIC.Location = new System.Drawing.Point(0, 225);
+            this.STATISTIC.Margin = new System.Windows.Forms.Padding(2);
+            this.STATISTIC.Name = "STATISTIC";
+            this.STATISTIC.ShadowDecoration.Parent = this.STATISTIC;
+            this.STATISTIC.Size = new System.Drawing.Size(147, 37);
+            this.STATISTIC.TabIndex = 6;
+            this.STATISTIC.Text = "STATISTIC";
+            this.STATISTIC.Click += new System.EventHandler(this.STATISTIC_Click);
             // 
             // btnINVOICE
             // 
@@ -670,7 +711,7 @@ namespace QLCuaHangQuanAo
 
         private Guna.UI2.WinForms.Guna2ShadowPanel Tool;
         private Guna.UI2.WinForms.Guna2ShadowPanel Tool2;
-        private Guna.UI2.WinForms.Guna2Button SETTING;
+        private Guna.UI2.WinForms.Guna2Button STATISTIC;
         private Guna.UI2.WinForms.Guna2Button btnINVOICE;
         private Guna.UI2.WinForms.Guna2Button STORE;
         private Guna.UI2.WinForms.Guna2Button HOME;
@@ -689,7 +730,6 @@ namespace QLCuaHangQuanAo
         private System.Windows.Forms.Panel subbar1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private System.Windows.Forms.Panel subbar4;
         private System.Windows.Forms.Panel subbar3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel subbar2;
@@ -699,5 +739,8 @@ namespace QLCuaHangQuanAo
         private System.Windows.Forms.PictureBox pic_Logo;
         private System.Windows.Forms.Label time;
         private Guna.UI2.WinForms.Guna2GradientButton btnLogout;
+        private System.Windows.Forms.Panel subbar5;
+        private Guna.UI2.WinForms.Guna2Button SETTING;
+        private System.Windows.Forms.Panel subbar4;
     }
 }

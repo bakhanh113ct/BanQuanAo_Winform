@@ -60,6 +60,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -106,17 +107,23 @@
     <Compile Include="DTO\Item_HD.cs" />
     <Compile Include="DTO\TAIKHOAN.cs" />
     <Compile Include="Library.cs" />
+    <Compile Include="Performance\Home_perfomancecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Performance\Home_perfomancecs.Designer.cs">
+      <DependentUpon>Home_perfomancecs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Performance\Invoice_performance.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Performance\Invoice_performance.Designer.cs">
       <DependentUpon>Invoice_performance.cs</DependentUpon>
     </Compile>
-    <Compile Include="Performance\Home_perfomancecs.cs">
+    <Compile Include="Performance\Statistics_perfomancecs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Performance\Home_perfomancecs.Designer.cs">
-      <DependentUpon>Home_perfomancecs.cs</DependentUpon>
+    <Compile Include="Performance\Statistics_perfomancecs.Designer.cs">
+      <DependentUpon>Statistics_perfomancecs.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -201,11 +208,14 @@
     <EmbeddedResource Include="Control_User\topList.resx">
       <DependentUpon>topList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Performance\Home_perfomancecs.resx">
+      <DependentUpon>Home_perfomancecs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Performance\Invoice_performance.resx">
       <DependentUpon>Invoice_performance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Performance\Home_perfomancecs.resx">
-      <DependentUpon>Home_perfomancecs.cs</DependentUpon>
+    <EmbeddedResource Include="Performance\Statistics_perfomancecs.resx">
+      <DependentUpon>Statistics_perfomancecs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -378,6 +388,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arow_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arow_right_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arow_right_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Giay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arow_right_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arow_right_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arow_right_brown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shirt1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trouser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hat.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
