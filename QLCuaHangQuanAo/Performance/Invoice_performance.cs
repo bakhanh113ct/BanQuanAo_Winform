@@ -39,7 +39,7 @@ namespace QLCuaHangQuanAo
             {
                 thang.Items.Add("Tháng " + month++.ToString());
             }
-            thang.SelectedIndex = 0;
+            thang.SelectedIndex = DateTime.Now.Month;
             dem = 1;
         }
         private void hide()//Ẩn những thứ không cần thiết 
@@ -153,6 +153,7 @@ namespace QLCuaHangQuanAo
             if (thang.SelectedIndex == 0)
             {
                 load("");
+                DAO.Sound.Instance.load_click();
             }
             else
             {

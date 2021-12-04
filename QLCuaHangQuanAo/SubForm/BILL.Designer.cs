@@ -30,10 +30,10 @@ namespace QLCuaHangQuanAo.SubForm
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.label21 = new System.Windows.Forms.Label();
             this.TONGALL = new System.Windows.Forms.Label();
@@ -76,6 +76,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.Cancel = new Guna.UI2.WinForms.Guna2Button();
             this.Delivery = new Guna.UI2.WinForms.Guna2Button();
             this.Exit = new Guna.UI2.WinForms.Guna2Button();
+            this.INHD = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BILLCT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -107,12 +108,12 @@ namespace QLCuaHangQuanAo.SubForm
             this.guna2ShadowPanel1.Controls.Add(this.NameKh);
             this.guna2ShadowPanel1.Controls.Add(this.label9);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(-1, 118);
-            this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(-1, 145);
+            this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.Radius = 10;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(377, 417);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(503, 513);
             this.guna2ShadowPanel1.TabIndex = 0;
             // 
             // label21
@@ -120,10 +121,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Quicksand SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(132)))));
-            this.label21.Location = new System.Drawing.Point(14, 72);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Location = new System.Drawing.Point(19, 89);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(44, 16);
+            this.label21.Size = new System.Drawing.Size(54, 21);
             this.label21.TabIndex = 21;
             this.label21.Text = "Địa chỉ";
             // 
@@ -132,10 +132,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.TONGALL.AutoSize = true;
             this.TONGALL.Font = new System.Drawing.Font("Quicksand SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TONGALL.ForeColor = System.Drawing.Color.MediumOrchid;
-            this.TONGALL.Location = new System.Drawing.Point(308, 385);
-            this.TONGALL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TONGALL.Location = new System.Drawing.Point(411, 474);
             this.TONGALL.Name = "TONGALL";
-            this.TONGALL.Size = new System.Drawing.Size(57, 16);
+            this.TONGALL.Size = new System.Drawing.Size(74, 21);
             this.TONGALL.TabIndex = 20;
             this.TONGALL.Text = "4015000₫";
             // 
@@ -144,10 +143,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.TONG_GIA.AutoSize = true;
             this.TONG_GIA.Font = new System.Drawing.Font("Quicksand SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TONG_GIA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.TONG_GIA.Location = new System.Drawing.Point(309, 324);
-            this.TONG_GIA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TONG_GIA.Location = new System.Drawing.Point(412, 399);
             this.TONG_GIA.Name = "TONG_GIA";
-            this.TONG_GIA.Size = new System.Drawing.Size(61, 16);
+            this.TONG_GIA.Size = new System.Drawing.Size(79, 21);
             this.TONG_GIA.TabIndex = 19;
             this.TONG_GIA.Text = "4000000₫";
             // 
@@ -156,10 +154,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.PHIVC.AutoSize = true;
             this.PHIVC.Font = new System.Drawing.Font("Quicksand SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PHIVC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.PHIVC.Location = new System.Drawing.Point(309, 346);
-            this.PHIVC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PHIVC.Location = new System.Drawing.Point(412, 426);
             this.PHIVC.Name = "PHIVC";
-            this.PHIVC.Size = new System.Drawing.Size(44, 16);
+            this.PHIVC.Size = new System.Drawing.Size(57, 21);
             this.PHIVC.TabIndex = 18;
             this.PHIVC.Text = "15000₫";
             // 
@@ -168,10 +165,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Quicksand SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(132)))));
-            this.label20.Location = new System.Drawing.Point(206, 385);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Location = new System.Drawing.Point(275, 474);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(35, 16);
+            this.label20.Size = new System.Drawing.Size(45, 21);
             this.label20.TabIndex = 17;
             this.label20.Text = "Tổng";
             // 
@@ -180,10 +176,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Quicksand SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(132)))));
-            this.label19.Location = new System.Drawing.Point(206, 368);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Location = new System.Drawing.Point(275, 453);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(156, 16);
+            this.label19.Size = new System.Drawing.Size(232, 21);
             this.label19.TabIndex = 16;
             this.label19.Text = "-------------------------------------";
             // 
@@ -192,10 +187,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Quicksand SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(132)))));
-            this.label18.Location = new System.Drawing.Point(206, 346);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Location = new System.Drawing.Point(275, 426);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(85, 16);
+            this.label18.Size = new System.Drawing.Size(109, 21);
             this.label18.TabIndex = 15;
             this.label18.Text = "Phí vận chuyển";
             // 
@@ -204,10 +198,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.Sub_Total.AutoSize = true;
             this.Sub_Total.Font = new System.Drawing.Font("Quicksand SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sub_Total.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(132)))));
-            this.Sub_Total.Location = new System.Drawing.Point(206, 324);
-            this.Sub_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Sub_Total.Location = new System.Drawing.Point(275, 399);
             this.Sub_Total.Name = "Sub_Total";
-            this.Sub_Total.Size = new System.Drawing.Size(26, 16);
+            this.Sub_Total.Size = new System.Drawing.Size(32, 21);
             this.Sub_Total.TabIndex = 14;
             this.Sub_Total.Text = "Giá";
             // 
@@ -216,10 +209,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Quicksand SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Red;
-            this.label16.Location = new System.Drawing.Point(10, 318);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Location = new System.Drawing.Point(13, 391);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(38, 16);
+            this.label16.Size = new System.Drawing.Size(49, 21);
             this.label16.TabIndex = 13;
             this.label16.Text = "Lưu ý:";
             // 
@@ -227,10 +219,9 @@ namespace QLCuaHangQuanAo.SubForm
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Quicksand Medium", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(10, 335);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Location = new System.Drawing.Point(13, 412);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(192, 44);
+            this.label15.Size = new System.Drawing.Size(192, 60);
             this.label15.TabIndex = 12;
             this.label15.Text = "Thanh toán, nếu không có quy định\r\nkhác được ghi rõ ràng trong hợp đồng\r\n,sẽ được" +
     " thực hiện trong vòng 60 ngày \r\nkể từ ngày giao hàng được chấp nhận.\r\n";
@@ -238,53 +229,53 @@ namespace QLCuaHangQuanAo.SubForm
             // BILLCT
             // 
             this.BILLCT.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            this.BILLCT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            this.BILLCT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.BILLCT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.BILLCT.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.BILLCT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.BILLCT.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.BILLCT.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.MediumOrchid;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BILLCT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.MediumOrchid;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.BILLCT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.BILLCT.ColumnHeadersHeight = 27;
             this.BILLCT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MASP,
             this.TENSP,
             this.SL,
             this.GIA});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.BILLCT.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.BILLCT.DefaultCellStyle = dataGridViewCellStyle11;
             this.BILLCT.EnableHeadersVisualStyles = false;
             this.BILLCT.GridColor = System.Drawing.Color.WhiteSmoke;
-            this.BILLCT.Location = new System.Drawing.Point(14, 129);
-            this.BILLCT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BILLCT.Location = new System.Drawing.Point(19, 159);
+            this.BILLCT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BILLCT.Name = "BILLCT";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.MediumOrchid;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BILLCT.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.MediumOrchid;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.BILLCT.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.BILLCT.RowHeadersVisible = false;
             this.BILLCT.RowHeadersWidth = 51;
             this.BILLCT.RowTemplate.Height = 24;
             this.BILLCT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.BILLCT.Size = new System.Drawing.Size(344, 173);
+            this.BILLCT.Size = new System.Drawing.Size(459, 213);
             this.BILLCT.TabIndex = 11;
             this.BILLCT.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.BILLCT.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -341,10 +332,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.DueDate.AutoSize = true;
             this.DueDate.Font = new System.Drawing.Font("Quicksand", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DueDate.ForeColor = System.Drawing.Color.Red;
-            this.DueDate.Location = new System.Drawing.Point(273, 87);
-            this.DueDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DueDate.Location = new System.Drawing.Point(364, 107);
             this.DueDate.Name = "DueDate";
-            this.DueDate.Size = new System.Drawing.Size(80, 21);
+            this.DueDate.Size = new System.Drawing.Size(98, 25);
             this.DueDate.TabIndex = 10;
             this.DueDate.Text = "2021-12-23";
             // 
@@ -353,10 +343,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.invoiceDate.AutoSize = true;
             this.invoiceDate.Font = new System.Drawing.Font("Quicksand", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.invoiceDate.ForeColor = System.Drawing.Color.Blue;
-            this.invoiceDate.Location = new System.Drawing.Point(124, 87);
-            this.invoiceDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.invoiceDate.Location = new System.Drawing.Point(165, 107);
             this.invoiceDate.Name = "invoiceDate";
-            this.invoiceDate.Size = new System.Drawing.Size(77, 21);
+            this.invoiceDate.Size = new System.Drawing.Size(95, 25);
             this.invoiceDate.TabIndex = 9;
             this.invoiceDate.Text = "2021-11-23";
             // 
@@ -365,10 +354,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.trangthai.AutoSize = true;
             this.trangthai.Font = new System.Drawing.Font("Quicksand SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trangthai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(132)))));
-            this.trangthai.Location = new System.Drawing.Point(274, 70);
-            this.trangthai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.trangthai.Location = new System.Drawing.Point(365, 86);
             this.trangthai.Name = "trangthai";
-            this.trangthai.Size = new System.Drawing.Size(77, 16);
+            this.trangthai.Size = new System.Drawing.Size(100, 21);
             this.trangthai.TabIndex = 8;
             this.trangthai.Text = "Ngày hết hạn";
             // 
@@ -377,10 +365,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Quicksand SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(132)))));
-            this.label13.Location = new System.Drawing.Point(122, 70);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(163, 86);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(102, 16);
+            this.label13.Size = new System.Drawing.Size(132, 21);
             this.label13.TabIndex = 7;
             this.label13.Text = "Ngày lập hóa đơn";
             // 
@@ -389,10 +376,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.tong.AutoSize = true;
             this.tong.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tong.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.tong.Location = new System.Drawing.Point(273, 38);
-            this.tong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.tong.Location = new System.Drawing.Point(364, 47);
             this.tong.Name = "tong";
-            this.tong.Size = new System.Drawing.Size(87, 24);
+            this.tong.Size = new System.Drawing.Size(107, 30);
             this.tong.TabIndex = 6;
             this.tong.Text = "4000000₫";
             // 
@@ -401,10 +387,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Quicksand SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(132)))));
-            this.label11.Location = new System.Drawing.Point(272, 17);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(363, 21);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(72, 16);
+            this.label11.Size = new System.Drawing.Size(92, 21);
             this.label11.TabIndex = 5;
             this.label11.Text = "Tổng  (VNĐ)";
             // 
@@ -413,10 +398,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.SoHD.AutoSize = true;
             this.SoHD.Font = new System.Drawing.Font("Quicksand", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SoHD.ForeColor = System.Drawing.Color.Black;
-            this.SoHD.Location = new System.Drawing.Point(122, 34);
-            this.SoHD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SoHD.Location = new System.Drawing.Point(163, 42);
             this.SoHD.Name = "SoHD";
-            this.SoHD.Size = new System.Drawing.Size(34, 21);
+            this.SoHD.Size = new System.Drawing.Size(41, 25);
             this.SoHD.TabIndex = 4;
             this.SoHD.Text = "#01";
             // 
@@ -425,10 +409,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Quicksand SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(132)))));
-            this.label10.Location = new System.Drawing.Point(122, 17);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(163, 21);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 16);
+            this.label10.Size = new System.Drawing.Size(87, 21);
             this.label10.TabIndex = 3;
             this.label10.Text = "Số hóa đơn";
             // 
@@ -437,10 +420,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.DiaChi.AutoSize = true;
             this.DiaChi.Font = new System.Drawing.Font("Quicksand SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DiaChi.ForeColor = System.Drawing.Color.Black;
-            this.DiaChi.Location = new System.Drawing.Point(14, 89);
-            this.DiaChi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DiaChi.Location = new System.Drawing.Point(19, 110);
             this.DiaChi.Name = "DiaChi";
-            this.DiaChi.Size = new System.Drawing.Size(56, 18);
+            this.DiaChi.Size = new System.Drawing.Size(70, 23);
             this.DiaChi.TabIndex = 2;
             this.DiaChi.Text = "Japanes";
             // 
@@ -449,10 +431,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.NameKh.AutoSize = true;
             this.NameKh.Font = new System.Drawing.Font("Quicksand", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameKh.ForeColor = System.Drawing.Color.Black;
-            this.NameKh.Location = new System.Drawing.Point(14, 34);
-            this.NameKh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.NameKh.Location = new System.Drawing.Point(19, 42);
             this.NameKh.Name = "NameKh";
-            this.NameKh.Size = new System.Drawing.Size(67, 21);
+            this.NameKh.Size = new System.Drawing.Size(82, 25);
             this.NameKh.TabIndex = 1;
             this.NameKh.Text = "Saitama";
             // 
@@ -461,10 +442,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Quicksand SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(132)))));
-            this.label9.Location = new System.Drawing.Point(14, 17);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(19, 21);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 16);
+            this.label9.Size = new System.Drawing.Size(86, 21);
             this.label9.TabIndex = 0;
             this.label9.Text = "Người mua,";
             // 
@@ -472,6 +452,7 @@ namespace QLCuaHangQuanAo.SubForm
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this;
+            this.guna2DragControl1.TransparentWhileDrag = true;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // guna2AnimateWindow1
@@ -484,11 +465,11 @@ namespace QLCuaHangQuanAo.SubForm
             this.guna2PictureBox1.BorderRadius = 5;
             this.guna2PictureBox1.Image = global::QLCuaHangQuanAo.Properties.Resources.Logo1;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(9, 10);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(49, 53);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(65, 65);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
@@ -499,10 +480,10 @@ namespace QLCuaHangQuanAo.SubForm
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Quicksand", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.MediumOrchid;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(70, 5);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(93, 6);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(193, 33);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(257, 41);
             this.guna2HtmlLabel1.TabIndex = 2;
             this.guna2HtmlLabel1.Text = "Long & Khanh                    \r\n\r\n\r\n\r\n\r\n\r\n\r\n";
             // 
@@ -511,10 +492,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Quicksand Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(132)))));
-            this.label1.Location = new System.Drawing.Point(68, 41);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(91, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 16);
+            this.label1.Size = new System.Drawing.Size(118, 21);
             this.label1.TabIndex = 3;
             this.label1.Text = "SĐT: 0987654321";
             // 
@@ -523,10 +503,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Quicksand SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(132)))));
-            this.label2.Location = new System.Drawing.Point(68, 58);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(91, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 16);
+            this.label2.Size = new System.Drawing.Size(131, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "Email@gmail.com";
             // 
@@ -535,10 +514,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Quicksand SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(132)))));
-            this.label3.Location = new System.Drawing.Point(68, 76);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(91, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 16);
+            this.label3.Size = new System.Drawing.Size(127, 21);
             this.label3.TabIndex = 5;
             this.label3.Text = "www.abcdfg.com";
             // 
@@ -547,10 +525,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Quicksand Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(132)))));
-            this.label4.Location = new System.Drawing.Point(296, 23);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(395, 28);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 16);
+            this.label4.Size = new System.Drawing.Size(76, 21);
             this.label4.TabIndex = 6;
             this.label4.Text = "Khu Phố 6";
             // 
@@ -559,10 +536,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Quicksand Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(132)))));
-            this.label5.Location = new System.Drawing.Point(257, 40);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(343, 49);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 16);
+            this.label5.Size = new System.Drawing.Size(134, 21);
             this.label5.TabIndex = 7;
             this.label5.Text = "Phường Linh Trung";
             // 
@@ -571,10 +547,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Quicksand Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(132)))));
-            this.label6.Location = new System.Drawing.Point(262, 47);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(349, 58);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 16);
+            this.label6.Size = new System.Drawing.Size(0, 21);
             this.label6.TabIndex = 8;
             // 
             // label7
@@ -582,10 +557,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Quicksand Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(132)))));
-            this.label7.Location = new System.Drawing.Point(275, 57);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(367, 70);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 16);
+            this.label7.Size = new System.Drawing.Size(104, 21);
             this.label7.TabIndex = 9;
             this.label7.Text = "Quận Thủ Đức";
             // 
@@ -594,10 +568,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Quicksand Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(132)))));
-            this.label8.Location = new System.Drawing.Point(257, 73);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(343, 90);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(115, 16);
+            this.label8.Size = new System.Drawing.Size(128, 21);
             this.label8.TabIndex = 10;
             this.label8.Text = "TP.HCM, Việt Nam";
             // 
@@ -615,11 +588,11 @@ namespace QLCuaHangQuanAo.SubForm
             this.Cancel.Font = new System.Drawing.Font("Quicksand", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cancel.ForeColor = System.Drawing.Color.White;
             this.Cancel.HoverState.Parent = this.Cancel;
-            this.Cancel.Location = new System.Drawing.Point(134, 540);
-            this.Cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Cancel.Location = new System.Drawing.Point(179, 665);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Cancel.Name = "Cancel";
             this.Cancel.ShadowDecoration.Parent = this.Cancel;
-            this.Cancel.Size = new System.Drawing.Size(112, 32);
+            this.Cancel.Size = new System.Drawing.Size(149, 39);
             this.Cancel.TabIndex = 11;
             this.Cancel.Text = "HỦY ĐƠN";
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
@@ -638,11 +611,11 @@ namespace QLCuaHangQuanAo.SubForm
             this.Delivery.Font = new System.Drawing.Font("Quicksand", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Delivery.ForeColor = System.Drawing.Color.White;
             this.Delivery.HoverState.Parent = this.Delivery;
-            this.Delivery.Location = new System.Drawing.Point(6, 540);
-            this.Delivery.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Delivery.Location = new System.Drawing.Point(8, 665);
+            this.Delivery.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Delivery.Name = "Delivery";
             this.Delivery.ShadowDecoration.Parent = this.Delivery;
-            this.Delivery.Size = new System.Drawing.Size(120, 32);
+            this.Delivery.Size = new System.Drawing.Size(160, 39);
             this.Delivery.TabIndex = 12;
             this.Delivery.Text = "VẬN CHUYỂN";
             this.Delivery.Click += new System.EventHandler(this.Delivery_Click);
@@ -661,22 +634,46 @@ namespace QLCuaHangQuanAo.SubForm
             this.Exit.Font = new System.Drawing.Font("Quicksand", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit.ForeColor = System.Drawing.Color.White;
             this.Exit.HoverState.Parent = this.Exit;
-            this.Exit.Location = new System.Drawing.Point(252, 540);
-            this.Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Exit.Location = new System.Drawing.Point(336, 665);
+            this.Exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Exit.Name = "Exit";
             this.Exit.ShadowDecoration.Parent = this.Exit;
-            this.Exit.Size = new System.Drawing.Size(120, 32);
+            this.Exit.Size = new System.Drawing.Size(160, 39);
             this.Exit.TabIndex = 13;
             this.Exit.Text = "THOÁT";
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
+            // INHD
+            // 
+            this.INHD.BorderRadius = 7;
+            this.INHD.CheckedState.Parent = this.INHD;
+            this.INHD.CustomImages.Parent = this.INHD;
+            this.INHD.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.INHD.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.INHD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.INHD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.INHD.DisabledState.Parent = this.INHD;
+            this.INHD.FillColor = System.Drawing.Color.Goldenrod;
+            this.INHD.Font = new System.Drawing.Font("Quicksand", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.INHD.ForeColor = System.Drawing.Color.Black;
+            this.INHD.HoverState.Parent = this.INHD;
+            this.INHD.Location = new System.Drawing.Point(8, 665);
+            this.INHD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.INHD.Name = "INHD";
+            this.INHD.ShadowDecoration.Parent = this.INHD;
+            this.INHD.Size = new System.Drawing.Size(160, 39);
+            this.INHD.TabIndex = 22;
+            this.INHD.Text = "IN HÓA ĐƠN";
+            this.INHD.Click += new System.EventHandler(this.INHD_Click);
+            // 
             // BILL
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(375, 575);
+            this.ClientSize = new System.Drawing.Size(500, 708);
+            this.Controls.Add(this.INHD);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.Delivery);
             this.Controls.Add(this.Cancel);
@@ -692,8 +689,8 @@ namespace QLCuaHangQuanAo.SubForm
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MaximumSize = new System.Drawing.Size(375, 575);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximumSize = new System.Drawing.Size(500, 708);
             this.Name = "BILL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "BILL";
@@ -750,5 +747,6 @@ namespace QLCuaHangQuanAo.SubForm
         private System.Windows.Forms.DataGridViewTextBoxColumn TENSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn SL;
         private System.Windows.Forms.DataGridViewTextBoxColumn GIA;
+        private Guna.UI2.WinForms.Guna2Button INHD;
     }
 }

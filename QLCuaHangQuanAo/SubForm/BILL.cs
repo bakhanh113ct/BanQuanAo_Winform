@@ -160,9 +160,14 @@ namespace QLCuaHangQuanAo.SubForm
             {
                 Delivery.Visible = false;
                 Cancel.Visible = false;
+                INHD.Visible = true;
             }
             else if (Status == "Delivery")
+            {
                 Delivery.Visible = false;
+            }
+            else
+                INHD.Visible = false;
         }
 
         private void SendEmail(int i)
@@ -193,6 +198,25 @@ namespace QLCuaHangQuanAo.SubForm
             return Convert.ToBase64String(data).Replace("+", "-").Replace("/", "_").Replace("=", "");
         }
 
+        private void INHD_Click(object sender, EventArgs e)
+        {
+            cr_HOADON inhoadon = new cr_HOADON();
+
+
+            CrystalDecisions.Shared.TableLogOnInfo thongtin;
+            thongtin = inhoadon.Database.Tables[0].LogOnInfo;
+            thongtin.ConnectionInfo.ServerName = @"DESKTOP-5E0I4OU\SQLEXPRESS01";
+            thongtin.ConnectionInfo.DatabaseName = "QuanLyKho";
+            thongtin.ConnectionInfo.IntegratedSecurity = true;
+            inhoadon.Database.Tables[0].ApplyLogOnInfo(thongtin);
+
+            frmInHoaDon frmInHoadon = new frmInHoaDon();
+
+            frmInHoadon.cryInHoaDon.ReportSource = inhoadon;
+            frmInHoadon.cryInHoaDon.SelectionFormula = "{HOADON.SOHD}=" + SOHD + "";
+            frmInHoadon.ShowDialog();
+
+        }
     }
     
 }

@@ -205,7 +205,7 @@ namespace QLCuaHangQuanAo.DAO
          public int SLHD_CRmonth()//Lấy số lượng hóa đơn trong tháng 
          {
             DataTable sl = DataProvider.ExcuseQuery1("select count(SOHD) as SL from HOADON " +
-                "where MONTH(NGHD) = MONTH(GETDATE()) and (TRANG_THAI = 'Delevery' or TRANG_THAI = 'Complete')");
+                "where MONTH(NGHD) = MONTH(GETDATE()) and (TRANG_THAI = 'Delivery' or TRANG_THAI = 'Complete')");
             foreach (DataRow x in sl.Rows)
             {
                 return (int)x["SL"];

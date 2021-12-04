@@ -57,11 +57,12 @@ namespace QLCuaHangQuanAo
             // 
             // prg
             // 
-            this.prg.Location = new System.Drawing.Point(159, 465);
+            this.prg.Location = new System.Drawing.Point(212, 572);
+            this.prg.Margin = new System.Windows.Forms.Padding(4);
             this.prg.Name = "prg";
             this.prg.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.prg.ShadowDecoration.Parent = this.prg;
-            this.prg.Size = new System.Drawing.Size(44, 42);
+            this.prg.Size = new System.Drawing.Size(59, 52);
             this.prg.TabIndex = 37;
             this.prg.Visible = false;
             // 
@@ -76,23 +77,25 @@ namespace QLCuaHangQuanAo
             this.btnAdmin_User.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAdmin_User.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnAdmin_User.DisabledState.Parent = this.btnAdmin_User;
-            this.btnAdmin_User.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(3)))), ((int)(((byte)(119)))));
-            this.btnAdmin_User.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnAdmin_User.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnAdmin_User.Font = new System.Drawing.Font("Quicksand", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmin_User.ForeColor = System.Drawing.Color.White;
             this.btnAdmin_User.HoverState.Parent = this.btnAdmin_User;
-            this.btnAdmin_User.Location = new System.Drawing.Point(-5, 49);
+            this.btnAdmin_User.Location = new System.Drawing.Point(-7, 60);
+            this.btnAdmin_User.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdmin_User.Name = "btnAdmin_User";
             this.btnAdmin_User.ShadowDecoration.Parent = this.btnAdmin_User;
-            this.btnAdmin_User.Size = new System.Drawing.Size(77, 31);
+            this.btnAdmin_User.Size = new System.Drawing.Size(103, 38);
             this.btnAdmin_User.TabIndex = 36;
             this.btnAdmin_User.Text = "User";
             // 
             // Gif_Logo
             // 
             this.Gif_Logo.Image = global::QLCuaHangQuanAo.Properties.Resources.Logo;
-            this.Gif_Logo.Location = new System.Drawing.Point(31, 88);
+            this.Gif_Logo.Location = new System.Drawing.Point(50, 109);
+            this.Gif_Logo.Margin = new System.Windows.Forms.Padding(4);
             this.Gif_Logo.Name = "Gif_Logo";
-            this.Gif_Logo.Size = new System.Drawing.Size(302, 374);
+            this.Gif_Logo.Size = new System.Drawing.Size(403, 460);
             this.Gif_Logo.TabIndex = 34;
             this.Gif_Logo.TabStop = false;
             this.Gif_Logo.Visible = false;
@@ -100,7 +103,8 @@ namespace QLCuaHangQuanAo
             // PhanTram
             // 
             this.PhanTram.BackColor = System.Drawing.Color.Transparent;
-            this.PhanTram.Location = new System.Drawing.Point(183, 486);
+            this.PhanTram.Location = new System.Drawing.Point(244, 598);
+            this.PhanTram.Margin = new System.Windows.Forms.Padding(4);
             this.PhanTram.Name = "PhanTram";
             this.PhanTram.Size = new System.Drawing.Size(3, 2);
             this.PhanTram.TabIndex = 33;
@@ -112,9 +116,10 @@ namespace QLCuaHangQuanAo
             this.guna2Panel1.Controls.Add(this.btnExit);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(361, 41);
+            this.guna2Panel1.Size = new System.Drawing.Size(481, 50);
             this.guna2Panel1.TabIndex = 29;
             // 
             // guna2ControlBox2
@@ -125,10 +130,11 @@ namespace QLCuaHangQuanAo
             this.guna2ControlBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(259, 0);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(345, 0);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
-            this.guna2ControlBox2.Size = new System.Drawing.Size(51, 38);
+            this.guna2ControlBox2.Size = new System.Drawing.Size(68, 47);
             this.guna2ControlBox2.TabIndex = 6;
             this.guna2ControlBox2.TabStop = false;
             // 
@@ -139,10 +145,11 @@ namespace QLCuaHangQuanAo
             this.btnExit.ForeColor = System.Drawing.Color.Black;
             this.btnExit.HoverState.Parent = this.btnExit;
             this.btnExit.IconColor = System.Drawing.Color.Black;
-            this.btnExit.Location = new System.Drawing.Point(310, 0);
+            this.btnExit.Location = new System.Drawing.Point(413, 0);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Parent = this.btnExit;
-            this.btnExit.Size = new System.Drawing.Size(51, 38);
+            this.btnExit.Size = new System.Drawing.Size(68, 47);
             this.btnExit.TabIndex = 7;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -153,9 +160,10 @@ namespace QLCuaHangQuanAo
             this.lbSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbSignUp.Font = new System.Drawing.Font("Quicksand Medium", 8.7F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSignUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(41)))), ((int)(((byte)(144)))));
-            this.lbSignUp.Location = new System.Drawing.Point(159, 424);
+            this.lbSignUp.Location = new System.Drawing.Point(212, 522);
+            this.lbSignUp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSignUp.Name = "lbSignUp";
-            this.lbSignUp.Size = new System.Drawing.Size(59, 18);
+            this.lbSignUp.Size = new System.Drawing.Size(63, 23);
             this.lbSignUp.TabIndex = 27;
             this.lbSignUp.Text = "Đăng kí";
             this.lbSignUp.Click += new System.EventHandler(this.lbSignUp_Click);
@@ -165,23 +173,26 @@ namespace QLCuaHangQuanAo
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Quicksand Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(41)))), ((int)(((byte)(144)))));
-            this.label1.Location = new System.Drawing.Point(103, 312);
+            this.label1.Location = new System.Drawing.Point(137, 384);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 18);
+            this.label1.Size = new System.Drawing.Size(113, 23);
             this.label1.TabIndex = 30;
             this.label1.Text = "Xem mật khẩu";
             // 
             // pwshow
             // 
+            this.pwshow.BackColor = System.Drawing.Color.White;
             this.pwshow.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.pwshow.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.pwshow.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.pwshow.CheckedState.InnerColor = System.Drawing.Color.White;
             this.pwshow.CheckedState.Parent = this.pwshow;
-            this.pwshow.Location = new System.Drawing.Point(61, 310);
+            this.pwshow.Location = new System.Drawing.Point(81, 382);
+            this.pwshow.Margin = new System.Windows.Forms.Padding(4);
             this.pwshow.Name = "pwshow";
             this.pwshow.ShadowDecoration.Parent = this.pwshow;
-            this.pwshow.Size = new System.Drawing.Size(33, 18);
+            this.pwshow.Size = new System.Drawing.Size(44, 22);
             this.pwshow.TabIndex = 26;
             this.pwshow.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.pwshow.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -194,7 +205,7 @@ namespace QLCuaHangQuanAo
             // 
             this.btnLogin.Animated = true;
             this.btnLogin.AutoRoundedCorners = true;
-            this.btnLogin.BorderRadius = 17;
+            this.btnLogin.BorderRadius = 22;
             this.btnLogin.CheckedState.Parent = this.btnLogin;
             this.btnLogin.CustomImages.Parent = this.btnLogin;
             this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -203,14 +214,15 @@ namespace QLCuaHangQuanAo
             this.btnLogin.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLogin.DisabledState.Parent = this.btnLogin;
-            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(3)))), ((int)(((byte)(121)))));
-            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnLogin.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.HoverState.Parent = this.btnLogin;
-            this.btnLogin.Location = new System.Drawing.Point(61, 372);
+            this.btnLogin.Location = new System.Drawing.Point(81, 458);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.ShadowDecoration.Parent = this.btnLogin;
-            this.btnLogin.Size = new System.Drawing.Size(254, 37);
+            this.btnLogin.Size = new System.Drawing.Size(339, 46);
             this.btnLogin.TabIndex = 28;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -219,7 +231,7 @@ namespace QLCuaHangQuanAo
             // 
             this.txtPassword.AutoRoundedCorners = true;
             this.txtPassword.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtPassword.BorderRadius = 19;
+            this.txtPassword.BorderRadius = 10;
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.DefaultText = "";
             this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -235,14 +247,15 @@ namespace QLCuaHangQuanAo
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.HoverState.Parent = this.txtPassword;
             this.txtPassword.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtPassword.IconLeft")));
-            this.txtPassword.Location = new System.Drawing.Point(61, 260);
+            this.txtPassword.Location = new System.Drawing.Point(81, 320);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txtPassword.PlaceholderText = "Mật khẩu";
             this.txtPassword.SelectedText = "";
             this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
-            this.txtPassword.Size = new System.Drawing.Size(254, 40);
+            this.txtPassword.Size = new System.Drawing.Size(339, 49);
             this.txtPassword.TabIndex = 25;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -253,12 +266,13 @@ namespace QLCuaHangQuanAo
             // PrgLogin
             // 
             this.PrgLogin.BorderRadius = 8;
-            this.PrgLogin.Location = new System.Drawing.Point(5, 510);
+            this.PrgLogin.Location = new System.Drawing.Point(7, 628);
+            this.PrgLogin.Margin = new System.Windows.Forms.Padding(4);
             this.PrgLogin.Name = "PrgLogin";
             this.PrgLogin.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
             this.PrgLogin.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(3)))), ((int)(((byte)(121)))));
             this.PrgLogin.ShadowDecoration.Parent = this.PrgLogin;
-            this.PrgLogin.Size = new System.Drawing.Size(361, 13);
+            this.PrgLogin.Size = new System.Drawing.Size(481, 16);
             this.PrgLogin.TabIndex = 32;
             this.PrgLogin.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.PrgLogin.Visible = false;
@@ -268,7 +282,7 @@ namespace QLCuaHangQuanAo
             this.txtUsername.AcceptsTab = true;
             this.txtUsername.AutoRoundedCorners = true;
             this.txtUsername.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtUsername.BorderRadius = 19;
+            this.txtUsername.BorderRadius = 10;
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.DefaultText = "";
             this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -284,14 +298,15 @@ namespace QLCuaHangQuanAo
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.HoverState.Parent = this.txtUsername;
             this.txtUsername.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtUsername.IconLeft")));
-            this.txtUsername.Location = new System.Drawing.Point(61, 199);
+            this.txtUsername.Location = new System.Drawing.Point(81, 245);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txtUsername.PlaceholderText = "Tên tài khoản";
             this.txtUsername.SelectedText = "";
             this.txtUsername.ShadowDecoration.Parent = this.txtUsername;
-            this.txtUsername.Size = new System.Drawing.Size(254, 40);
+            this.txtUsername.Size = new System.Drawing.Size(339, 49);
             this.txtUsername.TabIndex = 24;
             this.txtUsername.Tag = "1";
             // 
@@ -302,7 +317,7 @@ namespace QLCuaHangQuanAo
             // guna2Button1
             // 
             this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderRadius = 26;
+            this.guna2Button1.BorderRadius = 33;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
             this.guna2Button1.CustomizableEdges.BottomRight = false;
@@ -312,14 +327,15 @@ namespace QLCuaHangQuanAo
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.DisabledState.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(41)))), ((int)(((byte)(143)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.BlueViolet;
             this.guna2Button1.Font = new System.Drawing.Font("Quicksand", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(106, 88);
+            this.guna2Button1.Location = new System.Drawing.Point(141, 108);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(163, 55);
+            this.guna2Button1.Size = new System.Drawing.Size(217, 68);
             this.guna2Button1.TabIndex = 31;
             this.guna2Button1.Text = "Đăng nhập";
             // 
@@ -329,9 +345,10 @@ namespace QLCuaHangQuanAo
             this.Admin_User_Lg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Admin_User_Lg.Font = new System.Drawing.Font("Quicksand Medium", 8.7F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Admin_User_Lg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(41)))), ((int)(((byte)(144)))));
-            this.Admin_User_Lg.Location = new System.Drawing.Point(89, 446);
+            this.Admin_User_Lg.Location = new System.Drawing.Point(119, 549);
+            this.Admin_User_Lg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Admin_User_Lg.Name = "Admin_User_Lg";
-            this.Admin_User_Lg.Size = new System.Drawing.Size(196, 16);
+            this.Admin_User_Lg.Size = new System.Drawing.Size(261, 20);
             this.Admin_User_Lg.TabIndex = 35;
             this.Admin_User_Lg.Text = "Đăng nhập với quyền admin";
             this.Admin_User_Lg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -341,15 +358,16 @@ namespace QLCuaHangQuanAo
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this.guna2Panel1;
+            this.guna2DragControl1.TransparentWhileDrag = true;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // Login
             // 
             this.AcceptButton = this.btnLogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(361, 524);
+            this.ClientSize = new System.Drawing.Size(481, 645);
             this.Controls.Add(this.prg);
             this.Controls.Add(this.btnAdmin_User);
             this.Controls.Add(this.Gif_Logo);
@@ -365,6 +383,7 @@ namespace QLCuaHangQuanAo
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.Admin_User_Lg);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

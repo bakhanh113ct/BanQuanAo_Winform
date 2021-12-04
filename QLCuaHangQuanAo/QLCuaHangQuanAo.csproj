@@ -33,6 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Google.Apis, Version=1.55.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Apis.1.55.0\lib\net45\Google.Apis.dll</HintPath>
     </Reference>
@@ -51,8 +56,8 @@
     <Reference Include="Google.Apis.PlatformServices, Version=1.55.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Apis.1.55.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
     </Reference>
-    <Reference Include="Guna.UI2, Version=2.0.2.5, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.5\lib\net40\Guna.UI2.dll</HintPath>
+    <Reference Include="Guna.UI2, Version=2.0.2.4, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.4\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -61,6 +66,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -169,6 +175,12 @@
     <Compile Include="SubForm\Cart_Form.Designer.cs">
       <DependentUpon>Cart_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubForm\cr_HOADON.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_HOADON.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="SubForm\Detail_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +192,12 @@
     </Compile>
     <Compile Include="SubForm\Edit_Form.Designer.cs">
       <DependentUpon>Edit_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\InHOADON.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\InHOADON.Designer.cs">
+      <DependentUpon>InHOADON.cs</DependentUpon>
     </Compile>
     <Compile Include="SubForm\Product_Bill.cs">
       <SubType>Form</SubType>
@@ -248,11 +266,18 @@
     <EmbeddedResource Include="SubForm\Cart_Form.resx">
       <DependentUpon>Cart_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\cr_HOADON.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_HOADON.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Detail_Form.resx">
       <DependentUpon>Detail_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Edit_Form.resx">
       <DependentUpon>Edit_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\InHOADON.resx">
+      <DependentUpon>InHOADON.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Product_Bill.resx">
       <DependentUpon>Product_Bill.cs</DependentUpon>
@@ -430,6 +455,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buy-button.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

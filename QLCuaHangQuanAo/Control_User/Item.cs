@@ -55,16 +55,11 @@ namespace QLCuaHangQuanAo.Control_User
                 i.btnItem.FillColor = Color.Transparent;
             }
             Store_performence.sanpham = sanpham;
-            btnItem.FillColor = Color.Yellow;
+            btnItem.FillColor = Color.FromArgb(194, 130, 252);
         }
         private void picture_Click(object sender, EventArgs e)
         {
             btnItem_Click(btnItem, e);
-        }
-
-        private void btnItem_DoubleClick(object sender, EventArgs e)
-        {
-            
         }
 
         

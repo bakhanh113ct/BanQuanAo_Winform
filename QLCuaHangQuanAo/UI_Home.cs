@@ -120,7 +120,7 @@ namespace QLCuaHangQuanAo
 
         private void STATISTIC_Click(object sender, EventArgs e)
         {
-            subbar_Change(subbar4, btnINVOICE);
+            subbar_Change(subbar4, STATISTIC);
             openPerformance(new Statistics_perfomancecs());
 
             DAO.Sound.Instance.sound_Click();
@@ -128,7 +128,7 @@ namespace QLCuaHangQuanAo
 
         private void SETTING_Click(object sender, EventArgs e)
         {
-            subbar_Change(subbar5, STATISTIC);
+            subbar_Change(subbar5, SETTING);
             openPerformance(setting);
         }
 
@@ -156,8 +156,8 @@ namespace QLCuaHangQuanAo
         {
             DAO.Sound.Instance.sound_Click();
             SubForm.Show_creator creator = new SubForm.Show_creator();
-            creator.Show();
-            DAO.Sound.Instance.tada();
+            creator.ShowDialog();
+            
             
         }
 
