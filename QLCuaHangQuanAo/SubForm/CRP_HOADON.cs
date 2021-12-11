@@ -16,14 +16,14 @@ namespace QLCuaHangQuanAo.SubForm {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class cr_HOADON : ReportClass {
+    public class CRP_HOADON : ReportClass {
         
-        public cr_HOADON() {
+        public CRP_HOADON() {
         }
         
         public override string ResourceName {
             get {
-                return "cr_HOADON.rpt";
+                return "CRP_HOADON.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace QLCuaHangQuanAo.SubForm {
         
         public override string FullResourceName {
             get {
-                return "QLCuaHangQuanAo.SubForm.cr_HOADON.rpt";
+                return "QLCuaHangQuanAo.SubForm.CRP_HOADON.rpt";
             }
             set {
                 // Do nothing
@@ -106,9 +106,9 @@ namespace QLCuaHangQuanAo.SubForm {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class Cachedcr_HOADON : Component, ICachedReport {
+    public class CachedCRP_HOADON : Component, ICachedReport {
         
-        public Cachedcr_HOADON() {
+        public CachedCRP_HOADON() {
         }
         
         [Browsable(false)]
@@ -145,7 +145,7 @@ namespace QLCuaHangQuanAo.SubForm {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            cr_HOADON rpt = new cr_HOADON();
+            CRP_HOADON rpt = new CRP_HOADON();
             rpt.Site = this.Site;
             return rpt;
         }

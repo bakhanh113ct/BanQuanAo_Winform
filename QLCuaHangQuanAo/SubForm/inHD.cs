@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QLCuaHangQuanAo.SubForm
 {
-    public partial class frmInHoaDon : Form
+    public partial class inHD : Form
     {
-        public frmInHoaDon()
+        public inHD()
         {
             InitializeComponent();
-        }
-
-        private void crystalReportHOADON_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

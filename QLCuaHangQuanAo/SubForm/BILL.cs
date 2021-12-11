@@ -35,7 +35,6 @@ namespace QLCuaHangQuanAo.SubForm
             this.SOHD = SOHD;
             loadInfo(SOHD);
             loadCTSP(SOHD);
-           
         }
 
         private void loadCTSP(int sOHD)
@@ -167,22 +166,22 @@ namespace QLCuaHangQuanAo.SubForm
 
         private void INHD_Click(object sender, EventArgs e)
         {
-            cr_HOADON inhoadon = new cr_HOADON();
+            CRP_HOADON inhoadon = new CRP_HOADON();
+
 
             CrystalDecisions.Shared.TableLogOnInfo thongtin;
             thongtin = inhoadon.Database.Tables[0].LogOnInfo;
-            thongtin.ConnectionInfo.ServerName = @"DESKTOP-LBAULH5";
+            thongtin.ConnectionInfo.ServerName = @"DESKTOP-5E0I4OU\SQLEXPRESS01";
             thongtin.ConnectionInfo.DatabaseName = "QuanLyKho";
             thongtin.ConnectionInfo.IntegratedSecurity = true;
             inhoadon.Database.Tables[0].ApplyLogOnInfo(thongtin);
 
-            frmInHoaDon frmInHoadon = new frmInHoaDon();
+            inHD frmInHoadon = new inHD();
 
-            frmInHoadon.cryInHoaDon.ReportSource = inhoadon;
-            frmInHoadon.cryInHoaDon.SelectionFormula = "{HOADON.SOHD}=" + SOHD + "";
-            frmInHoadon.Show();
-            //frmInHoadon.cryInHoaDon.PrintReport();
-            
+            frmInHoadon.cryinHD.ReportSource = inhoadon;
+            frmInHoadon.cryinHD.SelectionFormula = "{HOADON.SOHD}=" + SOHD + "";
+            frmInHoadon.ShowDialog();
+
         }
     }
 }
