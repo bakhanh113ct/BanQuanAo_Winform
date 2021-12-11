@@ -258,6 +258,14 @@ namespace QLCuaHangQuanAo.DAO
             return (string)DAO.DataProvider.ExecuteScalar("Select TRANG_THAI from HOADON where SOHD = '" + SoHD + "'");
         }
 
+        public bool DeleteHD(string SoHd)
+        {
+            int check = DAO.DataProvider.ExecuteNonQuery("delete from HOADON where SOHD = '" + SoHd + "'");
+            if (check == 0)
+                return false;
+            else
+                return true;
+        }
 
     }
 }

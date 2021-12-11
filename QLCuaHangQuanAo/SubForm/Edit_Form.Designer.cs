@@ -52,6 +52,8 @@ namespace QLCuaHangQuanAo.SubForm
             this.txbTen = new Guna.UI2.WinForms.Guna2TextBox();
             this.txbSoLuong = new Guna.UI2.WinForms.Guna2TextBox();
             this.txbGiaTien = new Guna.UI2.WinForms.Guna2TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             this.tool3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
@@ -418,11 +420,27 @@ namespace QLCuaHangQuanAo.SubForm
             this.txbGiaTien.Size = new System.Drawing.Size(277, 30);
             this.txbGiaTien.TabIndex = 1;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(82, 287);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(161, 15);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "**1.Quần, 2.Áo, 3.Mũ, 4.Giày";
+            // 
             // Edit_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 400);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txbLoai);
             this.Controls.Add(this.txbMota);
             this.Controls.Add(this.txbTen);
@@ -476,5 +494,7 @@ namespace QLCuaHangQuanAo.SubForm
         private Guna.UI2.WinForms.Guna2TextBox txbTen;
         private Guna.UI2.WinForms.Guna2TextBox txbSoLuong;
         private Guna.UI2.WinForms.Guna2TextBox txbGiaTien;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

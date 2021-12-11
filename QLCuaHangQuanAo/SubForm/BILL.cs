@@ -23,8 +23,6 @@ namespace QLCuaHangQuanAo.SubForm
         private string Status;
         int SOHD;
         static bool kt = false;
-
-
         public BILL()
         {
             InitializeComponent();
@@ -48,7 +46,7 @@ namespace QLCuaHangQuanAo.SubForm
             {
                 DTO.BillInfo temp = new DTO.BillInfo(x);
                 BILLCT.Rows.Add(temp.TenSP, temp.SL, temp.Gia.ToString(), temp.Trigia);
-                total = temp.Trigia;
+                total += temp.Trigia;
             }
             tong.Text = (total + 15000).ToString() + "₫";
             TONGALL.Text = tong.Text;
@@ -138,11 +136,8 @@ namespace QLCuaHangQuanAo.SubForm
                 DAO.DataProvider.ExcuseNonQuery1("update HOADON set NGXN = " + time + " Where SOHD = " + SOHD);
                 MessageBox.Show("Đang vận chuyển");
                 Delivery.Visible = false;
+                INHD.Visible = true;
             }
-        }
-        public static bool getChange()
-        {
-            return kt;
         }
         private void Exit_Click(object sender, EventArgs e)
         {
@@ -150,11 +145,17 @@ namespace QLCuaHangQuanAo.SubForm
         }
         private void xuli()
         {
-            if (Status == "Complete" || Status == "Cancel")
+            if (Status == "Complete")
             {
                 Delivery.Visible = false;
                 Cancel.Visible = false;
                 INHD.Visible = true;
+            }
+            else if(Status == "Cancel")
+            {
+                Delivery.Visible = false;
+                Cancel.Visible = false;
+                INHD.Visible = false;
             }
             else if (Status == "Delivery")
             {
@@ -170,7 +171,7 @@ namespace QLCuaHangQuanAo.SubForm
 
             CrystalDecisions.Shared.TableLogOnInfo thongtin;
             thongtin = inhoadon.Database.Tables[0].LogOnInfo;
-            thongtin.ConnectionInfo.ServerName = @"DESKTOP-5E0I4OU\SQLEXPRESS01";
+            thongtin.ConnectionInfo.ServerName = @"DESKTOP-LBAULH5";
             thongtin.ConnectionInfo.DatabaseName = "QuanLyKho";
             thongtin.ConnectionInfo.IntegratedSecurity = true;
             inhoadon.Database.Tables[0].ApplyLogOnInfo(thongtin);
@@ -180,11 +181,9 @@ namespace QLCuaHangQuanAo.SubForm
             frmInHoadon.cryInHoaDon.ReportSource = inhoadon;
             frmInHoadon.cryInHoaDon.SelectionFormula = "{HOADON.SOHD}=" + SOHD + "";
             frmInHoadon.Show();
-            frmInHoadon.cryInHoaDon.PrintReport();
+            //frmInHoadon.cryInHoaDon.PrintReport();
             
         }
-
     }
-    
 }
 

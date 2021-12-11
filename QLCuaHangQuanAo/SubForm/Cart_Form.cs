@@ -23,13 +23,31 @@ namespace QLCuaHangQuanAo.SubForm
         {
             this.Close();
         }
-
+        private string SetLoai(int idloai)
+        {
+            switch (idloai)
+            {
+                case 1:
+                    return "Quần";
+                    break;
+                case 2:
+                    return "Áo";
+                    break;
+                case 3:
+                    return "Mũ";
+                    break;
+                case 4:
+                    return "Giày";
+                    break;
+            }
+            return "không xác định";
+        }
         private void Cart_Form_Load(object sender, EventArgs e)
         {
             double Tongtien = 0;
             foreach (Item_HD item in Item_HD.item_HDs)
             {
-                dtgrvItem.Rows.Add(item.Anh, item.Ten, item.Loai, item.Sl, item.Gia);
+                dtgrvItem.Rows.Add(item.Anh, item.Ten, SetLoai(item.Idloai), item.Sl, item.Gia);
                 Tongtien += item.Sl * item.Gia;
             }
             txbTongTien.Text = Tongtien.ToString();

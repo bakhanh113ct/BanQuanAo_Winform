@@ -36,20 +36,20 @@ namespace QLCuaHangQuanAo.SubForm
             picture.SizeMode = PictureBoxSizeMode.Zoom;
             
         }
-
+        
         private void btnSave_Click(object sender, EventArgs e)
         {
             byte[] imgbyte = Library.ConvertoByte(picture.Image);
             if (imgbyte != null)
                 if (SanPhamDAO.UpdateSP(txbTen.Text, txbGiaTien.Text, txbSoLuong.Text, sp.DaBan.ToString(), txbMota.Text, txbLoai.Text, imgbyte, id))
                 {
-                    MessageBox.Show("Cap nhat thanh cong.");
+                    MessageBox.Show("Cập nhật thành công.");
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Cap nhat khong thanh cong.");
+                    MessageBox.Show("Cập nhật không thành công.");
                 }
             Close();
         }
@@ -64,7 +64,7 @@ namespace QLCuaHangQuanAo.SubForm
             }
             else
             {
-                MessageBox.Show("Xoa khong thanh cong.");
+                MessageBox.Show("Sản phẩm đang ở trong hóa đơn, không thể xóa.", "Thông báo",MessageBoxButtons.OK ,MessageBoxIcon.Error);
             }
         }
 

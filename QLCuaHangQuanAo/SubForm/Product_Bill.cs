@@ -26,6 +26,27 @@ namespace QLCuaHangQuanAo.SubForm
             dtgrvItem.DataSource = table;
         }
 
+        private void btnHuyDon_Click(object sender, EventArgs e)
+        {
+            
+
+            if (DAO.HoaDonDAO.Instance.CheckStatus(int.Parse(SoHD)) == "Waiting")
+            {
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn hủy đơn hàng không.", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if(result == DialogResult.Yes)
+                {
+                    if (DAO.CTHDDAO.Instance.DeleteCTHD(SoHD) && DAO.HoaDonDAO.Instance.DeleteHD(SoHD))
+                        MessageBox.Show("Đơn hàng của bạn đã được hủy thành công.");
+                    else MessageBox.Show("Hủy đơn hàng thất bại liên hệ cửa hàng thông qua email ở phần liên hệ để biết thêm chi tiết.");
+                }
+
+            }
+            else if (DAO.HoaDonDAO.Instance.CheckStatus(int.Parse(SoHD)) == "Delivery")
+                MessageBox.Show("Đơn hàng đang được vận chuyển, nếu muốn hủy đơn vui lòng liên hệ với cửa hàng qua email ở phần liên hệ.");
+            else
+                MessageBox.Show("Đơn hàng của bạn đã bị hủy, vui lòng kiểm tra email để biết lý do, rất tiết vì sự bất tiện này.");
+        }
+
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();

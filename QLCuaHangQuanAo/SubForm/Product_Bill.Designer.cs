@@ -40,10 +40,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tool3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.exit = new Guna.UI2.WinForms.Guna2Button();
-            this.zooe_in_out = new Guna.UI2.WinForms.Guna2Button();
-            this.minimize = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnHuyDon = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvItem)).BeginInit();
             this.tool3.SuspendLayout();
             this.SuspendLayout();
@@ -163,15 +162,13 @@ namespace QLCuaHangQuanAo.SubForm
             // 
             this.tool3.BackColor = System.Drawing.Color.Transparent;
             this.tool3.Controls.Add(this.exit);
-            this.tool3.Controls.Add(this.zooe_in_out);
-            this.tool3.Controls.Add(this.minimize);
             this.tool3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
-            this.tool3.Location = new System.Drawing.Point(615, 0);
+            this.tool3.Location = new System.Drawing.Point(660, 0);
             this.tool3.Margin = new System.Windows.Forms.Padding(2);
             this.tool3.Name = "tool3";
             this.tool3.ShadowColor = System.Drawing.Color.Black;
             this.tool3.ShadowShift = 0;
-            this.tool3.Size = new System.Drawing.Size(69, 24);
+            this.tool3.Size = new System.Drawing.Size(24, 24);
             this.tool3.TabIndex = 22;
             // 
             // exit
@@ -183,63 +180,20 @@ namespace QLCuaHangQuanAo.SubForm
             this.exit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.exit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.exit.DisabledState.Parent = this.exit;
+            this.exit.Dock = System.Windows.Forms.DockStyle.Right;
             this.exit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
             this.exit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.exit.ForeColor = System.Drawing.Color.White;
             this.exit.HoverState.Parent = this.exit;
             this.exit.Image = global::QLCuaHangQuanAo.Properties.Resources.delete_64px;
             this.exit.ImageSize = new System.Drawing.Size(22, 22);
-            this.exit.Location = new System.Drawing.Point(47, 2);
+            this.exit.Location = new System.Drawing.Point(4, 0);
             this.exit.Margin = new System.Windows.Forms.Padding(2);
             this.exit.Name = "exit";
             this.exit.ShadowDecoration.Parent = this.exit;
-            this.exit.Size = new System.Drawing.Size(20, 21);
+            this.exit.Size = new System.Drawing.Size(20, 24);
             this.exit.TabIndex = 2;
             this.exit.Click += new System.EventHandler(this.exit_Click);
-            // 
-            // zooe_in_out
-            // 
-            this.zooe_in_out.CheckedState.Parent = this.zooe_in_out;
-            this.zooe_in_out.CustomImages.Parent = this.zooe_in_out;
-            this.zooe_in_out.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.zooe_in_out.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.zooe_in_out.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.zooe_in_out.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.zooe_in_out.DisabledState.Parent = this.zooe_in_out;
-            this.zooe_in_out.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
-            this.zooe_in_out.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.zooe_in_out.ForeColor = System.Drawing.Color.White;
-            this.zooe_in_out.HoverState.Parent = this.zooe_in_out;
-            this.zooe_in_out.Image = global::QLCuaHangQuanAo.Properties.Resources.toggle_full_screen_64px;
-            this.zooe_in_out.ImageSize = new System.Drawing.Size(22, 22);
-            this.zooe_in_out.Location = new System.Drawing.Point(25, 2);
-            this.zooe_in_out.Margin = new System.Windows.Forms.Padding(2);
-            this.zooe_in_out.Name = "zooe_in_out";
-            this.zooe_in_out.ShadowDecoration.Parent = this.zooe_in_out;
-            this.zooe_in_out.Size = new System.Drawing.Size(20, 21);
-            this.zooe_in_out.TabIndex = 1;
-            // 
-            // minimize
-            // 
-            this.minimize.CheckedState.Parent = this.minimize;
-            this.minimize.CustomImages.Parent = this.minimize;
-            this.minimize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.minimize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.minimize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.minimize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.minimize.DisabledState.Parent = this.minimize;
-            this.minimize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
-            this.minimize.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.minimize.ForeColor = System.Drawing.Color.White;
-            this.minimize.HoverState.Parent = this.minimize;
-            this.minimize.Image = global::QLCuaHangQuanAo.Properties.Resources.minimize_window_64px2;
-            this.minimize.ImageSize = new System.Drawing.Size(22, 22);
-            this.minimize.Location = new System.Drawing.Point(2, 2);
-            this.minimize.Margin = new System.Windows.Forms.Padding(2);
-            this.minimize.Name = "minimize";
-            this.minimize.ShadowDecoration.Parent = this.minimize;
-            this.minimize.Size = new System.Drawing.Size(20, 21);
-            this.minimize.TabIndex = 0;
             // 
             // guna2GradientPanel1
             // 
@@ -261,11 +215,37 @@ namespace QLCuaHangQuanAo.SubForm
             this.label1.TabIndex = 36;
             this.label1.Text = "Giỏ hàng";
             // 
+            // btnHuyDon
+            // 
+            this.btnHuyDon.BorderRadius = 8;
+            this.btnHuyDon.CheckedState.Parent = this.btnHuyDon;
+            this.btnHuyDon.CustomImages.Parent = this.btnHuyDon;
+            this.btnHuyDon.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHuyDon.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHuyDon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHuyDon.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHuyDon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHuyDon.DisabledState.Parent = this.btnHuyDon;
+            this.btnHuyDon.FillColor = System.Drawing.Color.LightCoral;
+            this.btnHuyDon.FillColor2 = System.Drawing.Color.Red;
+            this.btnHuyDon.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnHuyDon.ForeColor = System.Drawing.Color.White;
+            this.btnHuyDon.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnHuyDon.HoverState.Parent = this.btnHuyDon;
+            this.btnHuyDon.Location = new System.Drawing.Point(545, 19);
+            this.btnHuyDon.Name = "btnHuyDon";
+            this.btnHuyDon.ShadowDecoration.Parent = this.btnHuyDon;
+            this.btnHuyDon.Size = new System.Drawing.Size(100, 34);
+            this.btnHuyDon.TabIndex = 65;
+            this.btnHuyDon.Text = "Hủy đơn";
+            this.btnHuyDon.Click += new System.EventHandler(this.btnHuyDon_Click);
+            // 
             // Product_Bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 361);
+            this.Controls.Add(this.btnHuyDon);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tool3);
@@ -287,8 +267,6 @@ namespace QLCuaHangQuanAo.SubForm
         private Guna.UI2.WinForms.Guna2DataGridView dtgrvItem;
         private Guna.UI2.WinForms.Guna2ShadowPanel tool3;
         private Guna.UI2.WinForms.Guna2Button exit;
-        private Guna.UI2.WinForms.Guna2Button zooe_in_out;
-        private Guna.UI2.WinForms.Guna2Button minimize;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewImageColumn anh;
@@ -296,5 +274,6 @@ namespace QLCuaHangQuanAo.SubForm
         private System.Windows.Forms.DataGridViewTextBoxColumn Loai;
         private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
         private System.Windows.Forms.DataGridViewTextBoxColumn gia;
+        private Guna.UI2.WinForms.Guna2GradientButton btnHuyDon;
     }
 }

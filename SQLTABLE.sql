@@ -1,4 +1,4 @@
-create database QuanLyKho
+﻿create database QuanLyKho
 go
 use QuanLyKho
 go
@@ -77,10 +77,10 @@ REFERENCES SANPHAM(MASP)
 ALTER TABLE SANPHAM ADD CONSTRAINT FK_LOAI_SP FOREIGN KEY(IDLOAI)
 REFERENCES LOAISP(ID)
 
-insert LOAISP(TENLOAI) values('quan')
-insert LOAISP(TENLOAI) values('ao')
-insert LOAISP(TENLOAI) values('mu')
-insert LOAISP(TENLOAI) values('giay')
+insert LOAISP(TENLOAI) values('Quần')
+insert LOAISP(TENLOAI) values('Áo')
+insert LOAISP(TENLOAI) values('Mũ')
+insert LOAISP(TENLOAI) values('Giày')
 
 
 
@@ -104,15 +104,15 @@ values('Kogoro', 'Japan', '1234', '2002-03-17', (SELECT * FROM OPENROWSET(BULK N
 
 --SANPHAM -giay
 insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values('Adidas', 5000000, 100, 4, 12, N'Gi�y ngon 4*', 4)
+values('Adidas', 5000000, 100, 4, 12, N'Giày ngon 4*', 4)
 insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI, ANH)
-values('Nike', 7000000, 110, 5, 11, N'Gi�y ngon 5*', 4, (SELECT * FROM OPENROWSET(BULK N'D:\HK3\LTTQ\Hinh\reload4.png', SINGLE_BLOB) as T1))
+values('Nike', 7000000, 110, 5, 11, N'Giày ngon 5*', 4, (SELECT * FROM OPENROWSET(BULK N'D:\HK3\LTTQ\Hinh\reload4.png', SINGLE_BLOB) as T1))
 insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI, ANH)
-values('Converse ', 3000000, 9, 4, 77, N'Gi�y ngon 5*', 4, (SELECT * FROM OPENROWSET(BULK N'D:\HK3\LTTQ\Hinh\reload4.png', SINGLE_BLOB) as T1))
+values('Converse ', 3000000, 9, 4, 77, N'Giày ngon 5*', 4, (SELECT * FROM OPENROWSET(BULK N'D:\HK3\LTTQ\Hinh\reload4.png', SINGLE_BLOB) as T1))
 insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI, ANH)
-values('Puma', 3500000, 33, 6, 55, N'Gi�y ngon 3*', 4, (SELECT * FROM OPENROWSET(BULK N'D:\HK3\LTTQ\Hinh\reload4.png', SINGLE_BLOB) as T1))
+values('Puma', 3500000, 33, 6, 55, N'Giày ngon 3*', 4, (SELECT * FROM OPENROWSET(BULK N'D:\HK3\LTTQ\Hinh\reload4.png', SINGLE_BLOB) as T1))
 insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI, ANH)
-values('Balance ', 6050000, 110, 1, 10, N'Gi�y ngon 2.5*', 4, (SELECT * FROM OPENROWSET(BULK N'D:\HK3\LTTQ\Hinh\reload4.png', SINGLE_BLOB) as T1))
+values('Balance ', 6050000, 110, 1, 10, N'Giày ngon 2.5*', 4, (SELECT * FROM OPENROWSET(BULK N'D:\HK3\LTTQ\Hinh\reload4.png', SINGLE_BLOB) as T1))
 
 --SANPHAM -mu
 insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
@@ -124,16 +124,16 @@ values('Puma ', 30000, 9, 7, 60, N'm? ngon 5*', 3)
 insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
 values('Balenciaga ', 20100, 9, 5, 66, N'm? ngon 1*', 3)
 
---SANPHAM --�o
+--SANPHAM --áo
 
 insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values('Adidas', 800000, 10, 3, 10, N'�o ngon 4*', 2)
+values('Adidas', 800000, 10, 3, 10, N'áo ngon 4*', 2)
 insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values('Levis', 715000, 90, 6.5, 17, N'�o ngon 5*', 2)
+values('Levis', 715000, 90, 6.5, 17, N'áo ngon 5*', 2)
 insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values('Puma ', 3200000, 9, 2, 18, N'�o ngon 5*', 2)
+values('Puma ', 3200000, 9, 2, 18, N'áo ngon 5*', 2)
 insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values('Balenciaga ', 202100, 9, 7, 11, N'�o ngon 1*', 2)
+values('Balenciaga ', 202100, 9, 7, 11, N'áo ngon 1*', 2)
 
 
 --SANPHAM --Qu?n
@@ -225,6 +225,7 @@ select * from TAIKHOAN
 select * from SANPHAM
 select * from HOADON
 select * from CTHD
+select * from LOAISP
 
 delete from TAIKHOAN
 
@@ -232,5 +233,5 @@ delete from SANPHAM
 exec test
 
 
---Th�m admin
+--Thêm admin
 insert into TAIKHOAN(DISPLAYNAME, USERNAME, PASSWORD, TYPETK) values ('admin', 'admin', 'admin', 0)

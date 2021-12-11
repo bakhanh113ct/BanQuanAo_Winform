@@ -213,7 +213,7 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="lbFileName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>185, 259</value>
+    <value>170, 259</value>
   </data>
   <data name="lbFileName.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 17</value>
