@@ -54,18 +54,12 @@ namespace QLCuaHangQuanAo.Control_User
         public DateTime NgHD { get => ngHD; set => ngHD = value; }
         public int SoHD { get => soHD; set => soHD = value; }
         public DateTime NGXN { get => nGXN; set => nGXN = value; }
-
-        
-        
-       
-      
-
        
      
         private void thao_tac_Click(object sender, EventArgs e) //khi click vào list_order thì sẽ đỗi màu
         {
             change();
-            DAO.Sound.Instance.sound_Click();
+            Library.sound_Click();
         }
         private void change()//đổi màu khi click
         {

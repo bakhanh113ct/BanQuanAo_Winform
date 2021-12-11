@@ -135,7 +135,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.btnSave.ShadowDecoration.Parent = this.btnSave;
             this.btnSave.Size = new System.Drawing.Size(128, 33);
             this.btnSave.TabIndex = 6;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "Lưu";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
@@ -159,7 +159,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
             this.btnCancel.Size = new System.Drawing.Size(128, 33);
             this.btnCancel.TabIndex = 7;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "Hủy";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // tool3
@@ -252,6 +252,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.picture.Name = "picture";
             this.picture.ShadowDecoration.Parent = this.picture;
             this.picture.Size = new System.Drawing.Size(267, 248);
+            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picture.TabIndex = 0;
             this.picture.TabStop = false;
             // 
@@ -321,7 +322,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.txbLoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbLoai.Name = "txbLoai";
             this.txbLoai.PasswordChar = '\0';
-            this.txbLoai.PlaceholderText = "Loai";
+            this.txbLoai.PlaceholderText = "1.Quần, 2.Áo, 3.Mũ, 4.Giày";
             this.txbLoai.SelectedText = "";
             this.txbLoai.ShadowDecoration.Parent = this.txbLoai;
             this.txbLoai.Size = new System.Drawing.Size(277, 30);
@@ -348,7 +349,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.btnUpload.ShadowDecoration.Parent = this.btnUpload;
             this.btnUpload.Size = new System.Drawing.Size(128, 33);
             this.btnUpload.TabIndex = 5;
-            this.btnUpload.Text = "Upload";
+            this.btnUpload.Text = "Thêm ảnh";
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // guna2GradientPanel1

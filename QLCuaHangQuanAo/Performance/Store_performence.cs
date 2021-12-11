@@ -27,10 +27,19 @@ namespace QLCuaHangQuanAo
         }
         private void Store_performence_Load(object sender, EventArgs e)
         {
+            //219, 0
             LoadPanel();
             ThemSLHang();
+            if (Login.tk.Typetk == 1)
+            {
+                btnAdd.Visible = false;
+                btnEdit.Visible = false;
+            }
+            else
+                btnCart.Location = new Point(219, 0);
         }
-        public void LoadPanel()
+        
+        public void LoadPanel() //Load lại flowlayoutpanel
         {
             if(UI_Home.ListItem != null) UI_Home.ListItem.Clear();
             flpnStore.Controls.Clear();
@@ -46,7 +55,7 @@ namespace QLCuaHangQuanAo
                 flpnStore.Controls.Add(u);
             }
         }
-        //Load lại flowlayoutpanel
+        
         public void btnReload_Click(object sender, EventArgs e)
         {
             cbbFilter.SelectedIndex = 4;
@@ -77,6 +86,13 @@ namespace QLCuaHangQuanAo
             
         }
 
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            SubForm.Cart_Form cart_Form = new SubForm.Cart_Form();
+            cart_Form.ShowDialog();
+            LoadPanel();
+        }
+
         private bool Check_update(SubForm.Edit_Form editform)
         {
             if (editform.DialogResult == DialogResult.OK)
@@ -90,18 +106,27 @@ namespace QLCuaHangQuanAo
             return false;
         }
 
-        private void btnCart_Click(object sender, EventArgs e)
+        private void txbSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            SubForm.Cart_Form cart_Form = new SubForm.Cart_Form();
-            //cart_Form.
-            cart_Form.ShowDialog();
-            LoadPanel();
-        }
-
-        public static void reloadlb()
-        {
-            int i = Item_HD.item_HDs.Count();
-            label1.Text = i.ToString();
+            if (Convert.ToInt32(e.KeyChar) == 13)
+            {
+                int k = 0;
+                foreach (Control_User.Item item in UI_Home.ListItem)
+                {
+                    SANPHAM i = (item.btnItem.Tag as SANPHAM);
+                    if (i.Ten.Contains(txbSearch.Text) && (i.IDLoai == cbbFilter.SelectedIndex + 1 || cbbFilter.SelectedIndex == 4))
+                    {
+                        k++;
+                        if (k == 1)
+                            flpnStore.Controls.Clear();
+                        flpnStore.Controls.Add(item);
+                    }
+                }
+                if (k == 0)
+                {
+                    MessageBox.Show("Không tìm thấy sản phẩm");
+                }
+            }
         }
 
         private void cbbFilter_SelectedIndexChanged(object sender, EventArgs e)
@@ -147,6 +172,22 @@ namespace QLCuaHangQuanAo
             }
         }
 
+        private void txbSearch_TextChanged(object sender, EventArgs e)
+        {
+            int k = 0;
+            foreach (Control_User.Item item in UI_Home.ListItem)
+            {
+                SANPHAM i = (item.btnItem.Tag as SANPHAM);
+                if (i.Ten.Contains(txbSearch.Text) && (i.IDLoai == cbbFilter.SelectedIndex + 1 || cbbFilter.SelectedIndex == 4))
+                {
+                    k++;
+                    if (k == 1)
+                        flpnStore.Controls.Clear();
+                    flpnStore.Controls.Add(item);
+                }
+            }
+        }
+
         private void ThemSLHang()
         {
             label1.AutoSize = true;
@@ -173,45 +214,11 @@ namespace QLCuaHangQuanAo
             btnSoHang.TabIndex = 0;
             btnSoHang.Text = "";
         }
-
-        private void txbSearch_TextChanged(object sender, EventArgs e)
+        
+        public static void reloadlb()
         {
-            int k = 0;
-            foreach (Control_User.Item item in UI_Home.ListItem)
-            {
-                SANPHAM i = (item.btnItem.Tag as SANPHAM);
-                if (i.Ten.Contains(txbSearch.Text) && (i.IDLoai == cbbFilter.SelectedIndex + 1 || cbbFilter.SelectedIndex == 4))
-                {
-                    k++;
-                    if (k == 1)
-                        flpnStore.Controls.Clear();
-                    flpnStore.Controls.Add(item);
-                }
-            }
-        }
-
-
-        private void txbSearch_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Convert.ToInt32(e.KeyChar) == 13)
-            {
-                int k = 0;
-                foreach (Control_User.Item item in UI_Home.ListItem)
-                {
-                    SANPHAM i = (item.btnItem.Tag as SANPHAM);
-                    if (i.Ten.Contains(txbSearch.Text) && (i.IDLoai == cbbFilter.SelectedIndex + 1 || cbbFilter.SelectedIndex == 4))
-                    {
-                        k++;
-                        if (k == 1)
-                            flpnStore.Controls.Clear();
-                        flpnStore.Controls.Add(item);
-                    }
-                }
-                if (k == 0)
-                {
-                    MessageBox.Show("Không tìm thấy sản phẩm");
-                }
-            }
+            int i = Item_HD.item_HDs.Count();
+            label1.Text = i.ToString();
         }
     }
 }

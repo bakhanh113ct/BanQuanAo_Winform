@@ -23,64 +23,57 @@ namespace QLCuaHangQuanAo
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (admin_user == 1)
+            bool kq = DAO.TaiKhoanDAO.Instance.CheckUsername_Password(txtUsername.Text, txtPassword.Text);
+            if (kq)
             {
-                User_Login();
+                if (admin_user == 1)
+                {
+                    User_Login();
+                }
+                else
+                {
+                    Admin_Login();
+                }
             }
             else
             {
-                Admin_Login();
+                MessageBox.Show("Kiểm tra lại tài khoản hoặc mật khẩu.");
             }
         }
 
         private void Admin_Login()
         {
-            bool kq = DAO.TaiKhoanDAO.Instance.CheckUsername_Password(txtUsername.Text, txtPassword.Text);
-            if (kq)
+            tk = DAO.TaiKhoanDAO.Instance.LoadTK(txtUsername.Text);
+            int id = DAO.TaiKhoanDAO.Instance.Getid_UserName(txtUsername.Text);
+            int loaitk = DAO.TaiKhoanDAO.Instance.GetLoaiTK(txtUsername.Text);
+            if (loaitk == 0)
             {
-                tk = DAO.TaiKhoanDAO.Instance.LoadTK(txtUsername.Text);
-                int loaitk = DAO.TaiKhoanDAO.Instance.GetLoaiTK(txtUsername.Text);
-                if (loaitk == 0)
-                {
-                    PrgLogin.Value = 0;
-                    Gif_Logo.Visible = true;
-                    timer1.Start();
-                }
-                else
-                {
-                    MessageBox.Show("Sai tk or mk.");
-                }
+                kh = DAO.KhachHangDAO.Instance.LoadKH(id);
+                PrgLogin.Value = 0;
+                Gif_Logo.Visible = true;
+                timer1.Start();
             }
             else
             {
-                MessageBox.Show("Sai tk or mk.");
+                MessageBox.Show("Kiểm tra lại tài khoản hoặc mật khẩu.");
             }
         }
 
         private void User_Login()
         {
-
-            bool kq = DAO.TaiKhoanDAO.Instance.CheckUsername_Password(txtUsername.Text, txtPassword.Text);
-            if (kq)
+            tk = DAO.TaiKhoanDAO.Instance.LoadTK(txtUsername.Text);
+            int id = DAO.TaiKhoanDAO.Instance.Getid_UserName(txtUsername.Text);
+            int loaitk = DAO.TaiKhoanDAO.Instance.GetLoaiTK(txtUsername.Text);
+            if (loaitk == 1)
             {
-                tk = DAO.TaiKhoanDAO.Instance.LoadTK(txtUsername.Text);
-                int id = DAO.TaiKhoanDAO.Instance.Getid_UserName(txtUsername.Text);
-                int loaitk = DAO.TaiKhoanDAO.Instance.GetLoaiTK(txtUsername.Text);
-                if (loaitk == 1)
-                {
-                    kh = DAO.KhachHangDAO.Instance.LoadKH(id);
-                    PrgLogin.Value = 0;
-                    Gif_Logo.Visible = true;
-                    timer1.Start();
-                }
-                else
-                {
-                    MessageBox.Show("Sai tk or mk.");
-                }
+                kh = DAO.KhachHangDAO.Instance.LoadKH(id);
+                PrgLogin.Value = 0;
+                Gif_Logo.Visible = true;
+                timer1.Start();
             }
             else
             {
-                MessageBox.Show("Sai tk or mk.");
+                MessageBox.Show("Kiểm tra lại tài khoản hoặc mật khẩu.");
             }
         }
 
@@ -100,7 +93,6 @@ namespace QLCuaHangQuanAo
             prg.Visible = true;
             PrgLogin.Increment(3);
             prg.Start();
-            PhanTram.Text = PrgLogin.ProgressPercentText;
 
             if (PrgLogin.ProgressPercentText == "100%")
             {

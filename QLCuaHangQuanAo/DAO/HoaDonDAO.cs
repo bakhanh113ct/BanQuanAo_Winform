@@ -154,7 +154,7 @@ namespace QLCuaHangQuanAo.DAO
         {
             DataTable bill = DataProvider.ExcuseQuery1("select SANPHAM.MASP, TEN, CTHD.SL, GIA " +
                 "from SANPHAM, CTHD where SOHD =  " + SOHD +
-                "and SANPHAM.MASP = CTHD.MASP");
+                " and SANPHAM.MASP = CTHD.MASP");
             return bill;
         }
         //public bool thanh_toan(int index)
@@ -252,6 +252,12 @@ namespace QLCuaHangQuanAo.DAO
             }
             return null;
         }
-       
+
+        public string CheckStatus(int SoHD)
+        {
+            return (string)DAO.DataProvider.ExecuteScalar("Select TRANG_THAI from HOADON where SOHD = '" + SoHD + "'");
+        }
+
+
     }
 }

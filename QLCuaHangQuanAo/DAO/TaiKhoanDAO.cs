@@ -86,5 +86,9 @@ namespace QLCuaHangQuanAo.DAO
             return false;
 
         }
+        public string LoadEmail(int SoHd)
+        {
+            return (string)DAO.DataProvider.ExecuteScalar("Select EMAIL from HOADON, KHACHHANG where HOADON.MAKH = KHACHHANG.MAKH and SOHD = '" + SoHd + "'");
+        }
     }
 }

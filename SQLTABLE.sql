@@ -84,8 +84,12 @@ insert LOAISP(TENLOAI) values('giay')
 
 
 
-
+select * from TAIKHOAN
+select * from KHACHHANG
+delete from KHACHHANG where MAKH = 2
 --Khach hang
+insert into KHACHHANG (IDUSERNAME, HOTEN, DCHI, SODT, EMAIL, NGSINH, GIOITINH)
+values(2, 'admin', 'VietNam', '1234','kuti113ct@gmail.com', '2002-01-01', 1)
 insert into KHACHHANG ( HOTEN, DCHI, SODT, NGSINH, ANH)
 values('Saitama', 'Japan', '1234', '2000-01-01', (SELECT * FROM OPENROWSET(BULK N'D:\HK3\LTTQ\Hinh\reload4.png', SINGLE_BLOB) as T1))
 insert into KHACHHANG ( HOTEN, DCHI, SODT, NGSINH, ANH)

@@ -27,13 +27,14 @@ namespace QLCuaHangQuanAo.SubForm
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
-            DAO.Sound.Instance.sound_Click();
+            Library.sound_Click();
         }
 
         private void minimize_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
-            DAO.Sound.Instance.sound_Click();
+            this.WindowState = FormWindowState.Minimized; 
+            Library.sound_Click();
+
         }
     }
 }

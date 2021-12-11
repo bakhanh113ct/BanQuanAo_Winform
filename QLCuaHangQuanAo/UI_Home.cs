@@ -37,7 +37,7 @@ namespace QLCuaHangQuanAo
         {
             store = new Store_performence();
             setting = new Settings_performance();
-            home = new Home_perfomancecs();
+            home = new Home_perfomancecs(this, store);
             time.Text = DateTime.Now.ToShortDateString();
             //statistics = new Statistics_perfomancecs();
             //invoice = new Invoice_performance();
@@ -58,7 +58,7 @@ namespace QLCuaHangQuanAo
             Home_button.Add(STATISTIC);
             Home_button.Add(SETTING);
         }
-       
+
         private void openPerformance(Form childForm)
         {
             if (activeForm != null)
@@ -69,6 +69,19 @@ namespace QLCuaHangQuanAo
             SubProgram.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        public void StoreOpenPerformance(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Hide();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            SubProgram.Controls.Add(childForm);
+            SubProgram.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            subbar_Change(subbar2, STORE);
         }
         private void exit_Click(object sender, EventArgs e)
         {
@@ -93,13 +106,13 @@ namespace QLCuaHangQuanAo
             button.ForeColor = Color.FromArgb(216, 19, 248);
             button.FillColor = Color.FromArgb(251, 237, 251);
             txtPerformance.Text = "> " + button.Text;
+            Library.sound_Click();
         }
 
         
 
         private void HOME_Click(object sender, EventArgs e)
         {
-            DAO.Sound.Instance.sound_Click();
             subbar_Change(subbar1, HOME);
             openPerformance(home);
         }
@@ -112,18 +125,19 @@ namespace QLCuaHangQuanAo
 
         private void btnINVOICE_Click(object sender, EventArgs e)
         {
-            subbar_Change(subbar3, btnINVOICE);
-            openPerformance(new Invoice_performance());
-
-            DAO.Sound.Instance.sound_Click();
+            if (Login.tk.Typetk == 1)
+                MessageBox.Show("Bạn không có quyền truy cập.");
+            else
+            {
+                subbar_Change(subbar3, btnINVOICE);
+                openPerformance(new Invoice_performance());
+            }
         }
 
         private void STATISTIC_Click(object sender, EventArgs e)
         {
             subbar_Change(subbar4, STATISTIC);
             openPerformance(new Statistics_perfomancecs());
-
-            DAO.Sound.Instance.sound_Click();
         }
 
         private void SETTING_Click(object sender, EventArgs e)
@@ -154,11 +168,9 @@ namespace QLCuaHangQuanAo
 
         private void MyLogo_Click(object sender, EventArgs e)
         {
-            DAO.Sound.Instance.sound_Click();
+            Library.sound_Click();
             SubForm.Show_creator creator = new SubForm.Show_creator();
             creator.ShowDialog();
-            
-            
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

@@ -114,7 +114,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.tool3.ShadowColor = System.Drawing.Color.Black;
             this.tool3.ShadowShift = 0;
             this.tool3.Size = new System.Drawing.Size(69, 24);
-            this.tool3.TabIndex = 25;
+            this.tool3.TabIndex = 15;
             // 
             // zooe_in_out
             // 
@@ -158,8 +158,8 @@ namespace QLCuaHangQuanAo.SubForm
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
             this.btnDelete.Size = new System.Drawing.Size(128, 33);
-            this.btnDelete.TabIndex = 23;
-            this.btnDelete.Text = "Delete";
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Text = "Xóa";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSave
@@ -182,8 +182,8 @@ namespace QLCuaHangQuanAo.SubForm
             this.btnSave.Name = "btnSave";
             this.btnSave.ShadowDecoration.Parent = this.btnSave;
             this.btnSave.Size = new System.Drawing.Size(128, 33);
-            this.btnSave.TabIndex = 22;
-            this.btnSave.Text = "Save";
+            this.btnSave.TabIndex = 6;
+            this.btnSave.Text = "Lưu";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // picture
@@ -194,6 +194,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.picture.Name = "picture";
             this.picture.ShadowDecoration.Parent = this.picture;
             this.picture.Size = new System.Drawing.Size(280, 259);
+            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picture.TabIndex = 13;
             this.picture.TabStop = false;
             // 
@@ -223,8 +224,8 @@ namespace QLCuaHangQuanAo.SubForm
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.ShadowDecoration.Parent = this.btnUpload;
             this.btnUpload.Size = new System.Drawing.Size(128, 33);
-            this.btnUpload.TabIndex = 32;
-            this.btnUpload.Text = "Upload";
+            this.btnUpload.TabIndex = 5;
+            this.btnUpload.Text = "Thêm ảnh";
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // guna2GradientPanel1
@@ -235,7 +236,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
             this.guna2GradientPanel1.Size = new System.Drawing.Size(35, 4);
-            this.guna2GradientPanel1.TabIndex = 35;
+            this.guna2GradientPanel1.TabIndex = 9;
             // 
             // label1
             // 
@@ -244,8 +245,8 @@ namespace QLCuaHangQuanAo.SubForm
             this.label1.Location = new System.Drawing.Point(10, 1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 29);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Edit";
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Sửa";
             // 
             // label8
             // 
@@ -254,7 +255,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.label8.Location = new System.Drawing.Point(33, 257);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 23);
-            this.label8.TabIndex = 51;
+            this.label8.TabIndex = 14;
             this.label8.Text = "Loại:";
             // 
             // label5
@@ -264,7 +265,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.label5.Location = new System.Drawing.Point(23, 207);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 23);
-            this.label5.TabIndex = 50;
+            this.label5.TabIndex = 13;
             this.label5.Text = "Mô tả:";
             // 
             // label6
@@ -274,7 +275,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.label6.Location = new System.Drawing.Point(0, 164);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 23);
-            this.label6.TabIndex = 49;
+            this.label6.TabIndex = 12;
             this.label6.Text = "Số lượng:";
             // 
             // label4
@@ -284,7 +285,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.label4.Location = new System.Drawing.Point(40, 121);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 23);
-            this.label4.TabIndex = 48;
+            this.label4.TabIndex = 11;
             this.label4.Text = "Giá:";
             // 
             // label3
@@ -294,7 +295,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.label3.Location = new System.Drawing.Point(38, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 23);
-            this.label3.TabIndex = 47;
+            this.label3.TabIndex = 10;
             this.label3.Text = "Tên:";
             // 
             // txbLoai
@@ -315,11 +316,11 @@ namespace QLCuaHangQuanAo.SubForm
             this.txbLoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbLoai.Name = "txbLoai";
             this.txbLoai.PasswordChar = '\0';
-            this.txbLoai.PlaceholderText = "Loai";
+            this.txbLoai.PlaceholderText = "1.Quần, 2.Áo, 3.Mũ, 4.Giày";
             this.txbLoai.SelectedText = "";
             this.txbLoai.ShadowDecoration.Parent = this.txbLoai;
             this.txbLoai.Size = new System.Drawing.Size(277, 30);
-            this.txbLoai.TabIndex = 56;
+            this.txbLoai.TabIndex = 4;
             // 
             // txbMota
             // 
@@ -343,7 +344,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.txbMota.SelectedText = "";
             this.txbMota.ShadowDecoration.Parent = this.txbMota;
             this.txbMota.Size = new System.Drawing.Size(277, 30);
-            this.txbMota.TabIndex = 55;
+            this.txbMota.TabIndex = 3;
             // 
             // txbTen
             // 
@@ -367,7 +368,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.txbTen.SelectedText = "";
             this.txbTen.ShadowDecoration.Parent = this.txbTen;
             this.txbTen.Size = new System.Drawing.Size(277, 30);
-            this.txbTen.TabIndex = 52;
+            this.txbTen.TabIndex = 0;
             // 
             // txbSoLuong
             // 
@@ -391,7 +392,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.txbSoLuong.SelectedText = "";
             this.txbSoLuong.ShadowDecoration.Parent = this.txbSoLuong;
             this.txbSoLuong.Size = new System.Drawing.Size(277, 30);
-            this.txbSoLuong.TabIndex = 54;
+            this.txbSoLuong.TabIndex = 2;
             // 
             // txbGiaTien
             // 
@@ -415,7 +416,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.txbGiaTien.SelectedText = "";
             this.txbGiaTien.ShadowDecoration.Parent = this.txbGiaTien;
             this.txbGiaTien.Size = new System.Drawing.Size(277, 30);
-            this.txbGiaTien.TabIndex = 53;
+            this.txbGiaTien.TabIndex = 1;
             // 
             // Edit_Form
             // 

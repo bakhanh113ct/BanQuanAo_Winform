@@ -14,8 +14,12 @@ namespace QLCuaHangQuanAo.Performance
 {
     public partial class Home_perfomancecs : Form
     {
-        public Home_perfomancecs()
+        UI_Home home;
+        Store_performence store;
+        public Home_perfomancecs(UI_Home home, Store_performence store)
         {
+            this.home = home;
+            this.store = store;
             InitializeComponent();
             listpanel.Add(panelGiay);
             listpanel.Add(panelAo);
@@ -58,9 +62,10 @@ namespace QLCuaHangQuanAo.Performance
             ChangePage();
         }
 
-        private void btnBuy_Click()
-        {
 
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+            home.StoreOpenPerformance(store);
         }
         //public void Saveimage()
         //{

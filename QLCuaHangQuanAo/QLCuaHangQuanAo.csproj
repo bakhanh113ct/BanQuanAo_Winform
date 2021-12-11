@@ -34,6 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.10.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.10\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -56,15 +59,22 @@
     <Reference Include="Google.Apis.PlatformServices, Version=1.55.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Apis.1.55.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
     </Reference>
-    <Reference Include="Guna.UI2, Version=2.0.2.4, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.4\lib\net40\Guna.UI2.dll</HintPath>
+    <Reference Include="Guna.UI2, Version=2.0.2.5, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.5\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="MimeKit, Version=2.15.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeKit.2.15.1\lib\net47\MimeKit.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -103,7 +113,6 @@
     <Compile Include="DAO\HoaDonDAO.cs" />
     <Compile Include="DAO\SanPhamDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
-    <Compile Include="DAO\Sound.cs" />
     <Compile Include="DTO\BillInfo.cs" />
     <Compile Include="DTO\CTHD.cs" />
     <Compile Include="DTO\HOADON.cs" />
@@ -180,6 +189,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cr_HOADON.rpt</DependentUpon>
       <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="SubForm\Detail_Form.cs">
       <SubType>Form</SubType>
@@ -204,6 +214,12 @@
     </Compile>
     <Compile Include="SubForm\Product_Bill.Designer.cs">
       <DependentUpon>Product_Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\SendEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\SendEmail.Designer.cs">
+      <DependentUpon>SendEmail.cs</DependentUpon>
     </Compile>
     <Compile Include="SubForm\Show_creator.cs">
       <SubType>Form</SubType>
@@ -269,6 +285,7 @@
     <EmbeddedResource Include="SubForm\cr_HOADON.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>cr_HOADON.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Detail_Form.resx">
       <DependentUpon>Detail_Form.cs</DependentUpon>
@@ -281,6 +298,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Product_Bill.resx">
       <DependentUpon>Product_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\SendEmail.en.resx">
+      <DependentUpon>SendEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\SendEmail.resx">
+      <DependentUpon>SendEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\SendEmail.vi-VN.resx">
+      <DependentUpon>SendEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Show_creator.resx">
       <DependentUpon>Show_creator.cs</DependentUpon>

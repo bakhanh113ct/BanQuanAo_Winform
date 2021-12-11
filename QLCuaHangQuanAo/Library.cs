@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace QLCuaHangQuanAo
 {
@@ -50,6 +51,42 @@ namespace QLCuaHangQuanAo
                 picture.Image = Image.FromFile(ofd.FileName);
             }
             picture.SizeMode = PictureBoxSizeMode.CenterImage;
+        }
+        static SoundPlayer SoundPlayer;
+        static public void sound_Click()
+        {
+            SoundPlayer = new SoundPlayer(@"..\..\Resources\ES_Switch Click 1 - SFX Producer.wav");
+            SoundPlayer.Stop();
+            SoundPlayer.Play();
+        }
+        static public void load_click()
+        {
+            SoundPlayer = new SoundPlayer(@"C:\Windows\Media\chimes.wav");
+            SoundPlayer.Stop();
+            SoundPlayer.Play();
+        }
+        static public void Noload_click()
+        {
+            SoundPlayer = new SoundPlayer(@"C:\Windows\Media\Windows Hardware Fail.wav");
+            SoundPlayer.Stop();
+            SoundPlayer.Play();
+
+        }
+
+        static public void tada()
+        {
+            using (var soundPlayer = new SoundPlayer(@"C:\Windows\Media\tada.wav"))
+            {
+                soundPlayer.PlaySync();
+
+            }
+        }
+        static public void cancel()
+        {
+            using (var soundPlayer = new SoundPlayer(@"C:\Windows\Media\Windows Error.wav"))
+            {
+                soundPlayer.PlaySync();
+            }
         }
     }
 }

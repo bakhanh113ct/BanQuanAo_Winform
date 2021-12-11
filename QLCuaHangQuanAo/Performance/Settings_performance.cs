@@ -23,13 +23,13 @@ namespace QLCuaHangQuanAo
         private void Settings_performance_Load(object sender, EventArgs e)
         {
             //Note **SỬa phần database IDUSERNAME trùng
-            if (Login.tk.Typetk != 0)
-            {
+            //if (Login.tk.Typetk != 0)
+            //{
                 ListHD = DAO.HoaDonDAO.Instance.LoadHDtoDatatable(Login.kh.MaKH.ToString());
                 
                 dtgv.DataSource = new BindingSource(ListHD, "");
                 Loadform();
-            }
+            //}
             //cbDay.DataSource = Enumerable.Range(1, DateTime.DaysInMonth(DateTime.Now.Year, Convert.ToInt32(cbMonth.SelectedValue)));
         }
 
@@ -51,8 +51,6 @@ namespace QLCuaHangQuanAo
             {
                 Avatar.Image = Library.ConvertoImage(Login.kh.Anh);
                 picAvatar.Image = Avatar.Image;
-                Avatar.SizeMode = PictureBoxSizeMode.Zoom;
-                picAvatar.SizeMode = PictureBoxSizeMode.Zoom;
             }
             else
             {
@@ -72,10 +70,6 @@ namespace QLCuaHangQuanAo
 
         private void guna2TabControl1_Click(object sender, EventArgs e)
         {
-            //if(guna2TabControl1.TabIndex == tabPage4.)
-            //{
-            //    Application.Exit();
-            //}
             if(guna2TabControl1.SelectedTab == tabPage3)
             {
                 ListHD = DAO.HoaDonDAO.Instance.LoadHDtoDatatable(Login.kh.MaKH.ToString());

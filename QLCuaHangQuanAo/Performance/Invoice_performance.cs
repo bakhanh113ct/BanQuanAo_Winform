@@ -1,9 +1,14 @@
-﻿using System;
+﻿using Google.Apis.Auth.OAuth2;
+using Google.Apis.Gmail.v1;
+using Google.Apis.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -48,6 +53,7 @@ namespace QLCuaHangQuanAo
             View.Visible = false;
             time.Visible = false;
             label2.Visible = false;
+            btnSendEmail.Visible = false;
         }
         private void unhide()//Ẩn những thứ không cần thiết 
         {
@@ -55,6 +61,7 @@ namespace QLCuaHangQuanAo
             View.Visible = true;
             time.Visible = true;
             label2.Visible = true;
+            btnSendEmail.Visible = true;
         }
 
         private void show_chi_tiet(object sender, EventArgs e)//Tìm kiếm đối tượng đang được trỏ đến
@@ -127,15 +134,15 @@ namespace QLCuaHangQuanAo
             foreach (DataRow x in Bill.Rows)//Thêm vào từng hàng cho Data grid view
             {
                 DTO.BillInfo temp = new DTO.BillInfo(x);
-                loadBill.Rows.Add(temp.MaSP, temp.TenSP, temp.SL, temp.Gia.ToString());
+                loadBill.Rows.Add(temp.TenSP, temp.SL, temp.Gia.ToString(), temp.Trigia);
             }
         }
 
         private void View_Click(object sender, EventArgs e)//Click vào để xem chi tiết hóa đơn
         {
             SubForm.BILL temp = new SubForm.BILL(index);//Tạo một cái bill mới
-            DAO.Sound.Instance.sound_Click();
-            temp.ShowDialog(this);//cái này để tránh thao tác trên chương trình chính
+            Library.sound_Click();
+            temp.Show(this);//cái này để tránh thao tác trên chương trình chính
 
             foreach (Control_User.list_order x in dcm)//kiếm đối tượng đang trỏ vào
             {
@@ -153,7 +160,7 @@ namespace QLCuaHangQuanAo
             if (thang.SelectedIndex == 0)
             {
                 load("");
-                DAO.Sound.Instance.load_click();
+                Library.load_click();
             }
             else
             {
@@ -161,7 +168,7 @@ namespace QLCuaHangQuanAo
                 if (dem != 0)
                 {
                     if (list_KH.Controls.Count > 0)
-                        DAO.Sound.Instance.load_click();
+                        Library.load_click();
                     else
                     {
                         Label tb = new Label();
@@ -175,7 +182,7 @@ namespace QLCuaHangQuanAo
                         tb.Text = "Không có dữ liệu";
                         //Font = new System.Drawing.Font("Quicksand SemiBold", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         list_KH.Controls.Add(tb);
-                        DAO.Sound.Instance.Noload_click();
+                        Library.Noload_click();
                         //MessageBox.Show("Khong co du lieu");
                     }
                 }
@@ -185,7 +192,7 @@ namespace QLCuaHangQuanAo
 
         private void thang_Click(object sender, EventArgs e)
         {
-            DAO.Sound.Instance.sound_Click();
+            Library.sound_Click();
         }
 
         private void tim_theo_ten_TextChanged(object sender, EventArgs e)
@@ -225,6 +232,14 @@ namespace QLCuaHangQuanAo
                     MessageBox.Show("Không tìm thấy hóa đơn", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        
+
+        private void btnSendEmail_Click(object sender, EventArgs e)
+        {
+            SubForm.SendEmail send = new SubForm.SendEmail(index);
+            send.Show();
         }
     }
 }

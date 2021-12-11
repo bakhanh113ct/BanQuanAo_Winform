@@ -49,7 +49,7 @@ namespace QLCuaHangQuanAo
             }
             if (tbPassword.Text != tbCfPassword.Text)
             {
-                MessageBox.Show("Mat khau khong giong nhau");
+                MessageBox.Show("Mật khẩu không đúng");
                 return;
             }
             if (DAO.TaiKhoanDAO.Instance.CheckUserNameExists(tbUserName.Text))
@@ -72,17 +72,17 @@ namespace QLCuaHangQuanAo
 
                     if (DAO.KhachHangDAO.Instance.InsertKH(kh))
                     {
-                        MessageBox.Show("Dang ki thanh cong");
+                        MessageBox.Show("Đăng kí thành công.");
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Dang ki that bai");
+                        MessageBox.Show("Đăng kí thất bại.");
                         DAO.TaiKhoanDAO.Instance.DeleteAccount();
                     }
                 }
                 else
-                    MessageBox.Show("Dang ki that bai");
+                    MessageBox.Show("Đăng kí thất bại.");
             }
         }
 

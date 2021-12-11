@@ -108,11 +108,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.guna2CustomGradientPanel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(231)))), ((int)(((byte)(246)))));
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(4, 6);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(3, 5);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(120, 111);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(90, 90);
             this.guna2CustomGradientPanel1.TabIndex = 5;
             // 
             // label1
@@ -121,10 +120,9 @@ namespace QLCuaHangQuanAo.Performance
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label1.Font = new System.Drawing.Font("Segoe UI Light", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(35, 69);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(26, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(343, 52);
+            this.label1.Size = new System.Drawing.Size(269, 42);
             this.label1.TabIndex = 1;
             this.label1.Text = "Bạn đã sẵn sàng để";
             // 
@@ -134,10 +132,9 @@ namespace QLCuaHangQuanAo.Performance
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.label2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(84, 121);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(63, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(217, 50);
+            this.label2.Size = new System.Drawing.Size(175, 41);
             this.label2.TabIndex = 2;
             this.label2.Text = "trãi nghiệm";
             // 
@@ -147,10 +144,9 @@ namespace QLCuaHangQuanAo.Performance
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.label3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label3.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(35, 186);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(26, 151);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(359, 132);
+            this.label3.Size = new System.Drawing.Size(269, 107);
             this.label3.TabIndex = 3;
             this.label3.Text = "Một outfit đẹp khi bạn biết cách tạo được điểm nhấn cho chúng. Hơn ai hết đây chí" +
     "nh là nhân tố kiên quyết mang đến sự nổi bật cá tính trong set đồ của bạn.\r\n";
@@ -162,11 +158,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.guna2CustomGradientPanel5, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2CustomGradientPanel5.FillColor = System.Drawing.Color.Fuchsia;
             this.guna2CustomGradientPanel5.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(231)))), ((int)(((byte)(246)))));
-            this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(387, 256);
-            this.guna2CustomGradientPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(290, 208);
             this.guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
             this.guna2CustomGradientPanel5.ShadowDecoration.Parent = this.guna2CustomGradientPanel5;
-            this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(67, 62);
+            this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(50, 50);
             this.guna2CustomGradientPanel5.TabIndex = 8;
             // 
             // guna2CustomGradientPanel2
@@ -176,11 +171,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.guna2CustomGradientPanel2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.HotPink;
             this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(231)))), ((int)(((byte)(246)))));
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(357, 0);
-            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(268, 0);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.ShadowDecoration.Parent = this.guna2CustomGradientPanel2;
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(67, 62);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(50, 50);
             this.guna2CustomGradientPanel2.TabIndex = 6;
             // 
             // guna2CustomGradientPanel6
@@ -190,11 +184,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.guna2CustomGradientPanel6, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2CustomGradientPanel6.FillColor = System.Drawing.Color.Fuchsia;
             this.guna2CustomGradientPanel6.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(231)))), ((int)(((byte)(246)))));
-            this.guna2CustomGradientPanel6.Location = new System.Drawing.Point(16, 367);
-            this.guna2CustomGradientPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel6.Location = new System.Drawing.Point(12, 298);
             this.guna2CustomGradientPanel6.Name = "guna2CustomGradientPanel6";
             this.guna2CustomGradientPanel6.ShadowDecoration.Parent = this.guna2CustomGradientPanel6;
-            this.guna2CustomGradientPanel6.Size = new System.Drawing.Size(53, 49);
+            this.guna2CustomGradientPanel6.Size = new System.Drawing.Size(40, 40);
             this.guna2CustomGradientPanel6.TabIndex = 9;
             // 
             // guna2CustomGradientPanel3
@@ -204,11 +197,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.guna2CustomGradientPanel3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2CustomGradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(231)))), ((int)(((byte)(246)))));
             this.guna2CustomGradientPanel3.FillColor3 = System.Drawing.Color.HotPink;
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(845, 12);
-            this.guna2CustomGradientPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(634, 10);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.ShadowDecoration.Parent = this.guna2CustomGradientPanel3;
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(53, 49);
+            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(40, 40);
             this.guna2CustomGradientPanel3.TabIndex = 7;
             // 
             // guna2CustomGradientPanel4
@@ -218,11 +210,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.guna2CustomGradientPanel4, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2CustomGradientPanel4.FillColor = System.Drawing.Color.LightPink;
             this.guna2CustomGradientPanel4.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(231)))), ((int)(((byte)(246)))));
-            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(557, 69);
-            this.guna2CustomGradientPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(418, 56);
             this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
             this.guna2CustomGradientPanel4.ShadowDecoration.Parent = this.guna2CustomGradientPanel4;
-            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(67, 62);
+            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(50, 50);
             this.guna2CustomGradientPanel4.TabIndex = 7;
             // 
             // panelGiay
@@ -244,11 +235,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.panelGiay, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panelGiay.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(234)))), ((int)(((byte)(248)))));
             this.panelGiay.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(231)))), ((int)(((byte)(246)))));
-            this.panelGiay.Location = new System.Drawing.Point(0, 50);
-            this.panelGiay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelGiay.Location = new System.Drawing.Point(0, 41);
             this.panelGiay.Name = "panelGiay";
             this.panelGiay.ShadowDecoration.Parent = this.panelGiay;
-            this.panelGiay.Size = new System.Drawing.Size(915, 490);
+            this.panelGiay.Size = new System.Drawing.Size(686, 398);
             this.panelGiay.TabIndex = 0;
             // 
             // btnChange1
@@ -267,11 +257,10 @@ namespace QLCuaHangQuanAo.Performance
             this.btnChange1.HoverState.Parent = this.btnChange1;
             this.btnChange1.Image = global::QLCuaHangQuanAo.Properties.Resources.arow_right_black;
             this.btnChange1.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnChange1.Location = new System.Drawing.Point(840, 153);
-            this.btnChange1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChange1.Location = new System.Drawing.Point(630, 124);
             this.btnChange1.Name = "btnChange1";
             this.btnChange1.ShadowDecoration.Parent = this.btnChange1;
-            this.btnChange1.Size = new System.Drawing.Size(69, 132);
+            this.btnChange1.Size = new System.Drawing.Size(52, 107);
             this.btnChange1.TabIndex = 11;
             this.btnChange1.Click += new System.EventHandler(this.btnChange_Click);
             // 
@@ -281,11 +270,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2PictureBox1.Image = global::QLCuaHangQuanAo.Properties.Resources.Giay;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(461, 69);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(346, 56);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(375, 308);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(281, 250);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 10;
             this.guna2PictureBox1.TabStop = false;
@@ -309,14 +297,14 @@ namespace QLCuaHangQuanAo.Performance
             this.btnBuy1.Image = global::QLCuaHangQuanAo.Properties.Resources.arow_right_red;
             this.btnBuy1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnBuy1.ImageSize = new System.Drawing.Size(20, 18);
-            this.btnBuy1.Location = new System.Drawing.Point(68, 334);
-            this.btnBuy1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuy1.Location = new System.Drawing.Point(51, 271);
             this.btnBuy1.Name = "btnBuy1";
-            this.btnBuy1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 7);
+            this.btnBuy1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 6);
             this.btnBuy1.ShadowDecoration.Parent = this.btnBuy1;
-            this.btnBuy1.Size = new System.Drawing.Size(216, 55);
+            this.btnBuy1.Size = new System.Drawing.Size(162, 45);
             this.btnBuy1.TabIndex = 4;
             this.btnBuy1.Text = "Mua ngay";
+            this.btnBuy1.Click += new System.EventHandler(this.btnBuy_Click);
             // 
             // panelAo
             // 
@@ -337,11 +325,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.panelAo, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panelAo.FillColor = System.Drawing.Color.Snow;
             this.panelAo.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
-            this.panelAo.Location = new System.Drawing.Point(0, 50);
-            this.panelAo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelAo.Location = new System.Drawing.Point(0, 41);
             this.panelAo.Name = "panelAo";
             this.panelAo.ShadowDecoration.Parent = this.panelAo;
-            this.panelAo.Size = new System.Drawing.Size(915, 490);
+            this.panelAo.Size = new System.Drawing.Size(686, 398);
             this.panelAo.TabIndex = 14;
             // 
             // label6
@@ -350,10 +337,9 @@ namespace QLCuaHangQuanAo.Performance
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.label6, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label6.Font = new System.Drawing.Font("Segoe UI Light", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(35, 69);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(26, 56);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(343, 52);
+            this.label6.Size = new System.Drawing.Size(269, 42);
             this.label6.TabIndex = 1;
             this.label6.Text = "Bạn đã sẵn sàng để";
             // 
@@ -364,11 +350,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.guna2CustomGradientPanel7, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2CustomGradientPanel7.FillColor = System.Drawing.Color.Yellow;
             this.guna2CustomGradientPanel7.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
-            this.guna2CustomGradientPanel7.Location = new System.Drawing.Point(4, 6);
-            this.guna2CustomGradientPanel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel7.Location = new System.Drawing.Point(3, 5);
             this.guna2CustomGradientPanel7.Name = "guna2CustomGradientPanel7";
             this.guna2CustomGradientPanel7.ShadowDecoration.Parent = this.guna2CustomGradientPanel7;
-            this.guna2CustomGradientPanel7.Size = new System.Drawing.Size(120, 111);
+            this.guna2CustomGradientPanel7.Size = new System.Drawing.Size(90, 90);
             this.guna2CustomGradientPanel7.TabIndex = 11;
             // 
             // guna2CustomGradientPanel8
@@ -378,11 +363,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.guna2CustomGradientPanel8, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2CustomGradientPanel8.FillColor = System.Drawing.Color.Yellow;
             this.guna2CustomGradientPanel8.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
-            this.guna2CustomGradientPanel8.Location = new System.Drawing.Point(16, 350);
-            this.guna2CustomGradientPanel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel8.Location = new System.Drawing.Point(12, 284);
             this.guna2CustomGradientPanel8.Name = "guna2CustomGradientPanel8";
             this.guna2CustomGradientPanel8.ShadowDecoration.Parent = this.guna2CustomGradientPanel8;
-            this.guna2CustomGradientPanel8.Size = new System.Drawing.Size(67, 62);
+            this.guna2CustomGradientPanel8.Size = new System.Drawing.Size(50, 50);
             this.guna2CustomGradientPanel8.TabIndex = 11;
             // 
             // guna2CustomGradientPanel9
@@ -392,11 +376,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.guna2CustomGradientPanel9, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2CustomGradientPanel9.FillColor = System.Drawing.Color.Yellow;
             this.guna2CustomGradientPanel9.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
-            this.guna2CustomGradientPanel9.Location = new System.Drawing.Point(419, 334);
-            this.guna2CustomGradientPanel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel9.Location = new System.Drawing.Point(314, 271);
             this.guna2CustomGradientPanel9.Name = "guna2CustomGradientPanel9";
             this.guna2CustomGradientPanel9.ShadowDecoration.Parent = this.guna2CustomGradientPanel9;
-            this.guna2CustomGradientPanel9.Size = new System.Drawing.Size(67, 62);
+            this.guna2CustomGradientPanel9.Size = new System.Drawing.Size(50, 50);
             this.guna2CustomGradientPanel9.TabIndex = 10;
             // 
             // guna2CustomGradientPanel10
@@ -406,11 +389,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.guna2CustomGradientPanel10, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2CustomGradientPanel10.FillColor = System.Drawing.Color.Yellow;
             this.guna2CustomGradientPanel10.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
-            this.guna2CustomGradientPanel10.Location = new System.Drawing.Point(820, 84);
-            this.guna2CustomGradientPanel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel10.Location = new System.Drawing.Point(615, 68);
             this.guna2CustomGradientPanel10.Name = "guna2CustomGradientPanel10";
             this.guna2CustomGradientPanel10.ShadowDecoration.Parent = this.guna2CustomGradientPanel10;
-            this.guna2CustomGradientPanel10.Size = new System.Drawing.Size(67, 62);
+            this.guna2CustomGradientPanel10.Size = new System.Drawing.Size(50, 50);
             this.guna2CustomGradientPanel10.TabIndex = 9;
             // 
             // guna2CustomGradientPanel11
@@ -420,11 +402,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.guna2CustomGradientPanel11, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2CustomGradientPanel11.FillColor = System.Drawing.Color.Yellow;
             this.guna2CustomGradientPanel11.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
-            this.guna2CustomGradientPanel11.Location = new System.Drawing.Point(419, 6);
-            this.guna2CustomGradientPanel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel11.Location = new System.Drawing.Point(314, 5);
             this.guna2CustomGradientPanel11.Name = "guna2CustomGradientPanel11";
             this.guna2CustomGradientPanel11.ShadowDecoration.Parent = this.guna2CustomGradientPanel11;
-            this.guna2CustomGradientPanel11.Size = new System.Drawing.Size(67, 62);
+            this.guna2CustomGradientPanel11.Size = new System.Drawing.Size(50, 50);
             this.guna2CustomGradientPanel11.TabIndex = 8;
             // 
             // btnChange2
@@ -443,11 +424,10 @@ namespace QLCuaHangQuanAo.Performance
             this.btnChange2.HoverState.Parent = this.btnChange2;
             this.btnChange2.Image = global::QLCuaHangQuanAo.Properties.Resources.arow_right_black;
             this.btnChange2.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnChange2.Location = new System.Drawing.Point(840, 153);
-            this.btnChange2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChange2.Location = new System.Drawing.Point(630, 124);
             this.btnChange2.Name = "btnChange2";
             this.btnChange2.ShadowDecoration.Parent = this.btnChange2;
-            this.btnChange2.Size = new System.Drawing.Size(69, 132);
+            this.btnChange2.Size = new System.Drawing.Size(52, 107);
             this.btnChange2.TabIndex = 11;
             this.btnChange2.Click += new System.EventHandler(this.btnChange_Click);
             // 
@@ -458,11 +438,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.guna2CustomGradientPanel12, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2CustomGradientPanel12.FillColor = System.Drawing.Color.Yellow;
             this.guna2CustomGradientPanel12.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
-            this.guna2CustomGradientPanel12.Location = new System.Drawing.Point(585, 31);
-            this.guna2CustomGradientPanel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel12.Location = new System.Drawing.Point(439, 25);
             this.guna2CustomGradientPanel12.Name = "guna2CustomGradientPanel12";
             this.guna2CustomGradientPanel12.ShadowDecoration.Parent = this.guna2CustomGradientPanel12;
-            this.guna2CustomGradientPanel12.Size = new System.Drawing.Size(40, 37);
+            this.guna2CustomGradientPanel12.Size = new System.Drawing.Size(30, 30);
             this.guna2CustomGradientPanel12.TabIndex = 7;
             // 
             // guna2PictureBox2
@@ -471,11 +450,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.guna2PictureBox2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2PictureBox2.Image = global::QLCuaHangQuanAo.Properties.Resources.ao;
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(461, 69);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(346, 56);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(375, 308);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(281, 250);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox2.TabIndex = 10;
             this.guna2PictureBox2.TabStop = false;
@@ -486,10 +464,9 @@ namespace QLCuaHangQuanAo.Performance
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.label4, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label4.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(35, 186);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(26, 151);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(359, 132);
+            this.label4.Size = new System.Drawing.Size(269, 107);
             this.label4.TabIndex = 3;
             this.label4.Text = "Một outfit đẹp khi bạn biết cách tạo được điểm nhấn cho chúng. Hơn ai hết đây chí" +
     "nh là nhân tố kiên quyết mang đến sự nổi bật cá tính trong set đồ của bạn.\r\n";
@@ -500,10 +477,9 @@ namespace QLCuaHangQuanAo.Performance
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.label5, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(84, 121);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(63, 98);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(217, 50);
+            this.label5.Size = new System.Drawing.Size(175, 41);
             this.label5.TabIndex = 2;
             this.label5.Text = "trãi nghiệm";
             // 
@@ -526,14 +502,14 @@ namespace QLCuaHangQuanAo.Performance
             this.btnBuy2.Image = global::QLCuaHangQuanAo.Properties.Resources.arow_right_yellow;
             this.btnBuy2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnBuy2.ImageSize = new System.Drawing.Size(20, 18);
-            this.btnBuy2.Location = new System.Drawing.Point(91, 334);
-            this.btnBuy2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuy2.Location = new System.Drawing.Point(68, 271);
             this.btnBuy2.Name = "btnBuy2";
-            this.btnBuy2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 7);
+            this.btnBuy2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 6);
             this.btnBuy2.ShadowDecoration.Parent = this.btnBuy2;
-            this.btnBuy2.Size = new System.Drawing.Size(216, 55);
+            this.btnBuy2.Size = new System.Drawing.Size(162, 45);
             this.btnBuy2.TabIndex = 4;
             this.btnBuy2.Text = "Mua ngay";
+            this.btnBuy2.Click += new System.EventHandler(this.btnBuy_Click);
             // 
             // panelMu
             // 
@@ -554,11 +530,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.panelMu, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panelMu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(220)))), ((int)(((byte)(212)))));
             this.panelMu.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(151)))), ((int)(((byte)(126)))));
-            this.panelMu.Location = new System.Drawing.Point(0, 50);
-            this.panelMu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMu.Location = new System.Drawing.Point(0, 41);
             this.panelMu.Name = "panelMu";
             this.panelMu.ShadowDecoration.Parent = this.panelMu;
-            this.panelMu.Size = new System.Drawing.Size(915, 490);
+            this.panelMu.Size = new System.Drawing.Size(686, 398);
             this.panelMu.TabIndex = 17;
             // 
             // label12
@@ -567,10 +542,9 @@ namespace QLCuaHangQuanAo.Performance
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.label12, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label12.Font = new System.Drawing.Font("Segoe UI Light", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(35, 69);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(26, 56);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(343, 52);
+            this.label12.Size = new System.Drawing.Size(269, 42);
             this.label12.TabIndex = 1;
             this.label12.Text = "Bạn đã sẵn sàng để";
             // 
@@ -581,11 +555,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.guna2CustomGradientPanel23, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2CustomGradientPanel23.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2CustomGradientPanel23.FillColor3 = System.Drawing.SystemColors.Info;
-            this.guna2CustomGradientPanel23.Location = new System.Drawing.Point(387, 86);
-            this.guna2CustomGradientPanel23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel23.Location = new System.Drawing.Point(290, 70);
             this.guna2CustomGradientPanel23.Name = "guna2CustomGradientPanel23";
             this.guna2CustomGradientPanel23.ShadowDecoration.Parent = this.guna2CustomGradientPanel23;
-            this.guna2CustomGradientPanel23.Size = new System.Drawing.Size(120, 111);
+            this.guna2CustomGradientPanel23.Size = new System.Drawing.Size(90, 90);
             this.guna2CustomGradientPanel23.TabIndex = 9;
             // 
             // guna2CustomGradientPanel21
@@ -595,11 +568,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.guna2CustomGradientPanel21, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2CustomGradientPanel21.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2CustomGradientPanel21.FillColor3 = System.Drawing.SystemColors.Info;
-            this.guna2CustomGradientPanel21.Location = new System.Drawing.Point(4, 351);
-            this.guna2CustomGradientPanel21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel21.Location = new System.Drawing.Point(3, 285);
             this.guna2CustomGradientPanel21.Name = "guna2CustomGradientPanel21";
             this.guna2CustomGradientPanel21.ShadowDecoration.Parent = this.guna2CustomGradientPanel21;
-            this.guna2CustomGradientPanel21.Size = new System.Drawing.Size(67, 62);
+            this.guna2CustomGradientPanel21.Size = new System.Drawing.Size(50, 50);
             this.guna2CustomGradientPanel21.TabIndex = 9;
             // 
             // guna2CustomGradientPanel20
@@ -609,11 +581,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.guna2CustomGradientPanel20, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2CustomGradientPanel20.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2CustomGradientPanel20.FillColor3 = System.Drawing.SystemColors.Info;
-            this.guna2CustomGradientPanel20.Location = new System.Drawing.Point(401, 252);
-            this.guna2CustomGradientPanel20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel20.Location = new System.Drawing.Point(301, 205);
             this.guna2CustomGradientPanel20.Name = "guna2CustomGradientPanel20";
             this.guna2CustomGradientPanel20.ShadowDecoration.Parent = this.guna2CustomGradientPanel20;
-            this.guna2CustomGradientPanel20.Size = new System.Drawing.Size(67, 62);
+            this.guna2CustomGradientPanel20.Size = new System.Drawing.Size(50, 50);
             this.guna2CustomGradientPanel20.TabIndex = 8;
             // 
             // guna2CustomGradientPanel19
@@ -623,11 +594,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.guna2CustomGradientPanel19, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2CustomGradientPanel19.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2CustomGradientPanel19.FillColor3 = System.Drawing.SystemColors.Info;
-            this.guna2CustomGradientPanel19.Location = new System.Drawing.Point(840, 12);
-            this.guna2CustomGradientPanel19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel19.Location = new System.Drawing.Point(630, 10);
             this.guna2CustomGradientPanel19.Name = "guna2CustomGradientPanel19";
             this.guna2CustomGradientPanel19.ShadowDecoration.Parent = this.guna2CustomGradientPanel19;
-            this.guna2CustomGradientPanel19.Size = new System.Drawing.Size(47, 43);
+            this.guna2CustomGradientPanel19.Size = new System.Drawing.Size(35, 35);
             this.guna2CustomGradientPanel19.TabIndex = 8;
             // 
             // guna2CustomGradientPanel25
@@ -637,11 +607,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.guna2CustomGradientPanel25, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2CustomGradientPanel25.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2CustomGradientPanel25.FillColor3 = System.Drawing.SystemColors.Info;
-            this.guna2CustomGradientPanel25.Location = new System.Drawing.Point(568, 95);
-            this.guna2CustomGradientPanel25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel25.Location = new System.Drawing.Point(426, 77);
             this.guna2CustomGradientPanel25.Name = "guna2CustomGradientPanel25";
             this.guna2CustomGradientPanel25.ShadowDecoration.Parent = this.guna2CustomGradientPanel25;
-            this.guna2CustomGradientPanel25.Size = new System.Drawing.Size(83, 76);
+            this.guna2CustomGradientPanel25.Size = new System.Drawing.Size(62, 62);
             this.guna2CustomGradientPanel25.TabIndex = 7;
             // 
             // btnChange4
@@ -660,11 +629,10 @@ namespace QLCuaHangQuanAo.Performance
             this.btnChange4.HoverState.Parent = this.btnChange4;
             this.btnChange4.Image = global::QLCuaHangQuanAo.Properties.Resources.arow_right_black;
             this.btnChange4.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnChange4.Location = new System.Drawing.Point(840, 153);
-            this.btnChange4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChange4.Location = new System.Drawing.Point(630, 124);
             this.btnChange4.Name = "btnChange4";
             this.btnChange4.ShadowDecoration.Parent = this.btnChange4;
-            this.btnChange4.Size = new System.Drawing.Size(69, 132);
+            this.btnChange4.Size = new System.Drawing.Size(52, 107);
             this.btnChange4.TabIndex = 11;
             this.btnChange4.Click += new System.EventHandler(this.btnChange_Click);
             // 
@@ -674,11 +642,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.guna2PictureBox4, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2PictureBox4.Image = global::QLCuaHangQuanAo.Properties.Resources.Mu;
             this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(476, 81);
-            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2PictureBox4.Location = new System.Drawing.Point(357, 66);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
             this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
-            this.guna2PictureBox4.Size = new System.Drawing.Size(375, 308);
+            this.guna2PictureBox4.Size = new System.Drawing.Size(281, 250);
             this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox4.TabIndex = 10;
             this.guna2PictureBox4.TabStop = false;
@@ -690,11 +657,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.bongbong, Guna.UI2.AnimatorNS.DecorationType.None);
             this.bongbong.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bongbong.FillColor3 = System.Drawing.SystemColors.Info;
-            this.bongbong.Location = new System.Drawing.Point(361, 10);
-            this.bongbong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bongbong.Location = new System.Drawing.Point(271, 8);
             this.bongbong.Name = "bongbong";
             this.bongbong.ShadowDecoration.Parent = this.bongbong;
-            this.bongbong.Size = new System.Drawing.Size(67, 62);
+            this.bongbong.Size = new System.Drawing.Size(50, 50);
             this.bongbong.TabIndex = 6;
             // 
             // label10
@@ -703,10 +669,9 @@ namespace QLCuaHangQuanAo.Performance
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.label10, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label10.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(35, 186);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(26, 151);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(359, 132);
+            this.label10.Size = new System.Drawing.Size(269, 107);
             this.label10.TabIndex = 3;
             this.label10.Text = "Một outfit đẹp khi bạn biết cách tạo được điểm nhấn cho chúng. Hơn ai hết đây chí" +
     "nh là nhân tố kiên quyết mang đến sự nổi bật cá tính trong set đồ của bạn.\r\n\r\n";
@@ -717,10 +682,9 @@ namespace QLCuaHangQuanAo.Performance
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.label11, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(84, 121);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(63, 98);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(217, 50);
+            this.label11.Size = new System.Drawing.Size(175, 41);
             this.label11.TabIndex = 2;
             this.label11.Text = "trãi nghiệm";
             // 
@@ -743,14 +707,14 @@ namespace QLCuaHangQuanAo.Performance
             this.btnBuy4.Image = global::QLCuaHangQuanAo.Properties.Resources.arow_right_brown;
             this.btnBuy4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnBuy4.ImageSize = new System.Drawing.Size(20, 18);
-            this.btnBuy4.Location = new System.Drawing.Point(68, 334);
-            this.btnBuy4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuy4.Location = new System.Drawing.Point(51, 271);
             this.btnBuy4.Name = "btnBuy4";
-            this.btnBuy4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 7);
+            this.btnBuy4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 6);
             this.btnBuy4.ShadowDecoration.Parent = this.btnBuy4;
-            this.btnBuy4.Size = new System.Drawing.Size(216, 55);
+            this.btnBuy4.Size = new System.Drawing.Size(162, 45);
             this.btnBuy4.TabIndex = 4;
             this.btnBuy4.Text = "Mua ngay";
+            this.btnBuy4.Click += new System.EventHandler(this.btnBuy_Click);
             // 
             // guna2Transition1
             // 
@@ -779,10 +743,9 @@ namespace QLCuaHangQuanAo.Performance
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.label9, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label9.Font = new System.Drawing.Font("Segoe UI Light", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(35, 69);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(26, 56);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(343, 52);
+            this.label9.Size = new System.Drawing.Size(269, 42);
             this.label9.TabIndex = 1;
             this.label9.Text = "Bạn đã sẵn sàng để";
             // 
@@ -792,10 +755,9 @@ namespace QLCuaHangQuanAo.Performance
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.label8, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(84, 121);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(63, 98);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(217, 50);
+            this.label8.Size = new System.Drawing.Size(175, 41);
             this.label8.TabIndex = 2;
             this.label8.Text = "trãi nghiệm";
             // 
@@ -805,10 +767,9 @@ namespace QLCuaHangQuanAo.Performance
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.label7, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label7.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(35, 186);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(26, 151);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(359, 132);
+            this.label7.Size = new System.Drawing.Size(269, 107);
             this.label7.TabIndex = 3;
             this.label7.Text = "Một outfit đẹp khi bạn biết cách tạo được điểm nhấn cho chúng. Hơn ai hết đây chí" +
     "nh là nhân tố kiên quyết mang đến sự nổi bật cá tính trong set đồ của bạn.";
@@ -821,11 +782,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2CustomGradientPanel18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(189)))));
             this.guna2CustomGradientPanel18.FillColor2 = System.Drawing.Color.WhiteSmoke;
             this.guna2CustomGradientPanel18.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(184)))), ((int)(((byte)(171)))));
-            this.guna2CustomGradientPanel18.Location = new System.Drawing.Point(387, 4);
-            this.guna2CustomGradientPanel18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel18.Location = new System.Drawing.Point(290, 3);
             this.guna2CustomGradientPanel18.Name = "guna2CustomGradientPanel18";
             this.guna2CustomGradientPanel18.ShadowDecoration.Parent = this.guna2CustomGradientPanel18;
-            this.guna2CustomGradientPanel18.Size = new System.Drawing.Size(67, 62);
+            this.guna2CustomGradientPanel18.Size = new System.Drawing.Size(50, 50);
             this.guna2CustomGradientPanel18.TabIndex = 6;
             // 
             // guna2CustomGradientPanel17
@@ -836,11 +796,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2CustomGradientPanel17.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(189)))));
             this.guna2CustomGradientPanel17.FillColor2 = System.Drawing.Color.WhiteSmoke;
             this.guna2CustomGradientPanel17.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(184)))), ((int)(((byte)(171)))));
-            this.guna2CustomGradientPanel17.Location = new System.Drawing.Point(475, 110);
-            this.guna2CustomGradientPanel17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel17.Location = new System.Drawing.Point(356, 89);
             this.guna2CustomGradientPanel17.Name = "guna2CustomGradientPanel17";
             this.guna2CustomGradientPanel17.ShadowDecoration.Parent = this.guna2CustomGradientPanel17;
-            this.guna2CustomGradientPanel17.Size = new System.Drawing.Size(40, 37);
+            this.guna2CustomGradientPanel17.Size = new System.Drawing.Size(30, 30);
             this.guna2CustomGradientPanel17.TabIndex = 7;
             // 
             // guna2CustomGradientPanel16
@@ -851,11 +810,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2CustomGradientPanel16.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(189)))));
             this.guna2CustomGradientPanel16.FillColor2 = System.Drawing.Color.WhiteSmoke;
             this.guna2CustomGradientPanel16.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(184)))), ((int)(((byte)(171)))));
-            this.guna2CustomGradientPanel16.Location = new System.Drawing.Point(784, 54);
-            this.guna2CustomGradientPanel16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel16.Location = new System.Drawing.Point(588, 44);
             this.guna2CustomGradientPanel16.Name = "guna2CustomGradientPanel16";
             this.guna2CustomGradientPanel16.ShadowDecoration.Parent = this.guna2CustomGradientPanel16;
-            this.guna2CustomGradientPanel16.Size = new System.Drawing.Size(67, 62);
+            this.guna2CustomGradientPanel16.Size = new System.Drawing.Size(50, 50);
             this.guna2CustomGradientPanel16.TabIndex = 8;
             // 
             // guna2CustomGradientPanel15
@@ -866,11 +824,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2CustomGradientPanel15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(189)))));
             this.guna2CustomGradientPanel15.FillColor2 = System.Drawing.Color.WhiteSmoke;
             this.guna2CustomGradientPanel15.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(184)))), ((int)(((byte)(171)))));
-            this.guna2CustomGradientPanel15.Location = new System.Drawing.Point(361, 336);
-            this.guna2CustomGradientPanel15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel15.Location = new System.Drawing.Point(271, 273);
             this.guna2CustomGradientPanel15.Name = "guna2CustomGradientPanel15";
             this.guna2CustomGradientPanel15.ShadowDecoration.Parent = this.guna2CustomGradientPanel15;
-            this.guna2CustomGradientPanel15.Size = new System.Drawing.Size(67, 62);
+            this.guna2CustomGradientPanel15.Size = new System.Drawing.Size(50, 50);
             this.guna2CustomGradientPanel15.TabIndex = 9;
             // 
             // guna2CustomGradientPanel14
@@ -881,11 +838,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2CustomGradientPanel14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(189)))));
             this.guna2CustomGradientPanel14.FillColor2 = System.Drawing.Color.WhiteSmoke;
             this.guna2CustomGradientPanel14.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(184)))), ((int)(((byte)(171)))));
-            this.guna2CustomGradientPanel14.Location = new System.Drawing.Point(12, 369);
-            this.guna2CustomGradientPanel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel14.Location = new System.Drawing.Point(9, 300);
             this.guna2CustomGradientPanel14.Name = "guna2CustomGradientPanel14";
             this.guna2CustomGradientPanel14.ShadowDecoration.Parent = this.guna2CustomGradientPanel14;
-            this.guna2CustomGradientPanel14.Size = new System.Drawing.Size(67, 62);
+            this.guna2CustomGradientPanel14.Size = new System.Drawing.Size(50, 50);
             this.guna2CustomGradientPanel14.TabIndex = 10;
             // 
             // guna2CustomGradientPanel13
@@ -896,11 +852,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2CustomGradientPanel13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(189)))));
             this.guna2CustomGradientPanel13.FillColor2 = System.Drawing.Color.WhiteSmoke;
             this.guna2CustomGradientPanel13.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(184)))), ((int)(((byte)(171)))));
-            this.guna2CustomGradientPanel13.Location = new System.Drawing.Point(37, 22);
-            this.guna2CustomGradientPanel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel13.Location = new System.Drawing.Point(28, 18);
             this.guna2CustomGradientPanel13.Name = "guna2CustomGradientPanel13";
             this.guna2CustomGradientPanel13.ShadowDecoration.Parent = this.guna2CustomGradientPanel13;
-            this.guna2CustomGradientPanel13.Size = new System.Drawing.Size(67, 62);
+            this.guna2CustomGradientPanel13.Size = new System.Drawing.Size(50, 50);
             this.guna2CustomGradientPanel13.TabIndex = 12;
             // 
             // panelQuan
@@ -923,11 +878,10 @@ namespace QLCuaHangQuanAo.Performance
             this.panelQuan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(234)))), ((int)(((byte)(248)))));
             this.panelQuan.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(154)))), ((int)(((byte)(189)))));
             this.panelQuan.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.panelQuan.Location = new System.Drawing.Point(0, 50);
-            this.panelQuan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelQuan.Location = new System.Drawing.Point(0, 41);
             this.panelQuan.Name = "panelQuan";
             this.panelQuan.ShadowDecoration.Parent = this.panelQuan;
-            this.panelQuan.Size = new System.Drawing.Size(915, 490);
+            this.panelQuan.Size = new System.Drawing.Size(686, 398);
             this.panelQuan.TabIndex = 15;
             // 
             // btnChange3
@@ -947,11 +901,10 @@ namespace QLCuaHangQuanAo.Performance
             this.btnChange3.HoverState.Parent = this.btnChange3;
             this.btnChange3.Image = global::QLCuaHangQuanAo.Properties.Resources.arow_right_black;
             this.btnChange3.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnChange3.Location = new System.Drawing.Point(841, 154);
-            this.btnChange3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChange3.Location = new System.Drawing.Point(631, 125);
             this.btnChange3.Name = "btnChange3";
             this.btnChange3.ShadowDecoration.Parent = this.btnChange3;
-            this.btnChange3.Size = new System.Drawing.Size(69, 132);
+            this.btnChange3.Size = new System.Drawing.Size(52, 107);
             this.btnChange3.TabIndex = 11;
             this.btnChange3.Click += new System.EventHandler(this.btnChange_Click);
             // 
@@ -961,11 +914,10 @@ namespace QLCuaHangQuanAo.Performance
             this.guna2Transition1.SetDecoration(this.guna2PictureBox3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2PictureBox3.Image = global::QLCuaHangQuanAo.Properties.Resources.quan;
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(459, 54);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(344, 44);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
-            this.guna2PictureBox3.Size = new System.Drawing.Size(375, 308);
+            this.guna2PictureBox3.Size = new System.Drawing.Size(281, 250);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox3.TabIndex = 10;
             this.guna2PictureBox3.TabStop = false;
@@ -989,14 +941,14 @@ namespace QLCuaHangQuanAo.Performance
             this.btnBuy3.Image = global::QLCuaHangQuanAo.Properties.Resources.arow_right_blue;
             this.btnBuy3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnBuy3.ImageSize = new System.Drawing.Size(20, 18);
-            this.btnBuy3.Location = new System.Drawing.Point(83, 324);
-            this.btnBuy3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuy3.Location = new System.Drawing.Point(62, 263);
             this.btnBuy3.Name = "btnBuy3";
-            this.btnBuy3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 7);
+            this.btnBuy3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 6);
             this.btnBuy3.ShadowDecoration.Parent = this.btnBuy3;
-            this.btnBuy3.Size = new System.Drawing.Size(216, 55);
+            this.btnBuy3.Size = new System.Drawing.Size(162, 45);
             this.btnBuy3.TabIndex = 4;
             this.btnBuy3.Text = "Mua ngay";
+            this.btnBuy3.Click += new System.EventHandler(this.btnBuy_Click);
             // 
             // btnMu
             // 
@@ -1014,11 +966,10 @@ namespace QLCuaHangQuanAo.Performance
             this.btnMu.HoverState.Parent = this.btnMu;
             this.btnMu.Image = global::QLCuaHangQuanAo.Properties.Resources.hat;
             this.btnMu.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnMu.Location = new System.Drawing.Point(16, 4);
-            this.btnMu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMu.Location = new System.Drawing.Point(12, 3);
             this.btnMu.Name = "btnMu";
             this.btnMu.ShadowDecoration.Parent = this.btnMu;
-            this.btnMu.Size = new System.Drawing.Size(155, 47);
+            this.btnMu.Size = new System.Drawing.Size(116, 38);
             this.btnMu.TabIndex = 21;
             this.btnMu.Text = "Mũ";
             // 
@@ -1038,11 +989,10 @@ namespace QLCuaHangQuanAo.Performance
             this.btnQuan.HoverState.Parent = this.btnQuan;
             this.btnQuan.Image = global::QLCuaHangQuanAo.Properties.Resources.trouser;
             this.btnQuan.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnQuan.Location = new System.Drawing.Point(16, 4);
-            this.btnQuan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuan.Location = new System.Drawing.Point(12, 3);
             this.btnQuan.Name = "btnQuan";
             this.btnQuan.ShadowDecoration.Parent = this.btnQuan;
-            this.btnQuan.Size = new System.Drawing.Size(155, 47);
+            this.btnQuan.Size = new System.Drawing.Size(116, 38);
             this.btnQuan.TabIndex = 20;
             this.btnQuan.Text = "Quần";
             // 
@@ -1062,11 +1012,10 @@ namespace QLCuaHangQuanAo.Performance
             this.btnAo.HoverState.Parent = this.btnAo;
             this.btnAo.Image = global::QLCuaHangQuanAo.Properties.Resources.shirt1;
             this.btnAo.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAo.Location = new System.Drawing.Point(16, 4);
-            this.btnAo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAo.Location = new System.Drawing.Point(12, 3);
             this.btnAo.Name = "btnAo";
             this.btnAo.ShadowDecoration.Parent = this.btnAo;
-            this.btnAo.Size = new System.Drawing.Size(155, 47);
+            this.btnAo.Size = new System.Drawing.Size(116, 38);
             this.btnAo.TabIndex = 19;
             this.btnAo.Text = "Áo";
             // 
@@ -1086,26 +1035,24 @@ namespace QLCuaHangQuanAo.Performance
             this.btnGiay.HoverState.Parent = this.btnGiay;
             this.btnGiay.Image = global::QLCuaHangQuanAo.Properties.Resources.shoe;
             this.btnGiay.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnGiay.Location = new System.Drawing.Point(16, 4);
-            this.btnGiay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGiay.Location = new System.Drawing.Point(12, 3);
             this.btnGiay.Name = "btnGiay";
             this.btnGiay.ShadowDecoration.Parent = this.btnGiay;
-            this.btnGiay.Size = new System.Drawing.Size(155, 47);
+            this.btnGiay.Size = new System.Drawing.Size(116, 38);
             this.btnGiay.TabIndex = 18;
             this.btnGiay.Text = "Giày";
             // 
             // guna2DragControl1
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl1.TransparentWhileDrag = true;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // Home_perfomancecs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
-            this.ClientSize = new System.Drawing.Size(915, 543);
+            this.ClientSize = new System.Drawing.Size(686, 441);
             this.Controls.Add(this.btnMu);
             this.Controls.Add(this.btnQuan);
             this.Controls.Add(this.btnAo);
@@ -1116,7 +1063,6 @@ namespace QLCuaHangQuanAo.Performance
             this.Controls.Add(this.panelGiay);
             this.guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Home_perfomancecs";
             this.Text = "Form2";
             this.panelGiay.ResumeLayout(false);

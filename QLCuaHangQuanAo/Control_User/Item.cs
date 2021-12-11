@@ -61,7 +61,5 @@ namespace QLCuaHangQuanAo.Control_User
         {
             btnItem_Click(btnItem, e);
         }
-
-        
     }
 }

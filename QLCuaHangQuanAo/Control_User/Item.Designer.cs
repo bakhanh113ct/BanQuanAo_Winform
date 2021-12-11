@@ -75,12 +75,12 @@ namespace QLCuaHangQuanAo.Control_User
             // 
             this.lbName.AutoSize = true;
             this.lbName.BackColor = System.Drawing.Color.Transparent;
-            this.lbName.Font = new System.Drawing.Font("Quicksand SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Font = new System.Drawing.Font("Quicksand", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.Color.Black;
-            this.lbName.Location = new System.Drawing.Point(4, 146);
+            this.lbName.Location = new System.Drawing.Point(3, 119);
             this.lbName.Margin = new System.Windows.Forms.Padding(0);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(69, 25);
+            this.lbName.Size = new System.Drawing.Size(57, 21);
             this.lbName.TabIndex = 2;
             this.lbName.Text = "abcxyz";
             this.lbName.Click += new System.EventHandler(this.btnItem_Click);
@@ -88,24 +88,24 @@ namespace QLCuaHangQuanAo.Control_User
             // lbDaBan
             // 
             this.lbDaBan.AutoSize = true;
-            this.lbDaBan.Font = new System.Drawing.Font("Quicksand Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDaBan.Font = new System.Drawing.Font("Quicksand SemiBold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDaBan.ForeColor = System.Drawing.Color.Black;
-            this.lbDaBan.Location = new System.Drawing.Point(7, 202);
+            this.lbDaBan.Location = new System.Drawing.Point(5, 164);
             this.lbDaBan.Margin = new System.Windows.Forms.Padding(0);
             this.lbDaBan.Name = "lbDaBan";
-            this.lbDaBan.Size = new System.Drawing.Size(58, 23);
+            this.lbDaBan.Size = new System.Drawing.Size(46, 18);
             this.lbDaBan.TabIndex = 4;
             this.lbDaBan.Text = "DaBan";
             this.lbDaBan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbSoLuong
             // 
-            this.lbSoLuong.Font = new System.Drawing.Font("Quicksand Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoLuong.Font = new System.Drawing.Font("Quicksand SemiBold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSoLuong.ForeColor = System.Drawing.Color.Black;
-            this.lbSoLuong.Location = new System.Drawing.Point(121, 201);
+            this.lbSoLuong.Location = new System.Drawing.Point(84, 163);
             this.lbSoLuong.Margin = new System.Windows.Forms.Padding(0);
             this.lbSoLuong.Name = "lbSoLuong";
-            this.lbSoLuong.Size = new System.Drawing.Size(76, 18);
+            this.lbSoLuong.Size = new System.Drawing.Size(66, 19);
             this.lbSoLuong.TabIndex = 5;
             this.lbSoLuong.Text = "SoLuong";
             this.lbSoLuong.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -133,10 +133,9 @@ namespace QLCuaHangQuanAo.Control_User
             this.btnItem.ForeColor = System.Drawing.Color.White;
             this.btnItem.HoverState.Parent = this.btnItem;
             this.btnItem.Location = new System.Drawing.Point(0, 0);
-            this.btnItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnItem.Name = "btnItem";
             this.btnItem.ShadowDecoration.Parent = this.btnItem;
-            this.btnItem.Size = new System.Drawing.Size(207, 228);
+            this.btnItem.Size = new System.Drawing.Size(155, 185);
             this.btnItem.TabIndex = 8;
             this.btnItem.Click += new System.EventHandler(this.btnItem_Click);
             // 
@@ -148,11 +147,10 @@ namespace QLCuaHangQuanAo.Control_User
             this.picture.Controls.Add(this.btnTinhTrang);
             this.picture.FillColor = System.Drawing.Color.Silver;
             this.picture.ImageRotate = 0F;
-            this.picture.Location = new System.Drawing.Point(4, 4);
-            this.picture.Margin = new System.Windows.Forms.Padding(4);
+            this.picture.Location = new System.Drawing.Point(3, 3);
             this.picture.Name = "picture";
             this.picture.ShadowDecoration.Parent = this.picture;
-            this.picture.Size = new System.Drawing.Size(199, 139);
+            this.picture.Size = new System.Drawing.Size(149, 113);
             this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picture.TabIndex = 7;
             this.picture.TabStop = false;
@@ -160,7 +158,7 @@ namespace QLCuaHangQuanAo.Control_User
             // 
             // btnBuy
             // 
-            this.btnBuy.BackgroundImage = global::QLCuaHangQuanAo.Properties.Resources.buy_button;
+            this.btnBuy.BackgroundImage = global::QLCuaHangQuanAo.Properties.Resources.add;
             this.btnBuy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnBuy.CheckedState.Parent = this.btnBuy;
             this.btnBuy.CustomImages.Parent = this.btnBuy;
@@ -173,12 +171,11 @@ namespace QLCuaHangQuanAo.Control_User
             this.btnBuy.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBuy.ForeColor = System.Drawing.Color.White;
             this.btnBuy.HoverState.Parent = this.btnBuy;
-            this.btnBuy.Location = new System.Drawing.Point(147, 2);
-            this.btnBuy.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuy.Location = new System.Drawing.Point(115, 2);
             this.btnBuy.Name = "btnBuy";
             this.btnBuy.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnBuy.ShadowDecoration.Parent = this.btnBuy;
-            this.btnBuy.Size = new System.Drawing.Size(50, 50);
+            this.btnBuy.Size = new System.Drawing.Size(32, 32);
             this.btnBuy.TabIndex = 0;
             this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
@@ -196,11 +193,10 @@ namespace QLCuaHangQuanAo.Control_User
             this.btnTinhTrang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnTinhTrang.ForeColor = System.Drawing.Color.White;
             this.btnTinhTrang.HoverState.Parent = this.btnTinhTrang;
-            this.btnTinhTrang.Location = new System.Drawing.Point(3, 2);
-            this.btnTinhTrang.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTinhTrang.Location = new System.Drawing.Point(2, 2);
             this.btnTinhTrang.Name = "btnTinhTrang";
             this.btnTinhTrang.ShadowDecoration.Parent = this.btnTinhTrang;
-            this.btnTinhTrang.Size = new System.Drawing.Size(65, 25);
+            this.btnTinhTrang.Size = new System.Drawing.Size(49, 20);
             this.btnTinhTrang.TabIndex = 9;
             this.btnTinhTrang.Text = "Hết";
             // 
@@ -210,10 +206,10 @@ namespace QLCuaHangQuanAo.Control_User
             this.lbGia.Enabled = false;
             this.lbGia.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGia.ForeColor = System.Drawing.Color.Black;
-            this.lbGia.Location = new System.Drawing.Point(4, 170);
+            this.lbGia.Location = new System.Drawing.Point(3, 138);
             this.lbGia.Margin = new System.Windows.Forms.Padding(0);
             this.lbGia.Name = "lbGia";
-            this.lbGia.Size = new System.Drawing.Size(199, 32);
+            this.lbGia.Size = new System.Drawing.Size(149, 26);
             this.lbGia.TabIndex = 9;
             this.lbGia.Text = "10.000";
             this.lbGia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -221,13 +217,12 @@ namespace QLCuaHangQuanAo.Control_User
             // 
             // Item
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.btnItem);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Item";
-            this.Size = new System.Drawing.Size(207, 228);
+            this.Size = new System.Drawing.Size(155, 185);
             this.btnItem.ResumeLayout(false);
             this.btnItem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
