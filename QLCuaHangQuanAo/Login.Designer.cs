@@ -82,7 +82,7 @@ namespace QLCuaHangQuanAo
             this.btnAdmin_User.HoverState.Parent = this.btnAdmin_User;
             this.btnAdmin_User.Location = new System.Drawing.Point(-12, 35);
             this.btnAdmin_User.Name = "btnAdmin_User";
-            this.btnAdmin_User.Padding = new System.Windows.Forms.Padding(10, 0, 0, 2);
+            this.btnAdmin_User.Padding = new System.Windows.Forms.Padding(5, 0, 0, 2);
             this.btnAdmin_User.ShadowDecoration.Parent = this.btnAdmin_User;
             this.btnAdmin_User.Size = new System.Drawing.Size(77, 31);
             this.btnAdmin_User.TabIndex = 36;

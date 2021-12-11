@@ -360,7 +360,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.guna2GradientPanel1.Location = new System.Drawing.Point(6, 32);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(60, 4);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(25, 4);
             this.guna2GradientPanel1.TabIndex = 35;
             // 
             // label1
@@ -369,9 +369,9 @@ namespace QLCuaHangQuanAo.SubForm
             this.label1.Font = new System.Drawing.Font("Quicksand", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 28);
+            this.label1.Size = new System.Drawing.Size(64, 28);
             this.label1.TabIndex = 34;
-            this.label1.Text = "Thêm sản phẩm";
+            this.label1.Text = "Thêm";
             // 
             // label3
             // 

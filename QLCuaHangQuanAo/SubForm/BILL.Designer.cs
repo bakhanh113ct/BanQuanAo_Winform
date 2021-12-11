@@ -46,6 +46,10 @@ namespace QLCuaHangQuanAo.SubForm
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.BILLCT = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.TENSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TriGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DueDate = new System.Windows.Forms.Label();
             this.invoiceDate = new System.Windows.Forms.Label();
             this.trangthai = new System.Windows.Forms.Label();
@@ -73,10 +77,6 @@ namespace QLCuaHangQuanAo.SubForm
             this.Delivery = new Guna.UI2.WinForms.Guna2Button();
             this.Exit = new Guna.UI2.WinForms.Guna2Button();
             this.INHD = new Guna.UI2.WinForms.Guna2Button();
-            this.TENSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TriGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BILLCT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -285,7 +285,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.BILLCT.RowHeadersWidth = 51;
             this.BILLCT.RowTemplate.Height = 24;
             this.BILLCT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.BILLCT.Size = new System.Drawing.Size(344, 173);
+            this.BILLCT.Size = new System.Drawing.Size(351, 173);
             this.BILLCT.TabIndex = 11;
             this.BILLCT.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.BILLCT.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -308,6 +308,32 @@ namespace QLCuaHangQuanAo.SubForm
             this.BILLCT.ThemeStyle.RowsStyle.Height = 24;
             this.BILLCT.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.BILLCT.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // TENSP
+            // 
+            this.TENSP.FillWeight = 96.62147F;
+            this.TENSP.HeaderText = "Tên SP";
+            this.TENSP.MinimumWidth = 6;
+            this.TENSP.Name = "TENSP";
+            // 
+            // SL
+            // 
+            this.SL.FillWeight = 38.36898F;
+            this.SL.HeaderText = "SL";
+            this.SL.MinimumWidth = 6;
+            this.SL.Name = "SL";
+            // 
+            // GIA
+            // 
+            this.GIA.FillWeight = 96.62147F;
+            this.GIA.HeaderText = "Giá";
+            this.GIA.MinimumWidth = 6;
+            this.GIA.Name = "GIA";
+            // 
+            // TriGia
+            // 
+            this.TriGia.HeaderText = "Thành tiền";
+            this.TriGia.Name = "TriGia";
             // 
             // DueDate
             // 
@@ -665,32 +691,6 @@ namespace QLCuaHangQuanAo.SubForm
             this.INHD.TabIndex = 22;
             this.INHD.Text = "IN HÓA ĐƠN";
             this.INHD.Click += new System.EventHandler(this.INHD_Click);
-            // 
-            // TENSP
-            // 
-            this.TENSP.FillWeight = 96.62147F;
-            this.TENSP.HeaderText = "Tên SP";
-            this.TENSP.MinimumWidth = 6;
-            this.TENSP.Name = "TENSP";
-            // 
-            // SL
-            // 
-            this.SL.FillWeight = 38.36898F;
-            this.SL.HeaderText = "SL";
-            this.SL.MinimumWidth = 6;
-            this.SL.Name = "SL";
-            // 
-            // GIA
-            // 
-            this.GIA.FillWeight = 96.62147F;
-            this.GIA.HeaderText = "Giá";
-            this.GIA.MinimumWidth = 6;
-            this.GIA.Name = "GIA";
-            // 
-            // TriGia
-            // 
-            this.TriGia.HeaderText = "Thành tiền";
-            this.TriGia.Name = "TriGia";
             // 
             // BILL
             // 
