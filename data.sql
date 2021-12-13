@@ -562,7 +562,3 @@ values(35, 21, 1)
 insert into CTHD ( SOHD, MASP, SL)
 values(35, 6, 3)
 
-select * from TAIKHOAN
-select * from KHACHHANG
-select * from SANPHAM
-Update SANPHAM set SL = SL + 5 where MASP = 1
