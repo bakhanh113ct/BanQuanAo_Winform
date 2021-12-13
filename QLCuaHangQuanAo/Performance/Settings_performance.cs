@@ -37,10 +37,10 @@ namespace QLCuaHangQuanAo
         {
             txbName.Text = Login.kh.HoTen;
             lbName.Text = txbName.Text;
-            txbUserName.Text = Login.tk.Username;
             txbAddress.Text = Login.kh.DiaChi;
             txbPhone.Text = Login.kh.SoDT;
             txbEmail.Text = Login.kh.Email;
+            setGioiTinh();
             cbYear.DataSource = (Enumerable.Range(1950, DateTime.Now.Year).ToList());
             DateTime ngsinh = DateTime.Parse(Login.kh.NgSinh);
             cbMonth.SelectedItem = ngsinh.Month.ToString();
@@ -101,7 +101,7 @@ namespace QLCuaHangQuanAo
             byte[] anh = Library.ConvertoByte(picAvatar.Image);
             //Convert.ToInt32(cbYear.Text), Convert.ToInt32(cbMonth.Text), Convert.ToInt32(cbDay.Text)
             string ngsinh = cbYear.Text + "-" + cbMonth.Text + "-" + cbDay.Text;
-            DTO.KHACHHANG kh = new DTO.KHACHHANG(Login.kh.MaKH, Login.kh.IdUsername, txbName.Text, txbAddress.Text, txbPhone.Text, ngsinh, Login.kh.Gioitinh, anh == null ? null : anh, txbEmail.Text);
+            DTO.KHACHHANG kh = new DTO.KHACHHANG(Login.kh.MaKH, Login.kh.IdUsername, txbName.Text, txbAddress.Text, txbPhone.Text, ngsinh, GetGioiTinh(), anh == null ? null : anh, txbEmail.Text);
             if (DAO.KhachHangDAO.Instance.Update(kh))
             {
                 MessageBox.Show("Cập nhật thành công");
@@ -163,6 +163,24 @@ namespace QLCuaHangQuanAo
             //if(row == dtgv.Rowhead)
             SubForm.Product_Bill product_Bill = new SubForm.Product_Bill(row["SOHD"].ToString());
             product_Bill.ShowDialog();
+        }
+        private int GetGioiTinh()
+        {
+            if (rdMale.Checked == true)
+                return 1;
+            else if (rdFemale.Checked == true)
+                return 0;
+            else return 2;
+        }
+
+        private void setGioiTinh()
+        {
+            if (Login.kh.Gioitinh == 1)
+                rdMale.Checked = true;
+            else if (Login.kh.Gioitinh == 0)
+                rdFemale.Checked = true;
+            else
+                rdOther.Checked = true;
         }
     }
 }

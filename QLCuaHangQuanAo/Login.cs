@@ -111,16 +111,16 @@ namespace QLCuaHangQuanAo
 
         private void Admin_User_Lg_Click(object sender, EventArgs e)
         {
-            if (Admin_User_Lg.Text == "Đăng nhập với quyền admin")
+            if (Admin_User_Lg.Text == "Đăng nhập với quyền quản trị viên")
             {
                 Admin_User_Lg.Text = "Đăng nhập với người dùng";
-                btnAdmin_User.Text = "Admin";
+                btnAdmin_User.Text = "Quản trị viên";
                 admin_user = 0;
             }
             else
             {
-                Admin_User_Lg.Text = "Đăng nhập với quyền admin";
-                btnAdmin_User.Text = "User";
+                Admin_User_Lg.Text = "Đăng nhập với quyền quản trị viên";
+                btnAdmin_User.Text = "Khách hàng";
                 admin_user = 1;
             }
         }

@@ -46,10 +46,10 @@ namespace QLCuaHangQuanAo.DAO
             return lll[0];
 
         }
-        static public bool InsertSP(string ten, string gia, string SL, string mota, string loai, byte[] image)
+        static public bool InsertSP(string ten,string gianhap, string gia, string SL, string mota, string loai, byte[] image)
         {
-            int check = DAO.DataProvider.ExecuteNonQuery("Insert into SANPHAM(TEN, GIA, SL, DANHGIA, DABAN , MOTA, IDLOAI, ANH) values( @TEN , @GIA , @SL , @DANHGIA , @DABAN  , @MOTA ,  @IDLOAI , @ANH )", 
-                                             new object[] { ten, gia, SL, "0", "0" , mota, loai, image });
+            int check = DAO.DataProvider.ExecuteNonQuery("Insert into SANPHAM(TEN, GIANHAP, GIA, SL, DANHGIA, DABAN , MOTA, IDLOAI, ANH) values( @TEN , @GIANHAP , @GIA , @SL , @DANHGIA , @DABAN  , @MOTA ,  @IDLOAI , @ANH )", 
+                                             new object[] { ten, gianhap, gia, SL, "0", "0" , mota, loai, image });
             if (check == 0)
                 return false;
             else
@@ -153,6 +153,15 @@ namespace QLCuaHangQuanAo.DAO
                 return (int)x["sl"];
             }
             return 0;
+        }
+
+        public bool IncreaseSL(int id, int sl)
+        {
+            int check = DAO.DataProvider.ExecuteNonQuery("Update SANPHAM set SL = SL + '" + sl + "' where MASP = '" + id + "'");
+            if (check == 0)
+                return false;
+            else
+                return true;
         }
     }
 }

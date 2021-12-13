@@ -24,6 +24,7 @@ namespace QLCuaHangQuanAo.DTO
         private int masp;
         private string tenSP;
         private int gia;
+        private int gianhap;
         private float danhGia;
         private int daBan;
         private int sL;
@@ -31,7 +32,7 @@ namespace QLCuaHangQuanAo.DTO
         private int iDLoai;
         private byte[] anh;
 
-        public SANPHAM(int masp, string ten, int gia, float danhGia, int daBan, string moTa, int iDLoai, byte[] anh)
+        public SANPHAM(int masp, string ten, int gia, float danhGia, int daBan, string moTa, int iDLoai, byte[] anh, int gianhap)
         {
             this.masp = masp;
             this.tenSP = ten;
@@ -41,6 +42,7 @@ namespace QLCuaHangQuanAo.DTO
             this.moTa = moTa;
             this.iDLoai = iDLoai;
             this.Anh = anh;
+            this.gianhap = gianhap;
         }
 
         public SANPHAM(DataRow row)
@@ -59,6 +61,7 @@ namespace QLCuaHangQuanAo.DTO
             {
                 anh = null;
             }
+            gianhap = (int)row["GIANHAP"];
         }
         
         
@@ -71,6 +74,7 @@ namespace QLCuaHangQuanAo.DTO
         public int IDLoai { get => iDLoai; set => iDLoai = value; }
         public byte[] Anh { get => anh; set => anh = value; }
         public int SL { get => sL; set => sL = value; }
+        public int Gianhap { get => gianhap; set => gianhap = value; }
 
         public int get_SLSP(int x)
         {

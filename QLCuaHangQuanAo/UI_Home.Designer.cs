@@ -132,7 +132,7 @@ namespace QLCuaHangQuanAo
             this.SETTING.ShadowDecoration.Parent = this.SETTING;
             this.SETTING.Size = new System.Drawing.Size(147, 37);
             this.SETTING.TabIndex = 9;
-            this.SETTING.Text = "  Cài đặt";
+            this.SETTING.Text = "  Tài khoản";
             this.SETTING.Click += new System.EventHandler(this.SETTING_Click);
             // 
             // subbar4
@@ -393,11 +393,11 @@ namespace QLCuaHangQuanAo
             this.txtworkspace.AutoSize = true;
             this.txtworkspace.Font = new System.Drawing.Font("Quicksand SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtworkspace.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtworkspace.Location = new System.Drawing.Point(208, 7);
+            this.txtworkspace.Location = new System.Drawing.Point(183, 7);
             this.txtworkspace.Name = "txtworkspace";
-            this.txtworkspace.Size = new System.Drawing.Size(108, 21);
+            this.txtworkspace.Size = new System.Drawing.Size(130, 21);
             this.txtworkspace.TabIndex = 4;
-            this.txtworkspace.Text = "My workspace";
+            this.txtworkspace.Text = "Quản lý bán hàng";
             // 
             // send
             // 

@@ -19,6 +19,7 @@ namespace QLCuaHangQuanAo.SubForm
             InitializeComponent();
             this.Focus();
             txbTen.Select();
+            cbLoinhuan.SelectedIndex = 0;
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
@@ -29,8 +30,9 @@ namespace QLCuaHangQuanAo.SubForm
         private void btnSave_Click(object sender, EventArgs e)
         {
             byte[] imgbyte = Library.ConvertoByte(picture.Image);
+            int gia = (int)XulyGIa();
             if (imgbyte != null)
-                if (!DAO.SanPhamDAO.InsertSP(txbTen.Text, txbGiaTien.Text, txbSoLuong.Text, txbMota.Text, txbLoai.Text, imgbyte))
+                if (!DAO.SanPhamDAO.InsertSP(txbTen.Text, txbGiaTien.Text, gia.ToString(),  txbSoLuong.Text, txbMota.Text, txbLoai.Text, imgbyte))
                 {
                     MessageBox.Show("Them khong thanh cong.");
                     this.Hide();
@@ -50,6 +52,16 @@ namespace QLCuaHangQuanAo.SubForm
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private double XulyGIa()
+        {
+            double gia;
+            if (cbLoinhuan.SelectedIndex == 0)
+                gia = Convert.ToDouble(txbGiaTien.Text) * Convert.ToDouble(txbLoinhuan.Text)/100;
+            else
+                gia = Convert.ToDouble(txbGiaTien.Text) + Convert.ToDouble(txbLoinhuan.Text);
+            return gia;
         }
     }
 }

@@ -50,7 +50,7 @@ namespace QLCuaHangQuanAo
             {
                 picture.Image = Image.FromFile(ofd.FileName);
             }
-            picture.SizeMode = PictureBoxSizeMode.CenterImage;
+            picture.SizeMode = PictureBoxSizeMode.Zoom;
         }
         static SoundPlayer SoundPlayer;
         static public void sound_Click()

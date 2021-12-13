@@ -20,14 +20,14 @@ namespace QLCuaHangQuanAo.DAO
         public DTO.TAIKHOAN LoadTK(string username)
         {
             DTO.TAIKHOAN tk;
-            DataTable data = DAO.DataProvider.ExecuteQuery("Select * from TAIKHOAN where USERNAME = '" + username + "'");
+            DataTable data = DAO.DataProvider.ExecuteQuery("Select * from TAIKHOAN where TENDANGNHAP = '" + username + "'");
             DataRow row = data.Rows[0];
             tk = new DTO.TAIKHOAN(row);
             return tk;
         }
         public bool CheckUsername_Password(string username, string password)
         {
-            int kq = (int)DAO.DataProvider.ExecuteScalar("select count(*) from TAIKHOAN where USERNAME = '" + username + "' and PASSWORD = '" + password + "'");
+            int kq = (int)DAO.DataProvider.ExecuteScalar("select count(*) from TAIKHOAN where TENDANGNHAP = '" + username + "' and MATKHAU = '" + password + "'");
             if (kq != 0)
             {
                 return true;
@@ -38,7 +38,7 @@ namespace QLCuaHangQuanAo.DAO
 
         public bool CheckUserNameExists(string username)
         {
-            int check = (int)DAO.DataProvider.ExecuteScalar("select count(USERNAME) from TAIKHOAN where USERNAME = '" + username + "' ");
+            int check = (int)DAO.DataProvider.ExecuteScalar("select count(TENDANGNHAP) from TAIKHOAN where TENDANGNHAP = '" + username + "' ");
             if (check != 0)
                 return true;
             return false;
@@ -46,7 +46,7 @@ namespace QLCuaHangQuanAo.DAO
 
         public bool InsertAccount(DTO.TAIKHOAN tk)
         {
-            int kq = DAO.DataProvider.ExecuteNonQuery("insert into TAIKHOAN(DISPLAYNAME, USERNAME, PASSWORD, TYPETK) values(N'" + tk.Displayname + "','" + tk.Username + "','" + tk.Password + "','" + tk.Typetk + "')");
+            int kq = DAO.DataProvider.ExecuteNonQuery("insert into TAIKHOAN(TENHIENTHI, TENDANGNHAP, MATKHAU, LOAITK) values(N'" + tk.Displayname + "','" + tk.Username + "','" + tk.Password + "','" + tk.Typetk + "')");
             if (kq != 0)
                 return true;
             return false;
@@ -54,12 +54,12 @@ namespace QLCuaHangQuanAo.DAO
 
         public int Getid_UserName(string username)
         {
-            return (int)DAO.DataProvider.ExecuteScalar("select ID from TAIKHOAN where USERNAME = '" + username + "'");
+            return (int)DAO.DataProvider.ExecuteScalar("select ID from TAIKHOAN where TENDANGNHAP = '" + username + "'");
         }
 
         public int GetLoaiTK(string username)
         {
-            return (int)DAO.DataProvider.ExecuteScalar("select TYPETK from TAIKHOAN where USERNAME = '" + username + "'");
+            return (int)DAO.DataProvider.ExecuteScalar("select LOAITK from TAIKHOAN where TENDANGNHAP = '" + username + "'");
         }
 
         public int GetIdMax()
@@ -72,7 +72,7 @@ namespace QLCuaHangQuanAo.DAO
 
         public bool ChangePassword(string id, string newpassword)
         {
-            int kq = DAO.DataProvider.ExecuteNonQuery("update TAIKHOAN set PASSWORD = '" + newpassword + "' where ID = '" + id + "'");
+            int kq = DAO.DataProvider.ExecuteNonQuery("update TAIKHOAN set MATKHAU = '" + newpassword + "' where ID = '" + id + "'");
             if (kq != 0)
                 return true;
             return false;

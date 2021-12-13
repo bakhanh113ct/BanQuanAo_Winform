@@ -26,10 +26,10 @@ namespace QLCuaHangQuanAo.DTO
         public TAIKHOAN(DataRow row)
         {
             id = (int)row["ID"];
-            displayname = row["DISPLAYNAME"].ToString();
-            username = row["USERNAME"].ToString();
-            password = row["PASSWORD"].ToString();
-            typetk = (int)row["TYPETK"];
+            displayname = row["TENHIENTHI"].ToString();
+            username = row["TENDANGNHAP"].ToString();
+            password = row["MATKHAU"].ToString();
+            typetk = (int)row["LOAITK"];
         }
 
         public int Id { get => id; set => id = value; }

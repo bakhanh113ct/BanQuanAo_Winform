@@ -44,8 +44,17 @@ namespace QLCuaHangQuanAo.Control_User
         }
         private void btnBuy_Click(object sender, EventArgs e)
         {
-            SubForm.Detail_Form detail_form = new SubForm.Detail_Form((btnItem.Tag as SANPHAM).Masp.ToString());
-            detail_form.ShowDialog();
+            if(Login.tk.Typetk == 0)
+            {
+                SubForm.AddSL addSL = new SubForm.AddSL(sanpham.Masp);
+                addSL.ShowDialog();
+            }
+            else
+            {
+                SubForm.Detail_Form detail_form = new SubForm.Detail_Form((btnItem.Tag as SANPHAM).Masp.ToString());
+                detail_form.ShowDialog();
+            }
+            
         }
 
         private void btnItem_Click(object sender, EventArgs e)

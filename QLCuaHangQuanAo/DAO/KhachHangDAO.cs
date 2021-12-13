@@ -27,7 +27,7 @@ namespace QLCuaHangQuanAo.DAO
         public DTO.KHACHHANG LoadKH(int id)
         {
             DTO.KHACHHANG kh;
-            DataTable data = DAO.DataProvider.ExecuteQuery("Select * from KHACHHANG where IDUSERNAME = '" + id + "'");
+            DataTable data = DAO.DataProvider.ExecuteQuery("Select * from KHACHHANG where IDTK = '" + id + "'");
             DataRow row = data.Rows[0];
             kh = new DTO.KHACHHANG(row);
             return kh;
@@ -52,7 +52,7 @@ namespace QLCuaHangQuanAo.DAO
         }
 
         public bool InsertKH(DTO.KHACHHANG kh) {
-            int kq = DAO.DataProvider.ExcuseNonQuery1("insert into KHACHHANG(IDUSERNAME, HOTEN, DCHI, SODT, EMAIL, NGSINH, GIOITINH, ANH) values('" + kh.IdUsername + "', N'" + kh.HoTen + "',N'" + kh.DiaChi + "', N'" + kh.SoDT + "', '" + kh.Email + "','" + kh.NgSinh + "', '" + kh.Gioitinh + "', null)");
+            int kq = DAO.DataProvider.ExcuseNonQuery1("insert into KHACHHANG(IDTK, HOTEN, DCHI, SODT, EMAIL, NGSINH, GIOITINH, ANH) values('" + kh.IdUsername + "', N'" + kh.HoTen + "',N'" + kh.DiaChi + "', N'" + kh.SoDT + "', '" + kh.Email + "','" + kh.NgSinh + "', '" + kh.Gioitinh + "', null)");
             if (kq != 0)
                 return true;
             return false;

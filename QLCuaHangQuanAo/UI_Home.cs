@@ -43,7 +43,9 @@ namespace QLCuaHangQuanAo
             //invoice = new Invoice_performance();
             openPerformance(home);
             if (Login.tk.Typetk == 1)
+            {
                 btnINVOICE.Visible = false;
+            }
         }
 
 
@@ -85,14 +87,7 @@ namespace QLCuaHangQuanAo
             childForm.Show();
             subbar_Change(subbar2, STORE);
         }
-        private void exit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-        private void minimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
+        
         private void subbar_Change(Panel panel, Guna.UI2.WinForms.Guna2Button button)
         {
             foreach (Panel x in subbar)
@@ -110,8 +105,6 @@ namespace QLCuaHangQuanAo
             txtPerformance.Text = "> " + button.Text;
             Library.sound_Click();
         }
-
-        
 
         private void HOME_Click(object sender, EventArgs e)
         {
@@ -148,6 +141,23 @@ namespace QLCuaHangQuanAo
             openPerformance(setting);
         }
 
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult kq = MessageBox.Show("Ban co muon dang xuat?", "Thong bao", MessageBoxButtons.YesNo);
+            if (kq == DialogResult.Yes)
+            {
+                //MessageBox.Show("Đăng xuất thành công");
+                for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+                {
+                    if (Application.OpenForms.Count <= i)
+                        i = Application.OpenForms.Count - 1;
+                    if (Application.OpenForms[i].Name != "Login")
+                        Application.OpenForms[i].Close();
+                }
+                Login newLogin = new Login();
+                newLogin.Show();
+            }
+        }
         private void facebook_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.facebook.com/long.deptraiso1");
@@ -174,25 +184,13 @@ namespace QLCuaHangQuanAo
             SubForm.Show_creator creator = new SubForm.Show_creator();
             creator.ShowDialog();
         }
-
-        private void btnLogout_Click(object sender, EventArgs e)
+        private void exit_Click(object sender, EventArgs e)
         {
-            DialogResult kq = MessageBox.Show("Ban co muon dang xuat?", "Thong bao", MessageBoxButtons.YesNo);
-            if (kq == DialogResult.Yes)
-            {
-                //MessageBox.Show("Đăng xuất thành công");
-                for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
-                {
-                    if (Application.OpenForms.Count <= i)
-                        i = Application.OpenForms.Count - 1;
-                    if (Application.OpenForms[i].Name != "Login")
-                        Application.OpenForms[i].Close();
-                }
-                Login newLogin = new Login();
-                newLogin.Show();
-            }
+            Application.Exit();
         }
-
-        
+        private void minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

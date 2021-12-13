@@ -91,8 +91,8 @@ namespace QLCuaHangQuanAo
             if (rdMale.Checked == true)
                 return 1;
             else if (rdFemale.Checked == true)
-                return 2;
-            else return 3;
+                return 0;
+            else return 2;
         }
     }
 }

@@ -34,8 +34,11 @@ namespace QLCuaHangQuanAo
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.list_KH = new System.Windows.Forms.FlowLayoutPanel();
             this.loadBill = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.TENSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TRIGIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.View = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.label2 = new System.Windows.Forms.Label();
             this.thang = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -48,10 +51,6 @@ namespace QLCuaHangQuanAo
             this.time = new Guna.UI2.WinForms.Guna2Panel();
             this.tim_theo_ten = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSendEmail = new Guna.UI2.WinForms.Guna2Button();
-            this.TENSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TRIGIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.loadBill)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.time.SuspendLayout();
@@ -139,6 +138,33 @@ namespace QLCuaHangQuanAo
             this.loadBill.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(144)))), ((int)(((byte)(206)))));
             this.loadBill.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
+            // TENSP
+            // 
+            this.TENSP.HeaderText = "Tên sản phẩm";
+            this.TENSP.MinimumWidth = 6;
+            this.TENSP.Name = "TENSP";
+            this.TENSP.ReadOnly = true;
+            // 
+            // SL
+            // 
+            this.SL.HeaderText = "SL";
+            this.SL.MinimumWidth = 6;
+            this.SL.Name = "SL";
+            this.SL.ReadOnly = true;
+            // 
+            // GIA
+            // 
+            this.GIA.HeaderText = "Giá";
+            this.GIA.MinimumWidth = 6;
+            this.GIA.Name = "GIA";
+            this.GIA.ReadOnly = true;
+            // 
+            // TRIGIA
+            // 
+            this.TRIGIA.HeaderText = "Thành tiền";
+            this.TRIGIA.Name = "TRIGIA";
+            this.TRIGIA.ReadOnly = true;
+            // 
             // View
             // 
             this.View.BorderRadius = 10;
@@ -161,26 +187,6 @@ namespace QLCuaHangQuanAo
             this.View.TabIndex = 3;
             this.View.Text = "Xem";
             this.View.Click += new System.EventHandler(this.View_Click);
-            // 
-            // guna2VScrollBar1
-            // 
-            this.guna2VScrollBar1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.guna2VScrollBar1.BindingContainer = this.list_KH;
-            this.guna2VScrollBar1.HighlightOnWheel = true;
-            this.guna2VScrollBar1.HoverState.Parent = null;
-            this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 10;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(304, 48);
-            this.guna2VScrollBar1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2VScrollBar1.MouseWheelBarPartitions = 5;
-            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.PressedState.Parent = this.guna2VScrollBar1;
-            this.guna2VScrollBar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.guna2VScrollBar1.ScrollbarSize = 18;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 395);
-            this.guna2VScrollBar1.TabIndex = 0;
-            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.DarkViolet;
-            this.guna2VScrollBar1.ThumbSize = 2F;
             // 
             // label2
             // 
@@ -369,33 +375,6 @@ namespace QLCuaHangQuanAo
             this.btnSendEmail.Text = "Gửi Mail";
             this.btnSendEmail.Click += new System.EventHandler(this.btnSendEmail_Click);
             // 
-            // TENSP
-            // 
-            this.TENSP.HeaderText = "Tên sản phẩm";
-            this.TENSP.MinimumWidth = 6;
-            this.TENSP.Name = "TENSP";
-            this.TENSP.ReadOnly = true;
-            // 
-            // SL
-            // 
-            this.SL.HeaderText = "SL";
-            this.SL.MinimumWidth = 6;
-            this.SL.Name = "SL";
-            this.SL.ReadOnly = true;
-            // 
-            // GIA
-            // 
-            this.GIA.HeaderText = "Giá";
-            this.GIA.MinimumWidth = 6;
-            this.GIA.Name = "GIA";
-            this.GIA.ReadOnly = true;
-            // 
-            // TRIGIA
-            // 
-            this.TRIGIA.HeaderText = "Thành tiền";
-            this.TRIGIA.Name = "TRIGIA";
-            this.TRIGIA.ReadOnly = true;
-            // 
             // Invoice_performance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -403,7 +382,6 @@ namespace QLCuaHangQuanAo
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(686, 441);
             this.Controls.Add(this.btnSendEmail);
-            this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.tim_theo_ten);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.thang);
@@ -430,7 +408,6 @@ namespace QLCuaHangQuanAo
         private System.Windows.Forms.FlowLayoutPanel list_KH;
         private Guna.UI2.WinForms.Guna2Button View;
         private Guna.UI2.WinForms.Guna2DataGridView loadBill;
-        public Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2ComboBox thang;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;

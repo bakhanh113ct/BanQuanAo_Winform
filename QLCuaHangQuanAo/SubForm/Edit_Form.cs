@@ -22,21 +22,30 @@ namespace QLCuaHangQuanAo.SubForm
         {
             InitializeComponent();
             this.id = id;
+            cbLoinhuan.SelectedIndex = 0;
         }
 
         private void Edit_Form_Load(object sender, EventArgs e)
         {
             sp = SanPhamDAO.Instance.LoadSP(id);
             txbTen.Text = sp.Ten;
-            txbGiaTien.Text = sp.Gia.ToString();
+            txbGiaTien.Text = sp.Gianhap.ToString();
             txbSoLuong.Text = sp.SL.ToString();
             txbMota.Text = sp.MoTa;
             txbLoai.Text = sp.IDLoai.ToString();
+            GetLoiNhuan(sp);
             picture.Image = Library.ConvertoImage(sp.Anh) == null ? Properties.Resources.NoImage : Library.ConvertoImage(sp.Anh);
             picture.SizeMode = PictureBoxSizeMode.Zoom;
             
         }
-        
+
+        private void GetLoiNhuan(SANPHAM sp)
+        {
+            double profitPercent = (double)sp.Gia / sp.Gianhap;
+            profitPercent = Math.Round(profitPercent, 3);
+            txbLoinhuan.Text = (profitPercent*100).ToString() + "%";
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             byte[] imgbyte = Library.ConvertoByte(picture.Image);

@@ -152,7 +152,7 @@ namespace QLCuaHangQuanAo.DAO
         }
         public DataTable loadBill(int SOHD)//Lấy thông tin sản phảm từ hóa đơn
         {
-            DataTable bill = DataProvider.ExcuseQuery1("select SANPHAM.MASP, TEN, CTHD.SL, GIA " +
+            DataTable bill = DataProvider.ExcuseQuery1("select SANPHAM.MASP, TEN, CTHD.SL, CTHD.GIA " +
                 "from SANPHAM, CTHD where SOHD =  " + SOHD +
                 " and SANPHAM.MASP = CTHD.MASP");
             return bill;

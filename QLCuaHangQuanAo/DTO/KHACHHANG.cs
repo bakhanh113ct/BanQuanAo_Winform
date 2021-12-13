@@ -49,7 +49,7 @@ namespace QLCuaHangQuanAo.DTO
         public KHACHHANG(DataRow row)
         {
             maKH = (int)row["MAKH"];
-            idUsername = (int)row["IDUSERNAME"];
+            idUsername = (int)row["IDTK"];
             hoTen = row["HOTEN"].ToString();
             diaChi = row["DCHI"].ToString();
             soDT = row["SODT"].ToString();

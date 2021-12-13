@@ -100,7 +100,7 @@ namespace QLCuaHangQuanAo.SubForm
             {
                 if (item.Sl == 0)                               //chưa test
                     break;
-                CTHDDAO.Instance.InsertCTHD((soHD).ToString(), item.MaSP, item.Sl.ToString());
+                CTHDDAO.Instance.InsertCTHD((soHD).ToString(), item.MaSP, item.Gia.ToString() ,item.Sl.ToString());
                 //Giảm SL
                 SanPhamDAO.Instance.ReduceSL(item.Sl.ToString(), item.MaSP);
                 //Tăng đã bán 

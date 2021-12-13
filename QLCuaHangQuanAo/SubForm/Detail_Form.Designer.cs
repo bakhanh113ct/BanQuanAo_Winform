@@ -39,7 +39,6 @@ namespace QLCuaHangQuanAo.SubForm
             this.picture = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbName = new System.Windows.Forms.Label();
             this.lbGia = new System.Windows.Forms.Label();
-            this.lbSL = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbDetail = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -49,6 +48,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbSL = new System.Windows.Forms.Label();
             this.tool3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
@@ -160,7 +160,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(251, 39);
             this.lbName.TabIndex = 21;
-            this.lbName.Text = "Name";
+            this.lbName.Text = "Tên";
             // 
             // lbGia
             // 
@@ -171,15 +171,6 @@ namespace QLCuaHangQuanAo.SubForm
             this.lbGia.TabIndex = 22;
             this.lbGia.Text = "$$$";
             // 
-            // lbSL
-            // 
-            this.lbSL.Font = new System.Drawing.Font("Quicksand Medium", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSL.Location = new System.Drawing.Point(403, 105);
-            this.lbSL.Name = "lbSL";
-            this.lbSL.Size = new System.Drawing.Size(251, 28);
-            this.lbSL.TabIndex = 23;
-            this.lbSL.Text = "SL: ";
-            // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Quicksand Medium", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -187,7 +178,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 24);
             this.label3.TabIndex = 24;
-            this.label3.Text = "Details:";
+            this.label3.Text = "Mô tả";
             // 
             // lbDetail
             // 
@@ -302,9 +293,18 @@ namespace QLCuaHangQuanAo.SubForm
             this.label1.Font = new System.Drawing.Font("Quicksand Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(-3, -3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 35);
+            this.label1.Size = new System.Drawing.Size(101, 35);
             this.label1.TabIndex = 34;
-            this.label1.Text = "Detail";
+            this.label1.Text = "Chi tiết";
+            // 
+            // lbSL
+            // 
+            this.lbSL.Font = new System.Drawing.Font("Quicksand Medium", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSL.Location = new System.Drawing.Point(403, 105);
+            this.lbSL.Name = "lbSL";
+            this.lbSL.Size = new System.Drawing.Size(251, 28);
+            this.lbSL.TabIndex = 23;
+            this.lbSL.Text = "SL: ";
             // 
             // Detail_Form
             // 
@@ -351,7 +351,6 @@ namespace QLCuaHangQuanAo.SubForm
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Label lbDetail;
         public Guna.UI2.WinForms.Guna2PictureBox picture;
-        public System.Windows.Forms.Label lbSL;
         public System.Windows.Forms.Label lbGia;
         public System.Windows.Forms.Label lbName;
         public Guna.UI2.WinForms.Guna2CircleButton btnAddSL;
@@ -359,5 +358,6 @@ namespace QLCuaHangQuanAo.SubForm
         private Guna.UI2.WinForms.Guna2Button btnAdd;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label lbSL;
     }
 }

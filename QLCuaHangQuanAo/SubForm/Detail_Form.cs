@@ -54,7 +54,14 @@ namespace QLCuaHangQuanAo.SubForm
 
         private void btnAddSL_Click(object sender, EventArgs e)
         {
-            txbSLMua.Text = (Convert.ToInt32(txbSLMua.Text)+1).ToString();
+            try
+            {
+                txbSLMua.Text = (Convert.ToInt32(txbSLMua.Text)+1).ToString();
+            }
+            catch
+            {
+                txbSLMua.Text = "0";
+            }
         }
 
         private void Detail_Form_Load(object sender, EventArgs e)
@@ -74,11 +81,19 @@ namespace QLCuaHangQuanAo.SubForm
         {
             if (txbSLMua.Text == "")
                 return;
-            if (Convert.ToInt32(txbSLMua.Text) > sp.SL)
+            try
             {
-                txbSLMua.Text = sp.SL.ToString();
-                MessageBox.Show("Số lượng không đủ.");
+                if (Convert.ToInt32(txbSLMua.Text) > sp.SL)
+                {
+                    txbSLMua.Text = sp.SL.ToString();
+                    MessageBox.Show("Số lượng không đủ.");
+                }
             }
+            catch
+            {
+
+            }
+            
         }
     }
 }

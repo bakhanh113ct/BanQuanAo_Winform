@@ -166,6 +166,12 @@
     <Compile Include="Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubForm\AddSL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\AddSL.Designer.cs">
+      <DependentUpon>AddSL.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubForm\Add_Item_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\AddSL.resx">
+      <DependentUpon>AddSL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Add_Item_Form.resx">
       <DependentUpon>Add_Item_Form.cs</DependentUpon>

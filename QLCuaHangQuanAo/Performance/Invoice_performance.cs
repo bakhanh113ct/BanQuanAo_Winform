@@ -142,8 +142,7 @@ namespace QLCuaHangQuanAo
         {
             SubForm.BILL temp = new SubForm.BILL(index);//Tạo một cái bill mới
             Library.sound_Click();
-            temp.Show(this);//cái này để tránh thao tác trên chương trình chính
-
+            temp.ShowDialog(this);//cái này để tránh thao tác trên chương trình chính
             foreach (Control_User.list_order x in dcm)//kiếm đối tượng đang trỏ vào
             {
                 if (x.BackGround.FillColor == Color.FromArgb(174, 78, 191))
@@ -153,6 +152,7 @@ namespace QLCuaHangQuanAo
                     return;//Khỏi tìm
                 }
             }
+
         }
         private void thang_SelectedIndexChanged_1(object sender, EventArgs e)
         {

@@ -136,7 +136,7 @@ namespace QLCuaHangQuanAo.Performance
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(175, 41);
             this.label2.TabIndex = 2;
-            this.label2.Text = "trãi nghiệm";
+            this.label2.Text = "trải nghiệm";
             // 
             // label3
             // 
@@ -481,7 +481,7 @@ namespace QLCuaHangQuanAo.Performance
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(175, 41);
             this.label5.TabIndex = 2;
-            this.label5.Text = "trãi nghiệm";
+            this.label5.Text = "trải nghiệm";
             // 
             // btnBuy2
             // 
@@ -686,7 +686,7 @@ namespace QLCuaHangQuanAo.Performance
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(175, 41);
             this.label11.TabIndex = 2;
-            this.label11.Text = "trãi nghiệm";
+            this.label11.Text = "trải nghiệm";
             // 
             // btnBuy4
             // 
@@ -759,7 +759,7 @@ namespace QLCuaHangQuanAo.Performance
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(175, 41);
             this.label8.TabIndex = 2;
-            this.label8.Text = "trãi nghiệm";
+            this.label8.Text = "trải nghiệm";
             // 
             // label7
             // 
