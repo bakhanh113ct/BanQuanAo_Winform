@@ -140,7 +140,17 @@ namespace QLCuaHangQuanAo
             else if (txbNewPass.Text != txbCfPass.Text)
                 MessageBox.Show("2 mật khẩu không khớp");
             else if (DAO.TaiKhoanDAO.Instance.ChangePassword(Login.kh.IdUsername.ToString(), txbNewPass.Text))
+            {
                 MessageBox.Show("Thay đổi thành công");
+                Login.tk.Password = txbNewPass.Text;
+                foreach (Control i in tabPage2.Controls)
+                {
+                    if (i.GetType().Name == "Guna2TextBox")
+                    {
+                        i.ResetText();
+                    }
+                }
+            }
             else
                 MessageBox.Show("Thay đổi thất bại");
         }

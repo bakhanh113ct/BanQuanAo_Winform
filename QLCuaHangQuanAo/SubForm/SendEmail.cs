@@ -19,9 +19,9 @@ namespace QLCuaHangQuanAo.SubForm
         int SoHD;
         string[] Scopes = { GmailService.Scope.GmailSend };
         string ApplicationName = "SendMail";
-        string messageDilivery = "Đơn hàng của bạn đang được vận chuyển, cảm ơn đã sử dụng dịch vụ của shop.";
-        string messageCancel = "Đơn hàng của bạn đã bị hủy vì lý do hết hàng. Shop thành thật xin lỗi vì sự bất tiện này.";
-        string messageWaitting = "Đơn hàng của bạn đang được xử lí. Sẽ gửi cho bạn trong thời gian sớm nhất. Cảm ơn đã sử dụng dịch vụ của cửa hàng.";
+        string messageDilivery = "Don hang cua ban dang duoc van chuyen Cam on da su dung dich vu cua cua hang.";
+        string messageCancel = "Don hang cua ban da bi huy vi ly do het hang. Rat xin loi vi su bat tien nay.";
+        string messageWaitting = "Don hang cua ban dang duoc xu ly. Hang se duoc gui den trong thoi gian ngan nhat. Cam on da su dung dich vu cua cua hang.";
         string email;
         public SendEmail(int SoHD)
         {

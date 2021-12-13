@@ -90,7 +90,7 @@ namespace QLCuaHangQuanAo
             this.Tool.Controls.Add(this.MyLogo);
             this.Tool.FillColor = System.Drawing.Color.White;
             this.Tool.Location = new System.Drawing.Point(18, 20);
-            this.Tool.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tool.Margin = new System.Windows.Forms.Padding(2);
             this.Tool.Name = "Tool";
             this.Tool.Radius = 10;
             this.Tool.ShadowColor = System.Drawing.Color.Black;
@@ -127,12 +127,12 @@ namespace QLCuaHangQuanAo
             this.SETTING.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.SETTING.ImageSize = new System.Drawing.Size(30, 30);
             this.SETTING.Location = new System.Drawing.Point(0, 262);
-            this.SETTING.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SETTING.Margin = new System.Windows.Forms.Padding(2);
             this.SETTING.Name = "SETTING";
             this.SETTING.ShadowDecoration.Parent = this.SETTING;
             this.SETTING.Size = new System.Drawing.Size(147, 37);
             this.SETTING.TabIndex = 9;
-            this.SETTING.Text = "  SETTING";
+            this.SETTING.Text = "  Cài đặt";
             this.SETTING.Click += new System.EventHandler(this.SETTING_Click);
             // 
             // subbar4
@@ -166,13 +166,13 @@ namespace QLCuaHangQuanAo
             this.btnLogout.HoverState.Parent = this.btnLogout;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnLogout.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnLogout.Location = new System.Drawing.Point(18, 395);
+            this.btnLogout.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnLogout.Location = new System.Drawing.Point(8, 395);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.ShadowDecoration.Parent = this.btnLogout;
-            this.btnLogout.Size = new System.Drawing.Size(113, 36);
+            this.btnLogout.Size = new System.Drawing.Size(128, 36);
             this.btnLogout.TabIndex = 0;
-            this.btnLogout.Text = "Log out";
+            this.btnLogout.Text = "Đăng xuất";
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
@@ -243,12 +243,12 @@ namespace QLCuaHangQuanAo
             this.STATISTIC.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.STATISTIC.ImageSize = new System.Drawing.Size(30, 30);
             this.STATISTIC.Location = new System.Drawing.Point(0, 225);
-            this.STATISTIC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.STATISTIC.Margin = new System.Windows.Forms.Padding(2);
             this.STATISTIC.Name = "STATISTIC";
             this.STATISTIC.ShadowDecoration.Parent = this.STATISTIC;
             this.STATISTIC.Size = new System.Drawing.Size(147, 37);
             this.STATISTIC.TabIndex = 6;
-            this.STATISTIC.Text = "ANALYSIS";
+            this.STATISTIC.Text = "  Thống kê";
             this.STATISTIC.Click += new System.EventHandler(this.STATISTIC_Click);
             // 
             // btnINVOICE
@@ -271,12 +271,12 @@ namespace QLCuaHangQuanAo
             this.btnINVOICE.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnINVOICE.ImageSize = new System.Drawing.Size(30, 30);
             this.btnINVOICE.Location = new System.Drawing.Point(0, 188);
-            this.btnINVOICE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnINVOICE.Margin = new System.Windows.Forms.Padding(2);
             this.btnINVOICE.Name = "btnINVOICE";
             this.btnINVOICE.ShadowDecoration.Parent = this.btnINVOICE;
             this.btnINVOICE.Size = new System.Drawing.Size(147, 37);
             this.btnINVOICE.TabIndex = 4;
-            this.btnINVOICE.Text = "  INVOICE";
+            this.btnINVOICE.Text = "  Đơn hàng";
             this.btnINVOICE.Click += new System.EventHandler(this.btnINVOICE_Click);
             // 
             // STORE
@@ -298,12 +298,12 @@ namespace QLCuaHangQuanAo
             this.STORE.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.STORE.ImageSize = new System.Drawing.Size(30, 30);
             this.STORE.Location = new System.Drawing.Point(0, 151);
-            this.STORE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.STORE.Margin = new System.Windows.Forms.Padding(2);
             this.STORE.Name = "STORE";
             this.STORE.ShadowDecoration.Parent = this.STORE;
             this.STORE.Size = new System.Drawing.Size(147, 37);
             this.STORE.TabIndex = 2;
-            this.STORE.Text = "STORE";
+            this.STORE.Text = "  Sản phẩm";
             this.STORE.Click += new System.EventHandler(this.STORE_Click);
             // 
             // HOME
@@ -325,12 +325,12 @@ namespace QLCuaHangQuanAo
             this.HOME.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.HOME.ImageSize = new System.Drawing.Size(30, 30);
             this.HOME.Location = new System.Drawing.Point(0, 114);
-            this.HOME.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HOME.Margin = new System.Windows.Forms.Padding(2);
             this.HOME.Name = "HOME";
             this.HOME.ShadowDecoration.Parent = this.HOME;
             this.HOME.Size = new System.Drawing.Size(147, 37);
             this.HOME.TabIndex = 1;
-            this.HOME.Text = "HOME";
+            this.HOME.Text = "  Trang chủ";
             this.HOME.Click += new System.EventHandler(this.HOME_Click);
             // 
             // MyLogo
@@ -350,7 +350,7 @@ namespace QLCuaHangQuanAo
             this.MyLogo.ForeColor = System.Drawing.Color.White;
             this.MyLogo.HoverState.Parent = this.MyLogo;
             this.MyLogo.Location = new System.Drawing.Point(0, 0);
-            this.MyLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MyLogo.Margin = new System.Windows.Forms.Padding(2);
             this.MyLogo.Name = "MyLogo";
             this.MyLogo.ShadowDecoration.Parent = this.MyLogo;
             this.MyLogo.Size = new System.Drawing.Size(147, 114);
@@ -369,7 +369,7 @@ namespace QLCuaHangQuanAo
             this.Tool2.Controls.Add(this.Avatar);
             this.Tool2.FillColor = System.Drawing.Color.White;
             this.Tool2.Location = new System.Drawing.Point(184, 20);
-            this.Tool2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tool2.Margin = new System.Windows.Forms.Padding(2);
             this.Tool2.Name = "Tool2";
             this.Tool2.Radius = 4;
             this.Tool2.ShadowColor = System.Drawing.Color.Black;
@@ -415,7 +415,7 @@ namespace QLCuaHangQuanAo
             this.send.Image = global::QLCuaHangQuanAo.Properties.Resources.sent_64px1;
             this.send.ImageSize = new System.Drawing.Size(29, 29);
             this.send.Location = new System.Drawing.Point(86, 6);
-            this.send.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.send.Margin = new System.Windows.Forms.Padding(2);
             this.send.Name = "send";
             this.send.ShadowDecoration.Parent = this.send;
             this.send.Size = new System.Drawing.Size(24, 26);
@@ -437,7 +437,7 @@ namespace QLCuaHangQuanAo
             this.notify.Image = global::QLCuaHangQuanAo.Properties.Resources.notification_64px1;
             this.notify.ImageSize = new System.Drawing.Size(29, 29);
             this.notify.Location = new System.Drawing.Point(43, 6);
-            this.notify.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.notify.Margin = new System.Windows.Forms.Padding(2);
             this.notify.Name = "notify";
             this.notify.ShadowDecoration.Parent = this.notify;
             this.notify.Size = new System.Drawing.Size(24, 26);
@@ -459,7 +459,7 @@ namespace QLCuaHangQuanAo
             this.Avatar.Image = global::QLCuaHangQuanAo.Properties.Resources.avatar_48px;
             this.Avatar.ImageSize = new System.Drawing.Size(29, 29);
             this.Avatar.Location = new System.Drawing.Point(5, 6);
-            this.Avatar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Avatar.Margin = new System.Windows.Forms.Padding(2);
             this.Avatar.Name = "Avatar";
             this.Avatar.ShadowDecoration.Parent = this.Avatar;
             this.Avatar.Size = new System.Drawing.Size(24, 26);
@@ -473,7 +473,7 @@ namespace QLCuaHangQuanAo
             this.info.Controls.Add(this.instagram);
             this.info.FillColor = System.Drawing.Color.White;
             this.info.Location = new System.Drawing.Point(18, 481);
-            this.info.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.info.Margin = new System.Windows.Forms.Padding(2);
             this.info.Name = "info";
             this.info.Radius = 6;
             this.info.ShadowColor = System.Drawing.Color.Black;
@@ -499,7 +499,7 @@ namespace QLCuaHangQuanAo
             this.facebook.Image = global::QLCuaHangQuanAo.Properties.Resources.facebook_64px1;
             this.facebook.ImageSize = new System.Drawing.Size(29, 29);
             this.facebook.Location = new System.Drawing.Point(112, 8);
-            this.facebook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.facebook.Margin = new System.Windows.Forms.Padding(2);
             this.facebook.Name = "facebook";
             this.facebook.ShadowDecoration.Parent = this.facebook;
             this.facebook.Size = new System.Drawing.Size(24, 26);
@@ -524,7 +524,7 @@ namespace QLCuaHangQuanAo
             this.twitter.Image = global::QLCuaHangQuanAo.Properties.Resources.twitter_squared_64px;
             this.twitter.ImageSize = new System.Drawing.Size(29, 29);
             this.twitter.Location = new System.Drawing.Point(62, 7);
-            this.twitter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.twitter.Margin = new System.Windows.Forms.Padding(2);
             this.twitter.Name = "twitter";
             this.twitter.ShadowDecoration.Parent = this.twitter;
             this.twitter.Size = new System.Drawing.Size(24, 26);
@@ -549,7 +549,7 @@ namespace QLCuaHangQuanAo
             this.instagram.Image = global::QLCuaHangQuanAo.Properties.Resources.Instagram_64px;
             this.instagram.ImageSize = new System.Drawing.Size(29, 29);
             this.instagram.Location = new System.Drawing.Point(8, 8);
-            this.instagram.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.instagram.Margin = new System.Windows.Forms.Padding(2);
             this.instagram.Name = "instagram";
             this.instagram.ShadowDecoration.Parent = this.instagram;
             this.instagram.Size = new System.Drawing.Size(24, 26);
@@ -564,7 +564,7 @@ namespace QLCuaHangQuanAo
             this.tool3.Controls.Add(this.minimize);
             this.tool3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
             this.tool3.Location = new System.Drawing.Point(810, 10);
-            this.tool3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tool3.Margin = new System.Windows.Forms.Padding(2);
             this.tool3.Name = "tool3";
             this.tool3.ShadowColor = System.Drawing.Color.Black;
             this.tool3.ShadowShift = 0;
@@ -588,7 +588,7 @@ namespace QLCuaHangQuanAo
             this.exit.Image = global::QLCuaHangQuanAo.Properties.Resources.delete_64px;
             this.exit.ImageSize = new System.Drawing.Size(22, 22);
             this.exit.Location = new System.Drawing.Point(47, 2);
-            this.exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.exit.Margin = new System.Windows.Forms.Padding(2);
             this.exit.Name = "exit";
             this.exit.ShadowDecoration.Parent = this.exit;
             this.exit.Size = new System.Drawing.Size(20, 21);
@@ -612,7 +612,7 @@ namespace QLCuaHangQuanAo
             this.zooe_in_out.Image = global::QLCuaHangQuanAo.Properties.Resources.toggle_full_screen_64px;
             this.zooe_in_out.ImageSize = new System.Drawing.Size(22, 22);
             this.zooe_in_out.Location = new System.Drawing.Point(25, 2);
-            this.zooe_in_out.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.zooe_in_out.Margin = new System.Windows.Forms.Padding(2);
             this.zooe_in_out.Name = "zooe_in_out";
             this.zooe_in_out.ShadowDecoration.Parent = this.zooe_in_out;
             this.zooe_in_out.Size = new System.Drawing.Size(20, 21);
@@ -635,7 +635,7 @@ namespace QLCuaHangQuanAo
             this.minimize.Image = global::QLCuaHangQuanAo.Properties.Resources.minimize_window_64px2;
             this.minimize.ImageSize = new System.Drawing.Size(22, 22);
             this.minimize.Location = new System.Drawing.Point(2, 2);
-            this.minimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.minimize.Margin = new System.Windows.Forms.Padding(2);
             this.minimize.Name = "minimize";
             this.minimize.ShadowDecoration.Parent = this.minimize;
             this.minimize.Size = new System.Drawing.Size(20, 21);
@@ -657,7 +657,7 @@ namespace QLCuaHangQuanAo
             this.SubProgram.BackColor = System.Drawing.Color.Transparent;
             this.SubProgram.FillColor = System.Drawing.Color.White;
             this.SubProgram.Location = new System.Drawing.Point(184, 80);
-            this.SubProgram.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SubProgram.Margin = new System.Windows.Forms.Padding(2);
             this.SubProgram.Name = "SubProgram";
             this.SubProgram.Radius = 4;
             this.SubProgram.ShadowColor = System.Drawing.Color.Black;

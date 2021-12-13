@@ -42,6 +42,8 @@ namespace QLCuaHangQuanAo
             //statistics = new Statistics_perfomancecs();
             //invoice = new Invoice_performance();
             openPerformance(home);
+            if (Login.tk.Typetk == 1)
+                btnINVOICE.Visible = false;
         }
 
 

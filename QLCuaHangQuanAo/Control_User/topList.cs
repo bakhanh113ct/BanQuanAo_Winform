@@ -53,8 +53,16 @@ namespace QLCuaHangQuanAo.Control_User
             hoten.Text = (string)row["TEN"];
             int DoanhSo = Convert.ToInt32(row["SL"]);
             doanhso.Text = "Bán được " + DoanhSo.ToString() + " SP";
-            byte[] anh = (byte[])row["ANH"];
-            anhdd.Image = Library.ConvertoImage(anh) == null ? Properties.Resources.male_User : Library.ConvertoImage(anh);
+            try
+            {
+                byte[] anh = (byte[])row["ANH"];
+                anhdd.Image = Library.ConvertoImage(anh) == null ? Properties.Resources.male_User : Library.ConvertoImage(anh);
+            }
+            catch
+            {
+                anhdd.Image = Properties.Resources.NoImage;
+            }
+            
             if (topp == 3)
             {
                 top.FillColor = Color.Orange;

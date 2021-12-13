@@ -171,7 +171,7 @@ namespace QLCuaHangQuanAo.SubForm
 
             CrystalDecisions.Shared.TableLogOnInfo thongtin;
             thongtin = inhoadon.Database.Tables[0].LogOnInfo;
-            thongtin.ConnectionInfo.ServerName = @"DESKTOP-5E0I4OU\SQLEXPRESS01";
+            thongtin.ConnectionInfo.ServerName = @"DESKTOP-LBAULH5";
             thongtin.ConnectionInfo.DatabaseName = "QuanLyKho";
             thongtin.ConnectionInfo.IntegratedSecurity = true;
             inhoadon.Database.Tables[0].ApplyLogOnInfo(thongtin);

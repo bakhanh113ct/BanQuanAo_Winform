@@ -6,14 +6,12 @@ go
 CREATE TABLE TAIKHOAN
 (
 	ID INT IDENTITY PRIMARY KEY,
-	DISPLAYNAME NVARCHAR(100) NOT NULL,
+	TENHIENTHI NVARCHAR(100) NOT NULL,
 	USERNAME VARCHAR(50) NOT NULL,
 	PASSWORD VARCHAR(50) NOT NULL,
-	TYPETK	INT	NOT NULL
+	LOAITK INT NOT NULL
 )
 
-drop database QuanLyKho
-select * from TAIKHOAN
 CREATE TABLE KHACHHANG
 (
 	MAKH INT PRIMARY KEY identity(1,1),
@@ -77,19 +75,20 @@ REFERENCES SANPHAM(MASP)
 ALTER TABLE SANPHAM ADD CONSTRAINT FK_LOAI_SP FOREIGN KEY(IDLOAI)
 REFERENCES LOAISP(ID)
 
-insert LOAISP(TENLOAI) values('Quần')
-insert LOAISP(TENLOAI) values('Áo')
-insert LOAISP(TENLOAI) values('Mũ')
-insert LOAISP(TENLOAI) values('Giày')
+ALTER TABLE KHACHHANG ADD CONSTRAINT FK_KH_TK FOREIGN KEY(IDUSERNAME)
+REFERENCES TAIKHOAN(ID)
 
+insert LOAISP(TENLOAI) values(N'Quần')
+insert LOAISP(TENLOAI) values(N'Áo')
+insert LOAISP(TENLOAI) values(N'Mũ')
+insert LOAISP(TENLOAI) values(N'Giày')
 
-
-select * from TAIKHOAN
-select * from KHACHHANG
-delete from KHACHHANG where MAKH = 2
---Khach hang
+--Thêm admin
+insert into TAIKHOAN(DISPLAYNAME, USERNAME, PASSWORD, TYPETK) values ('admin', 'admin', 'admin', 0)
 insert into KHACHHANG (IDUSERNAME, HOTEN, DCHI, SODT, EMAIL, NGSINH, GIOITINH)
-values(2, 'admin', 'VietNam', '1234','kuti113ct@gmail.com', '2002-01-01', 1)
+values(1, 'admin', 'VietNam', '1234','kuti113ct@gmail.com', '2002-01-01', 1)
+
+--Khach hang
 insert into KHACHHANG ( HOTEN, DCHI, SODT, NGSINH, ANH)
 values('Saitama', 'Japan', '1234', '2000-01-01', (SELECT * FROM OPENROWSET(BULK N'D:\HK3\LTTQ\Hinh\reload4.png', SINGLE_BLOB) as T1))
 insert into KHACHHANG ( HOTEN, DCHI, SODT, NGSINH, ANH)
@@ -233,5 +232,3 @@ delete from SANPHAM
 exec test
 
 
---Thêm admin
-insert into TAIKHOAN(DISPLAYNAME, USERNAME, PASSWORD, TYPETK) values ('admin', 'admin', 'admin', 0)
