@@ -117,22 +117,22 @@ namespace QLCuaHangQuanAo.Control_User
         {
             switch (tt)
             {
-                case "Complete":
+                case "Hoàn thành":
                     //trang_thai.Text = "Complete";
                     trang_thai.FillColor = Color.FromArgb(242, 203, 66);
                     trang_thai.ForeColor = Color.Black;
                     break;
-                case "Delivery":
+                case "Vận chuyển":
                     trang_thai.Text = "Delivery";
                     trang_thai.FillColor = Color.FromArgb(0, 192, 0);
                     trang_thai.ForeColor = Color.White;
                     break;
-                case "Cancel":
+                case "Hủy":
                     trang_thai.Text = "Cancel";
                     trang_thai.FillColor = Color.Red;
                     trang_thai.ForeColor = Color.White;
                     break;
-                case "Waiting":
+                case "Chờ":
                     trang_thai.FillColor = Color.RoyalBlue;
                     trang_thai.ForeColor = Color.White;
                     break;

@@ -90,7 +90,7 @@ namespace QLCuaHangQuanAo
             DateTime nghd = DAO.HoaDonDAO.Instance.getNGHD(index);
             switch (status)
             {
-                case "Waiting":
+                case "Chờ":
                     NGHD.Text = nghd.ToString();
                     label3.Text = "Chờ xác nhận";
                     timeXN.Text = "";
@@ -98,7 +98,7 @@ namespace QLCuaHangQuanAo
                     hanHD.Text = nghd.AddDays(7).ToString();
                     hanHD.ForeColor = Color.Red;
                     break;
-                case "Delivery":
+                case "Vận chuyển":
                     NGHD.Text = nghd.ToString();
                     label3.Text = "Thời gian xác nhận đơn hàng:";
                     timeXN.Text = xn.ToString();
@@ -107,7 +107,7 @@ namespace QLCuaHangQuanAo
                     hanHD.Text = xn.AddDays(2).ToString();
                     hanHD.ForeColor = Color.Goldenrod;
                     break;
-                case "Cancel":
+                case "Hủy":
                     NGHD.Text = nghd.ToString();
                     label3.Text = "Thời gian hủy đơn hàng";
                     timeXN.Text = xn.ToString();
@@ -115,7 +115,7 @@ namespace QLCuaHangQuanAo
                     label4.Text = "";
                     hanHD.Text = "";
                     break;
-                case "Complete":
+                case "Hoàn thành":
                     NGHD.Text = nghd.ToString();
                     label3.Text = "Thời gian vận chuyển đơn hàng";
                     timeXN.Text = xn.ToString();

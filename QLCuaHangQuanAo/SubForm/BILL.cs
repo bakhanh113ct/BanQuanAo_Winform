@@ -74,19 +74,19 @@ namespace QLCuaHangQuanAo.SubForm
         {
             switch(v1)
             {
-                case "Waiting":
+                case "Chờ":
                     return null;
-                case "Delivery":
+                case "Vận chuyển":
                     trangthai.Text = "Đang vận chuyển";
                     trangthai.ForeColor = Color.FromArgb(0, 192, 0);
                     DueDate.Text = NGXN.ToShortDateString();
                     return "hi";
-                case "Cancel":
+                case "Hủy":
                     trangthai.Text = "Đã hủy";
                     trangthai.ForeColor = Color.Red;
                     DueDate.Text = NGXN.ToShortDateString();
                     return "hi";
-                case "Complete":
+                case "Hoàn thành":
                     trangthai.Text = "Hoàn thành";
                     DueDate.ForeColor = Color.Goldenrod;
                     DueDate.Text = NGXN.AddDays(2).ToShortDateString();
@@ -104,7 +104,7 @@ namespace QLCuaHangQuanAo.SubForm
                 Library.cancel();
                 DateTime x = DateTime.Now;
                 string time = "'" + x.Year + "-" + x.Month + "-" + x.Day + " " + x.Hour + ":" + x.Minute + ":" + x.Second + "'";
-                DAO.DataProvider.ExcuseNonQuery1("update HOADON set TRANG_THAI = 'Cancel' where SOHD = " + SOHD);
+                DAO.DataProvider.ExcuseNonQuery1("update HOADON set TRANG_THAI = 'Hủy' where SOHD = " + SOHD);
                 DAO.DataProvider.ExcuseNonQuery1("update HOADON set NGXN = " + time + " Where SOHD = " + SOHD);
                 return_SP();
                 MessageBox.Show("Đã hủy thành công đơn hàng");
@@ -131,7 +131,7 @@ namespace QLCuaHangQuanAo.SubForm
                 Library.tada();
                 DateTime x = DateTime.Now;
                 string time = "'" + x.Year + "-" + x.Month + "-" + x.Day + " " + x.Hour + ":" + x.Minute + ":" + x.Second + "'";
-                DAO.DataProvider.ExcuseNonQuery1("update HOADON set TRANG_THAI = 'Delivery' where SOHD = " + SOHD);
+                DAO.DataProvider.ExcuseNonQuery1("update HOADON set TRANG_THAI = N'Vận chuyển' where SOHD = " + SOHD);
                 DAO.DataProvider.ExcuseNonQuery1("update HOADON set NGXN = " + time + " Where SOHD = " + SOHD);
                 MessageBox.Show("Đang vận chuyển");
                 Delivery.Visible = false;
@@ -144,19 +144,19 @@ namespace QLCuaHangQuanAo.SubForm
         }
         private void xuli()
         {
-            if (Status == "Complete")
+            if (Status == "Hoàn thành")
             {
                 Delivery.Visible = false;
                 Cancel.Visible = false;
                 INHD.Visible = true;
             }
-            else if(Status == "Cancel")
+            else if(Status == "Hủy")
             {
                 Delivery.Visible = false;
                 Cancel.Visible = false;
                 INHD.Visible = false;
             }
-            else if (Status == "Delivery")
+            else if (Status == "Vận chuyển")
             {
                 Delivery.Visible = false;
             }
@@ -171,7 +171,7 @@ namespace QLCuaHangQuanAo.SubForm
 
             CrystalDecisions.Shared.TableLogOnInfo thongtin;
             thongtin = inhoadon.Database.Tables[0].LogOnInfo;
-            thongtin.ConnectionInfo.ServerName = @"DESKTOP-LBAULH5";
+            thongtin.ConnectionInfo.ServerName = @"DESKTOP-5E0I4OU\SQLEXPRESS01";
             thongtin.ConnectionInfo.DatabaseName = "QuanLyKho";
             thongtin.ConnectionInfo.IntegratedSecurity = true;
             inhoadon.Database.Tables[0].ApplyLogOnInfo(thongtin);

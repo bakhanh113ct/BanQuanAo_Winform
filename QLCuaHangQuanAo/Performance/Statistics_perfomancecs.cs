@@ -88,8 +88,8 @@ namespace QLCuaHangQuanAo
                 Muiten.ForeColor = Color.Red;
             }
             cmp.Text = DAO.HoaDonDAO.Instance.cmpHD().ToString() + "%";
-            Items.Text = "Items: " + DAO.SanPhamDAO.Instance.countSPsold().ToString();
-            Delivered.Text = "Delivered: " + DAO.HoaDonDAO.Instance.SLHD_HOANTHANH().ToString();
+            Items.Text = "Số hàng: " + DAO.SanPhamDAO.Instance.countSPsold().ToString();
+            Delivered.Text = "Đã vận chuyển: " + DAO.HoaDonDAO.Instance.SLHD_HOANTHANH().ToString();
             Sl_HD_huy.Text = DAO.HoaDonDAO.Instance.SLHD_huy().ToString();
 
 

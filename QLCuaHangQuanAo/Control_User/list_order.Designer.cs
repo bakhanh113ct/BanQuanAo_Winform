@@ -89,10 +89,10 @@ namespace QLCuaHangQuanAo.Control_User
             this.trang_thai.Font = new System.Drawing.Font("Quicksand", 9F, System.Drawing.FontStyle.Bold);
             this.trang_thai.ForeColor = System.Drawing.Color.White;
             this.trang_thai.HoverState.Parent = this.trang_thai;
-            this.trang_thai.Location = new System.Drawing.Point(276, 0);
+            this.trang_thai.Location = new System.Drawing.Point(235, 0);
             this.trang_thai.Name = "trang_thai";
             this.trang_thai.ShadowDecoration.Parent = this.trang_thai;
-            this.trang_thai.Size = new System.Drawing.Size(125, 33);
+            this.trang_thai.Size = new System.Drawing.Size(166, 33);
             this.trang_thai.TabIndex = 4;
             this.trang_thai.Text = "Delivery";
             // 

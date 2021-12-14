@@ -78,7 +78,7 @@ namespace QLCuaHangQuanAo.DAO
 
         internal object SLHD_huy()
         {
-            DataTable temp = DataProvider.ExcuseQuery1("Select COUNT(SOHD) as SL from HOADON where TRANG_THAI = 'Cancel' and MONTH(NGHD) = " + DateTime.Now.Month);
+            DataTable temp = DataProvider.ExcuseQuery1("Select COUNT(SOHD) as SL from HOADON where TRANG_THAI = N'Hủy' and MONTH(NGHD) = " + DateTime.Now.Month);
             foreach(DataRow row in temp.Rows)
             {
                 return row["SL"];
@@ -205,7 +205,7 @@ namespace QLCuaHangQuanAo.DAO
          public int SLHD_CRmonth()//Lấy số lượng hóa đơn trong tháng 
          {
             DataTable sl = DataProvider.ExcuseQuery1("select count(SOHD) as SL from HOADON " +
-                "where MONTH(NGHD) = MONTH(GETDATE()) and (TRANG_THAI = 'Delivery' or TRANG_THAI = 'Complete')");
+                "where MONTH(NGHD) = MONTH(GETDATE()) and (TRANG_THAI = N'Vận chuyển' or TRANG_THAI = N'Hoàn thành')");
             foreach (DataRow x in sl.Rows)
             {
                 return (int)x["SL"];
@@ -221,7 +221,7 @@ namespace QLCuaHangQuanAo.DAO
         public int SLHD_HOANTHANH()//Lấy số lượng hóa đơn trong tháng này trong trạng thái hoàn thành
         {
             DataTable sl = DataProvider.ExcuseQuery1("select count(SOHD) as SL from HOADON " +
-                "where TRANG_THAI = 'Complete'" +
+                "where TRANG_THAI = N'Hoàn thành'" +
                 "and MONTH(NGHD) = MONTH(GETDATE())");
             foreach (DataRow x in sl.Rows)
             {
@@ -233,7 +233,7 @@ namespace QLCuaHangQuanAo.DAO
         {
             int slfrompreM = 0;
             DataTable sl = DataProvider.ExcuseQuery1("select count(SOHD) as SL from HOADON " +
-                "where (TRANG_THAI = 'Complete' or TRANG_THAI = 'Delevery')" +
+                "where (TRANG_THAI = N'Hoàn thành' or TRANG_THAI = N'Vận chuyển')" +
                 "and MONTH(NGHD) = MONTH(GETDATE()) - 1");
             foreach (DataRow x in sl.Rows)
             {
