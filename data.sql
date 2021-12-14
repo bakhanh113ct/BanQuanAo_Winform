@@ -47,7 +47,7 @@ CREATE TABLE HOADON
 	NGHD SMALLDATETIME DEFAULT GETDATE(),
 	MAKH INT NOT NULL,
 	TRIGIA INT DEFAULT 0, 
-	TRANG_THAI NVARCHAR(50) DEFAULT 'Waitting',
+	TRANG_THAI NVARCHAR(50) DEFAULT  N'Chờ',
 	NGXN SMALLDATETIME
 )
 CREATE TABLE CTHD
@@ -59,6 +59,7 @@ CREATE TABLE CTHD
 	PRIMARY KEY(SOHD,MASP)
 )
 go
+
 ALTER TABLE HOADON ADD CONSTRAINT FK_HD_KH FOREIGN KEY(MAKH)
 REFERENCES KHACHHANG(MAKH)
 
@@ -73,9 +74,19 @@ REFERENCES LOAISP(ID)
 
 ALTER TABLE KHACHHANG ADD CONSTRAINT FK_KH_TK FOREIGN KEY(IDTK)
 REFERENCES TAIKHOAN(ID)
-
-
-
+go
+create trigger CTHD_GIA
+ON CTHD
+for insert
+as
+	declare @GIA int
+	declare @SOHD int
+	declare @MASP int
+	select @SOHD = SOHD from INSERTED
+	select @MASP = MASP from INSERTED
+	select @GIA = SANPHAM.GIA  from SANPHAM, INSERTED  where INSERTED.MASP  = SANPHAM.MASP
+	update CTHD set GIA = @GIA where SOHD =  @SOHD and MASP = @MASP
+go
 insert LOAISP(TENLOAI) values(N'Quần')
 insert LOAISP(TENLOAI) values(N'Áo')
 insert LOAISP(TENLOAI) values(N'Mũ')
@@ -91,6 +102,7 @@ insert into TAIKHOAN(TENHIENTHI, TENDANGNHAP, MATKHAU, LOAITK) values ('user6', 
 insert into TAIKHOAN(TENHIENTHI, TENDANGNHAP, MATKHAU, LOAITK) values ('user7', 'user7', 'a', 1)
 insert into TAIKHOAN(TENHIENTHI, TENDANGNHAP, MATKHAU, LOAITK) values ('user8', 'user8', 'a', 1)
 insert into TAIKHOAN(TENHIENTHI, TENDANGNHAP, MATKHAU, LOAITK) values ('user9', 'user9', 'a', 1)
+
 
 
 --KHACHHANG
@@ -117,141 +129,144 @@ values(10, N'Đức Long', N'Việt Nam', '1234', 'sv2htth@gmail.com',  '2002-03
 
 
 
+
 --SANPHAM -giay
-insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values(N'giày Adidas', 5000000, 100, 4, 12, N'Giày ngon 4*', 4)
-insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values(N'Giày Balenciaga', 7000000, 110, 5, 11, N'Giày ngon 5*', 4)
-insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI )
-values(N'Giày Converse', 3000000, 9, 4, 77, N'Giày ngon 5*', 4)
-insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values(N'Giày Chanel', 3500000, 33, 6, 55, N'Giày ngon 3*', 4)
-insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values(N'Giày Balenciaga', 6050000, 110, 1, 10, N'Giày ngon 2.5*', 4)
-insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values(N'Giày Gucci', 6050000, 110, 1, 10, N'Giày ngon 2.5*', 4)
+insert into SANPHAM ( TEN, GIA, GIANHAP, SL, DANHGIA, DABAN, MOTA, IDLOAI)
+values(N'giày Adidas', 5000000,4800000, 100, 4, 12, N'Giày ngon 4*', 4)
+insert into SANPHAM ( TEN, GIA, GIANHAP, SL, DANHGIA, DABAN, MOTA, IDLOAI)
+values(N'Giày Balenciaga', 7000000, 68000000, 110, 5, 11, N'Giày ngon 5*', 4)
+insert into SANPHAM ( TEN, GIA, GIANHAP, SL, DANHGIA, DABAN, MOTA, IDLOAI)
+values(N'Giày Converse', 3000000,2800000, 9, 4, 77, N'Giày ngon 5*', 4)
+insert into SANPHAM ( TEN, GIA, GIANHAP, SL, DANHGIA, DABAN, MOTA, IDLOAI)
+values(N'Giày Chanel', 3500000,3300000, 33, 6, 55, N'Giày ngon 3*', 4)
+insert into SANPHAM ( TEN, GIA, GIANHAP, SL, DANHGIA, DABAN, MOTA, IDLOAI)
+values(N'Giày Balenciaga', 6050000,6000000, 110, 1, 10, N'Giày ngon 2.5*', 4)
+insert into SANPHAM ( TEN, GIA, GIANHAP, SL, DANHGIA, DABAN, MOTA, IDLOAI)
+values(N'Giày Gucci', 6050000,58000000, 110, 1, 10, N'Giày ngon 2.5*', 4)
 
 
 --mu
-insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values(N'Mũ Adidas', 500000, 10, '5', 80, N'Mũ ngon 4*', 3)
-insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values(N'Mũ Chanle', 75000, 90, '4', 11, N'mũ ngon 5*', 3)
-insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values(N'Mũ Gucci', 30000, 9, 7, 60, N'mũ ngon 5*', 3)
-insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values(N'Mũ Balenciaga ', 20100, 9, 5, 66, N'mũ ngon 1*', 3)
-insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values('Mũ Converse', 500000, 10, '5', 80, N'Mũ ngon 4*', 3)
+insert into SANPHAM ( TEN, GIA, GIANHAP, SL, DANHGIA, DABAN, MOTA, IDLOAI)
+values(N'Mũ Adidas', 500000,450000, 10, '5', 80, N'Mũ ngon 4*', 3)
+insert into SANPHAM ( TEN, GIA, GIANHAP, SL, DANHGIA, DABAN, MOTA, IDLOAI)
+values(N'Mũ Chanle', 75000,70000, 90, '4', 11, N'mũ ngon 5*', 3)
+insert into SANPHAM ( TEN, GIA, GIANHAP, SL, DANHGIA, DABAN, MOTA, IDLOAI)
+values(N'Mũ Gucci', 30000,25000, 9, 7, 60, N'mũ ngon 5*', 3)
+insert into SANPHAM ( TEN, GIA, GIANHAP, SL, DANHGIA, DABAN, MOTA, IDLOAI)
+values(N'Mũ Balenciaga ', 20100,18000, 9, 5, 66, N'mũ ngon 1*', 3)
+insert into SANPHAM ( TEN, GIA, GIANHAP, SL, DANHGIA, DABAN, MOTA, IDLOAI)
+values('Mũ Converse', 500000,490000, 10, '5', 80, N'Mũ ngon 4*', 3)
 
 --SANPHAM --áo
 
-insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values(N'Áo Adidas', 800000, 10, 0, 10, N'áo ngon 4*', 2)
-insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values(N'Áo Chanel', 715000, 90, 6.5, 17, N'áo ngon 5*', 2)
-insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values(N'Áo Gucci ', 3200000, 9, 2, 18, N'áo ngon 5*', 2)
-insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values(N'Áo Balenciaga ', 202100, 9, 7, 11, N'áo ngon 1*', 2)
-insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values(N'Áo Converse', 202100, 9, 7, 11, N'áo ngon 1*', 2)
+insert into SANPHAM ( TEN, GIA, GIANHAP, SL, DANHGIA, DABAN, MOTA, IDLOAI)
+values(N'Áo Adidas', 800000,750000, 10, 0, 10, N'áo ngon 4*', 2)
+insert into SANPHAM ( TEN, GIA, GIANHAP, SL, DANHGIA, DABAN, MOTA, IDLOAI)
+values(N'Áo Chanel', 715000,700000 ,90, 6.5, 17, N'áo ngon 5*', 2)
+insert into SANPHAM ( TEN, GIA, GIANHAP, SL, DANHGIA, DABAN, MOTA, IDLOAI)
+values(N'Áo Gucci ', 3200000,3000000, 9, 2, 18, N'áo ngon 5*', 2)
+insert into SANPHAM ( TEN, GIA, GIANHAP, SL, DANHGIA, DABAN, MOTA, IDLOAI)
+values(N'Áo Balenciaga ', 202100,200000 , 9, 7, 11, N'áo ngon 1*', 2)
+insert into SANPHAM ( TEN, GIA, GIANHAP, SL, DANHGIA, DABAN, MOTA, IDLOAI)
+values(N'Áo Converse', 202100,180000, 9, 7, 11, N'áo ngon 1*', 2)
 
 
 --SANPHAM --Quần
-insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values(N'Quần Adidas', 800000, 10, 4, 22, N'quần ngon 4*', 1)
-insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values(N'Quần Chanle', 715000, 90, 5, 40, N'quần  ngon 5*', 1)
-insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values(N'Quần Gucci ', 3200000, 9, 4, 60, N'quần ngon 5*', 1)
-insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values('Quần Balenciaga ', 202100, 0, 3.5, 88, N'quần ngon 1*', 1)
-insert into SANPHAM ( TEN, GIA, SL, DANHGIA, DABAN, MOTA, IDLOAI)
-values(N'Quần Converse', 202100, 9, 3.5, 88, N'quần ngon 1*', 1)
+insert into SANPHAM ( TEN, GIA, GIANHAP, SL, DANHGIA, DABAN, MOTA, IDLOAI)
+values(N'Quần Adidas', 800000,760000, 10, 4, 22, N'quần ngon 4*', 1)
+insert into SANPHAM ( TEN, GIA, GIANHAP, SL, DANHGIA, DABAN, MOTA, IDLOAI)
+values(N'Quần Chanle', 715000,700000, 90, 5, 40, N'quần  ngon 5*', 1)
+insert into SANPHAM ( TEN, GIA, GIANHAP, SL, DANHGIA, DABAN, MOTA, IDLOAI)
+values(N'Quần Gucci ', 3200000,3000000 , 9, 4, 60, N'quần ngon 5*', 1)
+insert into SANPHAM ( TEN, GIA, GIANHAP, SL, DANHGIA, DABAN, MOTA, IDLOAI)
+values('Quần Balenciaga ', 202100,200000, 0, 3.5, 88, N'quần ngon 1*', 1)
+insert into SANPHAM ( TEN, GIA, GIANHAP, SL, DANHGIA, DABAN, MOTA, IDLOAI)
+values(N'Quần Converse', 202100, 180000, 9, 3.5, 88, N'quần ngon 1*', 1)
 
 --HOADON
 --thang1
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-01-01', 2, 12808400, 'Complete' )
+values('2021-01-01', 2, 12808400, N'Hoàn thành' )
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-01-02', 3, 25630000, 'Complete')
+values('2021-01-02', 3, 25630000, N'Hoàn thành')
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-01-07', 4,52750000, 'Cancel' )
+values('2021-01-07', 4,52750000, N'Hủy' )
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-01-09', 5, 9236300, 'Complete' )
+values('2021-01-09', 5, 9236300, N'Hoàn thành' )
 
 --thang2
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-02-12', 6, 98904200, 'Cancel')
+values('2021-02-12', 6, 98904200, N'Hủy' ) 
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-02-01', 7, 12808400, 'Complete' )
+values('2021-02-01', 7, 12808400, N'Hoàn thành')
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-02-02', 8, 25630000, 'Complete')
+values('2021-02-02', 8, 25630000, N'Hoàn thành')
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-02-07', 9,52750000, 'Cancel' )
+values('2021-02-07', 9,52750000, N'Hủy')
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-02-09', 10, 9236300, 'Complete' )
+values('2021-02-09', 10, 9236300, N'Hoàn thành')
 --thang3
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-03-02', 3, 69758400, 'Complete')
+values('2021-03-02', 3, 69758400, N'Hoàn thành')
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-03-07', 4,3348900, 'Cancel' )
+values('2021-03-07', 4,3348900, N'Hủy')
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-03-09', 5, 61450000, 'Complete' )
+values('2021-03-09', 5, 61450000, N'Hoàn thành')
 --thang4
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-04-01', 6, 34200000, 'Complete' )
+values('2021-04-01', 6, 34200000, N'Hoàn thành')
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-04-02', 3, 25630000, 'Complete')
+values('2021-04-02', 3, 25630000, N'Hoàn thành')
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-04-07', 9,15818900, 'Cancel' )
+values('2021-04-07', 9,15818900, N'Hủy')
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-04-09', 2, 14287600, 'Complete' )
+values('2021-04-09', 2, 14287600, N'Hoàn thành')
 --thang6
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-06-01', 9, 2393900, 'Complete' )
+values('2021-06-01', 9, 2393900, N'Hoàn thành')
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-06-02', 4, 43400000, 'Complete')
+values('2021-06-02', 4, 43400000, N'Hoàn thành')
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-06-07', 2,17290000, 'Cancel' )
+values('2021-06-07', 2,17290000, N'Hủy')
 --thang8
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-08-01', 3, 12808400, 'Complete' )
+values('2021-08-01', 3, 12808400, N'Hoàn thành')
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-08-02', 5, 25630000, 'Complete')
+values('2021-08-02', 5, 25630000, N'Hoàn thành')
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-08-07', 7,52750000, 'Cancel' )
+values('2021-08-07', 7,52750000, N'Hủy')
 --thang9
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-09-01', 8, 25250000, 'Complete' )
+values('2021-09-01', 8, 25250000, N'Hoàn thành')
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-09-02', 6, 46704200, 'Complete')
+values('2021-09-02', 6, 46704200, N'Hoàn thành')
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-09-07', 2,1460500, 'Cancel' )
+values('2021-09-07', 2,1460500, N'Hủy')
 --thang10
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-10-01', 4, 8752100, 'Complete' )
+values('2021-10-01', 4, 8752100, N'Hoàn thành')
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-10-02', 9, 16775000, 'Complete')
+values('2021-10-02', 9, 16775000, N'Hoàn thành')
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-10-07', 5,6280400, 'Cancel' )
+values('2021-10-07', 5,6280400, N'Hủy')
 --thang11
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-11-01', 2, 33875000, 'Complete' )
+values('2021-11-01', 2, 33875000, N'Hoàn thành')
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-11-02', 5, 13706300, 'Complete')
+values('2021-11-02', 5, 13706300, N'Hoàn thành')
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-11-07', 8,15486700, 'Cancel' )
+values('2021-11-07', 8,15486700, N'Hủy')
 --thang 12
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-12-01', 2, 28050000, 'Complete' )
+values('2021-12-01', 2, 28050000, N'Hoàn thành')
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-12-02', 7, 54800000, 'Cancel' )
+values('2021-12-02', 7, 54800000, N'Hủy' )
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-12-12', 6, 8550000, 'Waiting' )
+values('2021-12-12', 6, 8550000, N'Chờ' )
 insert into HOADON ( NGHD, MAKH, TRIGIA, TRANG_THAI)
-values('2021-12-12', 4, 28352100, 'Waiting' )
+values('2021-12-12', 4, 28352100, N'Chờ' )
+
+
 
 --CTHD
 insert into CTHD ( SOHD, MASP, SL)
