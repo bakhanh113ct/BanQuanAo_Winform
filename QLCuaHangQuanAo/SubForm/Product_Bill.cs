@@ -35,7 +35,7 @@ namespace QLCuaHangQuanAo.SubForm
                 DialogResult result = MessageBox.Show("Bạn có chắc muốn hủy đơn hàng không.", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if(result == DialogResult.Yes)
                 {
-                    if (DAO.CTHDDAO.Instance.DeleteCTHD(SoHD) && DAO.HoaDonDAO.Instance.DeleteHD(SoHD))
+                    if (DAO.HoaDonDAO.Instance.DeleteHD(SoHD))
                         MessageBox.Show("Đơn hàng của bạn đã được hủy thành công.");
                     else MessageBox.Show("Hủy đơn hàng thất bại liên hệ cửa hàng thông qua email ở phần liên hệ để biết thêm chi tiết.");
                 }

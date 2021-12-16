@@ -275,7 +275,7 @@ namespace QLCuaHangQuanAo.DAO
 
         public bool DeleteHD(string SoHd)
         {
-            int check = DAO.DataProvider.ExecuteNonQuery("delete from HOADON where SOHD = '" + SoHd + "'");
+            int check = DAO.DataProvider.ExecuteNonQuery("update HOADON set TRANG_THAI = N'Huỷ' where SOHD = '" + SoHd + "'");
             if (check == 0)
                 return false;
             else
