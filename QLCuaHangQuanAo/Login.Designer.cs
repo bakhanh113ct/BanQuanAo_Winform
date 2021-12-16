@@ -268,10 +268,11 @@ namespace QLCuaHangQuanAo
             // 
             // Gif_Logo
             // 
-            this.Gif_Logo.Image = global::QLCuaHangQuanAo.Properties.Resources.Logo;
-            this.Gif_Logo.Location = new System.Drawing.Point(34, 88);
+            this.Gif_Logo.Image = global::QLCuaHangQuanAo.Properties.Resources.logo_main_gif;
+            this.Gif_Logo.Location = new System.Drawing.Point(26, 88);
             this.Gif_Logo.Name = "Gif_Logo";
-            this.Gif_Logo.Size = new System.Drawing.Size(302, 374);
+            this.Gif_Logo.Size = new System.Drawing.Size(327, 374);
+            this.Gif_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Gif_Logo.TabIndex = 34;
             this.Gif_Logo.TabStop = false;
             this.Gif_Logo.Visible = false;

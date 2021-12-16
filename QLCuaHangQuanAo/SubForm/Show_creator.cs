@@ -22,7 +22,6 @@ namespace QLCuaHangQuanAo.SubForm
         {
             System.Diagnostics.Process.Start("https://www.facebook.com/profile.php?id=100010585110164");
             this.Close();
-
         }
         private void exit_Click(object sender, EventArgs e)
         {

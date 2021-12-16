@@ -30,7 +30,8 @@ namespace QLCuaHangQuanAo.Control_User
             mAKH = (int)row["MAKH"];
             name.Text = row["HOTEN"].ToString();
             sl.Text = row["Sl"].ToString();
-            gia.Text = row["GIA"].ToString() + "VNĐ";
+            int giax = (int)row["GIA"];
+            gia.Text = String.Format("{0:n0}", giax) + " VND";
         }
 
         private void thaotac_Click(object sender, EventArgs e)

@@ -29,10 +29,10 @@ namespace QLCuaHangQuanAo
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -41,6 +41,10 @@ namespace QLCuaHangQuanAo
             this.Avatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.rdOther = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rdMale = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rdFemale = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
             this.txbEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txbName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -72,10 +76,6 @@ namespace QLCuaHangQuanAo
             this.NGHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TRIGIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TRANG_THAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
-            this.rdOther = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.rdMale = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.rdFemale = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -225,6 +225,73 @@ namespace QLCuaHangQuanAo
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Thông tin";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // rdOther
+            // 
+            this.rdOther.AutoSize = true;
+            this.rdOther.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdOther.CheckedState.BorderThickness = 0;
+            this.rdOther.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdOther.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdOther.CheckedState.InnerOffset = -4;
+            this.rdOther.Font = new System.Drawing.Font("Quicksand Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdOther.Location = new System.Drawing.Point(443, 224);
+            this.rdOther.Name = "rdOther";
+            this.rdOther.Size = new System.Drawing.Size(56, 20);
+            this.rdOther.TabIndex = 63;
+            this.rdOther.Text = "Khác";
+            this.rdOther.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdOther.UncheckedState.BorderThickness = 2;
+            this.rdOther.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdOther.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // rdMale
+            // 
+            this.rdMale.AutoSize = true;
+            this.rdMale.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdMale.CheckedState.BorderThickness = 0;
+            this.rdMale.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdMale.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdMale.CheckedState.InnerOffset = -4;
+            this.rdMale.Font = new System.Drawing.Font("Quicksand Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdMale.Location = new System.Drawing.Point(293, 224);
+            this.rdMale.Name = "rdMale";
+            this.rdMale.Size = new System.Drawing.Size(54, 20);
+            this.rdMale.TabIndex = 61;
+            this.rdMale.Text = "Nam";
+            this.rdMale.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdMale.UncheckedState.BorderThickness = 2;
+            this.rdMale.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdMale.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // rdFemale
+            // 
+            this.rdFemale.AutoSize = true;
+            this.rdFemale.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdFemale.CheckedState.BorderThickness = 0;
+            this.rdFemale.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdFemale.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdFemale.CheckedState.InnerOffset = -4;
+            this.rdFemale.Font = new System.Drawing.Font("Quicksand Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdFemale.Location = new System.Drawing.Point(370, 224);
+            this.rdFemale.Name = "rdFemale";
+            this.rdFemale.Size = new System.Drawing.Size(42, 20);
+            this.rdFemale.TabIndex = 62;
+            this.rdFemale.Text = "Nữ";
+            this.rdFemale.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdFemale.UncheckedState.BorderThickness = 2;
+            this.rdFemale.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdFemale.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Quicksand Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(209, 223);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 21);
+            this.label3.TabIndex = 60;
+            this.label3.Text = "Giới tính";
             // 
             // txbEmail
             // 
@@ -563,7 +630,7 @@ namespace QLCuaHangQuanAo
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(548, 371);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Đổi mk";
+            this.tabPage2.Text = "Đổi mật khẩu";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // btnSavePass
@@ -619,11 +686,11 @@ namespace QLCuaHangQuanAo
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(118, 196);
+            this.label10.Location = new System.Drawing.Point(94, 196);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(114, 17);
+            this.label10.Size = new System.Drawing.Size(134, 17);
             this.label10.TabIndex = 62;
-            this.label10.Text = "Confirm Pasword";
+            this.label10.Text = "Xác nhận mật khẩu:";
             // 
             // txbNewPass
             // 
@@ -653,11 +720,11 @@ namespace QLCuaHangQuanAo
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(139, 116);
+            this.label9.Location = new System.Drawing.Point(132, 116);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 17);
+            this.label9.Size = new System.Drawing.Size(96, 17);
             this.label9.TabIndex = 60;
-            this.label9.Text = "New Pasword";
+            this.label9.Text = "Mật khẩu mới:";
             // 
             // txbOldPass
             // 
@@ -687,11 +754,11 @@ namespace QLCuaHangQuanAo
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(137, 42);
+            this.label1.Location = new System.Drawing.Point(139, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 17);
+            this.label1.Size = new System.Drawing.Size(89, 17);
             this.label1.TabIndex = 58;
-            this.label1.Text = "Old Password";
+            this.label1.Text = "Mật khẩu cũ:";
             // 
             // tabPage3
             // 
@@ -707,39 +774,39 @@ namespace QLCuaHangQuanAo
             // 
             this.dtgv.AllowUserToAddRows = false;
             this.dtgv.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Violet;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Violet;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgv.BackgroundColor = System.Drawing.Color.White;
             this.dtgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.MediumOrchid;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Quicksand Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.MediumOrchid;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumOrchid;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Quicksand Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumOrchid;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgv.ColumnHeadersHeight = 40;
             this.dtgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SOHD,
             this.NGHD,
             this.TRIGIA,
             this.TRANG_THAI});
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgv.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgv.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgv.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgv.EnableHeadersVisualStyles = false;
             this.dtgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -747,14 +814,14 @@ namespace QLCuaHangQuanAo
             this.dtgv.Name = "dtgv";
             this.dtgv.ReadOnly = true;
             this.dtgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgv.RowHeadersVisible = false;
             this.dtgv.RowHeadersWidth = 40;
             this.dtgv.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -815,73 +882,6 @@ namespace QLCuaHangQuanAo
             this.TRANG_THAI.MinimumWidth = 6;
             this.TRANG_THAI.Name = "TRANG_THAI";
             this.TRANG_THAI.ReadOnly = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Quicksand Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(209, 223);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 21);
-            this.label3.TabIndex = 60;
-            this.label3.Text = "Giới tính";
-            // 
-            // rdOther
-            // 
-            this.rdOther.AutoSize = true;
-            this.rdOther.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdOther.CheckedState.BorderThickness = 0;
-            this.rdOther.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdOther.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rdOther.CheckedState.InnerOffset = -4;
-            this.rdOther.Font = new System.Drawing.Font("Quicksand Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdOther.Location = new System.Drawing.Point(443, 224);
-            this.rdOther.Name = "rdOther";
-            this.rdOther.Size = new System.Drawing.Size(56, 20);
-            this.rdOther.TabIndex = 63;
-            this.rdOther.Text = "Khác";
-            this.rdOther.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdOther.UncheckedState.BorderThickness = 2;
-            this.rdOther.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rdOther.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // rdMale
-            // 
-            this.rdMale.AutoSize = true;
-            this.rdMale.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdMale.CheckedState.BorderThickness = 0;
-            this.rdMale.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdMale.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rdMale.CheckedState.InnerOffset = -4;
-            this.rdMale.Font = new System.Drawing.Font("Quicksand Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdMale.Location = new System.Drawing.Point(293, 224);
-            this.rdMale.Name = "rdMale";
-            this.rdMale.Size = new System.Drawing.Size(54, 20);
-            this.rdMale.TabIndex = 61;
-            this.rdMale.Text = "Nam";
-            this.rdMale.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdMale.UncheckedState.BorderThickness = 2;
-            this.rdMale.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rdMale.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // rdFemale
-            // 
-            this.rdFemale.AutoSize = true;
-            this.rdFemale.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdFemale.CheckedState.BorderThickness = 0;
-            this.rdFemale.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdFemale.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rdFemale.CheckedState.InnerOffset = -4;
-            this.rdFemale.Font = new System.Drawing.Font("Quicksand Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdFemale.Location = new System.Drawing.Point(370, 224);
-            this.rdFemale.Name = "rdFemale";
-            this.rdFemale.Size = new System.Drawing.Size(42, 20);
-            this.rdFemale.TabIndex = 62;
-            this.rdFemale.Text = "Nữ";
-            this.rdFemale.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdFemale.UncheckedState.BorderThickness = 2;
-            this.rdFemale.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rdFemale.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
             // Settings_performance
             // 

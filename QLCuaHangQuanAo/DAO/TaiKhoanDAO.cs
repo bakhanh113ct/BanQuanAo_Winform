@@ -90,5 +90,10 @@ namespace QLCuaHangQuanAo.DAO
         {
             return (string)DAO.DataProvider.ExecuteScalar("Select EMAIL from HOADON, KHACHHANG where HOADON.MAKH = KHACHHANG.MAKH and SOHD = '" + SoHd + "'");
         }
+        
+        public string LoadEmail_MaKH(string makh)
+        {
+            return (string)DAO.DataProvider.ExecuteScalar("Select EMAIL from KHACHHANG where MAKH = '" + makh + "'");
+        }
     }
 }

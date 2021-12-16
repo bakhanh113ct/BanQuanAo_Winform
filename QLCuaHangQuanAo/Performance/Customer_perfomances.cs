@@ -37,7 +37,7 @@ namespace QLCuaHangQuanAo.Performance
                 if(x.nen.FillColor == Color.FromArgb(174, 78, 191))
                 {
                     SubForm.TTKH ttkh = new SubForm.TTKH(x.MAKH);
-                    ttkh.ShowDialog();
+                    ttkh.Show();
                     return;
                 }
             }

@@ -531,5 +531,11 @@
   <ItemGroup>
     <None Include="Resources\buy-button.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_main.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_main_gif.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

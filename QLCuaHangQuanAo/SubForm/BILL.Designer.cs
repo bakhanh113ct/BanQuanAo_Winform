@@ -471,6 +471,7 @@ namespace QLCuaHangQuanAo.SubForm
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this;
+            this.guna2DragControl1.TransparentWhileDrag = true;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // guna2AnimateWindow1
@@ -481,7 +482,7 @@ namespace QLCuaHangQuanAo.SubForm
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BorderRadius = 5;
-            this.guna2PictureBox1.Image = global::QLCuaHangQuanAo.Properties.Resources.Logo1;
+            this.guna2PictureBox1.Image = global::QLCuaHangQuanAo.Properties.Resources.logo_main;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(9, 10);
             this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);

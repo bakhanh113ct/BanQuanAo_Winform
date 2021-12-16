@@ -26,7 +26,8 @@ namespace QLCuaHangQuanAo.Control_User
             DateTime x = (DateTime)row["NGHD"];
             NGHD.Text = x.ToShortDateString();
             TRANG_THAI.Text = row["TRANG_THAI"].ToString();
-            GIA.Text = row["TRIGIA"].ToString() + " VNĐ";
+            int giax = (int)row["TRIGIA"];
+            GIA.Text = String.Format("{0:n0}", giax) + " VND";
         }
     }
 }

@@ -23,6 +23,7 @@ namespace QLCuaHangQuanAo
         private Form activeForm = null;
         public Store_performence store = null;
         private Statistics_perfomancecs statistics = null;
+        private Customer_perfomances customer = null;
         private Home_perfomancecs home = null;
         private Settings_performance setting = null;
         public UI_Home()
@@ -38,6 +39,7 @@ namespace QLCuaHangQuanAo
             store = new Store_performence();
             setting = new Settings_performance();
             home = new Home_perfomancecs(this, store);
+            customer = new Customer_perfomances();
             time.Text = DateTime.Now.ToShortDateString();
             //statistics = new Statistics_perfomancecs();
             //invoice = new Invoice_performance();
@@ -45,6 +47,7 @@ namespace QLCuaHangQuanAo
             if (Login.tk.Typetk == 1)
             {
                 btnINVOICE.Visible = false;
+                CUSTOMER.Visible = false;
             }
         }
 
@@ -56,10 +59,12 @@ namespace QLCuaHangQuanAo
             subbar.Add(subbar3);
             subbar.Add(subbar4);
             subbar.Add(subbar5);
+            subbar.Add(subbar6);
             Home_button.Add(HOME);
             Home_button.Add(STORE);
             Home_button.Add(btnINVOICE);
             Home_button.Add(STATISTIC);
+            Home_button.Add(CUSTOMER);
             Home_button.Add(SETTING);
         }
 
@@ -120,31 +125,35 @@ namespace QLCuaHangQuanAo
 
         private void btnINVOICE_Click(object sender, EventArgs e)
         {
-            if (Login.tk.Typetk == 1)
-                MessageBox.Show("Bạn không có quyền truy cập.");
-            else
-            {
-                subbar_Change(subbar3, btnINVOICE);
-                openPerformance(new Invoice_performance());
-            }
+            subbar_Change(subbar3, btnINVOICE);
+            openPerformance(new Invoice_performance());
         }
 
         private void STATISTIC_Click(object sender, EventArgs e)
         {
-            subbar_Change(subbar4, STATISTIC);
-            //openPerformance(new Statistics_perfomancecs());
-            openPerformance(new Customer_perfomances());
+            if (Login.tk.Typetk == 1)
+                subbar_Change(subbar3, STATISTIC);
+            else 
+                subbar_Change(subbar4, STATISTIC);
+            openPerformance(new Statistics_perfomancecs());
         }
-
+        private void CUSTOMER_Click(object sender, EventArgs e)
+        {
+            subbar_Change(subbar5, CUSTOMER);
+            openPerformance(customer);
+        }
         private void SETTING_Click(object sender, EventArgs e)
         {
-            subbar_Change(subbar5, SETTING);
+            if (Login.tk.Typetk == 1)
+                subbar_Change(subbar4, SETTING);
+            else 
+                subbar_Change(subbar6, SETTING);
             openPerformance(setting);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            DialogResult kq = MessageBox.Show("Ban co muon dang xuat?", "Thong bao", MessageBoxButtons.YesNo);
+            DialogResult kq = MessageBox.Show("Bạn có muốn đăng xuất?", "Đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (kq == DialogResult.Yes)
             {
                 //MessageBox.Show("Đăng xuất thành công");
@@ -193,5 +202,7 @@ namespace QLCuaHangQuanAo
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        
     }
 }

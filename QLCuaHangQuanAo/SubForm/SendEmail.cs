@@ -17,7 +17,8 @@ namespace QLCuaHangQuanAo.SubForm
 
     public partial class SendEmail : Form
     {
-        int SoHD;
+        int SoHD = 0;
+        int makh = 0;
         string[] Scopes = { GmailService.Scope.GmailSend };
         string ApplicationName = "SendMail";
         string messageDilivery = "Don hang cua ban dang duoc van chuyen Cam on da su dung dich vu cua cua hang.";
@@ -30,7 +31,11 @@ namespace QLCuaHangQuanAo.SubForm
             InitializeComponent();
             this.SoHD = SoHD;
         }
-        
+        public SendEmail(int makh, int i)
+        {
+            InitializeComponent();
+            this.makh = makh;
+        }
         string Base64UrlEncode(string input)
         {
             var data = Encoding.UTF8.GetBytes(input);
@@ -133,15 +138,20 @@ namespace QLCuaHangQuanAo.SubForm
 
         private void SendEmail_Load(object sender, EventArgs e)
         {
-            email = DAO.TaiKhoanDAO.Instance.LoadEmail(SoHD);
+            if (SoHD != 0)
+                email = DAO.TaiKhoanDAO.Instance.LoadEmail(SoHD);
+            else
+                email = DAO.TaiKhoanDAO.Instance.LoadEmail_MaKH(makh.ToString());
             txbToEmail.Text = email;
             string checkStatus = DAO.HoaDonDAO.Instance.CheckStatus(SoHD);
-            if (checkStatus == "Delivery")
+            if (checkStatus == "Vận chuyển")
                 txbContent.Text = messageDilivery;
-            else if (checkStatus == "Cancel")
+            else if (checkStatus == "Hủy")
                 txbContent.Text = messageCancel;
-            else
+            else if (checkStatus == "Chờ")
                 txbContent.Text = messageWaitting;
+            else
+                txbContent.Text = "";
         }
 
         private void btnExit_Click(object sender, EventArgs e)

@@ -13,7 +13,7 @@ namespace QLCuaHangQuanAo.SubForm
     public partial class TTKH : Form
     {
         public static List<Control_User.HDcuaKH> HD_KH = new List<Control_User.HDcuaKH>();
-        int MAKH = 0;
+        private int MAKH = 0;
         public TTKH()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace QLCuaHangQuanAo.SubForm
             foreach(DataRow x in KH.Rows)
             {
                 DTO.KHACHHANG xx = new DTO.KHACHHANG(x);
-                anhdd.Image = Library.ConvertoImage(xx.Anh);
+                anhdd.Image = Library.ConvertoImage(xx.Anh) == null ? Properties.Resources.NoImage: Library.ConvertoImage(xx.Anh);
                 ten.Text = "Họ và tên: " + xx.HoTen;
                 if(xx.Gioitinh == 1)
                 {
@@ -58,13 +58,16 @@ namespace QLCuaHangQuanAo.SubForm
 
         private void LH_Click(object sender, EventArgs e)
         {
-            //SubForm.SendEmail send = new SubForm.SendEmail();
-            //send.Show();
+            SubForm.SendEmail send = new SubForm.SendEmail(MAKH, 0);
+            this.SendToBack();
+            send.BringToFront();
+            send.ShowDialog();
+            this.BringToFront();
         }
 
         private void reset_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Mật khẩu hiện tại của TK 00" + 6 + " là 123456");
+            MessageBox.Show("Mật khẩu hiện tại của TK " + MAKH + " là 123456");
             DAO.DataProvider.ExcuseNonQuery1("UPDATE TAIKHOAN set MATKHAU = '123456' where ID = " + MAKH);
         }
     }
