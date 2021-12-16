@@ -275,7 +275,16 @@ namespace QLCuaHangQuanAo.DAO
 
         public bool DeleteHD(string SoHd)
         {
-            int check = DAO.DataProvider.ExecuteNonQuery("update HOADON set TRANG_THAI = N'Huỷ' where SOHD = '" + SoHd + "'");
+            int check = DAO.DataProvider.ExecuteNonQuery("update HOADON set TRANG_THAI = N'Hủy' where SOHD = '" + SoHd + "'");
+            if (check == 0)
+                return false;
+            else
+                return true;
+        }
+
+        public bool ChangeStatus(string tt, string sohd)
+        {
+            int check = DAO.DataProvider.ExecuteNonQuery("update HOADON set TRANG_THAI = N'"+tt+"' where SOHD = '" + sohd + "'");
             if (check == 0)
                 return false;
             else

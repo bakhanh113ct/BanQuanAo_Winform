@@ -107,9 +107,9 @@ insert into TAIKHOAN(TENHIENTHI, TENDANGNHAP, MATKHAU, LOAITK) values ('user9', 
 
 --KHACHHANG
 insert into KHACHHANG (IDTK, HOTEN, DCHI, SODT, EMAIL, NGSINH, GIOITINH)
-values(1, 'admin', 'VietNam', '1234','kuti113ct@gmail.com', '2002-01-01', 1)
+values(1, 'admin', 'VietNam', '1234','bakhanh113ct@gmail.com', '2002-01-01', 1)
 insert into KHACHHANG (IDTK, HOTEN, DCHI, SODT,EMAIL, NGSINH, GIOITINH)
-values(2,'Saitama', 'Japan', '1234', 'sv2htth@gmail.com', '2000-01-01', 1)
+values(2,'Saitama', 'Japan', '1234', '20521450@gm.uit.edu.vn', '2000-01-01', 1)
 insert into KHACHHANG (IDTK, HOTEN, DCHI, SODT,EMAIL, NGSINH, GIOITINH)
 values(3,'Kanna', 'Japan', '1234', 'sv2htth@gmail.com', '1985-02-05',0)
 insert into KHACHHANG (IDTK, HOTEN, DCHI, SODT,EMAIL, NGSINH, GIOITINH)

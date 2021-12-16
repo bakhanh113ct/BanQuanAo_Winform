@@ -24,12 +24,15 @@ namespace QLCuaHangQuanAo.SubForm
         {
             DataTable table = DAO.CTHDDAO.Instance.LoadCTHD(SoHD);
             dtgrvItem.DataSource = table;
+            if (DAO.HoaDonDAO.Instance.CheckStatus(int.Parse(SoHD)) == "Hủy" || DAO.HoaDonDAO.Instance.CheckStatus(int.Parse(SoHD)) == "Hoàn thành")
+            {
+                btnHuyDon.Visible = false;
+                btnXN.Visible = false;
+            }
         }
 
         private void btnHuyDon_Click(object sender, EventArgs e)
         {
-            
-
             if (DAO.HoaDonDAO.Instance.CheckStatus(int.Parse(SoHD)) == "Chờ")
             {
                 DialogResult result = MessageBox.Show("Bạn có chắc muốn hủy đơn hàng không.", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -43,6 +46,8 @@ namespace QLCuaHangQuanAo.SubForm
             }
             else if (DAO.HoaDonDAO.Instance.CheckStatus(int.Parse(SoHD)) == "Vận chuyển")
                 MessageBox.Show("Đơn hàng đang được vận chuyển, nếu muốn hủy đơn vui lòng liên hệ với cửa hàng qua email ở phần liên hệ.");
+            else if (DAO.HoaDonDAO.Instance.CheckStatus(int.Parse(SoHD)) == "Hoàn thành")
+                MessageBox.Show("Đơn hàng của bạn đã hoàn thành.");
             else
                 MessageBox.Show("Đơn hàng của bạn đã bị hủy, vui lòng kiểm tra email để biết lý do, rất tiết vì sự bất tiện này.");
         }
@@ -50,6 +55,27 @@ namespace QLCuaHangQuanAo.SubForm
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnXN_Click(object sender, EventArgs e)
+        {
+            if (DAO.HoaDonDAO.Instance.CheckStatus(int.Parse(SoHD)) == "Vận chuyển")
+            {
+                DAO.HoaDonDAO.Instance.ChangeStatus("Hoàn thành", SoHD);
+                MessageBox.Show("Xác nhận thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if(DAO.HoaDonDAO.Instance.CheckStatus(int.Parse(SoHD)) == "Chờ")
+            {
+                MessageBox.Show("Đơn hàng đang được xử lý.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if(DAO.HoaDonDAO.Instance.CheckStatus(int.Parse(SoHD)) == "Hủy")
+            {
+                MessageBox.Show("Đơn hàng đã bị hủy.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Xác nhận thành công. Cảm ơn quý khách đã sử dụng sản phẩm của cửa hàng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
