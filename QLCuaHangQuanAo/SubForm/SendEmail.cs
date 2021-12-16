@@ -106,9 +106,9 @@ namespace QLCuaHangQuanAo.SubForm
             {
                 SmtpClient mailclient = new SmtpClient("smtp.gmail.com", 587);
                 mailclient.EnableSsl = true;
-                mailclient.Credentials = new NetworkCredential("bakhanh113ct@gmail.com", txbPass.Text);
+                mailclient.Credentials = new NetworkCredential(Login.kh.Email, txbPass.Text);
 
-                MailMessage message = new MailMessage("bakhanh113ct@gmail.com", txbToEmail.Text);
+                MailMessage message = new MailMessage(Login.kh.Email, txbToEmail.Text);
                 message.Subject = "Tình trạng đơn hàng";
                 message.Body = txbContent.Text;
                 if (lbFileName.Text != "")

@@ -116,7 +116,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.txbSoLuong.SelectedText = "";
             this.txbSoLuong.ShadowDecoration.Parent = this.txbSoLuong;
             this.txbSoLuong.Size = new System.Drawing.Size(277, 30);
-            this.txbSoLuong.TabIndex = 2;
+            this.txbSoLuong.TabIndex = 3;
             // 
             // btnSave
             // 
@@ -138,7 +138,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.btnSave.Name = "btnSave";
             this.btnSave.ShadowDecoration.Parent = this.btnSave;
             this.btnSave.Size = new System.Drawing.Size(128, 33);
-            this.btnSave.TabIndex = 6;
+            this.btnSave.TabIndex = 7;
             this.btnSave.Text = "Lưu";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -162,7 +162,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
             this.btnCancel.Size = new System.Drawing.Size(128, 33);
-            this.btnCancel.TabIndex = 7;
+            this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -179,7 +179,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.tool3.ShadowColor = System.Drawing.Color.Black;
             this.tool3.ShadowShift = 0;
             this.tool3.Size = new System.Drawing.Size(69, 24);
-            this.tool3.TabIndex = 9;
+            this.tool3.TabIndex = 18;
             // 
             // exit
             // 
@@ -306,7 +306,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.txbMota.SelectedText = "";
             this.txbMota.ShadowDecoration.Parent = this.txbMota;
             this.txbMota.Size = new System.Drawing.Size(277, 30);
-            this.txbMota.TabIndex = 3;
+            this.txbMota.TabIndex = 4;
             // 
             // txbLoai
             // 
@@ -330,7 +330,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.txbLoai.SelectedText = "";
             this.txbLoai.ShadowDecoration.Parent = this.txbLoai;
             this.txbLoai.Size = new System.Drawing.Size(277, 30);
-            this.txbLoai.TabIndex = 4;
+            this.txbLoai.TabIndex = 5;
             // 
             // btnUpload
             // 
@@ -352,7 +352,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.ShadowDecoration.Parent = this.btnUpload;
             this.btnUpload.Size = new System.Drawing.Size(128, 33);
-            this.btnUpload.TabIndex = 5;
+            this.btnUpload.TabIndex = 6;
             this.btnUpload.Text = "Thêm ảnh";
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
@@ -364,7 +364,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
             this.guna2GradientPanel1.Size = new System.Drawing.Size(25, 4);
-            this.guna2GradientPanel1.TabIndex = 35;
+            this.guna2GradientPanel1.TabIndex = 16;
             // 
             // label1
             // 
@@ -373,7 +373,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.label1.Location = new System.Drawing.Point(0, 1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 28);
-            this.label1.TabIndex = 34;
+            this.label1.TabIndex = 17;
             this.label1.Text = "Thêm";
             // 
             // label3
@@ -383,7 +383,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.label3.Location = new System.Drawing.Point(52, 42);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 23);
-            this.label3.TabIndex = 37;
+            this.label3.TabIndex = 15;
             this.label3.Text = "Tên:";
             // 
             // label4
@@ -393,7 +393,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.label4.Location = new System.Drawing.Point(54, 85);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 23);
-            this.label4.TabIndex = 38;
+            this.label4.TabIndex = 14;
             this.label4.Text = "Giá:";
             // 
             // label5
@@ -403,7 +403,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.label5.Location = new System.Drawing.Point(37, 215);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 23);
-            this.label5.TabIndex = 40;
+            this.label5.TabIndex = 11;
             this.label5.Text = "Mô tả:";
             // 
             // label6
@@ -413,7 +413,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.label6.Location = new System.Drawing.Point(14, 172);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 23);
-            this.label6.TabIndex = 39;
+            this.label6.TabIndex = 12;
             this.label6.Text = "Số lượng:";
             // 
             // label8
@@ -423,7 +423,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.label8.Location = new System.Drawing.Point(47, 265);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 23);
-            this.label8.TabIndex = 41;
+            this.label8.TabIndex = 10;
             this.label8.Text = "Loại:";
             // 
             // label2
@@ -433,7 +433,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.label2.Location = new System.Drawing.Point(94, 292);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(161, 15);
-            this.label2.TabIndex = 42;
+            this.label2.TabIndex = 9;
             this.label2.Text = "**1.Quần, 2.Áo, 3.Mũ, 4.Giày";
             // 
             // label7
@@ -443,7 +443,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.label7.Location = new System.Drawing.Point(8, 127);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 23);
-            this.label7.TabIndex = 44;
+            this.label7.TabIndex = 13;
             this.label7.Text = "Lợi nhuận:";
             // 
             // txbLoinhuan
@@ -468,7 +468,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.txbLoinhuan.SelectedText = "";
             this.txbLoinhuan.ShadowDecoration.Parent = this.txbLoinhuan;
             this.txbLoinhuan.Size = new System.Drawing.Size(152, 30);
-            this.txbLoinhuan.TabIndex = 43;
+            this.txbLoinhuan.TabIndex = 2;
             // 
             // cbLoinhuan
             // 
@@ -491,7 +491,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.cbLoinhuan.Name = "cbLoinhuan";
             this.cbLoinhuan.ShadowDecoration.Parent = this.cbLoinhuan;
             this.cbLoinhuan.Size = new System.Drawing.Size(122, 30);
-            this.cbLoinhuan.TabIndex = 45;
+            this.cbLoinhuan.TabIndex = 19;
             // 
             // Add_Item_Form
             // 

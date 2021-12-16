@@ -132,7 +132,7 @@
     <value>69, 17</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Nội dung:</value>
@@ -162,7 +162,7 @@
     <value>71, 17</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Đính kèm:</value>
@@ -189,7 +189,7 @@
     <value>86, 30</value>
   </data>
   <data name="btnOpenFile.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btnOpenFile.Text" xml:space="preserve">
     <value>Chọn</value>
@@ -219,7 +219,7 @@
     <value>0, 17</value>
   </data>
   <data name="lbFileName.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;lbFileName.Name" xml:space="preserve">
     <value>lbFileName</value>
@@ -243,7 +243,7 @@
     <value>101, 30</value>
   </data>
   <data name="btnSend.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="btnSend.Text" xml:space="preserve">
     <value>Gửi</value>
@@ -295,7 +295,7 @@
     <value>406, 148</value>
   </data>
   <data name="guna2Panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>10</value>
   </data>
   <data name="&gt;&gt;guna2Panel1.Name" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -325,7 +325,7 @@
     <value>53, 17</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>8</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Gửi tới:</value>
@@ -415,7 +415,7 @@
     <value>406, 36</value>
   </data>
   <data name="txbPass.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;txbPass.Name" xml:space="preserve">
     <value>txbPass</value>
@@ -445,7 +445,7 @@
     <value>70, 17</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>Mật khẩu:</value>
