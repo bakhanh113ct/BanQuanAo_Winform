@@ -86,7 +86,7 @@ namespace QLCuaHangQuanAo
             this.btnAdmin_User.ShadowDecoration.Parent = this.btnAdmin_User;
             this.btnAdmin_User.Size = new System.Drawing.Size(123, 31);
             this.btnAdmin_User.TabIndex = 36;
-            this.btnAdmin_User.Text = "Quản trị viên";
+            this.btnAdmin_User.Text = "Khách hàng";
             // 
             // guna2Panel1
             // 
@@ -263,6 +263,7 @@ namespace QLCuaHangQuanAo
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this.guna2Panel1;
+            this.guna2DragControl1.TransparentWhileDrag = true;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // Gif_Logo

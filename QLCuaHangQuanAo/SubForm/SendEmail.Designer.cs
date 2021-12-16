@@ -42,6 +42,8 @@ namespace QLCuaHangQuanAo.SubForm
             this.txbToEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnExit = new Guna.UI2.WinForms.Guna2Button();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.txbPass = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -170,14 +172,41 @@ namespace QLCuaHangQuanAo.SubForm
             // 
             this.guna2BorderlessForm1.AnimateWindow = true;
             this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 1D;
-            this.guna2BorderlessForm1.DragStartTransparencyValue = 1D;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.9D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // txbPass
+            // 
+            this.txbPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbPass.DefaultText = "";
+            this.txbPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txbPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txbPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbPass.DisabledState.Parent = this.txbPass;
+            this.txbPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbPass.FocusedState.Parent = this.txbPass;
+            resources.ApplyResources(this.txbPass, "txbPass");
+            this.txbPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbPass.HoverState.Parent = this.txbPass;
+            this.txbPass.Name = "txbPass";
+            this.txbPass.PasswordChar = '\0';
+            this.txbPass.PlaceholderText = "";
+            this.txbPass.SelectedText = "";
+            this.txbPass.ShadowDecoration.Parent = this.txbPass;
+            this.txbPass.UseSystemPasswordChar = true;
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
             // 
             // SendEmail
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txbPass);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txbToEmail);
             this.Controls.Add(this.label3);
@@ -208,5 +237,7 @@ namespace QLCuaHangQuanAo.SubForm
         private Guna.UI2.WinForms.Guna2TextBox txbToEmail;
         private Guna.UI2.WinForms.Guna2Button btnExit;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2TextBox txbPass;
+        private System.Windows.Forms.Label label4;
     }
 }

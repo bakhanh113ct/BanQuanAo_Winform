@@ -67,7 +67,7 @@ namespace QLCuaHangQuanAo.SubForm
         {
             if (SanPhamDAO.DeleteSP(id))
             {
-                MessageBox.Show("Xoa thanh cong.");
+                MessageBox.Show("Xóa thành công.");
                 this.DialogResult = DialogResult.Abort;
                 this.Close();
             }

@@ -46,7 +46,7 @@ namespace QLCuaHangQuanAo.SubForm
             }
             Item_HD item_HD = new Item_HD(sp.Masp.ToString(), sp.Ten, sp.IDLoai, Convert.ToInt32(txbSLMua.Text), sp.Gia, Library.ConvertoImage(sp.Anh));
             Item_HD.item_HDs.Add(item_HD);
-            MessageBox.Show("Them vao gio hang thanh cong");
+            MessageBox.Show("Thêm vào giỏ hàng thành công.");
             Store_performence.reloadlb();
             this.Close();
             

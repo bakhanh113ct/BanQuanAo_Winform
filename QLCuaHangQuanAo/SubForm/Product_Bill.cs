@@ -30,7 +30,7 @@ namespace QLCuaHangQuanAo.SubForm
         {
             
 
-            if (DAO.HoaDonDAO.Instance.CheckStatus(int.Parse(SoHD)) == "Waiting")
+            if (DAO.HoaDonDAO.Instance.CheckStatus(int.Parse(SoHD)) == "Chờ")
             {
                 DialogResult result = MessageBox.Show("Bạn có chắc muốn hủy đơn hàng không.", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if(result == DialogResult.Yes)
@@ -41,7 +41,7 @@ namespace QLCuaHangQuanAo.SubForm
                 }
 
             }
-            else if (DAO.HoaDonDAO.Instance.CheckStatus(int.Parse(SoHD)) == "Delivery")
+            else if (DAO.HoaDonDAO.Instance.CheckStatus(int.Parse(SoHD)) == "Vận chuyển")
                 MessageBox.Show("Đơn hàng đang được vận chuyển, nếu muốn hủy đơn vui lòng liên hệ với cửa hàng qua email ở phần liên hệ.");
             else
                 MessageBox.Show("Đơn hàng của bạn đã bị hủy, vui lòng kiểm tra email để biết lý do, rất tiết vì sự bất tiện này.");

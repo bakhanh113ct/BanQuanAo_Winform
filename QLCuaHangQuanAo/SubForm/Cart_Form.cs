@@ -76,7 +76,7 @@ namespace QLCuaHangQuanAo.SubForm
         {
             if (Item_HD.item_HDs.Count == 0)
             {
-                MessageBox.Show("Chua co hang");
+                MessageBox.Show("Chưa có hàng.");
                 return;
             }
             double Trigia = 0;
@@ -84,14 +84,14 @@ namespace QLCuaHangQuanAo.SubForm
             {
                 Trigia += Convert.ToDouble(item.Gia)*item.Sl;
             }
-            if (HoaDonDAO.InsertHD(DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss"), Login.kh.MaKH.ToString(), Trigia.ToString(), "Waiting"))
+            if (HoaDonDAO.InsertHD(DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss"), Login.kh.MaKH.ToString(), Trigia.ToString(), "N'Chờ'"))
             {
-                MessageBox.Show("Them thanh cong.");
+                MessageBox.Show("Thêm thành công.");
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Them khong thanh cong.");
+                MessageBox.Show("Thêm không thành công.");
             }
 
             //Thêm CTHD

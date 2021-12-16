@@ -34,12 +34,12 @@ namespace QLCuaHangQuanAo.SubForm
             if (imgbyte != null)
                 if (!DAO.SanPhamDAO.InsertSP(txbTen.Text, txbGiaTien.Text, gia.ToString(),  txbSoLuong.Text, txbMota.Text, txbLoai.Text, imgbyte))
                 {
-                    MessageBox.Show("Them khong thanh cong.");
+                    MessageBox.Show("Thêm không thành công.");
                     this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Them thanh cong.");
+                    MessageBox.Show("Thêm thành công.");
                 }
             this.Close();
         }

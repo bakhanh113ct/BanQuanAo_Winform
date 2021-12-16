@@ -103,7 +103,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.Controls.Add(this.txbSL);
             this.Name = "AddSL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddSL";
+            this.Text = "Thêm số lượng";
             this.ResumeLayout(false);
             this.PerformLayout();
 

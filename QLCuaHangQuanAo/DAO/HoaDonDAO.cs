@@ -40,7 +40,7 @@ namespace QLCuaHangQuanAo.DAO
 
         static public bool InsertHD(string nghd, string makh, string trigia, string tt)
         {
-            int check = DAO.DataProvider.ExecuteNonQuery("insert into HOADON(NGHD,MAKH,TRIGIA,TRANG_THAI) values ( @NGHD , @MAKH , @TRIGIA , @TRANG_THAI )", new object[] { nghd, makh, trigia, tt });
+            int check = DAO.DataProvider.ExecuteNonQuery("insert into HOADON(NGHD,MAKH,TRIGIA,TRANG_THAI) values ( '"+nghd+ "' , " + makh + " , " + trigia + " , " + tt + " )");
             if (check == 0)
                 return false;
             else
