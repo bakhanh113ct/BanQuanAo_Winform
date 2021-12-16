@@ -35,13 +35,13 @@ namespace QLCuaHangQuanAo.DAO
             return data;
         }
 
-        public bool DeleteCTHD(string SoHD)
-        {
-            int check = DAO.DataProvider.ExecuteNonQuery("delete from CTHD where SOHD = '" + SoHD + "'");
-            if (check == 0)
-                return false;
-            else
-                return true;
-        }
+        //public bool DeleteCTHD(string SoHD)
+        //{
+        //    //int check = DAO.DataProvider.ExecuteNonQuery("update CTHD where SOHD = '" + SoHD + "'");
+        //    //if (check == 0)
+        //    //    return false;
+        //    //else
+        //    //    return true;
+        //}
     }
 }

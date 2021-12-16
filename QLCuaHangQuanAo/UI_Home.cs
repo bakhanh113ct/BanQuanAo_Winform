@@ -145,8 +145,11 @@ namespace QLCuaHangQuanAo
         private void SETTING_Click(object sender, EventArgs e)
         {
             if (Login.tk.Typetk == 1)
+            {
+                subbar4.BringToFront();
                 subbar_Change(subbar4, SETTING);
-            else 
+            }
+            else
                 subbar_Change(subbar6, SETTING);
             openPerformance(setting);
         }
