@@ -59,10 +59,10 @@ namespace QLCuaHangQuanAo
             // list_KH
             // 
             this.list_KH.AutoScroll = true;
-            this.list_KH.Location = new System.Drawing.Point(0, 48);
-            this.list_KH.Margin = new System.Windows.Forms.Padding(2);
+            this.list_KH.Location = new System.Drawing.Point(0, 59);
+            this.list_KH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.list_KH.Name = "list_KH";
-            this.list_KH.Size = new System.Drawing.Size(322, 395);
+            this.list_KH.Size = new System.Drawing.Size(429, 486);
             this.list_KH.TabIndex = 0;
             // 
             // loadBill
@@ -104,15 +104,15 @@ namespace QLCuaHangQuanAo
             this.loadBill.DefaultCellStyle = dataGridViewCellStyle3;
             this.loadBill.EnableHeadersVisualStyles = false;
             this.loadBill.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
-            this.loadBill.Location = new System.Drawing.Point(326, 47);
-            this.loadBill.Margin = new System.Windows.Forms.Padding(2);
+            this.loadBill.Location = new System.Drawing.Point(435, 58);
+            this.loadBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loadBill.Name = "loadBill";
             this.loadBill.ReadOnly = true;
             this.loadBill.RowHeadersVisible = false;
             this.loadBill.RowHeadersWidth = 51;
             this.loadBill.RowTemplate.Height = 24;
             this.loadBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.loadBill.Size = new System.Drawing.Size(350, 195);
+            this.loadBill.Size = new System.Drawing.Size(467, 240);
             this.loadBill.StandardTab = true;
             this.loadBill.TabIndex = 1;
             this.loadBill.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Amethyst;
@@ -162,6 +162,7 @@ namespace QLCuaHangQuanAo
             // TRIGIA
             // 
             this.TRIGIA.HeaderText = "Thành tiền";
+            this.TRIGIA.MinimumWidth = 6;
             this.TRIGIA.Name = "TRIGIA";
             this.TRIGIA.ReadOnly = true;
             // 
@@ -179,11 +180,11 @@ namespace QLCuaHangQuanAo
             this.View.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.View.ForeColor = System.Drawing.Color.Azure;
             this.View.HoverState.Parent = this.View;
-            this.View.Location = new System.Drawing.Point(568, 2);
-            this.View.Margin = new System.Windows.Forms.Padding(2);
+            this.View.Location = new System.Drawing.Point(757, 2);
+            this.View.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.View.Name = "View";
             this.View.ShadowDecoration.Parent = this.View;
-            this.View.Size = new System.Drawing.Size(109, 37);
+            this.View.Size = new System.Drawing.Size(145, 46);
             this.View.TabIndex = 3;
             this.View.Text = "Xem";
             this.View.Click += new System.EventHandler(this.View_Click);
@@ -193,10 +194,9 @@ namespace QLCuaHangQuanAo
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Quicksand SemiBold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label2.Location = new System.Drawing.Point(327, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(436, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 44);
+            this.label2.Size = new System.Drawing.Size(161, 57);
             this.label2.TabIndex = 4;
             this.label2.Text = "Chi Tiết";
             // 
@@ -215,11 +215,11 @@ namespace QLCuaHangQuanAo
             this.thang.HoverState.Parent = this.thang;
             this.thang.ItemHeight = 30;
             this.thang.ItemsAppearance.Parent = this.thang;
-            this.thang.Location = new System.Drawing.Point(34, 6);
-            this.thang.Margin = new System.Windows.Forms.Padding(2);
+            this.thang.Location = new System.Drawing.Point(45, 7);
+            this.thang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.thang.Name = "thang";
             this.thang.ShadowDecoration.Parent = this.thang;
-            this.thang.Size = new System.Drawing.Size(108, 36);
+            this.thang.Size = new System.Drawing.Size(143, 36);
             this.thang.TabIndex = 5;
             this.thang.SelectedIndexChanged += new System.EventHandler(this.thang_SelectedIndexChanged_1);
             this.thang.Click += new System.EventHandler(this.thang_Click);
@@ -228,11 +228,11 @@ namespace QLCuaHangQuanAo
             // 
             this.guna2PictureBox1.Image = global::QLCuaHangQuanAo.Properties.Resources.filter_50px;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 6);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 7);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(30, 32);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(40, 39);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.guna2PictureBox1.TabIndex = 6;
             this.guna2PictureBox1.TabStop = false;
@@ -242,10 +242,9 @@ namespace QLCuaHangQuanAo
             this.timeXN.AutoSize = true;
             this.timeXN.Font = new System.Drawing.Font("Quicksand SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeXN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.timeXN.Location = new System.Drawing.Point(2, 70);
-            this.timeXN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.timeXN.Location = new System.Drawing.Point(3, 86);
             this.timeXN.Name = "timeXN";
-            this.timeXN.Size = new System.Drawing.Size(49, 21);
+            this.timeXN.Size = new System.Drawing.Size(59, 25);
             this.timeXN.TabIndex = 7;
             this.timeXN.Text = "NGXN";
             // 
@@ -254,10 +253,9 @@ namespace QLCuaHangQuanAo
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Quicksand SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label3.Location = new System.Drawing.Point(2, 50);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(3, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 21);
+            this.label3.Size = new System.Drawing.Size(171, 25);
             this.label3.TabIndex = 8;
             this.label3.Text = "Thời gian xác nhận:";
             // 
@@ -266,10 +264,9 @@ namespace QLCuaHangQuanAo
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Quicksand SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label4.Location = new System.Drawing.Point(2, 98);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(3, 121);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(174, 21);
+            this.label4.Size = new System.Drawing.Size(214, 25);
             this.label4.TabIndex = 9;
             this.label4.Text = "Thời giự kiến hoàn thành";
             // 
@@ -278,10 +275,9 @@ namespace QLCuaHangQuanAo
             this.hanHD.AutoSize = true;
             this.hanHD.Font = new System.Drawing.Font("Quicksand SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hanHD.ForeColor = System.Drawing.Color.Goldenrod;
-            this.hanHD.Location = new System.Drawing.Point(4, 119);
-            this.hanHD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.hanHD.Location = new System.Drawing.Point(5, 146);
             this.hanHD.Name = "hanHD";
-            this.hanHD.Size = new System.Drawing.Size(55, 21);
+            this.hanHD.Size = new System.Drawing.Size(67, 25);
             this.hanHD.TabIndex = 10;
             this.hanHD.Text = "hanHD";
             // 
@@ -290,10 +286,9 @@ namespace QLCuaHangQuanAo
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Quicksand SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label5.Location = new System.Drawing.Point(2, 0);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(202, 21);
+            this.label5.Size = new System.Drawing.Size(246, 25);
             this.label5.TabIndex = 12;
             this.label5.Text = "Thời gian khởi tạo đơn hàng:";
             // 
@@ -302,10 +297,9 @@ namespace QLCuaHangQuanAo
             this.NGHD.AutoSize = true;
             this.NGHD.Font = new System.Drawing.Font("Quicksand SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NGHD.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.NGHD.Location = new System.Drawing.Point(2, 20);
-            this.NGHD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.NGHD.Location = new System.Drawing.Point(3, 25);
             this.NGHD.Name = "NGHD";
-            this.NGHD.Size = new System.Drawing.Size(50, 21);
+            this.NGHD.Size = new System.Drawing.Size(60, 25);
             this.NGHD.TabIndex = 11;
             this.NGHD.Text = "NGHD";
             // 
@@ -317,11 +311,11 @@ namespace QLCuaHangQuanAo
             this.time.Controls.Add(this.label3);
             this.time.Controls.Add(this.hanHD);
             this.time.Controls.Add(this.label4);
-            this.time.Location = new System.Drawing.Point(327, 247);
-            this.time.Margin = new System.Windows.Forms.Padding(2);
+            this.time.Location = new System.Drawing.Point(436, 304);
+            this.time.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.time.Name = "time";
             this.time.ShadowDecoration.Parent = this.time;
-            this.time.Size = new System.Drawing.Size(299, 145);
+            this.time.Size = new System.Drawing.Size(399, 178);
             this.time.TabIndex = 13;
             // 
             // tim_theo_ten
@@ -340,14 +334,14 @@ namespace QLCuaHangQuanAo
             this.tim_theo_ten.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tim_theo_ten.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tim_theo_ten.HoverState.Parent = this.tim_theo_ten;
-            this.tim_theo_ten.Location = new System.Drawing.Point(157, 6);
-            this.tim_theo_ten.Margin = new System.Windows.Forms.Padding(2);
+            this.tim_theo_ten.Location = new System.Drawing.Point(209, 7);
+            this.tim_theo_ten.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tim_theo_ten.Name = "tim_theo_ten";
             this.tim_theo_ten.PasswordChar = '\0';
             this.tim_theo_ten.PlaceholderText = "Tìm theo tên";
             this.tim_theo_ten.SelectedText = "";
             this.tim_theo_ten.ShadowDecoration.Parent = this.tim_theo_ten;
-            this.tim_theo_ten.Size = new System.Drawing.Size(150, 35);
+            this.tim_theo_ten.Size = new System.Drawing.Size(200, 43);
             this.tim_theo_ten.TabIndex = 14;
             this.tim_theo_ten.TextChanged += new System.EventHandler(this.tim_theo_ten_TextChanged);
             this.tim_theo_ten.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tim_theo_ten_KeyPress);
@@ -366,21 +360,21 @@ namespace QLCuaHangQuanAo
             this.btnSendEmail.Font = new System.Drawing.Font("Quicksand SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSendEmail.ForeColor = System.Drawing.Color.Azure;
             this.btnSendEmail.HoverState.Parent = this.btnSendEmail;
-            this.btnSendEmail.Location = new System.Drawing.Point(455, 2);
-            this.btnSendEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSendEmail.Location = new System.Drawing.Point(607, 2);
+            this.btnSendEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSendEmail.Name = "btnSendEmail";
             this.btnSendEmail.ShadowDecoration.Parent = this.btnSendEmail;
-            this.btnSendEmail.Size = new System.Drawing.Size(109, 37);
+            this.btnSendEmail.Size = new System.Drawing.Size(145, 46);
             this.btnSendEmail.TabIndex = 15;
             this.btnSendEmail.Text = "Gửi Mail";
             this.btnSendEmail.Click += new System.EventHandler(this.btnSendEmail_Click);
             // 
             // Invoice_performance
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(254)))));
-            this.ClientSize = new System.Drawing.Size(686, 441);
+            this.ClientSize = new System.Drawing.Size(915, 543);
             this.Controls.Add(this.btnSendEmail);
             this.Controls.Add(this.tim_theo_ten);
             this.Controls.Add(this.guna2PictureBox1);
@@ -391,7 +385,7 @@ namespace QLCuaHangQuanAo
             this.Controls.Add(this.loadBill);
             this.Controls.Add(this.list_KH);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Invoice_performance";
             this.Text = "Customer_performance";
             ((System.ComponentModel.ISupportInitialize)(this.loadBill)).EndInit();
@@ -404,8 +398,6 @@ namespace QLCuaHangQuanAo
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel list_KH;
         private Guna.UI2.WinForms.Guna2Button View;
         private Guna.UI2.WinForms.Guna2DataGridView loadBill;
         private System.Windows.Forms.Label label2;
@@ -424,5 +416,6 @@ namespace QLCuaHangQuanAo
         private System.Windows.Forms.DataGridViewTextBoxColumn SL;
         private System.Windows.Forms.DataGridViewTextBoxColumn GIA;
         private System.Windows.Forms.DataGridViewTextBoxColumn TRIGIA;
+        public System.Windows.Forms.FlowLayoutPanel list_KH;
     }
 }

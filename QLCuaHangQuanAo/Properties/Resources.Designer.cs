@@ -263,6 +263,16 @@ namespace QLCuaHangQuanAo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap customer_64px1 {
+            get {
+                object obj = ResourceManager.GetObject("customer_64px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_64px {
             get {
                 object obj = ResourceManager.GetObject("delete_64px", resourceCulture);

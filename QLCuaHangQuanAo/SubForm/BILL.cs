@@ -104,7 +104,7 @@ namespace QLCuaHangQuanAo.SubForm
                 Library.cancel();
                 DateTime x = DateTime.Now;
                 string time = "'" + x.Year + "-" + x.Month + "-" + x.Day + " " + x.Hour + ":" + x.Minute + ":" + x.Second + "'";
-                DAO.DataProvider.ExcuseNonQuery1("update HOADON set TRANG_THAI = 'Hủy' where SOHD = " + SOHD);
+                DAO.DataProvider.ExcuseNonQuery1("update HOADON set TRANG_THAI = N'Hủy' where SOHD = " + SOHD);
                 DAO.DataProvider.ExcuseNonQuery1("update HOADON set NGXN = " + time + " Where SOHD = " + SOHD);
                 return_SP();
                 MessageBox.Show("Đã hủy thành công đơn hàng");

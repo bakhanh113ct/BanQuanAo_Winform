@@ -24,6 +24,11 @@ namespace QLCuaHangQuanAo.DAO
                "order by sum(TRIGIA) DESC");
         }
 
+        internal static DataTable loadctkh(int MAKH)
+        {
+            return DataProvider.ExcuseQuery1("select * from KHACHHANG where MAKH = " + MAKH);
+        }
+
         public DTO.KHACHHANG LoadKH(int id)
         {
             DTO.KHACHHANG kh;
@@ -33,6 +38,19 @@ namespace QLCuaHangQuanAo.DAO
             return kh;
            
         }
+
+        public string gettuoi(int mAKH)
+        {
+            string tuoi = "";
+            DataTable age = DAO.DataProvider.ExcuseQuery1("SELECT MAKH, HOTEN, YEAR(GETDATE()) - YEAR(NGSINH) AS TUOI " +
+                "FROM KHACHHANG where MAKH = " + mAKH);
+            foreach (DataRow x in age.Rows)
+            {
+                tuoi = x["TUOI"].ToString();
+            }
+            return tuoi;
+        }
+
         public int GetIdMax()
         {
             object kq = DAO.DataProvider.ExecuteScalar("select max(MAKH) from KHACHHANG");
@@ -72,7 +90,21 @@ namespace QLCuaHangQuanAo.DAO
             else
                 return true;
         }
-            
+        public List<Control_User.Customer> loadlistKH()
+        {
+            List<Control_User.Customer> loadInfoFromDB = new List<Control_User.Customer>();
+            DataTable dt = DataProvider.ExcuseQuery1("select KHACHHANG.MAKH, HOTEN, count(SOHD) as SL , sum(TRIGIA) as GIA " +
+                "from KHACHHANG, HOADON where KHACHHANG.MAKH = HOADON.MAKH group by KHACHHANG.MAKH, HOTEN order by sum(TRIGIA) desc");
+
+            foreach (DataRow row in dt.Rows)
+            {
+                Control_User.Customer temp = new Control_User.Customer(row);
+                loadInfoFromDB.Add(temp);
+            }
+            return loadInfoFromDB;
+        }
+
+    
              
                 
         internal DataTable loadInfo(int SOHD)

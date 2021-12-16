@@ -84,7 +84,7 @@ namespace QLCuaHangQuanAo.SubForm
             {
                 Trigia += Convert.ToDouble(item.Gia)*item.Sl;
             }
-            if (HoaDonDAO.InsertHD(DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss"), Login.kh.MaKH.ToString(), Trigia.ToString(), "Waiting"))
+            if (HoaDonDAO.InsertHD(DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss"), Login.kh.MaKH.ToString(), Trigia.ToString(), "Chờ"))
             {
                 MessageBox.Show("Them thanh cong.");
                 this.Close();

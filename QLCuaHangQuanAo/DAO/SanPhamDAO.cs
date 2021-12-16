@@ -146,8 +146,8 @@ namespace QLCuaHangQuanAo.DAO
 
         public int countSPsold()
         {
-            DataTable tmp = DataProvider.ExcuseQuery1("select  count(CTHD.SL) as sl from CTHD, HOADON " +
-                "where CTHD.SOHD = HOADON.SOHD and TRANG_THAI = 'Complete' and MOnth(NGHD) = MONTH(GETDATE())");
+            DataTable tmp = DataProvider.ExcuseQuery1("select  count(CTHD.SL) as sl from CTHD, HOADON  " +
+                "where CTHD.SOHD = HOADON.SOHD and TRANG_THAI = N'Hoàn thành' and MOnth(NGHD) = MONTH(GETDATE())");
             foreach(DataRow x in tmp.Rows)
             {
                 return (int)x["sl"];
