@@ -1,4 +1,5 @@
-﻿using QLCuaHangQuanAo.DTO;
+﻿using QLCuaHangQuanAo.Control_User;
+using QLCuaHangQuanAo.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -45,6 +46,20 @@ namespace QLCuaHangQuanAo.DAO
                 return false;
             else
                 return true;
+        }
+
+        internal List<HDcuaKH> load_HD_KH(int makh)
+        {
+            List<Control_User.HDcuaKH> loadInfoFromDB = new List<Control_User.HDcuaKH>();
+            DataTable dt = DataProvider.ExcuseQuery1("select SOHD, NGHD, TRANG_THAI, TRIGIA from HOADON, KHACHHANG " +
+                "where KHACHHANG.MAKH  = HOADON.MAKH and KHACHHANG.MAKH = " + makh);
+            int stt = 1;
+            foreach (DataRow row in dt.Rows)
+            {
+                Control_User.HDcuaKH temp = new Control_User.HDcuaKH(row, stt++);
+                loadInfoFromDB.Add(temp);
+            }
+            return loadInfoFromDB;
         }
 
         public DateTime getTimeXN(int index)

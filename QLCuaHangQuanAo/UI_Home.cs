@@ -132,7 +132,8 @@ namespace QLCuaHangQuanAo
         private void STATISTIC_Click(object sender, EventArgs e)
         {
             subbar_Change(subbar4, STATISTIC);
-            openPerformance(new Statistics_perfomancecs());
+            //openPerformance(new Statistics_perfomancecs());
+            openPerformance(new Customer_perfomances());
         }
 
         private void SETTING_Click(object sender, EventArgs e)

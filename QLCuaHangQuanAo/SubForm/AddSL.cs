@@ -25,5 +25,10 @@ namespace QLCuaHangQuanAo.SubForm
             if(DAO.SanPhamDAO.Instance.IncreaseSL(id, Convert.ToInt32(txbSL.Text)))
                 this.Close();
         }
+
+        private void AddSL_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -89,6 +89,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control_User\Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control_User\Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control_User\HDcuaKH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control_User\HDcuaKH.Designer.cs">
+      <DependentUpon>HDcuaKH.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control_User\Item.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -122,6 +134,12 @@
     <Compile Include="DTO\Item_HD.cs" />
     <Compile Include="DTO\TAIKHOAN.cs" />
     <Compile Include="Library.cs" />
+    <Compile Include="Performance\Customer_perfomances.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Performance\Customer_perfomances.Designer.cs">
+      <DependentUpon>Customer_perfomances.cs</DependentUpon>
+    </Compile>
     <Compile Include="Performance\Home_perfomancecs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,12 +250,24 @@
     <Compile Include="SubForm\Show_creator.Designer.cs">
       <DependentUpon>Show_creator.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubForm\TTKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\TTKH.Designer.cs">
+      <DependentUpon>TTKH.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI_Home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI_Home.Designer.cs">
       <DependentUpon>UI_Home.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Control_User\Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control_User\HDcuaKH.resx">
+      <DependentUpon>HDcuaKH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control_User\Item.resx">
       <DependentUpon>Item.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Control_User\topList.resx">
       <DependentUpon>topList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Performance\Customer_perfomances.resx">
+      <DependentUpon>Customer_perfomances.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Performance\Home_perfomancecs.resx">
       <DependentUpon>Home_perfomancecs.cs</DependentUpon>
@@ -317,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Show_creator.resx">
       <DependentUpon>Show_creator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\TTKH.resx">
+      <DependentUpon>TTKH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI_Home.resx">
       <DependentUpon>UI_Home.cs</DependentUpon>
