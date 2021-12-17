@@ -17,9 +17,6 @@ namespace QLCuaHangQuanAo
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
-            //Application.Run(new Performance.Customer_perfomances());
-
-
         }
     }
 }
