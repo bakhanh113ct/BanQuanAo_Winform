@@ -29,9 +29,9 @@ namespace QLCuaHangQuanAo.SubForm
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgrvItem = new Guna.UI2.WinForms.Guna2DataGridView();
             this.anh = new System.Windows.Forms.DataGridViewImageColumn();
             this.ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +43,7 @@ namespace QLCuaHangQuanAo.SubForm
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnHuyDon = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnXN = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvItem)).BeginInit();
             this.tool3.SuspendLayout();
             this.SuspendLayout();
@@ -51,21 +52,21 @@ namespace QLCuaHangQuanAo.SubForm
             // 
             this.dtgrvItem.AllowUserToAddRows = false;
             this.dtgrvItem.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgrvItem.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dtgrvItem.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgrvItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgrvItem.BackgroundColor = System.Drawing.Color.White;
             this.dtgrvItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgrvItem.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgrvItem.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Quicksand Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgrvItem.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Quicksand Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgrvItem.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgrvItem.ColumnHeadersHeight = 30;
             this.dtgrvItem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.anh,
@@ -73,14 +74,14 @@ namespace QLCuaHangQuanAo.SubForm
             this.Loai,
             this.soluong,
             this.gia});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgrvItem.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvItem.DefaultCellStyle = dataGridViewCellStyle6;
             this.dtgrvItem.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgrvItem.EnableHeadersVisualStyles = false;
             this.dtgrvItem.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -240,11 +241,38 @@ namespace QLCuaHangQuanAo.SubForm
             this.btnHuyDon.Text = "Hủy đơn";
             this.btnHuyDon.Click += new System.EventHandler(this.btnHuyDon_Click);
             // 
+            // btnXN
+            // 
+            this.btnXN.BorderRadius = 8;
+            this.btnXN.CheckedState.Parent = this.btnXN;
+            this.btnXN.CustomImages.Parent = this.btnXN;
+            this.btnXN.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXN.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXN.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXN.DisabledState.Parent = this.btnXN;
+            this.btnXN.FillColor = System.Drawing.Color.Green;
+            this.btnXN.FillColor2 = System.Drawing.Color.Lime;
+            this.btnXN.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnXN.ForeColor = System.Drawing.Color.White;
+            this.btnXN.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnXN.HoverState.Parent = this.btnXN;
+            this.btnXN.Location = new System.Drawing.Point(377, 19);
+            this.btnXN.Name = "btnXN";
+            this.btnXN.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.btnXN.ShadowDecoration.Parent = this.btnXN;
+            this.btnXN.Size = new System.Drawing.Size(162, 34);
+            this.btnXN.TabIndex = 67;
+            this.btnXN.Text = "Xác nhận hoàn thành";
+            this.btnXN.Click += new System.EventHandler(this.btnXN_Click);
+            // 
             // Product_Bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 361);
+            this.Controls.Add(this.btnXN);
             this.Controls.Add(this.btnHuyDon);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.label1);
@@ -275,5 +303,6 @@ namespace QLCuaHangQuanAo.SubForm
         private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
         private System.Windows.Forms.DataGridViewTextBoxColumn gia;
         private Guna.UI2.WinForms.Guna2GradientButton btnHuyDon;
+        private Guna.UI2.WinForms.Guna2GradientButton btnXN;
     }
 }

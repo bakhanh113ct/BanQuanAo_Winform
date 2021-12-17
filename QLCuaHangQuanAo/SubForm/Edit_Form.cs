@@ -49,8 +49,9 @@ namespace QLCuaHangQuanAo.SubForm
         private void btnSave_Click(object sender, EventArgs e)
         {
             byte[] imgbyte = Library.ConvertoByte(picture.Image);
+            int gia = (int)XulyGIa();
             if (imgbyte != null)
-                if (SanPhamDAO.UpdateSP(txbTen.Text, txbGiaTien.Text, txbSoLuong.Text, sp.DaBan.ToString(), txbMota.Text, txbLoai.Text, imgbyte, id))
+                if (SanPhamDAO.UpdateSP(txbTen.Text, gia.ToString(), txbGiaTien.Text,  txbSoLuong.Text, sp.DaBan.ToString(), txbMota.Text, txbLoai.Text, imgbyte, id))
                 {
                     MessageBox.Show("Cập nhật thành công.");
                     this.DialogResult = DialogResult.OK;
@@ -85,6 +86,15 @@ namespace QLCuaHangQuanAo.SubForm
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private double XulyGIa()
+        {
+            double gia;
+            if (cbLoinhuan.SelectedIndex == 0)
+                gia = Convert.ToDouble(txbGiaTien.Text) * Convert.ToDouble(txbLoinhuan.Text) / 100;
+            else
+                gia = Convert.ToDouble(txbGiaTien.Text) + Convert.ToDouble(txbLoinhuan.Text);
+            return gia;
         }
 
     }
