@@ -12,10 +12,11 @@ using System.Windows.Forms;
 namespace QLCuaHangQuanAo.Control_User
 {
     public partial class Customer : UserControl
-    {   
+    {
         private int mAKH;
-        static int stt = 1;
+        private string tenkh = "";
         int slkh = DAO.KhachHangDAO.Instance.SLKH();
+        public string Tenkh {get =>tenkh; set =>tenkh = value;}
 
         public int MAKH { get => mAKH; set => mAKH = value; }
 
@@ -23,12 +24,12 @@ namespace QLCuaHangQuanAo.Control_User
         {
             InitializeComponent();
         }
-        public Customer(DataRow row)
+        public Customer(DataRow row, int stt)
         {
             InitializeComponent();
-            id.Text = stt++.ToString();
+            id.Text = stt.ToString();
             mAKH = (int)row["MAKH"];
-            name.Text = row["HOTEN"].ToString();
+            name.Text = tenkh = row["HOTEN"].ToString();
             sl.Text = row["Sl"].ToString();
             int giax = (int)row["GIA"];
             gia.Text = String.Format("{0:n0}", giax) + " VND";

@@ -16,12 +16,22 @@ namespace QLCuaHangQuanAo.Performance
         public Customer_perfomances()
         {
             InitializeComponent();
-            load();
+            addkieusx();
         }
-        void load()
+        void addkieusx()
+        {
+            
+            thang.Items.Add("Doanh thu tăng");
+            thang.Items.Add("Doanh thu giảm");
+            thang.Items.Add("Số lượng HĐ tăng");
+            thang.Items.Add("Số lượng hóa đơn giảm");
+            thang.SelectedIndex = 0;
+            
+        }
+        void load(string kieu)
         {
             //xem.Visible = false;
-            kh = DAO.KhachHangDAO.Instance.loadlistKH();
+            kh = DAO.KhachHangDAO.Instance.loadlistKH(kieu);
             foreach (Control_User.Customer x in kh)
             {
                 list_KH.Controls.Add(x);
@@ -42,6 +52,46 @@ namespace QLCuaHangQuanAo.Performance
                 }
             }
             MessageBox.Show("Vui lòng chọn khách hàng bạn muốn xem");
+        }
+
+        private void tim_theo_ten_TextChanged(object sender, EventArgs e)
+        {
+            int k = 0;
+            foreach (Control_User.Customer i in kh)
+            {
+                //ie i = (item.btnItem.Tag as SANPHAM);
+                if (i.Tenkh.Contains(tim_theo_ten.Text))
+                {
+                    k++;
+                    if (k == 1)
+                        list_KH.Controls.Clear();
+                    list_KH.Controls.Add(i);
+                }
+            }
+        }
+
+        private void thang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (thang.SelectedIndex)
+            {
+                case 0:
+                    list_KH.Controls.Clear();
+                    load("Sum(TRIGIA) desc");
+                    break;
+                case 1:
+                    list_KH.Controls.Clear();
+                    load("Sum(TRIGIA) asc");
+                    break;
+                case 2:
+                    list_KH.Controls.Clear();
+                    load("Count(SOHD) desc");
+                    break;
+                case 3:
+                    list_KH.Controls.Clear();
+                    load("Count(SOHD) asc");
+                    break;
+            }
+
         }
     }
 }

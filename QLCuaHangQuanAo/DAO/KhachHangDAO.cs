@@ -90,15 +90,15 @@ namespace QLCuaHangQuanAo.DAO
             else
                 return true;
         }
-        public List<Control_User.Customer> loadlistKH()
+        public List<Control_User.Customer> loadlistKH(string kieu)
         {
             List<Control_User.Customer> loadInfoFromDB = new List<Control_User.Customer>();
             DataTable dt = DataProvider.ExcuseQuery1("select KHACHHANG.MAKH, HOTEN, count(SOHD) as SL , sum(TRIGIA) as GIA " +
-                "from KHACHHANG, HOADON where KHACHHANG.MAKH = HOADON.MAKH group by KHACHHANG.MAKH, HOTEN order by sum(TRIGIA) desc");
-
+                "from KHACHHANG, HOADON where KHACHHANG.MAKH = HOADON.MAKH group by KHACHHANG.MAKH, HOTEN order by " + kieu);
+            int stt = 1;
             foreach (DataRow row in dt.Rows)
             {
-                Control_User.Customer temp = new Control_User.Customer(row);
+                Control_User.Customer temp = new Control_User.Customer(row, stt++);
                 loadInfoFromDB.Add(temp);
             }
             return loadInfoFromDB;
