@@ -63,10 +63,10 @@ namespace QLCuaHangQuanAo.DAO
                 "AND IDLOAI = ID " + month + " GROUP BY TENLOAI");
         }
 
-        static public bool UpdateSP(string ten, string gia, string SL,string daban, string mota, string loai, byte[] image, string old_Name)
+        static public bool UpdateSP(string ten, string gia,string gianhap,  string SL,string daban, string mota, string loai, byte[] image, string old_Name)
         {
-            int check = DAO.DataProvider.ExecuteNonQuery("update SANPHAM set TEN = @Ten , GIA = @Gia , SL = @SoLuong , DANHGIA = @DanhGia , DABAN = @DaBan , MOTA = @MoTa , IDLOAI = @Loai , ANH = @Anh where MASP = '" + old_Name + "'",
-                                                            new object[] { ten , gia , SL , "0" , daban , mota , loai , image });
+            int check = DAO.DataProvider.ExecuteNonQuery("update SANPHAM set TEN = @Ten , GIANHAP = @GIANHAP , GIA = @Gia , SL = @SoLuong , DANHGIA = @DanhGia , DABAN = @DaBan , MOTA = @MoTa , IDLOAI = @Loai , ANH = @Anh where MASP = '" + old_Name + "'",
+                                                            new object[] { ten , gianhap, gia , SL , "0" , daban , mota , loai , image });
             if (check == 0)
                 return false;
             else
